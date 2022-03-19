@@ -1,23 +1,18 @@
 import './App.css';
-import { Container, Row, Col } from 'react-bootstrap';
-import { ReactSearchAutocomplete } from 'react-search-autocomplete'
+import Search from "./Search";
+import ResultsTable from "./ResultsTable";
+import { Container, Stack } from 'react-bootstrap';
 
 function App() {
-  return (
-    <Container fluid className="App">
-      <Row className="header">
-		  <h1 style={{marginLeft: "10px", padding: "0px"}}>HUDDLE</h1>
-      </Row>
-	  <Row>
-		  <h2>NFL Player Guessing Game</h2>
-	  </Row>
-	  <Row>
-		  <Col sm={{span: 4, offset: 4}}>
-			<ReactSearchAutocomplete></ReactSearchAutocomplete>
-		  </Col>
-	  </Row>
-    </Container>
-  );
-}
+	return (
+		<Stack className="App" gap={5}>
+			<div className="header">
+				<h1 style={{marginLeft: "10px", padding: "0px"}}>HUDDLE</h1>
+			</div>
+			<Search></Search>
+			<ResultsTable></ResultsTable>
+		</Stack>
+		);
+	}
 
 export default App;
