@@ -1,24 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import { Container, Row, Col } from 'react-bootstrap';
+import { ReactSearchAutocomplete } from 'react-search-autocomplete'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container fluid className="App">
+      <Row className="header">
+		  <h1 style={{marginLeft: "10px", padding: "0px"}}>HUDDLE</h1>
+      </Row>
+	  <Row>
+		  <h2>NFL Player Guessing Game</h2>
+	  </Row>
+	  <Row>
+		  <Col sm={{span: 4, offset: 4}}>
+			<ReactSearchAutocomplete></ReactSearchAutocomplete>
+		  </Col>
+	  </Row>
+    </Container>
   );
 }
 
