@@ -16,11 +16,11 @@ class Search extends Component {
     }
 
 	handleOnSearch = (string, results) => {
-		console.log(string, results);
+
 	};
 	
 	handleOnHover = (result) => {
-		console.log(result);
+
 	};
 	
 	handleOnSelect = (player) => {

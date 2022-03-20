@@ -1,27 +1,27 @@
 const players = [
 	{
-		name: "Player1",
+		name: "Justin Herbert",
 		conf: "AFC",
 		div: "West",
 		team: "LAC",
 		pos: "QB"
 	},
 	{
-		name: "Player2",
+		name: "Aaron Jones",
 		conf: "NFC",
 		div: "North",
 		team: "GB",
 		pos: "RB"
 	},
 	{
-		name: "Player3",
+		name: "Ja'Marr Chase",
 		conf: "AFC",
 		div: "North",
 		team: "CIN",
 		pos: "WR"
 	},
 	{
-		name: "Player4",
+		name: "Younghoe Koo",
 		conf: "NFC",
 		div: "South",
 		team: "ATL",
