@@ -8,23 +8,19 @@ class Search extends Component {
     constructor(props) {
         super(props);
         this.state = {
-		
+			guesses: 1
 		}
     }
 
     componentDidMount() {
     }
-
-	handleOnSearch = (string, results) => {
-
-	};
-	
-	handleOnHover = (result) => {
-
-	};
 	
 	handleOnSelect = (player) => {
-		eventBus.dispatch("playerSelected", { guess: player });
+		// increment guess counter
+		this.setState(prevState => ({
+			guesses: prevState.guesses + 1
+		  }));
+		eventBus.dispatch("playerSelected", { guess: player, totalGuesses: this.state.guesses });
 	};
 
     render() {
@@ -39,10 +35,9 @@ class Search extends Component {
 							items={players}
 							maxResults={3}
 							onSearch={this.handleOnSearch}
-							onHover={this.handleOnHover}
 							onSelect={this.handleOnSelect}
 							showIcon={false}
-							placeholder={"Guess 1 of 6"}
+							placeholder={"Guess " + this.state.guesses + " of 6"}
 							styling={{ zIndex: 3 }} // To display it on top of the search box below
 						/>
 					</Col>

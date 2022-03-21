@@ -1,12 +1,14 @@
-.App {
-  text-align: center;
+.app {
+	background-color: #f0f2ef;
+	height: 100vh;
+	text-align: center;
 }
 
 .header {
-  background-color: navy;
-  padding: 2px;
-  text-align: left;
-  border-bottom: 5px red solid;
+	background-color: #013369;
+	padding: 2px;
+	text-align: left;
+	border-bottom: 5px #D50A0A solid;
 }
 
 h1 {
@@ -15,7 +17,7 @@ h1 {
 }
 
 .headerBtn { 
-	background-color: navy;
+	background-color: #013369;
 	border: none; 
 	color: white; 
 	padding: 5px 10px; 
@@ -25,5 +27,5 @@ h1 {
 }
   
 .headerBtn:hover {
-	color: red;
+	color: #D50A0A;
 }
