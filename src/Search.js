@@ -8,6 +8,7 @@ class Search extends Component {
     constructor(props) {
         super(props);
         this.state = {
+			resetSearch: false,
 			guesses: 1
 		}
     }
@@ -16,10 +17,10 @@ class Search extends Component {
     }
 	
 	handleOnSelect = (player) => {
-		// increment guess counter
 		this.setState(prevState => ({
-			guesses: prevState.guesses + 1
-		  }));
+			guesses: prevState.guesses + 1,		// increment guess counter
+			resetSearch: !prevState.resetSearch 	// changing this variable triggers the ReactSearchAutocomplete to reset itself
+		 }));
 		eventBus.dispatch("playerSelected", { guess: player, totalGuesses: this.state.guesses });
 	};
 
@@ -32,13 +33,16 @@ class Search extends Component {
 				<Row>
 					<Col sm={{span: 4, offset: 4}}>
 						<ReactSearchAutocomplete
+							key={this.state.resetSearch}
 							items={players}
 							maxResults={3}
-							onSearch={this.handleOnSearch}
 							onSelect={this.handleOnSelect}
 							showIcon={false}
-							placeholder={"Guess " + this.state.guesses + " of 6"}
-							styling={{ zIndex: 3 }} // To display it on top of the search box below
+							placeholder={this.state.guesses > 0 ? "Game Over" : "Guess " + this.state.guesses + " of 6"}
+							styling={this.state.guesses > 0
+								? {pointerEvents: "none", backgroundColor: "#F0F2EF", border: "1px solid #D50A0A", boxShadow: "none"} 
+								: {}
+							}
 						/>
 					</Col>
 				</Row>
