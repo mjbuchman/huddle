@@ -1,15 +1,31 @@
-.App {
-  text-align: center;
+.app {
+	background-color: #f0f2ef;
+	height: 100vh;
+	text-align: center;
 }
 
 .header {
-  background-color: navy;
-  padding: 2px;
-  text-align: left;
-  border-bottom: 5px red solid;
+	background-color: #013369;
+	padding: 2px;
+	text-align: left;
+	border-bottom: 5px #D50A0A solid;
 }
 
 h1 {
 	font-size: 24px;
 	color: white;
+}
+
+.headerBtn { 
+	background-color: #013369;
+	border: none; 
+	color: white; 
+	padding: 5px 10px; 
+	font-size: 16px;
+	cursor: pointer;
+	outline: none;
+}
+  
+.headerBtn:hover {
+	color: #D50A0A;
 }
