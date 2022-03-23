@@ -32,18 +32,20 @@ class Search extends Component {
 				</Row>
 				<Row>
 					<Col sm={{span: 4, offset: 4}}>
-						<ReactSearchAutocomplete
-							key={this.state.resetSearch}
-							items={players}
-							maxResults={3}
-							onSelect={this.handleOnSelect}
-							showIcon={false}
-							placeholder={this.state.guesses > 0 ? "Game Over" : "Guess " + this.state.guesses + " of 6"}
-							styling={this.state.guesses > 0
-								? {pointerEvents: "none", backgroundColor: "#F0F2EF", border: "1px solid #D50A0A", boxShadow: "none"} 
-								: {}
-							}
-						/>
+						<div style={this.props.disabled ? {pointerEvents: "none"} : {}}>
+							<ReactSearchAutocomplete
+								key={this.state.resetSearch}
+								items={players}
+								maxResults={3}
+								onSelect={this.handleOnSelect}
+								showIcon={false}
+								placeholder={this.props.disabled ? "Game Over" : "Guess " + this.state.guesses + " of 6"}
+								styling={this.props.disabled
+									? {backgroundColor: "#F0F2EF", border: "1px solid #D50A0A", boxShadow: "none"} 
+									: {}
+								}
+							/>
+						</div>
 					</Col>
 				</Row>
             </Container>

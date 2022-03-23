@@ -19,6 +19,7 @@ class App extends Component {
 			showStats: false,
 			showInfo: false,
 			showResults: false,
+			gameOver: false,
 			didWin: false,
 			answer: ""
 		};
@@ -27,6 +28,7 @@ class App extends Component {
 		this.setStatsModalShow = this.setStatsModalShow.bind(this);
 		this.setInfoModalShow = this.setInfoModalShow.bind(this);
 		this.setResultsModalShow = this.setResultsModalShow.bind(this);
+		this.hideResultsModal = this.hideResultsModal.bind(this);
 	}
 	
 	componentDidMount() {
@@ -49,9 +51,13 @@ class App extends Component {
 	}
 
 	setStatsModalShow() {
-		this.setState(prevState => ({
-			showStats: !prevState.showStats
-		  }));
+		if(this.state.gameOver) {
+			this.setResultsModalShow(this.state.didWin)  // if game is complete show results modal instead of stats
+		} else {
+			this.setState(prevState => ({
+				showStats: !prevState.showStats
+			}));
+		}
 	}
 
 	setInfoModalShow() {
@@ -61,10 +67,15 @@ class App extends Component {
 	}
 
 	setResultsModalShow(didWin) {
-		this.setState(prevState => ({
-			showResults: !prevState.showResults,
+		this.setState({
+			showResults: true,
+			gameOver: true,
 			didWin: didWin
-		  }));
+		  });
+	}
+
+	hideResultsModal() {
+		this.setState({showResults: false});
 	}
 
 	render() {
@@ -75,7 +86,7 @@ class App extends Component {
 					<button className="headerBtn ms-auto" onClick={this.setStatsModalShow}><AssessmentIcon/></button>
 					<button className="headerBtn" onClick={this.setInfoModalShow}><InfoIcon/></button>
 				</Stack>
-				<Search></Search>
+				<Search disabled={this.state.gameOver}></Search>
 				<ResultsTable></ResultsTable>
 				<StatsModal
 					show={this.state.showStats}
@@ -88,7 +99,7 @@ class App extends Component {
 				<ResultsModal
 					didWin={this.state.didWin}
 					show={this.state.showResults}
-					onHide={this.setResultsModalShow}
+					onHide={this.hideResultsModal}
 				/>
 			</Stack>  
 		);
