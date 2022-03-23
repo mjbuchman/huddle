@@ -29,3 +29,24 @@ h1 {
 .headerBtn:hover {
 	color: #D50A0A;
 }
+
+img {
+	height: 45px;
+}
+
+.result-name {
+	font-size: 16px;
+	margin-left: 10px;
+}
+
+.result-team {
+	font-size: 14px;
+	margin-left: 10px;
+}
+
+.result-pos {
+	font-size: 26px;
+	margin-right: 10px;
+	vertical-align: middle;
+	color: #666;
+}

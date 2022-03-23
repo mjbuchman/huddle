@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import {Container, Row, Col} from 'react-bootstrap';
+import { Container, Row, Col, Stack } from 'react-bootstrap';
 import { ReactSearchAutocomplete } from 'react-search-autocomplete';
 import players from './Players';
 import eventBus from "./EventBus";
+import placeholder from "./player_placeholder.png"
 
 class Search extends Component {
     constructor(props) {
@@ -24,6 +25,23 @@ class Search extends Component {
 		eventBus.dispatch("playerSelected", { guess: player, totalGuesses: this.state.guesses });
 	};
 
+	formatResult = (item) => {
+		return (
+			<Stack className="result-wrapper" direction="horizontal">
+				<img src={placeholder} alt="placeholder"></img>
+				<span>
+					<Row>
+						<span className="result-name">{item.name}</span>
+					</Row>
+					<Row>
+						<span className="result-team">{item.team}</span>
+					</Row>
+				</span>
+				<span className="result-pos ms-auto">{item.pos}</span>
+			</Stack>
+		);
+	};
+
     render() {
         return (
             <Container fluid>
@@ -40,6 +58,7 @@ class Search extends Component {
 								onSelect={this.handleOnSelect}
 								showIcon={false}
 								placeholder={this.props.disabled ? "Game Over" : "Guess " + this.state.guesses + " of 6"}
+								formatResult={this.formatResult}
 								styling={this.props.disabled
 									? {backgroundColor: "#F0F2EF", border: "1px solid #D50A0A", boxShadow: "none"} 
 									: {}
