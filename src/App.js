@@ -32,6 +32,10 @@ class App extends Component {
 	}
 	
 	componentDidMount() {
+		if(this.state.gameOver) {
+			this.setResultsModalShow(this.state.didWin);
+		}
+
 		this.chooseAnswer();
 		
 		eventBus.on("playerSelected", (data) => {
@@ -98,6 +102,7 @@ class App extends Component {
 				/>
 				<ResultsModal
 					didWin={this.state.didWin}
+					answer={this.state.answer}
 					show={this.state.showResults}
 					onHide={this.hideResultsModal}
 				/>

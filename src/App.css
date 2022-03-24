@@ -30,8 +30,12 @@ h1 {
 	color: #D50A0A;
 }
 
-img {
+.img-small {
 	height: 45px;
+}
+
+.img-large {
+	height: 240px;
 }
 
 .result-name {
@@ -45,7 +49,7 @@ img {
 }
 
 .result-pos {
-	font-size: 26px;
+	font-size: 18px;
 	margin-right: 10px;
 	vertical-align: middle;
 	color: #666;

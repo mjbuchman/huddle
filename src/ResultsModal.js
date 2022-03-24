@@ -1,4 +1,7 @@
 import { Modal, Button } from 'react-bootstrap';
+import ShareIcon from '@material-ui/icons/Share';
+import placeholder from "./player_placeholder.png"
+import Countdown from 'react-countdown';
 
 function ResultsModal(props) {
 	return (
@@ -6,17 +9,26 @@ function ResultsModal(props) {
 		{...props}
 		size="lg"
 		aria-labelledby="contained-modal-title-vcenter"
-		centered
 	  >
 		<Modal.Header closeButton>
-		  <Modal.Title id="contained-modal-title-vcenter">
-			{props.didWin ? "Winner!" : "You Lose!"}
-		  </Modal.Title>
+			<Modal.Title id="contained-modal-title-vcenter">
+				{props.didWin ? "Winner!" : "You Lose!"}
+			</Modal.Title>
 		</Modal.Header>
 		<Modal.Body>
+			<img src={placeholder} alt="placeholder" className="img-large"></img>
+			<h4>{props.didWin ? "Congrats," : "Sorry,"} the correct answer is</h4>
+			<h2>{props.answer.name}</h2>
+			<p>Statistics</p>
+			<p>Guess Distribution</p>
 		</Modal.Body>
 		<Modal.Footer>
-		  <Button onClick={props.onHide}>Close</Button>
+			<p>New Huddle In:</p>
+			<Countdown 
+				date={Date.now() + (new Date().setHours(24,0,0,0) - Date.now())}
+				daysInHours={true}
+			/>
+			<Button>Share<ShareIcon/></Button>
 		</Modal.Footer>
 	  </Modal>
 	);
