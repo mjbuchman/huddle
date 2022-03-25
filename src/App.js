@@ -39,7 +39,7 @@ class App extends Component {
 		this.chooseAnswer();
 		
 		eventBus.on("playerSelected", (data) => {
-			if (this.state.answer.name === data.guess.name) {
+			if (this.state.answer.Name === data.guess.Name) {
 				this.setResultsModalShow(true);
 			} else if (data.totalGuesses >= 6) {
 				this.setResultsModalShow(false);

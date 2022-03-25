@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import {Container, Row, Col, Table} from 'react-bootstrap';
 import eventBus from "./EventBus";
+import Teams from "./Teams"
 
 class ResultsTable extends Component {
     constructor(props) {
@@ -46,11 +47,11 @@ class ResultsTable extends Component {
 							<tbody>
 								{this.state.guesses.map(function(guess,i) {
 									return <tr key={i}>
-											<td>{guess.name}</td>
-											<td>{guess.conf}</td>
-											<td>{guess.div}</td>
-											<td>{guess.team}</td>
-											<td>{guess.pos}</td>
+											<td>{guess.Name}</td>
+											<td>{Teams[guess.Team].Conf}</td>
+											<td>{Teams[guess.Team].Div}</td>
+											<td><span className="img-small"><img src={Teams[guess.Team].Logo} alt="player-photo"></img></span></td>
+											<td>{guess.Position}</td>
 										</tr>
 								})}
 							</tbody>

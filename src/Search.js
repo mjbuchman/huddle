@@ -28,16 +28,16 @@ class Search extends Component {
 	formatResult = (item) => {
 		return (
 			<Stack className="result-wrapper" direction="horizontal">
-				<img src={placeholder} alt="placeholder" className="img-small"></img>
+				<span className="img-small"><img src={item.PhotoUrl} alt="player-photo"></img></span>
 				<span>
 					<Row>
-						<span className="result-name">{item.name}</span>
+						<span className="result-name">{item.Name}</span>
 					</Row>
 					<Row>
-						<span className="result-team">{item.team}</span>
+						<span className="result-team">{item.Team}</span>
 					</Row>
 				</span>
-				<span className="result-pos ms-auto">{item.pos}</span>
+				<span className="result-pos ms-auto">{item.Position}</span>
 			</Stack>
 		);
 	};
@@ -54,6 +54,7 @@ class Search extends Component {
 							<ReactSearchAutocomplete
 								key={this.state.resetSearch}
 								items={players}
+								fuseOptions={{ keys: ["Name"] }} // Search on both fields
 								maxResults={3}
 								onSelect={this.handleOnSelect}
 								showIcon={false}

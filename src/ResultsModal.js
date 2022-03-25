@@ -16,9 +16,9 @@ function ResultsModal(props) {
 			</Modal.Title>
 		</Modal.Header>
 		<Modal.Body>
-			<img src={placeholder} alt="placeholder" className="img-large"></img>
+			<img src={props.answer.PhotoUrl} alt="player-photo" className="img-large"></img>
 			<h4>{props.didWin ? "Congrats," : "Sorry,"} the correct answer is</h4>
-			<h2>{props.answer.name}</h2>
+			<h2>{props.answer.Name}</h2>
 			<p>Statistics</p>
 			<p>Guess Distribution</p>
 		</Modal.Body>

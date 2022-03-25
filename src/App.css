@@ -31,11 +31,20 @@ h1 {
 }
 
 .img-small {
+	display: flex;
 	height: 45px;
+	width: 45px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
 }
 
 .img-large {
 	height: 240px;
+}
+
+img {
+	height: 100%;
 }
 
 .result-name {
@@ -50,7 +59,7 @@ h1 {
 
 .result-pos {
 	font-size: 18px;
-	margin-right: 10px;
+	margin-right: 20px;
 	vertical-align: middle;
 	color: #666;
 }
