@@ -28,7 +28,7 @@ class Search extends Component {
 	formatResult = (item) => {
 		return (
 			<Stack className="result-wrapper" direction="horizontal">
-				<span className="img-small"><img src={item.PhotoUrl} alt="player-photo"></img></span>
+				<span className="img-small"><img className="player" src={item.PhotoUrl} alt="player-photo"></img></span>
 				<span>
 					<Row>
 						<span className="result-name">{item.Name}</span>
