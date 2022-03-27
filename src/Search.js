@@ -3,7 +3,6 @@ import { Container, Row, Col, Stack } from 'react-bootstrap';
 import { ReactSearchAutocomplete } from 'react-search-autocomplete';
 import players from './Players';
 import eventBus from "./EventBus";
-import placeholder from "./player_placeholder.png"
 
 class Search extends Component {
     constructor(props) {
@@ -28,7 +27,7 @@ class Search extends Component {
 	formatResult = (item) => {
 		return (
 			<Stack className="result-wrapper" direction="horizontal">
-				<span className="img-small"><img className="player" src={item.PhotoUrl} alt="player-photo"></img></span>
+				<span className="img-small"><img className="player" src={item.PhotoUrl} alt={item.Name}></img></span>
 				<span>
 					<Row>
 						<span className="result-name">{item.Name}</span>

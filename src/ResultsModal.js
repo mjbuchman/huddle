@@ -1,6 +1,5 @@
 import { Modal, Button } from 'react-bootstrap';
 import ShareIcon from '@material-ui/icons/Share';
-import placeholder from "./player_placeholder.png"
 import Countdown from 'react-countdown';
 
 function ResultsModal(props) {
@@ -16,7 +15,7 @@ function ResultsModal(props) {
 			</Modal.Title>
 		</Modal.Header>
 		<Modal.Body>
-			<img src={props.answer.PhotoUrl} alt="player-photo" className="img-large"></img>
+			<img src={props.answer.PhotoUrl} alt={props.answer.Name} className="img-large"></img>
 			<h4>{props.didWin ? "Congrats," : "Sorry,"} the correct answer is</h4>
 			<h2>{props.answer.Name}</h2>
 			<p>Statistics</p>

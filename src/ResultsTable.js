@@ -50,7 +50,7 @@ class ResultsTable extends Component {
 											<td>{guess.Name}</td>
 											<td>{Teams[guess.Team].Conf}</td>
 											<td>{Teams[guess.Team].Div}</td>
-											<td><span className="img-small-logo"><img className="logo" src={Teams[guess.Team].Logo} alt="player-photo"></img></span></td>
+											<td><span className="img-small-logo"><img className="logo" src={Teams[guess.Team].Logo} alt={guess.Name}></img></span></td>
 											<td>{guess.Position}</td>
 										</tr>
 								})}
