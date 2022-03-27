@@ -82,3 +82,17 @@ h1 {
 td {
 	vertical-align: middle;
 }
+
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color:#013369;
+	color: white;
+}
+
+.footer p {
+	font-size: 20px;
+	margin: 10px auto;
+}

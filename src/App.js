@@ -106,6 +106,9 @@ class App extends Component {
 					show={this.state.showResults}
 					onHide={this.hideResultsModal}
 				/>
+				<Stack className="footer" direction="horizontal">
+					<p>Footer Info</p>
+				</Stack>
 			</Stack>  
 		);
 	}
