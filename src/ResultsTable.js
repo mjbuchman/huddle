@@ -12,6 +12,11 @@ class ResultsTable extends Component {
     }
 
     componentDidMount() {
+		var savedData = JSON.parse(localStorage.getItem("daily"));
+		this.setState({
+			guesses: savedData.guesses
+		});
+
 		eventBus.on("playerSelected", (data) =>
 			this.setState({ guesses: [...this.state.guesses, data.guess] }) //append new guess to guesses
 		);
@@ -23,10 +28,6 @@ class ResultsTable extends Component {
 
 	hasGuesses() {
 		return this.state.guesses ? true : false;
-	}
-
-	renderTable() {
-		
 	}
 
     render() {

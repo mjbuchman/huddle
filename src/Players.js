@@ -1,6 +1,6 @@
 const players = [
 	{
-	   "team":"IND",
+	   "Team":"IND",
 	   "Position":"QB",
 	   "PositionCategory":"OFF",
 	   "Name":"Matt Ryan",
