@@ -112,6 +112,8 @@ class App extends Component {
 			// handle new state data
 			if(this.state.gameOver) {
 				this.setResultsModalShow(this.state.didWin);
+			} else if (this.state.stats.played === 0) {
+				this.setInfoModalShow();
 			}
 		});
 	}
