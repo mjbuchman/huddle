@@ -30,6 +30,33 @@ class ResultsTable extends Component {
 		return this.state.guesses ? true : false;
 	}
 
+	classMaker(guess){
+		let guessClasses = {};
+		for(let field in guess){
+			if(guess[field] === this.props.answer[field]){
+				guessClasses[field] = "correctField"
+			} else if(guess[field] === (this.props.answer[field] + 1) || guess[field] === (this.props.answer[field] - 1)){
+				guessClasses[field] = "closeField"
+			} else {
+				guessClasses[field] = null
+			}
+		} 
+		return guessClasses
+	}
+	
+	makeTableViews(guess,i){
+		let classes = this.classMaker(guess)
+		return (
+			<tr key={i}>
+				<td>{guess.Name}</td>
+				<td>{Teams[guess.Team].Conf}</td>
+				<td>{Teams[guess.Team].Div}</td>
+				<td><span className="img-small-logo"><img className="logo" src={Teams[guess.Team].Logo} alt={guess.Name}></img></span></td>
+				<td>{guess.Position}</td>
+			</tr>
+		)
+	}
+
     render() {
         return (
             <Container fluid>
@@ -43,17 +70,14 @@ class ResultsTable extends Component {
 									<th>Division</th>
 									<th>Team</th>
 									<th>Position</th>
+									<th>Age</th>
+									<th>Offense/Defense</th>
+									<th>#</th>
 								</tr>
 							</thead>
 							<tbody>
-								{this.state.guesses.map(function(guess,i) {
-									return <tr key={i}>
-											<td>{guess.Name}</td>
-											<td>{Teams[guess.Team].Conf}</td>
-											<td>{Teams[guess.Team].Div}</td>
-											<td><span className="img-small-logo"><img className="logo" src={Teams[guess.Team].Logo} alt={guess.Name}></img></span></td>
-											<td>{guess.Position}</td>
-										</tr>
+								{this.state.guesses.map((guess,i)=>{
+									return (this.makeTableViews(guess,i))
 								})}
 							</tbody>
 						</Table>
@@ -63,5 +87,5 @@ class ResultsTable extends Component {
         );
     }
 }
- 
+
 export default ResultsTable;

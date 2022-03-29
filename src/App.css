@@ -37,7 +37,7 @@ p {
 	cursor: pointer;
 	outline: none;
 }
-  
+
 .headerBtn:hover {
 	color: #D50A0A;
 }
@@ -146,4 +146,18 @@ td {
 
 .shareBtn:hover {
 	box-shadow: 2px 2px 2px grey ;
+}
+
+.correctField {
+	color: green;
+	/* border: 10px solid green; */
+	background-color: green;
+	font-weight: 800;
+}
+
+.closeField {
+	color: orange;
+	/* border: 10px solid green; */
+	background-color: orange;
+	font-weight: 800;
 }
