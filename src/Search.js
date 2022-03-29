@@ -9,19 +9,23 @@ class Search extends Component {
         super(props);
         this.state = {
 			resetSearch: false,
-			guesses: 1
+			totalGuesses: 1
 		}
     }
 
-    componentDidMount() {
-    }
+	componentDidMount() {
+		var savedData = JSON.parse(localStorage.getItem("daily"));
+		this.setState({
+			totalGuesses: savedData.totalGuesses + 1
+		});
+	}
 	
 	handleOnSelect = (player) => {
 		this.setState(prevState => ({
-			guesses: prevState.guesses + 1,		// increment guess counter
+			totalGuesses: prevState.totalGuesses + 1,		// increment guess counter
 			resetSearch: !prevState.resetSearch 	// changing this variable triggers the ReactSearchAutocomplete to reset itself
 		 }));
-		eventBus.dispatch("playerSelected", { guess: player, totalGuesses: this.state.guesses });
+		eventBus.dispatch("playerSelected", { guess: player });
 	};
 
 	formatResult = (item) => {
@@ -48,8 +52,8 @@ class Search extends Component {
 					<h2>NFL Player Guessing Game</h2>
 				</Row>
 				<Row>
-					<Col sm={{span: 4, offset: 4}}>
-						<div style={this.props.disabled ? {pointerEvents: "none"} : {}}>
+					<Col sm={{span: 6, offset: 3}}>
+						<div style={this.props.disabled ? {pointerEvents: "none"} : {pointerEvents: "auto"}}>
 							<ReactSearchAutocomplete
 								key={this.state.resetSearch}
 								items={players}
@@ -57,10 +61,10 @@ class Search extends Component {
 								maxResults={3}
 								onSelect={this.handleOnSelect}
 								showIcon={false}
-								placeholder={this.props.disabled ? "Game Over" : "Guess " + this.state.guesses + " of 6"}
+								placeholder={this.props.disabled ? "Game Over" : "Guess " + this.state.totalGuesses + " of 6"}
 								formatResult={this.formatResult}
 								styling={this.props.disabled
-									? {backgroundColor: "#F0F2EF", border: "1px solid #D50A0A", boxShadow: "none"} 
+									? {backgroundColor: "#F0F2EF", border: "1px solid #999", boxShadow: "none"} 
 									: {}
 								}
 							/>

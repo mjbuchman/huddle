@@ -12,6 +12,11 @@ class ResultsTable extends Component {
     }
 
     componentDidMount() {
+		var savedData = JSON.parse(localStorage.getItem("daily"));
+		this.setState({
+			guesses: savedData.guesses
+		});
+
 		eventBus.on("playerSelected", (data) =>
 			this.setState({ guesses: [...this.state.guesses, data.guess] }) //append new guess to guesses
 		);
@@ -25,15 +30,11 @@ class ResultsTable extends Component {
 		return this.state.guesses ? true : false;
 	}
 
-	renderTable() {
-		
-	}
-
     render() {
         return (
             <Container fluid>
 				<Row>
-					<Col sm={{span: 6, offset: 3}}>
+					<Col sm={{span: 10, offset: 1}}>
 						<Table responsive>
 							<thead>
 								<tr>
