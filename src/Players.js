@@ -1,35 +1,5 @@
 const players = [
 	{
-	   "team":"IND",
-	   "Position":"QB",
-	   "PositionCategory":"OFF",
-	   "Name":"Matt Ryan",
-	   "Age":36,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/732.png",
-	   "CollegeDraftTeam":"ATL",
-	   "CollegeDraftYear":2008
-	},
-	{
-	   "Team":"GB",
-	   "Position":"QB",
-	   "PositionCategory":"OFF",
-	   "Name":"Aaron Rodgers",
-	   "Age":38,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/2593.png",
-	   "CollegeDraftTeam":"GB",
-	   "CollegeDraftYear":2005
-	},
-	{
-	   "Team":"TB",
-	   "Position":"QB",
-	   "PositionCategory":"OFF",
-	   "Name":"Tom Brady",
-	   "Age":44,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/4314.png",
-	   "CollegeDraftTeam":"NE",
-	   "CollegeDraftYear":2000
-	},
-	{
 	   "Team":"DEN",
 	   "Position":"QB",
 	   "PositionCategory":"OFF",
@@ -41,7 +11,7 @@ const players = [
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Eric Weddle",
 	   "Age":37,
@@ -51,7 +21,7 @@ const players = [
 	},
 	{
 	   "Team":"SF",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Alex Mack",
 	   "Age":36,
@@ -60,18 +30,8 @@ const players = [
 	   "CollegeDraftYear":2009
 	},
 	{
-	   "Team":"LAR",
-	   "Position":"QB",
-	   "PositionCategory":"OFF",
-	   "Name":"Matthew Stafford",
-	   "Age":34,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/9038.png",
-	   "CollegeDraftTeam":"DET",
-	   "CollegeDraftYear":2009
-	},
-	{
 	   "Team":"NO",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Malcolm Jenkins",
 	   "Age":34,
@@ -81,7 +41,7 @@ const players = [
 	},
 	{
 	   "Team":"NE",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Devin McCourty",
 	   "Age":34,
@@ -101,7 +61,7 @@ const players = [
 	},
 	{
 	   "Team":"PIT",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Tyson Alualu",
 	   "Age":34,
@@ -111,17 +71,17 @@ const players = [
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Brandon Graham",
-	   "Age":33,
+	   "Age":34,
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/11315.png",
 	   "CollegeDraftTeam":"PHI",
 	   "CollegeDraftYear":2010
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Rodger Saffold III",
 	   "Age":33,
@@ -131,7 +91,7 @@ const players = [
 	},
 	{
 	   "Team":"SF",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Trent Williams",
 	   "Age":33,
@@ -141,7 +101,7 @@ const players = [
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Al Woods",
 	   "Age":35,
@@ -151,22 +111,12 @@ const players = [
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Jason Kelce",
 	   "Age":34,
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/12707.png",
 	   "CollegeDraftTeam":"PHI",
-	   "CollegeDraftYear":2011
-	},
-	{
-	   "Team":"NYG",
-	   "Position":"QB",
-	   "PositionCategory":"OFF",
-	   "Name":"Tyrod Taylor",
-	   "Age":32,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/12831.png",
-	   "CollegeDraftTeam":"BAL",
 	   "CollegeDraftYear":2011
 	},
 	{
@@ -181,7 +131,7 @@ const players = [
 	},
 	{
 	   "Team":"PIT",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Cameron Heyward",
 	   "Age":32,
@@ -191,7 +141,7 @@ const players = [
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"J.J. Watt",
 	   "Age":33,
@@ -201,7 +151,7 @@ const players = [
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Von Miller",
 	   "Age":33,
@@ -211,7 +161,7 @@ const players = [
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Rodney Hudson",
 	   "Age":32,
@@ -221,7 +171,7 @@ const players = [
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Tyron Smith",
 	   "Age":31,
@@ -231,7 +181,7 @@ const players = [
 	},
 	{
 	   "Team":"NO",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Cameron Jordan",
 	   "Age":32,
@@ -241,7 +191,7 @@ const players = [
 	},
 	{
 	   "Team":"CHI",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Robert Quinn",
 	   "Age":31,
@@ -251,7 +201,7 @@ const players = [
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Fletcher Cox",
 	   "Age":31,
@@ -261,7 +211,7 @@ const players = [
 	},
 	{
 	   "Team":"LV",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Chandler Jones",
 	   "Age":32,
@@ -271,7 +221,7 @@ const players = [
 	},
 	{
 	   "Team":"SF",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Tavon Wilson",
 	   "Age":32,
@@ -280,18 +230,8 @@ const players = [
 	   "CollegeDraftYear":2012
 	},
 	{
-	   "Team":"TEN",
-	   "Position":"QB",
-	   "PositionCategory":"OFF",
-	   "Name":"Ryan Tannehill",
-	   "Age":33,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/13799.png",
-	   "CollegeDraftTeam":"MIA",
-	   "CollegeDraftYear":2012
-	},
-	{
 	   "Team":"NO",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Demario Davis",
 	   "Age":33,
@@ -301,7 +241,7 @@ const players = [
 	},
 	{
 	   "Team":"BAL",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Kevin Zeitler",
 	   "Age":32,
@@ -311,7 +251,7 @@ const players = [
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Kelvin Beachum",
 	   "Age":32,
@@ -321,7 +261,7 @@ const players = [
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Ben Jones",
 	   "Age":32,
@@ -331,7 +271,7 @@ const players = [
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Julian Stanford",
 	   "Age":31,
@@ -341,7 +281,7 @@ const players = [
 	},
 	{
 	   "Team":"BAL",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Derek Wolfe",
 	   "Age":32,
@@ -351,7 +291,7 @@ const players = [
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Jack Crawford",
 	   "Age":33,
@@ -360,18 +300,8 @@ const players = [
 	   "CollegeDraftYear":2012
 	},
 	{
-	   "Team":"MIN",
-	   "Position":"QB",
-	   "PositionCategory":"OFF",
-	   "Name":"Kirk Cousins",
-	   "Age":33,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/14252.png",
-	   "CollegeDraftTeam":"WAS",
-	   "CollegeDraftYear":2012
-	},
-	{
 	   "Team":"CIN",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Mike Daniels",
 	   "Age":32,
@@ -401,7 +331,7 @@ const players = [
 	},
 	{
 	   "Team":"TB",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Lavonte David",
 	   "Age":32,
@@ -421,7 +351,7 @@ const players = [
 	},
 	{
 	   "Team":"MIN",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Harrison Smith",
 	   "Age":33,
@@ -440,18 +370,8 @@ const players = [
 	   "CollegeDraftYear":2012
 	},
 	{
-	   "Team":"DEN",
-	   "Position":"QB",
-	   "PositionCategory":"OFF",
-	   "Name":"Russell Wilson",
-	   "Age":33,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/14536.png",
-	   "CollegeDraftTeam":"SEA",
-	   "CollegeDraftYear":2012
-	},
-	{
 	   "Team":"CHI",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Bruce Irvin",
 	   "Age":34,
@@ -471,7 +391,7 @@ const players = [
 	},
 	{
 	   "Team":"NE",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Lawrence Guy",
 	   "Age":32,
@@ -481,7 +401,7 @@ const players = [
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Tom Compton",
 	   "Age":32,
@@ -490,18 +410,8 @@ const players = [
 	   "CollegeDraftYear":2012
 	},
 	{
-	   "Team":"ARI",
-	   "Position":"TE",
-	   "PositionCategory":"OFF",
-	   "Name":"Zach Ertz",
-	   "Age":31,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/14856.png",
-	   "CollegeDraftTeam":"PHI",
-	   "CollegeDraftYear":2013
-	},
-	{
 	   "Team":"PHI",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Lane Johnson",
 	   "Age":31,
@@ -511,7 +421,7 @@ const players = [
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Jordan Poyer",
 	   "Age":30,
@@ -520,18 +430,8 @@ const players = [
 	   "CollegeDraftYear":2013
 	},
 	{
-	   "Team":"TEN",
-	   "Position":"WR",
-	   "PositionCategory":"OFF",
-	   "Name":"Robert Woods",
-	   "Age":29,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/14871.png",
-	   "CollegeDraftTeam":"BUF",
-	   "CollegeDraftYear":2013
-	},
-	{
 	   "Team":"LV",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Duron Harmon",
 	   "Age":31,
@@ -541,7 +441,7 @@ const players = [
 	},
 	{
 	   "Team":"TB",
-	   "Position":"DB",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Logan Ryan",
 	   "Age":31,
@@ -551,7 +451,7 @@ const players = [
 	},
 	{
 	   "Team":"TB",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Ryan Jensen",
 	   "Age":30,
@@ -561,7 +461,7 @@ const players = [
 	},
 	{
 	   "Team":"PIT",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"John Simon",
 	   "Age":31,
@@ -571,7 +471,7 @@ const players = [
 	},
 	{
 	   "Team":"CLE",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Chris Hubbard",
 	   "Age":30,
@@ -580,18 +480,8 @@ const players = [
 	   "CollegeDraftYear":2013
 	},
 	{
-	   "Team":"ARI",
-	   "Position":"WR",
-	   "PositionCategory":"OFF",
-	   "Name":"DeAndre Hopkins",
-	   "Age":29,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/14986.png",
-	   "CollegeDraftTeam":"HOU",
-	   "CollegeDraftYear":2013
-	},
-	{
 	   "Team":"TEN",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"David Quessenberry",
 	   "Age":31,
@@ -601,7 +491,7 @@ const players = [
 	},
 	{
 	   "Team":"IND",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"D.J. Swearinger",
 	   "Age":30,
@@ -611,22 +501,12 @@ const players = [
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Lerentee McCray",
 	   "Age":31,
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/15029.png",
 	   "CollegeDraftTeam":"DEN",
-	   "CollegeDraftYear":2013
-	},
-	{
-	   "Team":"KC",
-	   "Position":"TE",
-	   "PositionCategory":"OFF",
-	   "Name":"Travis Kelce",
-	   "Age":32,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/15048.png",
-	   "CollegeDraftTeam":"KC",
 	   "CollegeDraftYear":2013
 	},
 	{
@@ -640,18 +520,8 @@ const players = [
 	   "CollegeDraftYear":2013
 	},
 	{
-	   "Team":"LAC",
-	   "Position":"WR",
-	   "PositionCategory":"OFF",
-	   "Name":"Keenan Allen",
-	   "Age":29,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/15076.png",
-	   "CollegeDraftTeam":"LAC",
-	   "CollegeDraftYear":2013
-	},
-	{
 	   "Team":"CAR",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Damontre Moore",
 	   "Age":29,
@@ -661,7 +531,7 @@ const players = [
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Justin Pugh",
 	   "Age":31,
@@ -681,7 +551,7 @@ const players = [
 	},
 	{
 	   "Team":"GB",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"David Bakhtiari",
 	   "Age":30,
@@ -711,7 +581,7 @@ const players = [
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Terron Armstead",
 	   "Age":30,
@@ -721,7 +591,7 @@ const players = [
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Akeem Spence",
 	   "Age":30,
@@ -731,7 +601,7 @@ const players = [
 	},
 	{
 	   "Team":"NE",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Cody Davis",
 	   "Age":32,
@@ -741,7 +611,7 @@ const players = [
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Bradley McDougald",
 	   "Age":31,
@@ -771,7 +641,7 @@ const players = [
 	},
 	{
 	   "Team":"NE",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"LaRoy Reynolds",
 	   "Age":31,
@@ -781,7 +651,7 @@ const players = [
 	},
 	{
 	   "Team":"BAL",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Tony Jefferson II",
 	   "Age":30,
@@ -791,7 +661,7 @@ const players = [
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Michael Thomas",
 	   "Age":32,
@@ -811,7 +681,7 @@ const players = [
 	},
 	{
 	   "Team":"BAL",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Ja'Wuan James",
 	   "Age":29,
@@ -821,7 +691,7 @@ const players = [
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Tyler Larsen",
 	   "Age":30,
@@ -851,7 +721,7 @@ const players = [
 	},
 	{
 	   "Team":"SF",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Jon Halapio",
 	   "Age":30,
@@ -861,7 +731,7 @@ const players = [
 	},
 	{
 	   "Team":"CHI",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Dakota Dozier",
 	   "Age":30,
@@ -871,7 +741,7 @@ const players = [
 	},
 	{
 	   "Team":"SF",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Kerry Hyder Jr.",
 	   "Age":30,
@@ -881,7 +751,7 @@ const players = [
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"DB",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Terrence Brooks",
 	   "Age":30,
@@ -891,7 +761,7 @@ const players = [
 	},
 	{
 	   "Team":"NO",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"James Hurst",
 	   "Age":30,
@@ -901,7 +771,7 @@ const players = [
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"C.J. Mosley",
 	   "Age":29,
@@ -921,7 +791,7 @@ const players = [
 	},
 	{
 	   "Team":"CLE",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Joel Bitonio",
 	   "Age":30,
@@ -931,7 +801,7 @@ const players = [
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Christian Kirksey",
 	   "Age":29,
@@ -951,7 +821,7 @@ const players = [
 	},
 	{
 	   "Team":"PIT",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Stephon Tuitt",
 	   "Age":28,
@@ -961,7 +831,7 @@ const players = [
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"DaQuan Jones",
 	   "Age":30,
@@ -971,7 +841,7 @@ const players = [
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Taylor Lewan",
 	   "Age":30,
@@ -981,7 +851,7 @@ const players = [
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Justin McCray",
 	   "Age":29,
@@ -991,7 +861,7 @@ const players = [
 	},
 	{
 	   "Team":"LAC",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Matt Feiler",
 	   "Age":29,
@@ -1001,7 +871,7 @@ const players = [
 	},
 	{
 	   "Team":"NE",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"James Ferentz",
 	   "Age":32,
@@ -1011,7 +881,7 @@ const players = [
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Xavier Su'a-Filo",
 	   "Age":31,
@@ -1021,7 +891,7 @@ const players = [
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Zach Kerr",
 	   "Age":31,
@@ -1030,28 +900,18 @@ const players = [
 	   "CollegeDraftYear":2014
 	},
 	{
-	   "Team":"JAX",
-	   "Position":"C",
+	   "Team":"TB",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
-	   "Name":"Brandon Linder",
-	   "Age":30,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16259.png",
-	   "CollegeDraftTeam":"JAX",
-	   "CollegeDraftYear":2014
-	},
-	{
-	   "Team":"LAR",
-	   "Position":"WR",
-	   "PositionCategory":"OFF",
-	   "Name":"Allen Robinson II",
-	   "Age":28,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16263.png",
+	   "Name":"Josh Wells",
+	   "Age":31,
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16268.png",
 	   "CollegeDraftTeam":"JAX",
 	   "CollegeDraftYear":2014
 	},
 	{
 	   "Team":"TB",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Shaquil Barrett",
 	   "Age":29,
@@ -1071,11 +931,21 @@ const players = [
 	},
 	{
 	   "Team":"SF",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Dee Ford",
 	   "Age":31,
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16294.png",
+	   "CollegeDraftTeam":"KC",
+	   "CollegeDraftYear":2014
+	},
+	{
+	   "Team":"NO",
+	   "Position":"S",
+	   "PositionCategory":"DEF",
+	   "Name":"Daniel Sorensen",
+	   "Age":32,
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16303.png",
 	   "CollegeDraftTeam":"KC",
 	   "CollegeDraftYear":2014
 	},
@@ -1090,18 +960,8 @@ const players = [
 	   "CollegeDraftYear":2014
 	},
 	{
-	   "Team":"LV",
-	   "Position":"QB",
-	   "PositionCategory":"OFF",
-	   "Name":"Derek Carr",
-	   "Age":31,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16311.png",
-	   "CollegeDraftTeam":"LV",
-	   "CollegeDraftYear":2014
-	},
-	{
 	   "Team":"NYG",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Justin Ellis",
 	   "Age":31,
@@ -1111,7 +971,7 @@ const players = [
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Shelby Harris",
 	   "Age":30,
@@ -1121,7 +981,7 @@ const players = [
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Gabe Jackson",
 	   "Age":30,
@@ -1131,7 +991,7 @@ const players = [
 	},
 	{
 	   "Team":"LAC",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Khalil Mack",
 	   "Age":31,
@@ -1141,7 +1001,7 @@ const players = [
 	},
 	{
 	   "Team":"CHI",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Jeremiah Attaochu",
 	   "Age":29,
@@ -1151,7 +1011,7 @@ const players = [
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"DeMarcus Lawrence",
 	   "Age":29,
@@ -1161,7 +1021,7 @@ const players = [
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Zack Martin",
 	   "Age":31,
@@ -1181,7 +1041,7 @@ const players = [
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Devon Kennard",
 	   "Age":30,
@@ -1191,7 +1051,7 @@ const players = [
 	},
 	{
 	   "Team":"BAL",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Morgan Moses",
 	   "Age":31,
@@ -1201,7 +1061,7 @@ const players = [
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Charles Leno Jr.",
 	   "Age":30,
@@ -1211,7 +1071,7 @@ const players = [
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Cornelius Lucas",
 	   "Age":30,
@@ -1221,7 +1081,7 @@ const players = [
 	},
 	{
 	   "Team":"LAC",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Caraun Reid",
 	   "Age":30,
@@ -1230,18 +1090,8 @@ const players = [
 	   "CollegeDraftYear":2014
 	},
 	{
-	   "Team":"LV",
-	   "Position":"WR",
-	   "PositionCategory":"OFF",
-	   "Name":"Davante Adams",
-	   "Age":29,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16470.png",
-	   "CollegeDraftTeam":"GB",
-	   "CollegeDraftYear":2014
-	},
-	{
 	   "Team":"DEN",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Ha Ha Clinton-Dix",
 	   "Age":29,
@@ -1251,7 +1101,7 @@ const players = [
 	},
 	{
 	   "Team":"LAC",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Corey Linsley",
 	   "Age":30,
@@ -1261,7 +1111,7 @@ const players = [
 	},
 	{
 	   "Team":"CHI",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Joe Thomas",
 	   "Age":30,
@@ -1270,18 +1120,8 @@ const players = [
 	   "CollegeDraftYear":2014
 	},
 	{
-	   "Team":"MIA",
-	   "Position":"QB",
-	   "PositionCategory":"OFF",
-	   "Name":"Teddy Bridgewater",
-	   "Age":29,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16497.png",
-	   "CollegeDraftTeam":"MIN",
-	   "CollegeDraftYear":2014
-	},
-	{
 	   "Team":"ATL",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Jake Matthews",
 	   "Age":30,
@@ -1291,7 +1131,7 @@ const players = [
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Andrew Norwell",
 	   "Age":30,
@@ -1300,28 +1140,8 @@ const players = [
 	   "CollegeDraftYear":2014
 	},
 	{
-	   "Team":"HOU",
-	   "Position":"WR",
-	   "PositionCategory":"OFF",
-	   "Name":"Brandin Cooks",
-	   "Age":28,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16568.png",
-	   "CollegeDraftTeam":"NO",
-	   "CollegeDraftYear":2014
-	},
-	{
-	   "Team":"TB",
-	   "Position":"WR",
-	   "PositionCategory":"OFF",
-	   "Name":"Mike Evans",
-	   "Age":28,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16597.png",
-	   "CollegeDraftTeam":"TB",
-	   "CollegeDraftYear":2014
-	},
-	{
 	   "Team":"LAR",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Aaron Donald",
 	   "Age":30,
@@ -1331,7 +1151,7 @@ const players = [
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Lamarcus Joyner",
 	   "Age":31,
@@ -1341,22 +1161,12 @@ const players = [
 	},
 	{
 	   "Team":"NO",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Ethan Westbrooks",
 	   "Age":31,
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16637.png",
 	   "CollegeDraftTeam":"LAR",
-	   "CollegeDraftYear":2014
-	},
-	{
-	   "Team":"WAS",
-	   "Position":"TE",
-	   "PositionCategory":"OFF",
-	   "Name":"Logan Thomas",
-	   "Age":30,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16656.png",
-	   "CollegeDraftTeam":"ARI",
 	   "CollegeDraftYear":2014
 	},
 	{
@@ -1371,7 +1181,7 @@ const players = [
 	},
 	{
 	   "Team":"SF",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Jimmie Ward",
 	   "Age":30,
@@ -1391,7 +1201,7 @@ const players = [
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Kevin Pierre-Louis",
 	   "Age":30,
@@ -1401,7 +1211,7 @@ const players = [
 	},
 	{
 	   "Team":"NE",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Adrian Phillips",
 	   "Age":30,
@@ -1410,18 +1220,8 @@ const players = [
 	   "CollegeDraftYear":2014
 	},
 	{
-	   "Team":"NO",
-	   "Position":"QB",
-	   "PositionCategory":"OFF",
-	   "Name":"Jameis Winston",
-	   "Age":28,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16762.png",
-	   "CollegeDraftTeam":"TB",
-	   "CollegeDraftYear":2015
-	},
-	{
 	   "Team":"DAL",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Dante Fowler Jr.",
 	   "Age":27,
@@ -1431,7 +1231,7 @@ const players = [
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Brandon Scherff",
 	   "Age":30,
@@ -1441,7 +1241,7 @@ const players = [
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Leonard Williams",
 	   "Age":27,
@@ -1461,7 +1261,7 @@ const players = [
 	},
 	{
 	   "Team":"SF",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Arik Armstead",
 	   "Age":28,
@@ -1481,7 +1281,7 @@ const players = [
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Cameron Erving",
 	   "Age":29,
@@ -1491,7 +1291,7 @@ const players = [
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Cedric Ogbuehi",
 	   "Age":29,
@@ -1501,7 +1301,7 @@ const players = [
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Bud Dupree",
 	   "Age":29,
@@ -1511,7 +1311,7 @@ const players = [
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"D.J. Humphries",
 	   "Age":28,
@@ -1521,7 +1321,7 @@ const players = [
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Shaq Thompson",
 	   "Age":27,
@@ -1541,7 +1341,7 @@ const players = [
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Laken Tomlinson",
 	   "Age":30,
@@ -1551,7 +1351,7 @@ const players = [
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Malcom Brown",
 	   "Age":28,
@@ -1561,7 +1361,7 @@ const players = [
 	},
 	{
 	   "Team":"TB",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Donovan Smith",
 	   "Age":28,
@@ -1571,7 +1371,7 @@ const players = [
 	},
 	{
 	   "Team":"CHI",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Mario Edwards Jr.",
 	   "Age":28,
@@ -1581,7 +1381,7 @@ const players = [
 	},
 	{
 	   "Team":"GB",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Preston Smith",
 	   "Age":29,
@@ -1591,7 +1391,7 @@ const players = [
 	},
 	{
 	   "Team":"MIN",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Eric Kendricks",
 	   "Age":30,
@@ -1601,7 +1401,7 @@ const players = [
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Eric Rowe",
 	   "Age":29,
@@ -1611,7 +1411,7 @@ const players = [
 	},
 	{
 	   "Team":"LV",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Denzel Perryman",
 	   "Age":29,
@@ -1621,7 +1421,7 @@ const players = [
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Mitch Morse",
 	   "Age":29,
@@ -1641,7 +1441,7 @@ const players = [
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Jordan Phillips",
 	   "Age":29,
@@ -1651,7 +1451,7 @@ const players = [
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Rob Havenstein",
 	   "Age":29,
@@ -1661,7 +1461,7 @@ const players = [
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Markus Golden",
 	   "Age":31,
@@ -1671,7 +1471,7 @@ const players = [
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Randy Gregory",
 	   "Age":29,
@@ -1681,7 +1481,7 @@ const players = [
 	},
 	{
 	   "Team":"KC",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Frank Clark",
 	   "Age":28,
@@ -1691,7 +1491,7 @@ const players = [
 	},
 	{
 	   "Team":"BAL",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Jordan Richards",
 	   "Age":29,
@@ -1701,7 +1501,7 @@ const players = [
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"A.J. Cann",
 	   "Age":30,
@@ -1711,7 +1511,7 @@ const players = [
 	},
 	{
 	   "Team":"LV",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Hroniss Grasu",
 	   "Age":30,
@@ -1721,7 +1521,7 @@ const players = [
 	},
 	{
 	   "Team":"MIN",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Jordan Hicks",
 	   "Age":29,
@@ -1731,7 +1531,7 @@ const players = [
 	},
 	{
 	   "Team":"MIN",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Danielle Hunter",
 	   "Age":27,
@@ -1741,7 +1541,7 @@ const players = [
 	},
 	{
 	   "Team":"PIT",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Chaz Green",
 	   "Age":29,
@@ -1751,7 +1551,7 @@ const players = [
 	},
 	{
 	   "Team":"NE",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Henry Anderson",
 	   "Age":30,
@@ -1761,7 +1561,7 @@ const players = [
 	},
 	{
 	   "Team":"CHI",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Angelo Blackson",
 	   "Age":29,
@@ -1771,17 +1571,17 @@ const players = [
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Gabe Wright",
-	   "Age":29,
+	   "Age":30,
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16874.png",
 	   "CollegeDraftTeam":"DET",
 	   "CollegeDraftYear":2015
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Jamil Douglas",
 	   "Age":30,
@@ -1791,7 +1591,7 @@ const players = [
 	},
 	{
 	   "Team":"IND",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Ibraheim Campbell",
 	   "Age":29,
@@ -1801,22 +1601,12 @@ const players = [
 	},
 	{
 	   "Team":"MIN",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Za'Darius Smith",
 	   "Age":29,
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16883.png",
 	   "CollegeDraftTeam":"BAL",
-	   "CollegeDraftYear":2015
-	},
-	{
-	   "Team":"ATL",
-	   "Position":"RB",
-	   "PositionCategory":"OFF",
-	   "Name":"Mike Davis",
-	   "Age":29,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16887.png",
-	   "CollegeDraftTeam":"SF",
 	   "CollegeDraftYear":2015
 	},
 	{
@@ -1831,7 +1621,7 @@ const players = [
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Jon Feliciano",
 	   "Age":30,
@@ -1841,7 +1631,7 @@ const players = [
 	},
 	{
 	   "Team":"TB",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Shaq Mason",
 	   "Age":28,
@@ -1851,7 +1641,17 @@ const players = [
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"G",
+	   "Position":"OL",
+	   "PositionCategory":"OFF",
+	   "Name":"Max Garcia",
+	   "Age":30,
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16894.png",
+	   "CollegeDraftTeam":"DEN",
+	   "CollegeDraftYear":2015
+	},
+	{
+	   "Team":"NYG",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Mark Glowinski",
 	   "Age":29,
@@ -1861,7 +1661,7 @@ const players = [
 	},
 	{
 	   "Team":"GB",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Adrian Amos",
 	   "Age":28,
@@ -1880,18 +1680,8 @@ const players = [
 	   "CollegeDraftYear":2015
 	},
 	{
-	   "Team":"BUF",
-	   "Position":"WR",
-	   "PositionCategory":"OFF",
-	   "Name":"Stefon Diggs",
-	   "Age":28,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16906.png",
-	   "CollegeDraftTeam":"MIN",
-	   "CollegeDraftYear":2015
-	},
-	{
 	   "Team":"ATL",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Tyeler Davison",
 	   "Age":29,
@@ -1900,18 +1690,8 @@ const players = [
 	   "CollegeDraftYear":2015
 	},
 	{
-	   "Team":"NYJ",
-	   "Position":"TE",
-	   "PositionCategory":"OFF",
-	   "Name":"C.J. Uzomah",
-	   "Age":29,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16917.png",
-	   "CollegeDraftTeam":"CIN",
-	   "CollegeDraftYear":2015
-	},
-	{
 	   "Team":"WAS",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"David Mayo",
 	   "Age":28,
@@ -1931,7 +1711,7 @@ const players = [
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Quandre Diggs",
 	   "Age":29,
@@ -1940,18 +1720,8 @@ const players = [
 	   "CollegeDraftYear":2015
 	},
 	{
-	   "Team":"LV",
-	   "Position":"TE",
-	   "PositionCategory":"OFF",
-	   "Name":"Darren Waller",
-	   "Age":29,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16964.png",
-	   "CollegeDraftTeam":"BAL",
-	   "CollegeDraftYear":2015
-	},
-	{
 	   "Team":"LAC",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Christian Covington",
 	   "Age":28,
@@ -1961,7 +1731,7 @@ const players = [
 	},
 	{
 	   "Team":"KC",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Austin Reiter",
 	   "Age":30,
@@ -1971,7 +1741,7 @@ const players = [
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Edmond Robinson",
 	   "Age":30,
@@ -1981,7 +1751,7 @@ const players = [
 	},
 	{
 	   "Team":"SF",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Mark Nzeocha",
 	   "Age":32,
@@ -1991,7 +1761,7 @@ const players = [
 	},
 	{
 	   "Team":"NE",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Trent Brown",
 	   "Age":28,
@@ -2021,7 +1791,7 @@ const players = [
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"La'el Collins",
 	   "Age":28,
@@ -2031,7 +1801,7 @@ const players = [
 	},
 	{
 	   "Team":"ATL",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Grady Jarrett",
 	   "Age":28,
@@ -2041,7 +1811,7 @@ const players = [
 	},
 	{
 	   "Team":"MIN",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"T.Y. McGill",
 	   "Age":29,
@@ -2051,7 +1821,7 @@ const players = [
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Alex Singleton",
 	   "Age":28,
@@ -2060,8 +1830,18 @@ const players = [
 	   "CollegeDraftYear":2015
 	},
 	{
+	   "Team":"HOU",
+	   "Position":"LB",
+	   "PositionCategory":"DEF",
+	   "Name":"Neville Hewitt",
+	   "Age":28,
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17145.png",
+	   "CollegeDraftTeam":"MIA",
+	   "CollegeDraftYear":2015
+	},
+	{
 	   "Team":"PHI",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Anthony Harris",
 	   "Age":30,
@@ -2070,18 +1850,8 @@ const players = [
 	   "CollegeDraftYear":2015
 	},
 	{
-	   "Team":"MIA",
-	   "Position":"RB",
-	   "PositionCategory":"OFF",
-	   "Name":"Raheem Mostert",
-	   "Age":29,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17217.png",
-	   "CollegeDraftTeam":"PHI",
-	   "CollegeDraftYear":2015
-	},
-	{
 	   "Team":"ATL",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"James Vaughters",
 	   "Age":28,
@@ -2091,7 +1861,7 @@ const players = [
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Efe Obada",
 	   "Age":29,
@@ -2121,7 +1891,7 @@ const players = [
 	},
 	{
 	   "Team":"LV",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Justin March-Lillard",
 	   "Age":28,
@@ -2131,7 +1901,7 @@ const players = [
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Josh Watson",
 	   "Age":25,
@@ -2141,7 +1911,7 @@ const players = [
 	},
 	{
 	   "Team":"NE",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"David Andrews",
 	   "Age":29,
@@ -2151,7 +1921,7 @@ const players = [
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Greg Mancz",
 	   "Age":29,
@@ -2161,7 +1931,7 @@ const players = [
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Daniel Munyer",
 	   "Age":30,
@@ -2171,7 +1941,7 @@ const players = [
 	},
 	{
 	   "Team":"TB",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Rakeem Nunez-Roches",
 	   "Age":28,
@@ -2191,7 +1961,7 @@ const players = [
 	},
 	{
 	   "Team":"BAL",
-	   "Position":"DB",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Brandon Stephens",
 	   "Age":24,
@@ -2201,17 +1971,17 @@ const players = [
 	},
 	{
 	   "Team":"ATL",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Erik Harris",
-	   "Age":31,
+	   "Age":32,
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17899.png",
 	   "CollegeDraftTeam":"NO",
 	   "CollegeDraftYear":2016
 	},
 	{
 	   "Team":"LAC",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Joey Bosa",
 	   "Age":26,
@@ -2221,7 +1991,7 @@ const players = [
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Laremy Tunsil",
 	   "Age":27,
@@ -2231,7 +2001,7 @@ const players = [
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"DB",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Jalen Ramsey",
 	   "Age":27,
@@ -2240,18 +2010,8 @@ const players = [
 	   "CollegeDraftYear":2016
 	},
 	{
-	   "Team":"WAS",
-	   "Position":"QB",
-	   "PositionCategory":"OFF",
-	   "Name":"Carson Wentz",
-	   "Age":29,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17920.png",
-	   "CollegeDraftTeam":"PHI",
-	   "CollegeDraftYear":2016
-	},
-	{
 	   "Team":"BAL",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Ronnie Stanley",
 	   "Age":28,
@@ -2260,28 +2020,8 @@ const players = [
 	   "CollegeDraftYear":2016
 	},
 	{
-	   "Team":"DET",
-	   "Position":"QB",
-	   "PositionCategory":"OFF",
-	   "Name":"Jared Goff",
-	   "Age":27,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17922.png",
-	   "CollegeDraftTeam":"LAR",
-	   "CollegeDraftYear":2016
-	},
-	{
-	   "Team":"DAL",
-	   "Position":"RB",
-	   "PositionCategory":"OFF",
-	   "Name":"Ezekiel Elliott",
-	   "Age":26,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17923.png",
-	   "CollegeDraftTeam":"DAL",
-	   "CollegeDraftYear":2016
-	},
-	{
 	   "Team":"PIT",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Myles Jack",
 	   "Age":26,
@@ -2291,7 +2031,7 @@ const players = [
 	},
 	{
 	   "Team":"IND",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"DeForest Buckner",
 	   "Age":28,
@@ -2301,7 +2041,7 @@ const players = [
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Leonard Floyd",
 	   "Age":29,
@@ -2311,7 +2051,7 @@ const players = [
 	},
 	{
 	   "Team":"CLE",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Jack Conklin",
 	   "Age":27,
@@ -2331,7 +2071,7 @@ const players = [
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Shaq Lawson",
 	   "Age":27,
@@ -2341,7 +2081,7 @@ const players = [
 	},
 	{
 	   "Team":"LV",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Vernon Butler",
 	   "Age":27,
@@ -2361,7 +2101,7 @@ const players = [
 	},
 	{
 	   "Team":"DET",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Taylor Decker",
 	   "Age":28,
@@ -2381,7 +2121,7 @@ const players = [
 	},
 	{
 	   "Team":"IND",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Ryan Kelly",
 	   "Age":28,
@@ -2391,10 +2131,10 @@ const players = [
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Sheldon Rankins",
-	   "Age":27,
+	   "Age":28,
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17949.png",
 	   "CollegeDraftTeam":"NO",
 	   "CollegeDraftYear":2016
@@ -2411,7 +2151,7 @@ const players = [
 	},
 	{
 	   "Team":"PIT",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Karl Joseph",
 	   "Age":28,
@@ -2431,7 +2171,7 @@ const players = [
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Noah Spence",
 	   "Age":28,
@@ -2441,7 +2181,7 @@ const players = [
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Emmanuel Ogbah",
 	   "Age":28,
@@ -2450,28 +2190,8 @@ const players = [
 	   "CollegeDraftYear":2016
 	},
 	{
-	   "Team":"TEN",
-	   "Position":"RB",
-	   "PositionCategory":"OFF",
-	   "Name":"Derrick Henry",
-	   "Age":28,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17959.png",
-	   "CollegeDraftTeam":"TEN",
-	   "CollegeDraftYear":2016
-	},
-	{
-	   "Team":"TEN",
-	   "Position":"TE",
-	   "PositionCategory":"OFF",
-	   "Name":"Austin Hooper",
-	   "Age":27,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17963.png",
-	   "CollegeDraftTeam":"ATL",
-	   "CollegeDraftYear":2016
-	},
-	{
 	   "Team":"LV",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Andrew Billings",
 	   "Age":27,
@@ -2491,7 +2211,7 @@ const players = [
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Jihad Ward",
 	   "Age":27,
@@ -2511,7 +2231,7 @@ const players = [
 	},
 	{
 	   "Team":"GB",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Jarran Reed",
 	   "Age":29,
@@ -2521,7 +2241,7 @@ const players = [
 	},
 	{
 	   "Team":"ATL",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Deion Jones",
 	   "Age":27,
@@ -2531,7 +2251,7 @@ const players = [
 	},
 	{
 	   "Team":"CHI",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Cody Whitehair",
 	   "Age":29,
@@ -2541,7 +2261,7 @@ const players = [
 	},
 	{
 	   "Team":"NE",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Sean Davis",
 	   "Age":28,
@@ -2551,7 +2271,7 @@ const players = [
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Vonn Bell",
 	   "Age":27,
@@ -2571,7 +2291,7 @@ const players = [
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Kevin Byard",
 	   "Age":28,
@@ -2591,7 +2311,7 @@ const players = [
 	},
 	{
 	   "Team":"IND",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Will Redmond",
 	   "Age":28,
@@ -2601,7 +2321,7 @@ const players = [
 	},
 	{
 	   "Team":"IND",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Yannick Ngakoue",
 	   "Age":27,
@@ -2631,7 +2351,7 @@ const players = [
 	},
 	{
 	   "Team":"IND",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Shon Coleman",
 	   "Age":30,
@@ -2651,7 +2371,7 @@ const players = [
 	},
 	{
 	   "Team":"KC",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Joe Thuney",
 	   "Age":29,
@@ -2661,7 +2381,7 @@ const players = [
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Isaac Seumalo",
 	   "Age":28,
@@ -2671,7 +2391,7 @@ const players = [
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Le'Raven Clark",
 	   "Age":28,
@@ -2681,7 +2401,7 @@ const players = [
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Jordan Jenkins",
 	   "Age":27,
@@ -2701,7 +2421,7 @@ const players = [
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Nick Vigil",
 	   "Age":28,
@@ -2711,7 +2431,7 @@ const players = [
 	},
 	{
 	   "Team":"LV",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Kyler Fackrell",
 	   "Age":30,
@@ -2721,7 +2441,7 @@ const players = [
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Javon Hargrave",
 	   "Age":29,
@@ -2731,7 +2451,7 @@ const players = [
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Graham Glasgow",
 	   "Age":29,
@@ -2741,7 +2461,7 @@ const players = [
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Justin Simmons",
 	   "Age":28,
@@ -2761,22 +2481,12 @@ const players = [
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Eric Murray",
 	   "Age":28,
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18029.png",
 	   "CollegeDraftTeam":"KC",
-	   "CollegeDraftYear":2016
-	},
-	{
-	   "Team":"LAR",
-	   "Position":"TE",
-	   "PositionCategory":"OFF",
-	   "Name":"Tyler Higbee",
-	   "Age":29,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18032.png",
-	   "CollegeDraftTeam":"LAR",
 	   "CollegeDraftYear":2016
 	},
 	{
@@ -2791,7 +2501,7 @@ const players = [
 	},
 	{
 	   "Team":"GB",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"De'Vondre Campbell",
 	   "Age":28,
@@ -2801,7 +2511,7 @@ const players = [
 	},
 	{
 	   "Team":"SF",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Hassan Ridgeway",
 	   "Age":27,
@@ -2811,7 +2521,7 @@ const players = [
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Juston Burris",
 	   "Age":28,
@@ -2831,7 +2541,7 @@ const players = [
 	},
 	{
 	   "Team":"ATL",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Willie Beavers",
 	   "Age":28,
@@ -2841,7 +2551,7 @@ const players = [
 	},
 	{
 	   "Team":"NO",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Jerald Hawkins",
 	   "Age":28,
@@ -2851,7 +2561,7 @@ const players = [
 	},
 	{
 	   "Team":"KC",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Deon Bush",
 	   "Age":28,
@@ -2861,7 +2571,7 @@ const players = [
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Blake Martinez",
 	   "Age":28,
@@ -2870,18 +2580,8 @@ const players = [
 	   "CollegeDraftYear":2016
 	},
 	{
-	   "Team":"DAL",
-	   "Position":"QB",
-	   "PositionCategory":"OFF",
-	   "Name":"Dak Prescott",
-	   "Age":28,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18055.png",
-	   "CollegeDraftTeam":"DAL",
-	   "CollegeDraftYear":2016
-	},
-	{
 	   "Team":"GB",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Dean Lowry",
 	   "Age":27,
@@ -2891,7 +2591,7 @@ const players = [
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Ronald Blair",
 	   "Age":29,
@@ -2901,7 +2601,7 @@ const players = [
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Connor McGovern",
 	   "Age":28,
@@ -2911,7 +2611,7 @@ const players = [
 	},
 	{
 	   "Team":"NE",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Matthew Judon",
 	   "Age":29,
@@ -2921,7 +2621,7 @@ const players = [
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Quinton Jefferson",
 	   "Age":29,
@@ -2931,7 +2631,7 @@ const players = [
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Matt Ioannidis",
 	   "Age":28,
@@ -2951,7 +2651,7 @@ const players = [
 	},
 	{
 	   "Team":"PIT",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Joe Haeg",
 	   "Age":29,
@@ -2971,22 +2671,12 @@ const players = [
 	},
 	{
 	   "Team":"DET",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Halapoulivaati Vaitai",
 	   "Age":28,
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18081.png",
 	   "CollegeDraftTeam":"PHI",
-	   "CollegeDraftYear":2016
-	},
-	{
-	   "Team":"MIA",
-	   "Position":"WR",
-	   "PositionCategory":"OFF",
-	   "Name":"Tyreek Hill",
-	   "Age":28,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18082.png",
-	   "CollegeDraftTeam":"KC",
 	   "CollegeDraftYear":2016
 	},
 	{
@@ -3001,7 +2691,7 @@ const players = [
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Devante Bond",
 	   "Age":28,
@@ -3031,7 +2721,7 @@ const players = [
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Wes Schweitzer",
 	   "Age":28,
@@ -3041,7 +2731,7 @@ const players = [
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Blake Countess",
 	   "Age":28,
@@ -3061,7 +2751,7 @@ const players = [
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Kamu Grugier-Hill",
 	   "Age":27,
@@ -3081,7 +2771,7 @@ const players = [
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Will Parks",
 	   "Age":27,
@@ -3101,7 +2791,7 @@ const players = [
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Ted Karras",
 	   "Age":29,
@@ -3111,7 +2801,7 @@ const players = [
 	},
 	{
 	   "Team":"KC",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Jonathan Woodard",
 	   "Age":28,
@@ -3131,7 +2821,7 @@ const players = [
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Jayron Kearse",
 	   "Age":28,
@@ -3141,7 +2831,7 @@ const players = [
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Clayton Fejedelem",
 	   "Age":28,
@@ -3151,7 +2841,7 @@ const players = [
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Tyler Matakevich",
 	   "Age":29,
@@ -3161,7 +2851,7 @@ const players = [
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Austin Blythe",
 	   "Age":29,
@@ -3171,7 +2861,7 @@ const players = [
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Joe Walker",
 	   "Age":29,
@@ -3191,7 +2881,7 @@ const players = [
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Justin Zimmer",
 	   "Age":29,
@@ -3211,7 +2901,7 @@ const players = [
 	},
 	{
 	   "Team":"DET",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Romeo Okwara",
 	   "Age":26,
@@ -3221,7 +2911,7 @@ const players = [
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Marcus Henry",
 	   "Age":29,
@@ -3231,7 +2921,7 @@ const players = [
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Roy Robertson-Harris",
 	   "Age":28,
@@ -3241,10 +2931,10 @@ const players = [
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Spencer Pulley",
-	   "Age":28,
+	   "Age":29,
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18312.png",
 	   "CollegeDraftTeam":"LAC",
 	   "CollegeDraftYear":2016
@@ -3261,7 +2951,7 @@ const players = [
 	},
 	{
 	   "Team":"SF",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Jarrod Wilson",
 	   "Age":28,
@@ -3311,7 +3001,7 @@ const players = [
 	},
 	{
 	   "Team":"BAL",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Adam Redmond",
 	   "Age":28,
@@ -3321,7 +3011,7 @@ const players = [
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Justin Murray",
 	   "Age":28,
@@ -3341,7 +3031,7 @@ const players = [
 	},
 	{
 	   "Team":"MIN",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Eddie Yarbrough",
 	   "Age":28,
@@ -3351,7 +3041,7 @@ const players = [
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Sharrod Neasman",
 	   "Age":30,
@@ -3391,7 +3081,7 @@ const players = [
 	},
 	{
 	   "Team":"NE",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Alex Redmond",
 	   "Age":27,
@@ -3401,7 +3091,7 @@ const players = [
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Brennan Scarlett",
 	   "Age":28,
@@ -3411,7 +3101,7 @@ const players = [
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Cory Littleton",
 	   "Age":28,
@@ -3441,7 +3131,7 @@ const players = [
 	},
 	{
 	   "Team":"TB",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Andrew Adams",
 	   "Age":29,
@@ -3451,7 +3141,7 @@ const players = [
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Brandin Bryant",
 	   "Age":28,
@@ -3461,7 +3151,7 @@ const players = [
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"George Fant",
 	   "Age":29,
@@ -3481,7 +3171,7 @@ const players = [
 	},
 	{
 	   "Team":"CHI",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Lucas Patrick",
 	   "Age":28,
@@ -3491,7 +3181,7 @@ const players = [
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Isaiah Williams",
 	   "Age":28,
@@ -3501,7 +3191,7 @@ const players = [
 	},
 	{
 	   "Team":"CLE",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Myles Garrett",
 	   "Age":26,
@@ -3510,28 +3200,8 @@ const players = [
 	   "CollegeDraftYear":2017
 	},
 	{
-	   "Team":"CIN",
-	   "Position":"RB",
-	   "PositionCategory":"OFF",
-	   "Name":"Joe Mixon",
-	   "Age":25,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18858.png",
-	   "CollegeDraftTeam":"CIN",
-	   "CollegeDraftYear":2017
-	},
-	{
-	   "Team":"MIN",
-	   "Position":"RB",
-	   "PositionCategory":"OFF",
-	   "Name":"Dalvin Cook",
-	   "Age":26,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18872.png",
-	   "CollegeDraftTeam":"MIN",
-	   "CollegeDraftYear":2017
-	},
-	{
 	   "Team":"WAS",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Jonathan Allen",
 	   "Age":27,
@@ -3540,48 +3210,8 @@ const players = [
 	   "CollegeDraftYear":2017
 	},
 	{
-	   "Team":"CAR",
-	   "Position":"RB",
-	   "PositionCategory":"OFF",
-	   "Name":"Christian McCaffrey",
-	   "Age":25,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18877.png",
-	   "CollegeDraftTeam":"CAR",
-	   "CollegeDraftYear":2017
-	},
-	{
-	   "Team":"NO",
-	   "Position":"RB",
-	   "PositionCategory":"OFF",
-	   "Name":"Alvin Kamara",
-	   "Age":26,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18878.png",
-	   "CollegeDraftTeam":"NO",
-	   "CollegeDraftYear":2017
-	},
-	{
-	   "Team":"NYJ",
-	   "Position":"WR",
-	   "PositionCategory":"OFF",
-	   "Name":"Corey Davis",
-	   "Age":27,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18879.png",
-	   "CollegeDraftTeam":"TEN",
-	   "CollegeDraftYear":2017
-	},
-	{
-	   "Team":"KC",
-	   "Position":"QB",
-	   "PositionCategory":"OFF",
-	   "Name":"Patrick Mahomes",
-	   "Age":26,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18890.png",
-	   "CollegeDraftTeam":"KC",
-	   "CollegeDraftYear":2017
-	},
-	{
 	   "Team":"DEN",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Garett Bolles",
 	   "Age":29,
@@ -3590,13 +3220,13 @@ const players = [
 	   "CollegeDraftYear":2017
 	},
 	{
-	   "Team":"IND",
-	   "Position":"TE",
-	   "PositionCategory":"OFF",
-	   "Name":"Mo Alie-Cox",
-	   "Age":28,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18900.png",
-	   "CollegeDraftTeam":"IND",
+	   "Team":"NYJ",
+	   "Position":"DL",
+	   "PositionCategory":"DEF",
+	   "Name":"Solomon Thomas",
+	   "Age":26,
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18904.png",
+	   "CollegeDraftTeam":"SF",
 	   "CollegeDraftYear":2017
 	},
 	{
@@ -3611,7 +3241,7 @@ const players = [
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Haason Reddick",
 	   "Age":27,
@@ -3621,7 +3251,7 @@ const players = [
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Cam Robinson",
 	   "Age":26,
@@ -3631,7 +3261,7 @@ const players = [
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Derek Barnett",
 	   "Age":25,
@@ -3640,18 +3270,18 @@ const players = [
 	   "CollegeDraftYear":2017
 	},
 	{
-	   "Team":"JAX",
-	   "Position":"TE",
-	   "PositionCategory":"OFF",
-	   "Name":"Evan Engram",
+	   "Team":"DET",
+	   "Position":"LB",
+	   "PositionCategory":"DEF",
+	   "Name":"Jarrad Davis",
 	   "Age":27,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18912.png",
-	   "CollegeDraftTeam":"NYG",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18913.png",
+	   "CollegeDraftTeam":"DET",
 	   "CollegeDraftYear":2017
 	},
 	{
 	   "Team":"PIT",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"T.J. Watt",
 	   "Age":27,
@@ -3681,17 +3311,17 @@ const players = [
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Malik Hooker",
-	   "Age":25,
+	   "Age":26,
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18920.png",
 	   "CollegeDraftTeam":"IND",
 	   "CollegeDraftYear":2017
 	},
 	{
 	   "Team":"DET",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Charles Harris",
 	   "Age":27,
@@ -3701,7 +3331,7 @@ const players = [
 	},
 	{
 	   "Team":"NO",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Ryan Ramczyk",
 	   "Age":27,
@@ -3711,7 +3341,7 @@ const players = [
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Jamal Adams",
 	   "Age":26,
@@ -3731,7 +3361,7 @@ const players = [
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Budda Baker",
 	   "Age":26,
@@ -3751,7 +3381,7 @@ const players = [
 	},
 	{
 	   "Team":"BAL",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Tyus Bowser",
 	   "Age":26,
@@ -3780,16 +3410,6 @@ const players = [
 	   "CollegeDraftYear":2017
 	},
 	{
-	   "Team":"LAC",
-	   "Position":"TE",
-	   "PositionCategory":"OFF",
-	   "Name":"Gerald Everett",
-	   "Age":27,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18935.png",
-	   "CollegeDraftTeam":"LAR",
-	   "CollegeDraftYear":2017
-	},
-	{
 	   "Team":"NE",
 	   "Position":"LB",
 	   "PositionCategory":"DEF",
@@ -3801,7 +3421,7 @@ const players = [
 	},
 	{
 	   "Team":"BAL",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Marcus Williams",
 	   "Age":25,
@@ -3821,7 +3441,7 @@ const players = [
 	},
 	{
 	   "Team":"NO",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Marcus Maye",
 	   "Age":29,
@@ -3831,7 +3451,7 @@ const players = [
 	},
 	{
 	   "Team":"NO",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Forrest Lamp",
 	   "Age":28,
@@ -3841,7 +3461,7 @@ const players = [
 	},
 	{
 	   "Team":"CLE",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Malik McDowell",
 	   "Age":25,
@@ -3851,7 +3471,7 @@ const players = [
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Duke Riley",
 	   "Age":27,
@@ -3871,7 +3491,7 @@ const players = [
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Dion Dawkins",
 	   "Age":27,
@@ -3881,7 +3501,7 @@ const players = [
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Daeshon Hall",
 	   "Age":26,
@@ -3891,7 +3511,7 @@ const players = [
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Taylor Moton",
 	   "Age":28,
@@ -3901,7 +3521,7 @@ const players = [
 	},
 	{
 	   "Team":"SF",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Jordan Willis",
 	   "Age":26,
@@ -3921,7 +3541,7 @@ const players = [
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Josh Jones",
 	   "Age":27,
@@ -3931,7 +3551,7 @@ const players = [
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Zach Cunningham",
 	   "Age":27,
@@ -3941,7 +3561,7 @@ const players = [
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Tarell Basham",
 	   "Age":28,
@@ -3951,7 +3571,7 @@ const players = [
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Dawuane Smoot",
 	   "Age":27,
@@ -3961,7 +3581,7 @@ const players = [
 	},
 	{
 	   "Team":"NO",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Tanoh Kpassagnon",
 	   "Age":27,
@@ -3971,7 +3591,7 @@ const players = [
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Pat Elflein",
 	   "Age":27,
@@ -3981,7 +3601,7 @@ const players = [
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Derek Rivers",
 	   "Age":27,
@@ -3991,7 +3611,7 @@ const players = [
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Dan Feeney",
 	   "Age":27,
@@ -4020,16 +3640,6 @@ const players = [
 	   "CollegeDraftYear":2017
 	},
 	{
-	   "Team":"NYG",
-	   "Position":"WR",
-	   "PositionCategory":"OFF",
-	   "Name":"Kenny Golladay",
-	   "Age":28,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18977.png",
-	   "CollegeDraftTeam":"DET",
-	   "CollegeDraftYear":2017
-	},
-	{
 	   "Team":"PIT",
 	   "Position":"NT",
 	   "PositionCategory":"DEF",
@@ -4041,7 +3651,7 @@ const players = [
 	},
 	{
 	   "Team":"CLE",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"John Johnson III",
 	   "Age":26,
@@ -4051,7 +3661,7 @@ const players = [
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Trey Hendrickson",
 	   "Age":27,
@@ -4090,18 +3700,8 @@ const players = [
 	   "CollegeDraftYear":2017
 	},
 	{
-	   "Team":"NE",
-	   "Position":"TE",
-	   "PositionCategory":"OFF",
-	   "Name":"Jonnu Smith",
-	   "Age":26,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18990.png",
-	   "CollegeDraftTeam":"TEN",
-	   "CollegeDraftYear":2017
-	},
-	{
 	   "Team":"NYJ",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Carl Lawson",
 	   "Age":26,
@@ -4111,7 +3711,7 @@ const players = [
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Sean Harlow",
 	   "Age":27,
@@ -4121,7 +3721,7 @@ const players = [
 	},
 	{
 	   "Team":"CHI",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Eddie Jackson",
 	   "Age":28,
@@ -4131,7 +3731,7 @@ const players = [
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Jalen Reeves-Maybin",
 	   "Age":27,
@@ -4141,7 +3741,7 @@ const players = [
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Carlos Watkins",
 	   "Age":28,
@@ -4161,7 +3761,7 @@ const players = [
 	},
 	{
 	   "Team":"SF",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Samson Ebukam",
 	   "Age":26,
@@ -4171,7 +3771,7 @@ const players = [
 	},
 	{
 	   "Team":"NE",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Deatrich Wise Jr.",
 	   "Age":27,
@@ -4181,7 +3781,7 @@ const players = [
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Rayshawn Jenkins",
 	   "Age":28,
@@ -4191,7 +3791,7 @@ const players = [
 	},
 	{
 	   "Team":"CLE",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Tedric Thompson",
 	   "Age":27,
@@ -4201,7 +3801,7 @@ const players = [
 	},
 	{
 	   "Team":"DET",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Will Holden",
 	   "Age":28,
@@ -4210,8 +3810,18 @@ const players = [
 	   "CollegeDraftYear":2017
 	},
 	{
+	   "Team":"LV",
+	   "Position":"OL",
+	   "PositionCategory":"OFF",
+	   "Name":"Jermaine Eluemunor",
+	   "Age":27,
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19036.png",
+	   "CollegeDraftTeam":"BAL",
+	   "CollegeDraftYear":2017
+	},
+	{
 	   "Team":"BUF",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Matt Milano",
 	   "Age":27,
@@ -4221,7 +3831,7 @@ const players = [
 	},
 	{
 	   "Team":"KC",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Roderick Johnson",
 	   "Age":26,
@@ -4230,18 +3840,18 @@ const players = [
 	   "CollegeDraftYear":2017
 	},
 	{
-	   "Team":"GB",
-	   "Position":"RB",
-	   "PositionCategory":"OFF",
-	   "Name":"Aaron Jones",
+	   "Team":"MIN",
+	   "Position":"CB",
+	   "PositionCategory":"DEF",
+	   "Name":"Nate Hairston",
 	   "Age":27,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19045.png",
-	   "CollegeDraftTeam":"GB",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19048.png",
+	   "CollegeDraftTeam":"IND",
 	   "CollegeDraftYear":2017
 	},
 	{
 	   "Team":"CLE",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Anthony Walker",
 	   "Age":26,
@@ -4271,7 +3881,7 @@ const players = [
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Danny Isidora",
 	   "Age":27,
@@ -4281,7 +3891,7 @@ const players = [
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Marquel Lee",
 	   "Age":26,
@@ -4301,7 +3911,7 @@ const players = [
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Desmond King II",
 	   "Age":27,
@@ -4310,18 +3920,8 @@ const players = [
 	   "CollegeDraftYear":2017
 	},
 	{
-	   "Team":"SF",
-	   "Position":"TE",
-	   "PositionCategory":"OFF",
-	   "Name":"George Kittle",
-	   "Age":28,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19063.png",
-	   "CollegeDraftTeam":"SF",
-	   "CollegeDraftYear":2017
-	},
-	{
 	   "Team":"LV",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Jayon Brown",
 	   "Age":27,
@@ -4331,7 +3931,7 @@ const players = [
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Rudy Ford",
 	   "Age":27,
@@ -4341,7 +3941,7 @@ const players = [
 	},
 	{
 	   "Team":"BAL",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Chuck Clark",
 	   "Age":26,
@@ -4351,7 +3951,7 @@ const players = [
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Tanner Vallejo",
 	   "Age":27,
@@ -4361,7 +3961,7 @@ const players = [
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Brandon Wilson",
 	   "Age":27,
@@ -4371,7 +3971,7 @@ const players = [
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Xavier Woods",
 	   "Age":26,
@@ -4381,7 +3981,7 @@ const players = [
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Jeremiah Ledbetter",
 	   "Age":27,
@@ -4391,7 +3991,7 @@ const players = [
 	},
 	{
 	   "Team":"TB",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Patrick O'Connor",
 	   "Age":28,
@@ -4401,7 +4001,7 @@ const players = [
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Kyle Fuller",
 	   "Age":28,
@@ -4421,7 +4021,7 @@ const players = [
 	},
 	{
 	   "Team":"KC",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Elijah Lee",
 	   "Age":26,
@@ -4431,7 +4031,7 @@ const players = [
 	},
 	{
 	   "Team":"CLE",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Ifeadi Odenigbo",
 	   "Age":27,
@@ -4441,7 +4041,7 @@ const players = [
 	},
 	{
 	   "Team":"CHI",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Al-Quadin Muhammad",
 	   "Age":27,
@@ -4450,18 +4050,8 @@ const players = [
 	   "CollegeDraftYear":2017
 	},
 	{
-	   "Team":"SEA",
-	   "Position":"RB",
-	   "PositionCategory":"OFF",
-	   "Name":"Chris Carson",
-	   "Age":27,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19119.png",
-	   "CollegeDraftTeam":"SEA",
-	   "CollegeDraftYear":2017
-	},
-	{
 	   "Team":"CLE",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Adrian Colbert",
 	   "Age":28,
@@ -4471,7 +4061,7 @@ const players = [
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Pita Taumoepenu",
 	   "Age":28,
@@ -4481,7 +4071,7 @@ const players = [
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Corey Levin",
 	   "Age":27,
@@ -4491,7 +4081,7 @@ const players = [
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Chase Roullier",
 	   "Age":28,
@@ -4501,7 +4091,7 @@ const players = [
 	},
 	{
 	   "Team":"SF",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Daniel Brunskill",
 	   "Age":28,
@@ -4511,7 +4101,7 @@ const players = [
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Josh Tupou",
 	   "Age":27,
@@ -4521,7 +4111,7 @@ const players = [
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Adam Pankey",
 	   "Age":28,
@@ -4531,7 +4121,7 @@ const players = [
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Cameron Malveaux",
 	   "Age":27,
@@ -4541,7 +4131,7 @@ const players = [
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Eric Smith",
 	   "Age":26,
@@ -4551,7 +4141,7 @@ const players = [
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Aviante Collins",
 	   "Age":28,
@@ -4561,7 +4151,7 @@ const players = [
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Adam Butler",
 	   "Age":27,
@@ -4571,7 +4161,7 @@ const players = [
 	},
 	{
 	   "Team":"NE",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Harvey Langi",
 	   "Age":29,
@@ -4591,7 +4181,7 @@ const players = [
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Austin Calitro",
 	   "Age":28,
@@ -4601,7 +4191,7 @@ const players = [
 	},
 	{
 	   "Team":"CHI",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Nicholas Morrow",
 	   "Age":26,
@@ -4621,7 +4211,7 @@ const players = [
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Cameron Tom",
 	   "Age":26,
@@ -4631,7 +4221,7 @@ const players = [
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Ben Braden",
 	   "Age":28,
@@ -4651,7 +4241,7 @@ const players = [
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Kai Nacua",
 	   "Age":27,
@@ -4671,7 +4261,7 @@ const players = [
 	},
 	{
 	   "Team":"SF",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Alex Barrett",
 	   "Age":28,
@@ -4681,7 +4271,7 @@ const players = [
 	},
 	{
 	   "Team":"LAC",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Storm Norton",
 	   "Age":27,
@@ -4690,18 +4280,8 @@ const players = [
 	   "CollegeDraftYear":2017
 	},
 	{
-	   "Team":"GB",
-	   "Position":"TE",
-	   "PositionCategory":"OFF",
-	   "Name":"Robert Tonyan",
-	   "Age":27,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19491.png",
-	   "CollegeDraftTeam":"DET",
-	   "CollegeDraftYear":2017
-	},
-	{
 	   "Team":"BUF",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Eli Ankou",
 	   "Age":27,
@@ -4711,7 +4291,7 @@ const players = [
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Dylan Cole",
 	   "Age":27,
@@ -4760,18 +4340,8 @@ const players = [
 	   "CollegeDraftYear":2017
 	},
 	{
-	   "Team":"LAC",
-	   "Position":"RB",
-	   "PositionCategory":"OFF",
-	   "Name":"Austin Ekeler",
-	   "Age":26,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19562.png",
-	   "CollegeDraftTeam":"LAC",
-	   "CollegeDraftYear":2017
-	},
-	{
 	   "Team":"TEN",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Jordan Roos",
 	   "Age":28,
@@ -4791,7 +4361,7 @@ const players = [
 	},
 	{
 	   "Team":"KC",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Andrew Wylie",
 	   "Age":27,
@@ -4801,7 +4371,7 @@ const players = [
 	},
 	{
 	   "Team":"DET",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Dan Skipper",
 	   "Age":27,
@@ -4810,18 +4380,8 @@ const players = [
 	   "CollegeDraftYear":2017
 	},
 	{
-	   "Team":"JAX",
-	   "Position":"TE",
-	   "PositionCategory":"OFF",
-	   "Name":"Dan Arnold",
-	   "Age":27,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19659.png",
-	   "CollegeDraftTeam":"NO",
-	   "CollegeDraftYear":2017
-	},
-	{
 	   "Team":"CLE",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Michael Dunn",
 	   "Age":27,
@@ -4831,7 +4391,7 @@ const players = [
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Greg Van Roten",
 	   "Age":32,
@@ -4841,7 +4401,7 @@ const players = [
 	},
 	{
 	   "Team":"PIT",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Christian Kuntz",
 	   "Age":27,
@@ -4851,7 +4411,7 @@ const players = [
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Jon Toth",
 	   "Age":28,
@@ -4860,88 +4420,8 @@ const players = [
 	   "CollegeDraftYear":2017
 	},
 	{
-	   "Team":"NYG",
-	   "Position":"RB",
-	   "PositionCategory":"OFF",
-	   "Name":"Saquon Barkley",
-	   "Age":25,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19766.png",
-	   "CollegeDraftTeam":"NYG",
-	   "CollegeDraftYear":2018
-	},
-	{
-	   "Team":"BAL",
-	   "Position":"QB",
-	   "PositionCategory":"OFF",
-	   "Name":"Lamar Jackson",
-	   "Age":25,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19781.png",
-	   "CollegeDraftTeam":"BAL",
-	   "CollegeDraftYear":2018
-	},
-	{
-	   "Team":"CLE",
-	   "Position":"QB",
-	   "PositionCategory":"OFF",
-	   "Name":"Baker Mayfield",
-	   "Age":26,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19790.png",
-	   "CollegeDraftTeam":"CLE",
-	   "CollegeDraftYear":2018
-	},
-	{
-	   "Team":"CLE",
-	   "Position":"RB",
-	   "PositionCategory":"OFF",
-	   "Name":"Nick Chubb",
-	   "Age":26,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19798.png",
-	   "CollegeDraftTeam":"CLE",
-	   "CollegeDraftYear":2018
-	},
-	{
-	   "Team":"BUF",
-	   "Position":"QB",
-	   "PositionCategory":"OFF",
-	   "Name":"Josh Allen",
-	   "Age":25,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19801.png",
-	   "CollegeDraftTeam":"BUF",
-	   "CollegeDraftYear":2018
-	},
-	{
-	   "Team":"ATL",
-	   "Position":"WR",
-	   "PositionCategory":"OFF",
-	   "Name":"Calvin Ridley",
-	   "Age":27,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19802.png",
-	   "CollegeDraftTeam":"ATL",
-	   "CollegeDraftYear":2018
-	},
-	{
-	   "Team":"BAL",
-	   "Position":"TE",
-	   "PositionCategory":"OFF",
-	   "Name":"Mark Andrews",
-	   "Age":26,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19803.png",
-	   "CollegeDraftTeam":"BAL",
-	   "CollegeDraftYear":2018
-	},
-	{
-	   "Team":"CAR",
-	   "Position":"QB",
-	   "PositionCategory":"OFF",
-	   "Name":"Sam Darnold",
-	   "Age":24,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19812.png",
-	   "CollegeDraftTeam":"NYJ",
-	   "CollegeDraftYear":2018
-	},
-	{
 	   "Team":"KC",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Orlando Brown",
 	   "Age":25,
@@ -4950,18 +4430,8 @@ const players = [
 	   "CollegeDraftYear":2018
 	},
 	{
-	   "Team":"DET",
-	   "Position":"WR",
-	   "PositionCategory":"OFF",
-	   "Name":"DJ Chark Jr.",
-	   "Age":25,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19816.png",
-	   "CollegeDraftTeam":"JAX",
-	   "CollegeDraftYear":2018
-	},
-	{
 	   "Team":"CHI",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Roquan Smith",
 	   "Age":24,
@@ -4971,7 +4441,7 @@ const players = [
 	},
 	{
 	   "Team":"PIT",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Minkah Fitzpatrick",
 	   "Age":25,
@@ -5001,7 +4471,7 @@ const players = [
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Bradley Chubb",
 	   "Age":25,
@@ -5011,7 +4481,7 @@ const players = [
 	},
 	{
 	   "Team":"SF",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Mike McGlinchey",
 	   "Age":27,
@@ -5031,7 +4501,7 @@ const players = [
 	},
 	{
 	   "Team":"NO",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Marcus Davenport",
 	   "Age":25,
@@ -5051,7 +4521,7 @@ const players = [
 	},
 	{
 	   "Team":"LAC",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Derwin James Jr.",
 	   "Age":25,
@@ -5061,7 +4531,7 @@ const players = [
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Leighton Vander Esch",
 	   "Age":26,
@@ -5081,7 +4551,7 @@ const players = [
 	},
 	{
 	   "Team":"LV",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Kolton Miller",
 	   "Age":26,
@@ -5100,18 +4570,8 @@ const players = [
 	   "CollegeDraftYear":2018
 	},
 	{
-	   "Team":"CAR",
-	   "Position":"WR",
-	   "PositionCategory":"OFF",
-	   "Name":"DJ Moore",
-	   "Age":24,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19844.png",
-	   "CollegeDraftTeam":"CAR",
-	   "CollegeDraftYear":2018
-	},
-	{
 	   "Team":"DET",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Frank Ragnow",
 	   "Age":25,
@@ -5121,7 +4581,7 @@ const players = [
 	},
 	{
 	   "Team":"CLE",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Taven Bryan",
 	   "Age":26,
@@ -5141,7 +4601,7 @@ const players = [
 	},
 	{
 	   "Team":"NE",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Isaiah Wynn",
 	   "Age":26,
@@ -5150,18 +4610,8 @@ const players = [
 	   "CollegeDraftYear":2018
 	},
 	{
-	   "Team":"PIT",
-	   "Position":"QB",
-	   "PositionCategory":"OFF",
-	   "Name":"Mason Rudolph",
-	   "Age":26,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19850.png",
-	   "CollegeDraftTeam":"PIT",
-	   "CollegeDraftYear":2018
-	},
-	{
 	   "Team":"CAR",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Austin Corbett",
 	   "Age":26,
@@ -5171,7 +4621,7 @@ const players = [
 	},
 	{
 	   "Team":"IND",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Darius Leonard",
 	   "Age":26,
@@ -5180,18 +4630,8 @@ const players = [
 	   "CollegeDraftYear":2018
 	},
 	{
-	   "Team":"MIA",
-	   "Position":"TE",
-	   "PositionCategory":"OFF",
-	   "Name":"Mike Gesicki",
-	   "Age":26,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19853.png",
-	   "CollegeDraftTeam":"MIA",
-	   "CollegeDraftYear":2018
-	},
-	{
 	   "Team":"PIT",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"James Daniels",
 	   "Age":24,
@@ -5201,7 +4641,7 @@ const players = [
 	},
 	{
 	   "Team":"IND",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Braden Smith",
 	   "Age":26,
@@ -5211,7 +4651,7 @@ const players = [
 	},
 	{
 	   "Team":"IND",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Uchenna Nwosu",
 	   "Age":25,
@@ -5220,18 +4660,18 @@ const players = [
 	   "CollegeDraftYear":2018
 	},
 	{
-	   "Team":"PHI",
-	   "Position":"TE",
+	   "Team":"ARI",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
-	   "Name":"Dallas Goedert",
-	   "Age":27,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19863.png",
-	   "CollegeDraftTeam":"PHI",
+	   "Name":"Will Hernandez",
+	   "Age":26,
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19860.png",
+	   "CollegeDraftTeam":"NYG",
 	   "CollegeDraftYear":2018
 	},
 	{
 	   "Team":"KC",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Justin Reid",
 	   "Age":25,
@@ -5261,7 +4701,7 @@ const players = [
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Sam Hubbard",
 	   "Age":26,
@@ -5271,7 +4711,7 @@ const players = [
 	},
 	{
 	   "Team":"IND",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Malik Jefferson",
 	   "Age":25,
@@ -5281,7 +4721,7 @@ const players = [
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Jessie Bates III",
 	   "Age":25,
@@ -5291,7 +4731,7 @@ const players = [
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Connor Williams",
 	   "Age":24,
@@ -5301,7 +4741,7 @@ const players = [
 	},
 	{
 	   "Team":"DET",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Tracy Walker III",
 	   "Age":27,
@@ -5321,7 +4761,7 @@ const players = [
 	},
 	{
 	   "Team":"KC",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Derrick Nnadi",
 	   "Age":25,
@@ -5331,7 +4771,7 @@ const players = [
 	},
 	{
 	   "Team":"CHI",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Justin Jones",
 	   "Age":25,
@@ -5351,7 +4791,7 @@ const players = [
 	},
 	{
 	   "Team":"MIN",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Brian O'Neill",
 	   "Age":26,
@@ -5361,7 +4801,7 @@ const players = [
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"B.J. Hill",
 	   "Age":26,
@@ -5371,7 +4811,7 @@ const players = [
 	},
 	{
 	   "Team":"ATL",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Lorenzo Carter",
 	   "Age":26,
@@ -5381,7 +4821,7 @@ const players = [
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Nathan Shepherd",
 	   "Age":28,
@@ -5391,7 +4831,7 @@ const players = [
 	},
 	{
 	   "Team":"LV",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Brandon Parker",
 	   "Age":26,
@@ -5401,7 +4841,7 @@ const players = [
 	},
 	{
 	   "Team":"SF",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Fred Warner",
 	   "Age":25,
@@ -5431,7 +4871,7 @@ const players = [
 	},
 	{
 	   "Team":"KC",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Geron Christian Sr.",
 	   "Age":25,
@@ -5441,7 +4881,7 @@ const players = [
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Joe Noteboom",
 	   "Age":26,
@@ -5450,18 +4890,8 @@ const players = [
 	   "CollegeDraftYear":2018
 	},
 	{
-	   "Team":"LV",
-	   "Position":"DE",
-	   "PositionCategory":"DEF",
-	   "Name":"Arden Key",
-	   "Age":25,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19896.png",
-	   "CollegeDraftTeam":"LV",
-	   "CollegeDraftYear":2018
-	},
-	{
 	   "Team":"PIT",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Mason Cole",
 	   "Age":26,
@@ -5471,7 +4901,7 @@ const players = [
 	},
 	{
 	   "Team":"MIN",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Harrison Phillips",
 	   "Age":26,
@@ -5491,7 +4921,7 @@ const players = [
 	},
 	{
 	   "Team":"SF",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Oren Burks",
 	   "Age":27,
@@ -5501,7 +4931,7 @@ const players = [
 	},
 	{
 	   "Team":"CLE",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Ronnie Harrison Jr.",
 	   "Age":24,
@@ -5511,7 +4941,7 @@ const players = [
 	},
 	{
 	   "Team":"PIT",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Chukwuma Okorafor",
 	   "Age":24,
@@ -5521,7 +4951,7 @@ const players = [
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Alex Cappa",
 	   "Age":27,
@@ -5531,22 +4961,12 @@ const players = [
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Josh Sweat",
 	   "Age":25,
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19918.png",
 	   "CollegeDraftTeam":"PHI",
-	   "CollegeDraftYear":2018
-	},
-	{
-	   "Team":"MIA",
-	   "Position":"RB",
-	   "PositionCategory":"OFF",
-	   "Name":"Chase Edmonds",
-	   "Age":25,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19919.png",
-	   "CollegeDraftTeam":"ARI",
 	   "CollegeDraftYear":2018
 	},
 	{
@@ -5571,7 +4991,7 @@ const players = [
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Marquis Haynes Sr.",
 	   "Age":28,
@@ -5591,7 +5011,7 @@ const players = [
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Joel Iyiegbuniwe",
 	   "Age":26,
@@ -5601,7 +5021,7 @@ const players = [
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Dorance Armstrong",
 	   "Age":24,
@@ -5611,7 +5031,7 @@ const players = [
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Josey Jewell",
 	   "Age":27,
@@ -5631,7 +5051,7 @@ const players = [
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Will Richardson Jr.",
 	   "Age":26,
@@ -5640,8 +5060,18 @@ const players = [
 	   "CollegeDraftYear":2018
 	},
 	{
+	   "Team":"PHI",
+	   "Position":"LB",
+	   "PositionCategory":"DEF",
+	   "Name":"Kyzir White",
+	   "Age":26,
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19940.png",
+	   "CollegeDraftTeam":"LAC",
+	   "CollegeDraftYear":2018
+	},
+	{
 	   "Team":"LAR",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Brian Allen",
 	   "Age":26,
@@ -5651,7 +5081,7 @@ const players = [
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"John Franklin-Myers",
 	   "Age":25,
@@ -5671,7 +5101,7 @@ const players = [
 	},
 	{
 	   "Team":"ATL",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Rick Leonard",
 	   "Age":25,
@@ -5681,7 +5111,7 @@ const players = [
 	},
 	{
 	   "Team":"IND",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"R.J. McIntosh",
 	   "Age":25,
@@ -5704,14 +5134,14 @@ const players = [
 	   "Position":"CB",
 	   "PositionCategory":"DEF",
 	   "Name":"Avonte Maddox",
-	   "Age":25,
+	   "Age":26,
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19949.png",
 	   "CollegeDraftTeam":"PHI",
 	   "CollegeDraftYear":2018
 	},
 	{
 	   "Team":"NO",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Kentavius Street",
 	   "Age":25,
@@ -5731,7 +5161,7 @@ const players = [
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Jordan Whitehead",
 	   "Age":25,
@@ -5741,7 +5171,7 @@ const players = [
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Troy Apke",
 	   "Age":26,
@@ -5751,7 +5181,7 @@ const players = [
 	},
 	{
 	   "Team":"CLE",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Wyatt Teller",
 	   "Age":27,
@@ -5760,8 +5190,18 @@ const players = [
 	   "CollegeDraftYear":2018
 	},
 	{
+	   "Team":"KC",
+	   "Position":"LB",
+	   "PositionCategory":"DEF",
+	   "Name":"Jermaine Carter",
+	   "Age":27,
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19964.png",
+	   "CollegeDraftTeam":"CAR",
+	   "CollegeDraftYear":2018
+	},
+	{
 	   "Team":"ARI",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Kylie Fitts",
 	   "Age":27,
@@ -5771,7 +5211,7 @@ const players = [
 	},
 	{
 	   "Team":"LAC",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Andrew Brown",
 	   "Age":26,
@@ -5790,6 +5230,16 @@ const players = [
 	   "CollegeDraftYear":2018
 	},
 	{
+	   "Team":"PIT",
+	   "Position":"LB",
+	   "PositionCategory":"DEF",
+	   "Name":"Genard Avery",
+	   "Age":26,
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19970.png",
+	   "CollegeDraftTeam":"CLE",
+	   "CollegeDraftYear":2018
+	},
+	{
 	   "Team":"HOU",
 	   "Position":"OL",
 	   "PositionCategory":"OFF",
@@ -5801,7 +5251,7 @@ const players = [
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Jamil Demby",
 	   "Age":25,
@@ -5821,7 +5271,7 @@ const players = [
 	},
 	{
 	   "Team":"LV",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Micah Kiser",
 	   "Age":27,
@@ -5831,32 +5281,12 @@ const players = [
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Ogbonnia Okoronkwo",
 	   "Age":26,
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19987.png",
 	   "CollegeDraftTeam":"LAR",
-	   "CollegeDraftYear":2018
-	},
-	{
-	   "Team":"NYJ",
-	   "Position":"TE",
-	   "PositionCategory":"OFF",
-	   "Name":"Tyler Conklin",
-	   "Age":26,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19988.png",
-	   "CollegeDraftTeam":"MIN",
-	   "CollegeDraftYear":2018
-	},
-	{
-	   "Team":"LV",
-	   "Position":"SS",
-	   "PositionCategory":"DEF",
-	   "Name":"Natrell Jamerson",
-	   "Age":26,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19992.png",
-	   "CollegeDraftTeam":"NO",
 	   "CollegeDraftYear":2018
 	},
 	{
@@ -5891,7 +5321,7 @@ const players = [
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Jamarco Jones",
 	   "Age":25,
@@ -5921,7 +5351,7 @@ const players = [
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Foyesade Oluokun",
 	   "Age":26,
@@ -5951,7 +5381,7 @@ const players = [
 	},
 	{
 	   "Team":"GB",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Peter Kalambayi",
 	   "Age":26,
@@ -5961,7 +5391,7 @@ const players = [
 	},
 	{
 	   "Team":"IND",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Zaire Franklin",
 	   "Age":25,
@@ -5971,7 +5401,7 @@ const players = [
 	},
 	{
 	   "Team":"BAL",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Kahlil McKenzie",
 	   "Age":25,
@@ -5981,7 +5411,7 @@ const players = [
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Travin Howard",
 	   "Age":25,
@@ -5991,7 +5421,7 @@ const players = [
 	},
 	{
 	   "Team":"ATL",
-	   "Position":"DB",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Cornell Armstrong",
 	   "Age":26,
@@ -6001,7 +5431,7 @@ const players = [
 	},
 	{
 	   "Team":"ATL",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Colby Gossett",
 	   "Age":26,
@@ -6011,17 +5441,17 @@ const players = [
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Jordan Mailata",
-	   "Age":24,
+	   "Age":25,
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20042.png",
 	   "CollegeDraftTeam":"PHI",
 	   "CollegeDraftYear":2018
 	},
 	{
 	   "Team":"IND",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Matt Pryor",
 	   "Age":27,
@@ -6031,7 +5461,7 @@ const players = [
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Korey Cunningham",
 	   "Age":26,
@@ -6041,7 +5471,7 @@ const players = [
 	},
 	{
 	   "Team":"KC",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Chris Lammons",
 	   "Age":26,
@@ -6051,7 +5481,7 @@ const players = [
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Zach Sieler",
 	   "Age":26,
@@ -6091,7 +5521,7 @@ const players = [
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Justin Lawler",
 	   "Age":27,
@@ -6101,7 +5531,7 @@ const players = [
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"DB",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Keion Crossen",
 	   "Age":25,
@@ -6121,7 +5551,7 @@ const players = [
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Dennis Gardeck",
 	   "Age":27,
@@ -6131,7 +5561,7 @@ const players = [
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Ezekiel Turner",
 	   "Age":25,
@@ -6141,7 +5571,7 @@ const players = [
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Matt Gono",
 	   "Age":25,
@@ -6161,7 +5591,7 @@ const players = [
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Bunmi Rotimi",
 	   "Age":26,
@@ -6181,7 +5611,7 @@ const players = [
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Trayvon Henderson",
 	   "Age":26,
@@ -6191,7 +5621,7 @@ const players = [
 	},
 	{
 	   "Team":"BAL",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Jaryd Jones-Smith",
 	   "Age":26,
@@ -6201,7 +5631,7 @@ const players = [
 	},
 	{
 	   "Team":"PIT",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Tegray Scales",
 	   "Age":25,
@@ -6241,7 +5671,7 @@ const players = [
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Sean Chandler",
 	   "Age":25,
@@ -6250,8 +5680,28 @@ const players = [
 	   "CollegeDraftYear":2018
 	},
 	{
+	   "Team":"MIN",
+	   "Position":"CB",
+	   "PositionCategory":"DEF",
+	   "Name":"Chandon Sullivan",
+	   "Age":25,
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20178.png",
+	   "CollegeDraftTeam":"PHI",
+	   "CollegeDraftYear":2018
+	},
+	{
+	   "Team":"TEN",
+	   "Position":"LB",
+	   "PositionCategory":"DEF",
+	   "Name":"Ola Adeniyi",
+	   "Age":24,
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20180.png",
+	   "CollegeDraftTeam":"PIT",
+	   "CollegeDraftYear":2018
+	},
+	{
 	   "Team":"SEA",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Poona Ford",
 	   "Age":26,
@@ -6261,7 +5711,7 @@ const players = [
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Demone Harris",
 	   "Age":26,
@@ -6311,7 +5761,7 @@ const players = [
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Jonathan Owens",
 	   "Age":26,
@@ -6321,7 +5771,7 @@ const players = [
 	},
 	{
 	   "Team":"PIT",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"J.C. Hassenauer",
 	   "Age":27,
@@ -6331,7 +5781,7 @@ const players = [
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Jacob Tuioti-Mariner",
 	   "Age":25,
@@ -6340,18 +5790,8 @@ const players = [
 	   "CollegeDraftYear":2018
 	},
 	{
-	   "Team":"BAL",
-	   "Position":"RB",
-	   "PositionCategory":"OFF",
-	   "Name":"Gus Edwards",
-	   "Age":26,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20239.png",
-	   "CollegeDraftTeam":"BAL",
-	   "CollegeDraftYear":2018
-	},
-	{
 	   "Team":"DET",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Chris Board",
 	   "Age":26,
@@ -6361,7 +5801,17 @@ const players = [
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"DE",
+	   "Position":"OL",
+	   "PositionCategory":"OFF",
+	   "Name":"Ike Boettger",
+	   "Age":27,
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20252.png",
+	   "CollegeDraftTeam":"BUF",
+	   "CollegeDraftYear":2018
+	},
+	{
+	   "Team":"BUF",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Mike Love",
 	   "Age":28,
@@ -6381,7 +5831,7 @@ const players = [
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Christian DiLauro",
 	   "Age":27,
@@ -6391,7 +5841,7 @@ const players = [
 	},
 	{
 	   "Team":"NE",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Daniel Ekuale",
 	   "Age":28,
@@ -6401,7 +5851,7 @@ const players = [
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Elijah Campbell",
 	   "Age":26,
@@ -6421,7 +5871,7 @@ const players = [
 	},
 	{
 	   "Team":"TB",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Chris Cooper",
 	   "Age":28,
@@ -6431,7 +5881,7 @@ const players = [
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Steven Parker",
 	   "Age":26,
@@ -6441,7 +5891,7 @@ const players = [
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"David Steinmetz",
 	   "Age":27,
@@ -6451,7 +5901,7 @@ const players = [
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Frank Herron",
 	   "Age":27,
@@ -6471,7 +5921,7 @@ const players = [
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Nick Gates",
 	   "Age":26,
@@ -6481,7 +5931,7 @@ const players = [
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"DB",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Grant Haley",
 	   "Age":26,
@@ -6491,7 +5941,7 @@ const players = [
 	},
 	{
 	   "Team":"LV",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Kendal Vickers",
 	   "Age":26,
@@ -6521,7 +5971,7 @@ const players = [
 	},
 	{
 	   "Team":"CLE",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Elijah Nkansah",
 	   "Age":27,
@@ -6531,7 +5981,7 @@ const players = [
 	},
 	{
 	   "Team":"TB",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Aaron Stinnie",
 	   "Age":28,
@@ -6541,7 +5991,7 @@ const players = [
 	},
 	{
 	   "Team":"NO",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Sharif Finch",
 	   "Age":26,
@@ -6551,7 +6001,7 @@ const players = [
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Joshua Kalu",
 	   "Age":26,
@@ -6561,7 +6011,7 @@ const players = [
 	},
 	{
 	   "Team":"MIN",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Timon Parris",
 	   "Age":26,
@@ -6581,7 +6031,7 @@ const players = [
 	},
 	{
 	   "Team":"LAC",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Trey Marshall",
 	   "Age":26,
@@ -6591,7 +6041,7 @@ const players = [
 	},
 	{
 	   "Team":"IND",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Skai Moore",
 	   "Age":27,
@@ -6601,7 +6051,7 @@ const players = [
 	},
 	{
 	   "Team":"TB",
-	   "Position":"DB",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Dee Delaney",
 	   "Age":27,
@@ -6631,7 +6081,7 @@ const players = [
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"KC McDermott",
 	   "Age":25,
@@ -6651,7 +6101,7 @@ const players = [
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Niles Scott",
 	   "Age":26,
@@ -6671,7 +6121,7 @@ const players = [
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Austin Larkin",
 	   "Age":26,
@@ -6681,7 +6131,7 @@ const players = [
 	},
 	{
 	   "Team":"SF",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"George Odum",
 	   "Age":28,
@@ -6691,17 +6141,17 @@ const players = [
 	},
 	{
 	   "Team":"LAC",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Ryan Hunter",
-	   "Age":26,
+	   "Age":27,
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20499.png",
 	   "CollegeDraftTeam":"KC",
 	   "CollegeDraftYear":2018
 	},
 	{
 	   "Team":"BAL",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Jimmy Murray",
 	   "Age":26,
@@ -6711,7 +6161,7 @@ const players = [
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"A.J. Moore Jr.",
 	   "Age":26,
@@ -6721,7 +6171,7 @@ const players = [
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Trent Harris",
 	   "Age":26,
@@ -6731,7 +6181,7 @@ const players = [
 	},
 	{
 	   "Team":"PIT",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Henry Mondeaux",
 	   "Age":26,
@@ -6741,7 +6191,7 @@ const players = [
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Jeremiah Kolone",
 	   "Age":27,
@@ -6751,7 +6201,7 @@ const players = [
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Coleman Shelton",
 	   "Age":26,
@@ -6761,7 +6211,7 @@ const players = [
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Ryan Neal",
 	   "Age":26,
@@ -6771,7 +6221,7 @@ const players = [
 	},
 	{
 	   "Team":"DET",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Bruce Hector",
 	   "Age":27,
@@ -6781,7 +6231,7 @@ const players = [
 	},
 	{
 	   "Team":"DET",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Evan Brown",
 	   "Age":25,
@@ -6791,7 +6241,7 @@ const players = [
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Dakoda Shepley",
 	   "Age":27,
@@ -6801,7 +6251,7 @@ const players = [
 	},
 	{
 	   "Team":"NO",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"J.T. Gray",
 	   "Age":26,
@@ -6851,7 +6301,7 @@ const players = [
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Jeremy Reaves",
 	   "Age":25,
@@ -6861,7 +6311,7 @@ const players = [
 	},
 	{
 	   "Team":"ATL",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Nick Thurman",
 	   "Age":26,
@@ -6871,7 +6321,7 @@ const players = [
 	},
 	{
 	   "Team":"LV",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Dallin Leavitt",
 	   "Age":27,
@@ -6881,7 +6331,7 @@ const players = [
 	},
 	{
 	   "Team":"PIT",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Robert Spillane",
 	   "Age":26,
@@ -6891,7 +6341,7 @@ const players = [
 	},
 	{
 	   "Team":"DET",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Josh Woods",
 	   "Age":25,
@@ -6911,7 +6361,7 @@ const players = [
 	},
 	{
 	   "Team":"SF",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Nick Bosa",
 	   "Age":24,
@@ -6931,7 +6381,7 @@ const players = [
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Sam Eguavoen",
 	   "Age":29,
@@ -6941,7 +6391,7 @@ const players = [
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Deionte Thompson",
 	   "Age":25,
@@ -6951,7 +6401,7 @@ const players = [
 	},
 	{
 	   "Team":"LV",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Johnathan Abram",
 	   "Age":25,
@@ -6961,7 +6411,7 @@ const players = [
 	},
 	{
 	   "Team":"LAC",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Nasir Adderley",
 	   "Age":24,
@@ -6971,7 +6421,7 @@ const players = [
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Dakota Allen",
 	   "Age":26,
@@ -6981,7 +6431,7 @@ const players = [
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Josh Allen",
 	   "Age":24,
@@ -6991,7 +6441,7 @@ const players = [
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Zach Allen",
 	   "Age":24,
@@ -7011,7 +6461,7 @@ const players = [
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Chuma Edoga",
 	   "Age":24,
@@ -7021,7 +6471,7 @@ const players = [
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"David Edwards",
 	   "Age":25,
@@ -7031,7 +6481,7 @@ const players = [
 	},
 	{
 	   "Team":"TB",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Mike Edwards",
 	   "Age":25,
@@ -7041,7 +6491,7 @@ const players = [
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"T.J. Edwards",
 	   "Age":25,
@@ -7051,7 +6501,7 @@ const players = [
 	},
 	{
 	   "Team":"LAC",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Emeke Egbule",
 	   "Age":25,
@@ -7061,22 +6511,12 @@ const players = [
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Bobby Evans",
 	   "Age":25,
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20752.png",
 	   "CollegeDraftTeam":"LAR",
-	   "CollegeDraftYear":2019
-	},
-	{
-	   "Team":"SEA",
-	   "Position":"TE",
-	   "PositionCategory":"OFF",
-	   "Name":"Noah Fant",
-	   "Age":24,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20753.png",
-	   "CollegeDraftTeam":"DEN",
 	   "CollegeDraftYear":2019
 	},
 	{
@@ -7091,7 +6531,7 @@ const players = [
 	},
 	{
 	   "Team":"BAL",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Jaylon Ferguson",
 	   "Age":26,
@@ -7101,7 +6541,7 @@ const players = [
 	},
 	{
 	   "Team":"LV",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Clelin Ferrell",
 	   "Age":24,
@@ -7111,7 +6551,7 @@ const players = [
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Cody Ford",
 	   "Age":25,
@@ -7121,7 +6561,7 @@ const players = [
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Lamont Gaillard",
 	   "Age":26,
@@ -7141,7 +6581,7 @@ const players = [
 	},
 	{
 	   "Team":"NO",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"C.J. Gardner-Johnson",
 	   "Age":24,
@@ -7151,7 +6591,7 @@ const players = [
 	},
 	{
 	   "Team":"GB",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Rashan Gary",
 	   "Age":24,
@@ -7160,18 +6600,8 @@ const players = [
 	   "CollegeDraftYear":2019
 	},
 	{
-	   "Team":"MIA",
-	   "Position":"RB",
-	   "PositionCategory":"OFF",
-	   "Name":"Myles Gaskin",
-	   "Age":25,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20768.png",
-	   "CollegeDraftTeam":"MIA",
-	   "CollegeDraftYear":2019
-	},
-	{
 	   "Team":"PIT",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Ulysees Gilbert III",
 	   "Age":24,
@@ -7181,17 +6611,17 @@ const players = [
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Joe Giles-Harris",
-	   "Age":24,
+	   "Age":25,
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20772.png",
 	   "CollegeDraftTeam":"JAX",
 	   "CollegeDraftYear":2019
 	},
 	{
 	   "Team":"SF",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Kevin Givens",
 	   "Age":25,
@@ -7201,7 +6631,7 @@ const players = [
 	},
 	{
 	   "Team":"NO",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Carl Granderson",
 	   "Age":25,
@@ -7211,7 +6641,7 @@ const players = [
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Derwin Gray",
 	   "Age":26,
@@ -7221,7 +6651,7 @@ const players = [
 	},
 	{
 	   "Team":"SF",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Dre Greenlaw",
 	   "Age":24,
@@ -7231,7 +6661,7 @@ const players = [
 	},
 	{
 	   "Team":"CLE",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Porter Gustin",
 	   "Age":25,
@@ -7241,7 +6671,7 @@ const players = [
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Nate Hall",
 	   "Age":25,
@@ -7261,7 +6691,7 @@ const players = [
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Saquan Hampton",
 	   "Age":26,
@@ -7271,7 +6701,7 @@ const players = [
 	},
 	{
 	   "Team":"NO",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Chase Hansen",
 	   "Age":28,
@@ -7280,18 +6710,8 @@ const players = [
 	   "CollegeDraftYear":2019
 	},
 	{
-	   "Team":"NE",
-	   "Position":"RB",
-	   "PositionCategory":"OFF",
-	   "Name":"Damien Harris",
-	   "Age":25,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20790.png",
-	   "CollegeDraftTeam":"NE",
-	   "CollegeDraftYear":2019
-	},
-	{
 	   "Team":"DET",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Will Harris",
 	   "Age":26,
@@ -7301,7 +6721,7 @@ const players = [
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Phil Haynes",
 	   "Age":26,
@@ -7310,18 +6730,8 @@ const players = [
 	   "CollegeDraftYear":2019
 	},
 	{
-	   "Team":"LAR",
-	   "Position":"RB",
-	   "PositionCategory":"OFF",
-	   "Name":"Darrell Henderson Jr.",
-	   "Age":24,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20798.png",
-	   "CollegeDraftTeam":"LAR",
-	   "CollegeDraftYear":2019
-	},
-	{
 	   "Team":"PHI",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Nate Herbig",
 	   "Age":23,
@@ -7331,7 +6741,7 @@ const players = [
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Trysten Hill",
 	   "Age":24,
@@ -7340,18 +6750,8 @@ const players = [
 	   "CollegeDraftYear":2019
 	},
 	{
-	   "Team":"DET",
-	   "Position":"TE",
-	   "PositionCategory":"OFF",
-	   "Name":"T.J. Hockenson",
-	   "Age":24,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20805.png",
-	   "CollegeDraftTeam":"DET",
-	   "CollegeDraftYear":2019
-	},
-	{
 	   "Team":"LAR",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Justin Hollins",
 	   "Age":26,
@@ -7361,7 +6761,7 @@ const players = [
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Amani Hooker",
 	   "Age":23,
@@ -7371,7 +6771,7 @@ const players = [
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Tytus Howard",
 	   "Age":25,
@@ -7381,7 +6781,7 @@ const players = [
 	},
 	{
 	   "Team":"NO",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Albert Huggins",
 	   "Age":24,
@@ -7391,7 +6791,7 @@ const players = [
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Mitch Hyatt",
 	   "Age":25,
@@ -7401,7 +6801,7 @@ const players = [
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Joe Jackson",
 	   "Age":25,
@@ -7421,17 +6821,7 @@ const players = [
 	},
 	{
 	   "Team":"LV",
-	   "Position":"RB",
-	   "PositionCategory":"OFF",
-	   "Name":"Josh Jacobs",
-	   "Age":24,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20824.png",
-	   "CollegeDraftTeam":"LV",
-	   "CollegeDraftYear":2019
-	},
-	{
-	   "Team":"LV",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Andre James",
 	   "Age":24,
@@ -7441,7 +6831,7 @@ const players = [
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Jalen Jelks",
 	   "Age":25,
@@ -7451,7 +6841,7 @@ const players = [
 	},
 	{
 	   "Team":"GB",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Elgton Jenkins",
 	   "Age":26,
@@ -7460,8 +6850,18 @@ const players = [
 	   "CollegeDraftYear":2019
 	},
 	{
+	   "Team":"TB",
+	   "Position":"OL",
+	   "PositionCategory":"OFF",
+	   "Name":"Fred Johnson",
+	   "Age":24,
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20831.png",
+	   "CollegeDraftTeam":"PIT",
+	   "CollegeDraftYear":2019
+	},
+	{
 	   "Team":"BUF",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Jaquan Johnson",
 	   "Age":26,
@@ -7471,7 +6871,7 @@ const players = [
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Darryl Johnson",
 	   "Age":24,
@@ -7490,18 +6890,8 @@ const players = [
 	   "CollegeDraftYear":2019
 	},
 	{
-	   "Team":"NYG",
-	   "Position":"QB",
-	   "PositionCategory":"OFF",
-	   "Name":"Daniel Jones",
-	   "Age":24,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20841.png",
-	   "CollegeDraftTeam":"NYG",
-	   "CollegeDraftYear":2019
-	},
-	{
 	   "Team":"DEN",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Dre'Mont Jones",
 	   "Age":25,
@@ -7511,7 +6901,7 @@ const players = [
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Michael Jordan",
 	   "Age":24,
@@ -7521,7 +6911,7 @@ const players = [
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Kingsley Keke",
 	   "Age":25,
@@ -7530,18 +6920,8 @@ const players = [
 	   "CollegeDraftYear":2019
 	},
 	{
-	   "Team":"BUF",
-	   "Position":"TE",
-	   "PositionCategory":"OFF",
-	   "Name":"Dawson Knox",
-	   "Age":25,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20850.png",
-	   "CollegeDraftTeam":"BUF",
-	   "CollegeDraftYear":2019
-	},
-	{
 	   "Team":"NYG",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Dexter Lawrence",
 	   "Age":24,
@@ -7561,7 +6941,7 @@ const players = [
 	},
 	{
 	   "Team":"ATL",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Chris Lindstrom",
 	   "Age":25,
@@ -7571,7 +6951,7 @@ const players = [
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Greg Little",
 	   "Age":24,
@@ -7591,7 +6971,7 @@ const players = [
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"David Long Jr.",
 	   "Age":25,
@@ -7601,7 +6981,7 @@ const players = [
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Julian Love",
 	   "Age":24,
@@ -7631,7 +7011,7 @@ const players = [
 	},
 	{
 	   "Team":"ATL",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Kaleb McGary",
 	   "Age":27,
@@ -7641,42 +7021,12 @@ const players = [
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Connor McGovern",
 	   "Age":24,
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20871.png",
 	   "CollegeDraftTeam":"DAL",
-	   "CollegeDraftYear":2019
-	},
-	{
-	   "Team":"WAS",
-	   "Position":"WR",
-	   "PositionCategory":"OFF",
-	   "Name":"Terry McLaurin",
-	   "Age":26,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20873.png",
-	   "CollegeDraftTeam":"WAS",
-	   "CollegeDraftYear":2019
-	},
-	{
-	   "Team":"SEA",
-	   "Position":"WR",
-	   "PositionCategory":"OFF",
-	   "Name":"DK Metcalf",
-	   "Age":24,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20875.png",
-	   "CollegeDraftTeam":"SEA",
-	   "CollegeDraftYear":2019
-	},
-	{
-	   "Team":"NE",
-	   "Position":"WR",
-	   "PositionCategory":"OFF",
-	   "Name":"Jakobi Meyers",
-	   "Age":25,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20876.png",
-	   "CollegeDraftTeam":"NE",
 	   "CollegeDraftYear":2019
 	},
 	{
@@ -7687,16 +7037,6 @@ const players = [
 	   "Age":25,
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20878.png",
 	   "CollegeDraftTeam":"ATL",
-	   "CollegeDraftYear":2019
-	},
-	{
-	   "Team":"CHI",
-	   "Position":"RB",
-	   "PositionCategory":"OFF",
-	   "Name":"David Montgomery",
-	   "Age":24,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20882.png",
-	   "CollegeDraftTeam":"CHI",
 	   "CollegeDraftYear":2019
 	},
 	{
@@ -7730,18 +7070,8 @@ const players = [
 	   "CollegeDraftYear":2019
 	},
 	{
-	   "Team":"ARI",
-	   "Position":"QB",
-	   "PositionCategory":"OFF",
-	   "Name":"Kyler Murray",
-	   "Age":24,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20889.png",
-	   "CollegeDraftTeam":"ARI",
-	   "CollegeDraftYear":2019
-	},
-	{
 	   "Team":"CHI",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Sam Mustipher",
 	   "Age":25,
@@ -7751,7 +7081,7 @@ const players = [
 	},
 	{
 	   "Team":"TB",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Anthony Nelson",
 	   "Age":25,
@@ -7761,7 +7091,7 @@ const players = [
 	},
 	{
 	   "Team":"GB",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Yosh Nijman",
 	   "Age":26,
@@ -7771,7 +7101,7 @@ const players = [
 	},
 	{
 	   "Team":"IND",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Bobby Okereke",
 	   "Age":25,
@@ -7781,7 +7111,7 @@ const players = [
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Ed Oliver",
 	   "Age":24,
@@ -7791,7 +7121,7 @@ const players = [
 	},
 	{
 	   "Team":"SF",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Charles Omenihu",
 	   "Age":24,
@@ -7801,7 +7131,7 @@ const players = [
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Sua Opeta",
 	   "Age":25,
@@ -7821,7 +7151,7 @@ const players = [
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Ross Pierschbacher",
 	   "Age":26,
@@ -7831,7 +7161,7 @@ const players = [
 	},
 	{
 	   "Team":"BAL",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Ben Powers",
 	   "Age":25,
@@ -7841,7 +7171,7 @@ const players = [
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Germaine Pratt",
 	   "Age":25,
@@ -7851,7 +7181,7 @@ const players = [
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Isaiah Prince",
 	   "Age":24,
@@ -7861,7 +7191,7 @@ const players = [
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Taylor Rapp",
 	   "Age":24,
@@ -7871,7 +7201,7 @@ const players = [
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Wyatt Ray",
 	   "Age":25,
@@ -7881,7 +7211,7 @@ const players = [
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Sheldrick Redwine",
 	   "Age":25,
@@ -7891,7 +7221,7 @@ const players = [
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Dalton Risner",
 	   "Age":26,
@@ -7901,22 +7231,12 @@ const players = [
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Dru Samia",
 	   "Age":24,
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20930.png",
 	   "CollegeDraftTeam":"MIN",
-	   "CollegeDraftYear":2019
-	},
-	{
-	   "Team":"PHI",
-	   "Position":"RB",
-	   "PositionCategory":"OFF",
-	   "Name":"Miles Sanders",
-	   "Age":24,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20933.png",
-	   "CollegeDraftTeam":"PHI",
 	   "CollegeDraftYear":2019
 	},
 	{
@@ -7931,7 +7251,7 @@ const players = [
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Max Scharping",
 	   "Age":25,
@@ -7951,7 +7271,7 @@ const players = [
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Jeffery Simmons",
 	   "Age":24,
@@ -7991,7 +7311,7 @@ const players = [
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Montez Sweat",
 	   "Age":25,
@@ -8001,7 +7321,7 @@ const players = [
 	},
 	{
 	   "Team":"NE",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Jahlani Tavai",
 	   "Age":25,
@@ -8011,7 +7331,7 @@ const players = [
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Jawaan Taylor",
 	   "Age":24,
@@ -8031,7 +7351,7 @@ const players = [
 	},
 	{
 	   "Team":"KC",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Juan Thornhill",
 	   "Age":26,
@@ -8041,7 +7361,7 @@ const players = [
 	},
 	{
 	   "Team":"LAC",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Jerry Tillery",
 	   "Age":25,
@@ -8051,7 +7371,7 @@ const players = [
 	},
 	{
 	   "Team":"LAC",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Drue Tranquill",
 	   "Age":26,
@@ -8061,7 +7381,7 @@ const players = [
 	},
 	{
 	   "Team":"MIN",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Olisaemeka Udoh",
 	   "Age":25,
@@ -8071,7 +7391,7 @@ const players = [
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Andrew Van Ginkel",
 	   "Age":26,
@@ -8091,7 +7411,7 @@ const players = [
 	},
 	{
 	   "Team":"TB",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Devin White",
 	   "Age":24,
@@ -8111,7 +7431,7 @@ const players = [
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Christian Wilkins",
 	   "Age":26,
@@ -8141,7 +7461,7 @@ const players = [
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Jonah Williams",
 	   "Age":24,
@@ -8161,7 +7481,7 @@ const players = [
 	},
 	{
 	   "Team":"IND",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Khari Willis",
 	   "Age":25,
@@ -8171,7 +7491,7 @@ const players = [
 	},
 	{
 	   "Team":"NE",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Mack Wilson",
 	   "Age":24,
@@ -8181,7 +7501,7 @@ const players = [
 	},
 	{
 	   "Team":"CLE",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Chase Winovich",
 	   "Age":26,
@@ -8191,7 +7511,7 @@ const players = [
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Renell Wren",
 	   "Age":26,
@@ -8201,7 +7521,7 @@ const players = [
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Oshane Ximines",
 	   "Age":25,
@@ -8221,7 +7541,7 @@ const players = [
 	},
 	{
 	   "Team":"NE",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Yodny Cajuste",
 	   "Age":26,
@@ -8231,7 +7551,7 @@ const players = [
 	},
 	{
 	   "Team":"PIT",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Demarcus Christmas",
 	   "Age":26,
@@ -8241,7 +7561,7 @@ const players = [
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"L.J. Collier",
 	   "Age":26,
@@ -8251,7 +7571,7 @@ const players = [
 	},
 	{
 	   "Team":"ATL",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"John Cominsky",
 	   "Age":26,
@@ -8261,7 +7581,7 @@ const players = [
 	},
 	{
 	   "Team":"MIN",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Ryan Connelly",
 	   "Age":26,
@@ -8271,7 +7591,7 @@ const players = [
 	},
 	{
 	   "Team":"LV",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Lester Cotton Sr.",
 	   "Age":26,
@@ -8281,7 +7601,7 @@ const players = [
 	},
 	{
 	   "Team":"NE",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Byron Cowart",
 	   "Age":25,
@@ -8291,7 +7611,7 @@ const players = [
 	},
 	{
 	   "Team":"LV",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Maxx Crosby",
 	   "Age":24,
@@ -8301,7 +7621,7 @@ const players = [
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Zack Bailey",
 	   "Age":26,
@@ -8331,7 +7651,7 @@ const players = [
 	},
 	{
 	   "Team":"IND",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Ben Banogu",
 	   "Age":26,
@@ -8341,7 +7661,7 @@ const players = [
 	},
 	{
 	   "Team":"LV",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Alex Bars",
 	   "Age":26,
@@ -8351,7 +7671,7 @@ const players = [
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Cody Barton",
 	   "Age":25,
@@ -8361,7 +7681,7 @@ const players = [
 	},
 	{
 	   "Team":"LV",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Jackson Barton",
 	   "Age":26,
@@ -8371,7 +7691,7 @@ const players = [
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Ryan Bates",
 	   "Age":25,
@@ -8381,7 +7701,7 @@ const players = [
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Beau Benzschawel",
 	   "Age":26,
@@ -8391,7 +7711,7 @@ const players = [
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Marquise Blair",
 	   "Age":24,
@@ -8431,7 +7751,7 @@ const players = [
 	},
 	{
 	   "Team":"MIN",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Garrett Bradbury",
 	   "Age":26,
@@ -8441,7 +7761,7 @@ const players = [
 	},
 	{
 	   "Team":"ATL",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Jordan Brailford",
 	   "Age":26,
@@ -8450,38 +7770,8 @@ const players = [
 	   "CollegeDraftYear":2019
 	},
 	{
-	   "Team":"TEN",
-	   "Position":"WR",
-	   "PositionCategory":"OFF",
-	   "Name":"A.J. Brown",
-	   "Age":24,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21042.png",
-	   "CollegeDraftTeam":"TEN",
-	   "CollegeDraftYear":2019
-	},
-	{
-	   "Team":"LV",
-	   "Position":"DB",
-	   "PositionCategory":"DEF",
-	   "Name":"Jordan Brown",
-	   "Age":26,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21044.png",
-	   "CollegeDraftTeam":"CIN",
-	   "CollegeDraftYear":2019
-	},
-	{
-	   "Team":"BAL",
-	   "Position":"WR",
-	   "PositionCategory":"OFF",
-	   "Name":"Marquise Brown",
-	   "Age":24,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21045.png",
-	   "CollegeDraftTeam":"BAL",
-	   "CollegeDraftYear":2019
-	},
-	{
 	   "Team":"DET",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Austin Bryant",
 	   "Age":25,
@@ -8491,7 +7781,7 @@ const players = [
 	},
 	{
 	   "Team":"LV",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Isaiah Buggs",
 	   "Age":25,
@@ -8511,7 +7801,7 @@ const players = [
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Brian Burns",
 	   "Age":23,
@@ -8521,7 +7811,7 @@ const players = [
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Ben Burr-Kirven",
 	   "Age":24,
@@ -8531,7 +7821,7 @@ const players = [
 	},
 	{
 	   "Team":"PIT",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Devin Bush",
 	   "Age":23,
@@ -8541,7 +7831,7 @@ const players = [
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Dennis Daley",
 	   "Age":25,
@@ -8551,7 +7841,7 @@ const players = [
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Nate Davis",
 	   "Age":25,
@@ -8581,7 +7871,7 @@ const players = [
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Andre Dillard",
 	   "Age":26,
@@ -8590,28 +7880,8 @@ const players = [
 	   "CollegeDraftYear":2019
 	},
 	{
-	   "Team":"PIT",
-	   "Position":"WR",
-	   "PositionCategory":"OFF",
-	   "Name":"Diontae Johnson",
-	   "Age":25,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21077.png",
-	   "CollegeDraftTeam":"PIT",
-	   "CollegeDraftYear":2019
-	},
-	{
-	   "Team":"LV",
-	   "Position":"OT",
-	   "PositionCategory":"OFF",
-	   "Name":"William Sweet",
-	   "Age":24,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21079.png",
-	   "CollegeDraftTeam":"ARI",
-	   "CollegeDraftYear":2019
-	},
-	{
 	   "Team":"MIA",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Durval Queiroz Neto",
 	   "Age":29,
@@ -8621,7 +7891,7 @@ const players = [
 	},
 	{
 	   "Team":"GB",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Darnell Savage",
 	   "Age":24,
@@ -8631,7 +7901,7 @@ const players = [
 	},
 	{
 	   "Team":"CLE",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Sione Takitaki",
 	   "Age":26,
@@ -8641,7 +7911,7 @@ const players = [
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Quincy Williams",
 	   "Age":25,
@@ -8651,7 +7921,7 @@ const players = [
 	},
 	{
 	   "Team":"LAC",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Trey Pipkins III",
 	   "Age":25,
@@ -8661,7 +7931,7 @@ const players = [
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Ugo Amadi",
 	   "Age":24,
@@ -8671,7 +7941,7 @@ const players = [
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Wes Martin",
 	   "Age":25,
@@ -8681,7 +7951,7 @@ const players = [
 	},
 	{
 	   "Team":"CLE",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Drew Forbes",
 	   "Age":25,
@@ -8701,7 +7971,7 @@ const players = [
 	},
 	{
 	   "Team":"IND",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"E.J. Speed",
 	   "Age":26,
@@ -8711,7 +7981,7 @@ const players = [
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Blake Cashman",
 	   "Age":25,
@@ -8721,7 +7991,7 @@ const players = [
 	},
 	{
 	   "Team":"SF",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Justin Skule",
 	   "Age":25,
@@ -8731,7 +8001,7 @@ const players = [
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Cole Holcomb",
 	   "Age":25,
@@ -8760,18 +8030,8 @@ const players = [
 	   "CollegeDraftYear":2019
 	},
 	{
-	   "Team":"LV",
-	   "Position":"DL",
-	   "PositionCategory":"DEF",
-	   "Name":"P.J. Johnson",
-	   "Age":25,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21124.png",
-	   "CollegeDraftTeam":"DET",
-	   "CollegeDraftYear":2019
-	},
-	{
 	   "Team":"GB",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Ty Summers",
 	   "Age":26,
@@ -8781,7 +8041,7 @@ const players = [
 	},
 	{
 	   "Team":"CHI",
-	   "Position":"DB",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Xavier Crawford",
 	   "Age":26,
@@ -8791,7 +8051,7 @@ const players = [
 	},
 	{
 	   "Team":"LV",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Gerri Green",
 	   "Age":26,
@@ -8801,7 +8061,7 @@ const players = [
 	},
 	{
 	   "Team":"KC",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Nick Allegretti",
 	   "Age":25,
@@ -8811,7 +8071,7 @@ const players = [
 	},
 	{
 	   "Team":"KC",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Cortez Broughton",
 	   "Age":25,
@@ -8821,7 +8081,7 @@ const players = [
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Nick Scott",
 	   "Age":26,
@@ -8831,7 +8091,7 @@ const players = [
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Marcus Epps",
 	   "Age":26,
@@ -8841,7 +8101,7 @@ const players = [
 	},
 	{
 	   "Team":"NO",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Kaden Elliss",
 	   "Age":26,
@@ -8851,7 +8111,7 @@ const players = [
 	},
 	{
 	   "Team":"ATL",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Quinton Bell",
 	   "Age":25,
@@ -8871,7 +8131,7 @@ const players = [
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Joshua Miles",
 	   "Age":26,
@@ -8881,7 +8141,7 @@ const players = [
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Michael Dogbe",
 	   "Age":25,
@@ -8911,7 +8171,7 @@ const players = [
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Koda Martin",
 	   "Age":26,
@@ -8921,7 +8181,7 @@ const players = [
 	},
 	{
 	   "Team":"NO",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Ethan Greenidge",
 	   "Age":24,
@@ -8931,7 +8191,7 @@ const players = [
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Kyle Phillips",
 	   "Age":24,
@@ -8971,7 +8231,7 @@ const players = [
 	},
 	{
 	   "Team":"LV",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Roderic Teamer",
 	   "Age":24,
@@ -8991,7 +8251,7 @@ const players = [
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Cody Conway",
 	   "Age":25,
@@ -9011,7 +8271,7 @@ const players = [
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Jordan Kunaszyk",
 	   "Age":25,
@@ -9041,7 +8301,7 @@ const players = [
 	},
 	{
 	   "Team":"CLE",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Blake Hance",
 	   "Age":26,
@@ -9051,7 +8311,7 @@ const players = [
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Tyrel Dodson",
 	   "Age":23,
@@ -9061,7 +8321,7 @@ const players = [
 	},
 	{
 	   "Team":"SF",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Keaton Sutherland",
 	   "Age":25,
@@ -9071,7 +8331,7 @@ const players = [
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Tim Ward",
 	   "Age":24,
@@ -9081,7 +8341,7 @@ const players = [
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Calvin Anderson",
 	   "Age":26,
@@ -9091,7 +8351,7 @@ const players = [
 	},
 	{
 	   "Team":"SF",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Wyatt Miller",
 	   "Age":26,
@@ -9120,7 +8380,7 @@ const players = [
 	   "CollegeDraftYear":2019
 	},
 	{
-	   "Team":"LV",
+	   "Team":"GB",
 	   "Position":"CB",
 	   "PositionCategory":"DEF",
 	   "Name":"Keisean Nixon",
@@ -9131,7 +8391,7 @@ const players = [
 	},
 	{
 	   "Team":"PIT",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Malcolm Pridgeon",
 	   "Age":27,
@@ -9151,7 +8411,7 @@ const players = [
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Deion Calhoun",
 	   "Age":26,
@@ -9161,7 +8421,7 @@ const players = [
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Aaron Monteiro",
 	   "Age":25,
@@ -9171,7 +8431,7 @@ const players = [
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Andrew Wingard",
 	   "Age":25,
@@ -9191,7 +8451,7 @@ const players = [
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Marquise Copeland",
 	   "Age":24,
@@ -9201,7 +8461,7 @@ const players = [
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Del'Shawn Phillips",
 	   "Age":25,
@@ -9221,7 +8481,7 @@ const players = [
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Chandler Brewer",
 	   "Age":24,
@@ -9231,7 +8491,7 @@ const players = [
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Troy Reeder",
 	   "Age":27,
@@ -9251,7 +8511,7 @@ const players = [
 	},
 	{
 	   "Team":"CHI",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Noah Dawkins",
 	   "Age":24,
@@ -9261,7 +8521,7 @@ const players = [
 	},
 	{
 	   "Team":"SF",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Demetrius Flannigan-Fowles",
 	   "Age":25,
@@ -9281,7 +8541,7 @@ const players = [
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Derick Roberson",
 	   "Age":26,
@@ -9291,7 +8551,7 @@ const players = [
 	},
 	{
 	   "Team":"PIT",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"John Leglue",
 	   "Age":25,
@@ -9301,7 +8561,7 @@ const players = [
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Malik Reed",
 	   "Age":25,
@@ -9331,7 +8591,7 @@ const players = [
 	},
 	{
 	   "Team":"KC",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Darius Harris",
 	   "Age":26,
@@ -9341,7 +8601,7 @@ const players = [
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Quinn Bailey",
 	   "Age":26,
@@ -9351,7 +8611,7 @@ const players = [
 	},
 	{
 	   "Team":"DET",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Matt Nelson",
 	   "Age":26,
@@ -9371,7 +8631,7 @@ const players = [
 	},
 	{
 	   "Team":"GB",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Randy Ramsey",
 	   "Age":26,
@@ -9401,7 +8661,7 @@ const players = [
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Derrick Kelly II",
 	   "Age":26,
@@ -9411,7 +8671,7 @@ const players = [
 	},
 	{
 	   "Team":"ATL",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Anthony Rush",
 	   "Age":25,
@@ -9421,7 +8681,7 @@ const players = [
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Daniel Wise",
 	   "Age":26,
@@ -9441,7 +8701,7 @@ const players = [
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Luke Gifford",
 	   "Age":26,
@@ -9461,7 +8721,7 @@ const players = [
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Jonathan Harris",
 	   "Age":25,
@@ -9481,7 +8741,7 @@ const players = [
 	},
 	{
 	   "Team":"CHI",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Willie Wright",
 	   "Age":26,
@@ -9491,7 +8751,7 @@ const players = [
 	},
 	{
 	   "Team":"DET",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Curtis Bolton",
 	   "Age":26,
@@ -9501,7 +8761,7 @@ const players = [
 	},
 	{
 	   "Team":"BAL",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Otaro Alaka",
 	   "Age":25,
@@ -9511,7 +8771,7 @@ const players = [
 	},
 	{
 	   "Team":"SF",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Azeez Al-Shaair",
 	   "Age":24,
@@ -9521,7 +8781,7 @@ const players = [
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Bryan Mone",
 	   "Age":26,
@@ -9531,7 +8791,7 @@ const players = [
 	},
 	{
 	   "Team":"NO",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Jalen Dalton",
 	   "Age":24,
@@ -9541,7 +8801,7 @@ const players = [
 	},
 	{
 	   "Team":"CLE",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Willie Harvey Jr.",
 	   "Age":26,
@@ -9591,7 +8851,7 @@ const players = [
 	},
 	{
 	   "Team":"BAL",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Isaiah Mack",
 	   "Age":26,
@@ -9601,7 +8861,7 @@ const players = [
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Kevin Strong",
 	   "Age":25,
@@ -9611,7 +8871,7 @@ const players = [
 	},
 	{
 	   "Team":"DET",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"C.J. Moore",
 	   "Age":26,
@@ -9621,7 +8881,7 @@ const players = [
 	},
 	{
 	   "Team":"DET",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Anthony Pittman",
 	   "Age":25,
@@ -9641,7 +8901,7 @@ const players = [
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Tuzar Skipper",
 	   "Age":26,
@@ -9661,7 +8921,7 @@ const players = [
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Freedom Akinmoladun",
 	   "Age":26,
@@ -9671,7 +8931,7 @@ const players = [
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Jake Gervase",
 	   "Age":26,
@@ -9681,7 +8941,7 @@ const players = [
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Casey Tucker",
 	   "Age":26,
@@ -9691,7 +8951,7 @@ const players = [
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"SS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Jalen Thompson",
 	   "Age":23,
@@ -9711,113 +8971,13 @@ const players = [
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Brett Toth",
 	   "Age":25,
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21661.png",
 	   "CollegeDraftTeam":"PHI",
 	   "CollegeDraftYear":2019
-	},
-	{
-	   "Team":"MIA",
-	   "Position":"QB",
-	   "PositionCategory":"OFF",
-	   "Name":"Tua Tagovailoa",
-	   "Age":24,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21677.png",
-	   "CollegeDraftTeam":"MIA",
-	   "CollegeDraftYear":2020
-	},
-	{
-	   "Team":"DAL",
-	   "Position":"WR",
-	   "PositionCategory":"OFF",
-	   "Name":"CeeDee Lamb",
-	   "Age":22,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21679.png",
-	   "CollegeDraftTeam":"DAL",
-	   "CollegeDraftYear":2020
-	},
-	{
-	   "Team":"LAC",
-	   "Position":"QB",
-	   "PositionCategory":"OFF",
-	   "Name":"Justin Herbert",
-	   "Age":24,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21681.png",
-	   "CollegeDraftTeam":"LAC",
-	   "CollegeDraftYear":2020
-	},
-	{
-	   "Team":"IND",
-	   "Position":"RB",
-	   "PositionCategory":"OFF",
-	   "Name":"Jonathan Taylor",
-	   "Age":23,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21682.png",
-	   "CollegeDraftTeam":"IND",
-	   "CollegeDraftYear":2020
-	},
-	{
-	   "Team":"DET",
-	   "Position":"RB",
-	   "PositionCategory":"OFF",
-	   "Name":"D'Andre Swift",
-	   "Age":23,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21684.png",
-	   "CollegeDraftTeam":"DET",
-	   "CollegeDraftYear":2020
-	},
-	{
-	   "Team":"MIN",
-	   "Position":"WR",
-	   "PositionCategory":"OFF",
-	   "Name":"Justin Jefferson",
-	   "Age":23,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21685.png",
-	   "CollegeDraftTeam":"MIN",
-	   "CollegeDraftYear":2020
-	},
-	{
-	   "Team":"PHI",
-	   "Position":"WR",
-	   "PositionCategory":"OFF",
-	   "Name":"DeVonta Smith",
-	   "Age":23,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21687.png",
-	   "CollegeDraftTeam":"PHI",
-	   "CollegeDraftYear":2021
-	},
-	{
-	   "Team":"CIN",
-	   "Position":"WR",
-	   "PositionCategory":"OFF",
-	   "Name":"Tee Higgins",
-	   "Age":23,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21690.png",
-	   "CollegeDraftTeam":"CIN",
-	   "CollegeDraftYear":2020
-	},
-	{
-	   "Team":"DEN",
-	   "Position":"WR",
-	   "PositionCategory":"OFF",
-	   "Name":"Jerry Jeudy",
-	   "Age":22,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21692.png",
-	   "CollegeDraftTeam":"DEN",
-	   "CollegeDraftYear":2020
-	},
-	{
-	   "Team":"CIN",
-	   "Position":"QB",
-	   "PositionCategory":"OFF",
-	   "Name":"Joe Burrow",
-	   "Age":25,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21693.png",
-	   "CollegeDraftTeam":"CIN",
-	   "CollegeDraftYear":2020
 	},
 	{
 	   "Team":"NO",
@@ -9830,26 +8990,6 @@ const players = [
 	   "CollegeDraftYear":2021
 	},
 	{
-	   "Team":"LV",
-	   "Position":"WR",
-	   "PositionCategory":"OFF",
-	   "Name":"Bryan Edwards",
-	   "Age":23,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21736.png",
-	   "CollegeDraftTeam":"LV",
-	   "CollegeDraftYear":2020
-	},
-	{
-	   "Team":"IND",
-	   "Position":"WR",
-	   "PositionCategory":"OFF",
-	   "Name":"Michael Pittman Jr.",
-	   "Age":24,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21744.png",
-	   "CollegeDraftTeam":"IND",
-	   "CollegeDraftYear":2020
-	},
-	{
 	   "Team":"NYJ",
 	   "Position":"WR",
 	   "PositionCategory":"OFF",
@@ -9860,26 +9000,6 @@ const players = [
 	   "CollegeDraftYear":2021
 	},
 	{
-	   "Team":"SF",
-	   "Position":"WR",
-	   "PositionCategory":"OFF",
-	   "Name":"Brandon Aiyuk",
-	   "Age":24,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21747.png",
-	   "CollegeDraftTeam":"SF",
-	   "CollegeDraftYear":2020
-	},
-	{
-	   "Team":"NO",
-	   "Position":"WR",
-	   "PositionCategory":"OFF",
-	   "Name":"Marquez Callaway",
-	   "Age":24,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21750.png",
-	   "CollegeDraftTeam":"NO",
-	   "CollegeDraftYear":2020
-	},
-	{
 	   "Team":"IND",
 	   "Position":"WR",
 	   "PositionCategory":"OFF",
@@ -9887,56 +9007,6 @@ const players = [
 	   "Age":23,
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21761.png",
 	   "CollegeDraftTeam":"MIN",
-	   "CollegeDraftYear":2020
-	},
-	{
-	   "Team":"PIT",
-	   "Position":"RB",
-	   "PositionCategory":"OFF",
-	   "Name":"Najee Harris",
-	   "Age":24,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21768.png",
-	   "CollegeDraftTeam":"PIT",
-	   "CollegeDraftYear":2021
-	},
-	{
-	   "Team":"KC",
-	   "Position":"RB",
-	   "PositionCategory":"OFF",
-	   "Name":"Clyde Edwards-Helaire",
-	   "Age":22,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21769.png",
-	   "CollegeDraftTeam":"KC",
-	   "CollegeDraftYear":2020
-	},
-	{
-	   "Team":"CHI",
-	   "Position":"TE",
-	   "PositionCategory":"OFF",
-	   "Name":"Cole Kmet",
-	   "Age":23,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21772.png",
-	   "CollegeDraftTeam":"CHI",
-	   "CollegeDraftYear":2020
-	},
-	{
-	   "Team":"BUF",
-	   "Position":"RB",
-	   "PositionCategory":"OFF",
-	   "Name":"Zack Moss",
-	   "Age":24,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21784.png",
-	   "CollegeDraftTeam":"BUF",
-	   "CollegeDraftYear":2020
-	},
-	{
-	   "Team":"NO",
-	   "Position":"TE",
-	   "PositionCategory":"OFF",
-	   "Name":"Adam Trautman",
-	   "Age":25,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21786.png",
-	   "CollegeDraftTeam":"NO",
 	   "CollegeDraftYear":2020
 	},
 	{
@@ -9960,28 +9030,8 @@ const players = [
 	   "CollegeDraftYear":2020
 	},
 	{
-	   "Team":"PHI",
-	   "Position":"QB",
-	   "PositionCategory":"OFF",
-	   "Name":"Jalen Hurts",
-	   "Age":23,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21831.png",
-	   "CollegeDraftTeam":"PHI",
-	   "CollegeDraftYear":2020
-	},
-	{
-	   "Team":"WAS",
-	   "Position":"RB",
-	   "PositionCategory":"OFF",
-	   "Name":"Antonio Gibson",
-	   "Age":23,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21861.png",
-	   "CollegeDraftTeam":"WAS",
-	   "CollegeDraftYear":2020
-	},
-	{
 	   "Team":"SF",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Javon Kinlaw",
 	   "Age":24,
@@ -9991,7 +9041,7 @@ const players = [
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Benito Jones",
 	   "Age":24,
@@ -10001,7 +9051,7 @@ const players = [
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"DaVon Hamilton",
 	   "Age":25,
@@ -10011,7 +9061,7 @@ const players = [
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Bradlee Anae",
 	   "Age":24,
@@ -10021,7 +9071,7 @@ const players = [
 	},
 	{
 	   "Team":"IND",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Robert Windsor",
 	   "Age":25,
@@ -10031,7 +9081,7 @@ const players = [
 	},
 	{
 	   "Team":"PIT",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Derrek Tuszka",
 	   "Age":24,
@@ -10041,7 +9091,7 @@ const players = [
 	},
 	{
 	   "Team":"CLE",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Curtis Weaver",
 	   "Age":23,
@@ -10051,7 +9101,7 @@ const players = [
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"James Smith-Williams",
 	   "Age":24,
@@ -10061,7 +9111,7 @@ const players = [
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Khalid Kareem",
 	   "Age":23,
@@ -10071,7 +9121,7 @@ const players = [
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Jonathan Greenard",
 	   "Age":24,
@@ -10081,7 +9131,7 @@ const players = [
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Larrell Murchison",
 	   "Age":24,
@@ -10091,7 +9141,7 @@ const players = [
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"A.J. Epenesa",
 	   "Age":23,
@@ -10101,7 +9151,7 @@ const players = [
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Darrell Taylor",
 	   "Age":25,
@@ -10121,7 +9171,7 @@ const players = [
 	},
 	{
 	   "Team":"ATL",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Marlon Davidson",
 	   "Age":23,
@@ -10131,7 +9181,7 @@ const players = [
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Rashard Lawrence",
 	   "Age":23,
@@ -10141,7 +9191,7 @@ const players = [
 	},
 	{
 	   "Team":"BAL",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Broderick Washington",
 	   "Age":25,
@@ -10151,7 +9201,7 @@ const players = [
 	},
 	{
 	   "Team":"DET",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Julian Okwara",
 	   "Age":24,
@@ -10181,7 +9231,7 @@ const players = [
 	},
 	{
 	   "Team":"CHI",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Trevis Gipson",
 	   "Age":24,
@@ -10191,7 +9241,7 @@ const players = [
 	},
 	{
 	   "Team":"GB",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Tipa Galeai",
 	   "Age":25,
@@ -10201,7 +9251,7 @@ const players = [
 	},
 	{
 	   "Team":"MIN",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Kenny Willekes",
 	   "Age":24,
@@ -10211,7 +9261,7 @@ const players = [
 	},
 	{
 	   "Team":"MIN",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"James Lynch",
 	   "Age":23,
@@ -10221,7 +9271,7 @@ const players = [
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Raequan Williams",
 	   "Age":25,
@@ -10231,7 +9281,7 @@ const players = [
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Yetur Gross-Matos",
 	   "Age":24,
@@ -10261,7 +9311,7 @@ const players = [
 	},
 	{
 	   "Team":"NO",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Malcolm Roach",
 	   "Age":23,
@@ -10271,7 +9321,7 @@ const players = [
 	},
 	{
 	   "Team":"BAL",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Justin Madubuike",
 	   "Age":24,
@@ -10281,7 +9331,7 @@ const players = [
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Alton Robinson",
 	   "Age":23,
@@ -10301,7 +9351,7 @@ const players = [
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Terrell Lewis",
 	   "Age":23,
@@ -10311,7 +9361,7 @@ const players = [
 	},
 	{
 	   "Team":"GB",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"La'Darius Hamilton",
 	   "Age":24,
@@ -10341,7 +9391,7 @@ const players = [
 	},
 	{
 	   "Team":"GB",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Chauncey Rivers",
 	   "Age":24,
@@ -10351,7 +9401,7 @@ const players = [
 	},
 	{
 	   "Team":"MIN",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"D.J. Wonnum",
 	   "Age":24,
@@ -10361,7 +9411,7 @@ const players = [
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Jabari Zuniga",
 	   "Age":24,
@@ -10431,7 +9481,7 @@ const players = [
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"DB",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Shyheim Carter",
 	   "Age":24,
@@ -10464,7 +9514,7 @@ const players = [
 	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Kamren Curl",
-	   "Age":22,
+	   "Age":23,
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21923.png",
 	   "CollegeDraftTeam":"WAS",
 	   "CollegeDraftYear":2020
@@ -10501,10 +9551,10 @@ const players = [
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"FS",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Brandon Jones",
-	   "Age":23,
+	   "Age":24,
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21927.png",
 	   "CollegeDraftTeam":"MIA",
 	   "CollegeDraftYear":2020
@@ -10571,7 +9621,7 @@ const players = [
 	},
 	{
 	   "Team":"KC",
-	   "Position":"DB",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"L'Jarius Sneed",
 	   "Age":25,
@@ -10641,7 +9691,7 @@ const players = [
 	},
 	{
 	   "Team":"GB",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Jake Hanson",
 	   "Age":24,
@@ -10681,7 +9731,7 @@ const players = [
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Charlie Heck",
 	   "Age":25,
@@ -10691,7 +9741,7 @@ const players = [
 	},
 	{
 	   "Team":"CLE",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Nick Harris",
 	   "Age":23,
@@ -10701,7 +9751,7 @@ const players = [
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Austin Jackson",
 	   "Age":22,
@@ -10721,7 +9771,7 @@ const players = [
 	},
 	{
 	   "Team":"ATL",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Matt Hennessy",
 	   "Age":24,
@@ -10751,16 +9801,6 @@ const players = [
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"RB",
-	   "PositionCategory":"OFF",
-	   "Name":"James Robinson",
-	   "Age":23,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21970.png",
-	   "CollegeDraftTeam":"JAX",
-	   "CollegeDraftYear":2020
-	},
-	{
-	   "Team":"JAX",
 	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Shaquille Quarterman",
@@ -10774,7 +9814,7 @@ const players = [
 	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Cam Brown",
-	   "Age":23,
+	   "Age":24,
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21978.png",
 	   "CollegeDraftTeam":"NYG",
 	   "CollegeDraftYear":2020
@@ -10784,7 +9824,7 @@ const players = [
 	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Jacob Phillips",
-	   "Age":22,
+	   "Age":23,
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21979.png",
 	   "CollegeDraftTeam":"CLE",
 	   "CollegeDraftYear":2020
@@ -10801,10 +9841,10 @@ const players = [
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Jack Driscoll",
-	   "Age":24,
+	   "Age":25,
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21981.png",
 	   "CollegeDraftTeam":"PHI",
 	   "CollegeDraftYear":2020
@@ -10821,7 +9861,7 @@ const players = [
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Tremayne Anchrum Jr.",
 	   "Age":23,
@@ -10871,7 +9911,7 @@ const players = [
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Ben Bredeson",
 	   "Age":23,
@@ -10911,7 +9951,7 @@ const players = [
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Tyler Biadasz",
 	   "Age":24,
@@ -10931,7 +9971,7 @@ const players = [
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Lloyd Cushenberry III",
 	   "Age":24,
@@ -10941,7 +9981,7 @@ const players = [
 	},
 	{
 	   "Team":"NE",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Yasir Durant",
 	   "Age":23,
@@ -11041,7 +10081,7 @@ const players = [
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Mekhi Becton",
 	   "Age":22,
@@ -11051,7 +10091,7 @@ const players = [
 	},
 	{
 	   "Team":"BAL",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Trystan Colon",
 	   "Age":24,
@@ -11071,7 +10111,7 @@ const players = [
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Hakeem Adeniji",
 	   "Age":24,
@@ -11101,7 +10141,7 @@ const players = [
 	},
 	{
 	   "Team":"KC",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Lucas Niang",
 	   "Age":23,
@@ -11111,7 +10151,7 @@ const players = [
 	},
 	{
 	   "Team":"CLE",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Alex Taylor",
 	   "Age":24,
@@ -11121,7 +10161,7 @@ const players = [
 	},
 	{
 	   "Team":"KC",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Prince Tega Wanogho",
 	   "Age":24,
@@ -11131,7 +10171,7 @@ const players = [
 	},
 	{
 	   "Team":"TB",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"John Molchon",
 	   "Age":25,
@@ -11151,7 +10191,7 @@ const players = [
 	},
 	{
 	   "Team":"CLE",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Jedrick Wills Jr.",
 	   "Age":22,
@@ -11161,7 +10201,7 @@ const players = [
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Andrew Thomas",
 	   "Age":23,
@@ -11181,7 +10221,7 @@ const players = [
 	},
 	{
 	   "Team":"BAL",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Tyre Phillips",
 	   "Age":25,
@@ -11191,7 +10231,7 @@ const players = [
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Damien Lewis",
 	   "Age":25,
@@ -11211,7 +10251,7 @@ const players = [
 	},
 	{
 	   "Team":"IND",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Danny Pinter",
 	   "Age":25,
@@ -11221,7 +10261,7 @@ const players = [
 	},
 	{
 	   "Team":"LV",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"John Simpson",
 	   "Age":24,
@@ -11231,7 +10271,7 @@ const players = [
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Netane Muti",
 	   "Age":23,
@@ -11241,7 +10281,7 @@ const players = [
 	},
 	{
 	   "Team":"TB",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Tristan Wirfs",
 	   "Age":23,
@@ -11251,7 +10291,7 @@ const players = [
 	},
 	{
 	   "Team":"KC",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Darryl Williams",
 	   "Age":24,
@@ -11261,7 +10301,7 @@ const players = [
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Matt Peart",
 	   "Age":24,
@@ -11281,7 +10321,7 @@ const players = [
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Solomon Kindley",
 	   "Age":24,
@@ -11301,7 +10341,7 @@ const players = [
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Shane Lemieux",
 	   "Age":24,
@@ -11311,7 +10351,7 @@ const players = [
 	},
 	{
 	   "Team":"GB",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Jon Runyan",
 	   "Age":24,
@@ -11321,7 +10361,7 @@ const players = [
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Terence Steele",
 	   "Age":24,
@@ -11481,7 +10521,7 @@ const players = [
 	},
 	{
 	   "Team":"CLE",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Jordan Elliott",
 	   "Age":24,
@@ -11511,7 +10551,7 @@ const players = [
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Raekwon Davis",
 	   "Age":24,
@@ -11551,7 +10591,7 @@ const players = [
 	},
 	{
 	   "Team":"PIT",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Carlos Davis",
 	   "Age":25,
@@ -11581,7 +10621,7 @@ const players = [
 	},
 	{
 	   "Team":"PIT",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Khalil Davis",
 	   "Age":25,
@@ -11631,7 +10671,7 @@ const players = [
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Neville Gallimore",
 	   "Age":25,
@@ -11681,7 +10721,7 @@ const players = [
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Leki Fotu",
 	   "Age":23,
@@ -11701,7 +10741,7 @@ const players = [
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Derrick Brown",
 	   "Age":23,
@@ -11751,7 +10791,7 @@ const players = [
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Kyle Murphy",
 	   "Age":23,
@@ -11761,7 +10801,7 @@ const players = [
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Chase Young",
 	   "Age":22,
@@ -11771,7 +10811,7 @@ const players = [
 	},
 	{
 	   "Team":"KC",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Mike Danna",
 	   "Age":24,
@@ -11811,7 +10851,7 @@ const players = [
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Casey Toohill",
 	   "Age":25,
@@ -11861,7 +10901,7 @@ const players = [
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Bravvion Roy",
 	   "Age":24,
@@ -11871,7 +10911,7 @@ const players = [
 	},
 	{
 	   "Team":"MIN",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Blake Brandel",
 	   "Age":25,
@@ -11911,7 +10951,7 @@ const players = [
 	},
 	{
 	   "Team":"NE",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Arlington Hambright",
 	   "Age":26,
@@ -11931,7 +10971,7 @@ const players = [
 	},
 	{
 	   "Team":"DET",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Jashon Cornell",
 	   "Age":25,
@@ -11991,7 +11031,7 @@ const players = [
 	},
 	{
 	   "Team":"MIN",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Kyle Hinton",
 	   "Age":24,
@@ -12051,7 +11091,7 @@ const players = [
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Evin Ksiezarczyk",
 	   "Age":24,
@@ -12061,7 +11101,7 @@ const players = [
 	},
 	{
 	   "Team":"KC",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Austin Edwards",
 	   "Age":24,
@@ -12074,14 +11114,14 @@ const players = [
 	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Ray Wilborn",
-	   "Age":24,
+	   "Age":25,
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22187.png",
 	   "CollegeDraftTeam":"ATL",
 	   "CollegeDraftYear":2020
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"DB",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Rojesterman Farris",
 	   "Age":24,
@@ -12111,7 +11151,7 @@ const players = [
 	},
 	{
 	   "Team":"BAL",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Aaron Crawford",
 	   "Age":24,
@@ -12121,7 +11161,7 @@ const players = [
 	},
 	{
 	   "Team":"CHI",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"John Daka",
 	   "Age":24,
@@ -12131,7 +11171,7 @@ const players = [
 	},
 	{
 	   "Team":"BAL",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Kristian Welch",
 	   "Age":23,
@@ -12144,14 +11184,14 @@ const players = [
 	   "Position":"CB",
 	   "PositionCategory":"DEF",
 	   "Name":"Khalil Dorsey",
-	   "Age":23,
+	   "Age":24,
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22202.png",
 	   "CollegeDraftTeam":"BAL",
 	   "CollegeDraftYear":2020
 	},
 	{
 	   "Team":"TB",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Brandon Walton",
 	   "Age":24,
@@ -12171,7 +11211,7 @@ const players = [
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Mike Horton",
 	   "Age":25,
@@ -12181,7 +11221,7 @@ const players = [
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Myles Adams",
 	   "Age":24,
@@ -12201,7 +11241,7 @@ const players = [
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"DB",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Myles Hartsfield",
 	   "Age":24,
@@ -12211,7 +11251,7 @@ const players = [
 	},
 	{
 	   "Team":"CHI",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Dieter Eiselen",
 	   "Age":24,
@@ -12291,7 +11331,7 @@ const players = [
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Ron'Dell Carter",
 	   "Age":24,
@@ -12311,7 +11351,7 @@ const players = [
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Zack Johnson",
 	   "Age":28,
@@ -12334,7 +11374,7 @@ const players = [
 	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Krys Barnes",
-	   "Age":23,
+	   "Age":24,
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22266.png",
 	   "CollegeDraftTeam":"GB",
 	   "CollegeDraftYear":2020
@@ -12361,7 +11401,7 @@ const players = [
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Jamir Jones",
 	   "Age":23,
@@ -12371,7 +11411,7 @@ const players = [
 	},
 	{
 	   "Team":"IND",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Carter O'Donnell",
 	   "Age":23,
@@ -12381,7 +11421,7 @@ const players = [
 	},
 	{
 	   "Team":"IND",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Kameron Cline",
 	   "Age":24,
@@ -12391,7 +11431,7 @@ const players = [
 	},
 	{
 	   "Team":"IND",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Chris Williams",
 	   "Age":23,
@@ -12421,7 +11461,7 @@ const players = [
 	},
 	{
 	   "Team":"KC",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Tershawn Wharton",
 	   "Age":23,
@@ -12471,7 +11511,7 @@ const players = [
 	},
 	{
 	   "Team":"PIT",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Nate Gilliam",
 	   "Age":24,
@@ -12481,7 +11521,7 @@ const players = [
 	},
 	{
 	   "Team":"DET",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Jessie Lemonier",
 	   "Age":25,
@@ -12511,7 +11551,7 @@ const players = [
 	},
 	{
 	   "Team":"MIN",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"T.J. Smith",
 	   "Age":24,
@@ -12551,7 +11591,7 @@ const players = [
 	},
 	{
 	   "Team":"DET",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Eric Banks",
 	   "Age":24,
@@ -12561,7 +11601,7 @@ const players = [
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Michael Hoecht",
 	   "Age":24,
@@ -12621,7 +11661,7 @@ const players = [
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"David Moa",
 	   "Age":25,
@@ -12651,7 +11691,7 @@ const players = [
 	},
 	{
 	   "Team":"NE",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Bill Murray",
 	   "Age":24,
@@ -12661,7 +11701,7 @@ const players = [
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Jordan Steckler",
 	   "Age":25,
@@ -12681,7 +11721,7 @@ const players = [
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Niko Lalos",
 	   "Age":24,
@@ -12701,7 +11741,7 @@ const players = [
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Luke Juriga",
 	   "Age":24,
@@ -12711,7 +11751,7 @@ const players = [
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"DB",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Michael Jacquet",
 	   "Age":25,
@@ -12721,7 +11761,7 @@ const players = [
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"DB",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Elijah Riley",
 	   "Age":23,
@@ -12731,7 +11771,7 @@ const players = [
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Isaac Alarc\u00f3n",
 	   "Age":23,
@@ -12751,7 +11791,7 @@ const players = [
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Matt Leo",
 	   "Age":29,
@@ -12821,7 +11861,7 @@ const players = [
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Aaron Brewer",
 	   "Age":24,
@@ -12831,7 +11871,7 @@ const players = [
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Brandon Kemp",
 	   "Age":25,
@@ -12841,7 +11881,7 @@ const players = [
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Teair Tart",
 	   "Age":25,
@@ -12861,7 +11901,7 @@ const players = [
 	},
 	{
 	   "Team":"TB",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Nick Leverett",
 	   "Age":25,
@@ -12951,7 +11991,7 @@ const players = [
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Sam Tecklenburg",
 	   "Age":25,
@@ -12971,7 +12011,7 @@ const players = [
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Tyler Clark",
 	   "Age":23,
@@ -12981,7 +12021,7 @@ const players = [
 	},
 	{
 	   "Team":"ATL",
-	   "Position":"DB",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Luther Kirk",
 	   "Age":25,
@@ -13021,7 +12061,7 @@ const players = [
 	},
 	{
 	   "Team":"TB",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Jonathan Hubbard",
 	   "Age":24,
@@ -13031,7 +12071,7 @@ const players = [
 	},
 	{
 	   "Team":"LV",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Kamaal Seymour",
 	   "Age":25,
@@ -13051,7 +12091,7 @@ const players = [
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Aaron Patrick",
 	   "Age":29,
@@ -13070,76 +12110,6 @@ const players = [
 	   "CollegeDraftYear":2020
 	},
 	{
-	   "Team":"JAX",
-	   "Position":"QB",
-	   "PositionCategory":"OFF",
-	   "Name":"Trevor Lawrence",
-	   "Age":22,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22490.png",
-	   "CollegeDraftTeam":"JAX",
-	   "CollegeDraftYear":2021
-	},
-	{
-	   "Team":"CHI",
-	   "Position":"QB",
-	   "PositionCategory":"OFF",
-	   "Name":"Justin Fields",
-	   "Age":23,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22492.png",
-	   "CollegeDraftTeam":"CHI",
-	   "CollegeDraftYear":2021
-	},
-	{
-	   "Team":"SF",
-	   "Position":"QB",
-	   "PositionCategory":"OFF",
-	   "Name":"Trey Lance",
-	   "Age":21,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22493.png",
-	   "CollegeDraftTeam":"SF",
-	   "CollegeDraftYear":2021
-	},
-	{
-	   "Team":"TB",
-	   "Position":"QB",
-	   "PositionCategory":"OFF",
-	   "Name":"Kyle Trask",
-	   "Age":24,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22494.png",
-	   "CollegeDraftTeam":"TB",
-	   "CollegeDraftYear":2021
-	},
-	{
-	   "Team":"NYJ",
-	   "Position":"QB",
-	   "PositionCategory":"OFF",
-	   "Name":"Zach Wilson",
-	   "Age":22,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22495.png",
-	   "CollegeDraftTeam":"NYJ",
-	   "CollegeDraftYear":2021
-	},
-	{
-	   "Team":"NE",
-	   "Position":"QB",
-	   "PositionCategory":"OFF",
-	   "Name":"Mac Jones",
-	   "Age":23,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22496.png",
-	   "CollegeDraftTeam":"NE",
-	   "CollegeDraftYear":2021
-	},
-	{
-	   "Team":"ATL",
-	   "Position":"TE",
-	   "PositionCategory":"OFF",
-	   "Name":"Kyle Pitts",
-	   "Age":21,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22508.png",
-	   "CollegeDraftTeam":"ATL",
-	   "CollegeDraftYear":2021
-	},
-	{
 	   "Team":"CLE",
 	   "Position":"TE",
 	   "PositionCategory":"OFF",
@@ -13150,26 +12120,6 @@ const players = [
 	   "CollegeDraftYear":2021
 	},
 	{
-	   "Team":"NYJ",
-	   "Position":"RB",
-	   "PositionCategory":"OFF",
-	   "Name":"Michael Carter",
-	   "Age":22,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22553.png",
-	   "CollegeDraftTeam":"NYJ",
-	   "CollegeDraftYear":2021
-	},
-	{
-	   "Team":"DEN",
-	   "Position":"RB",
-	   "PositionCategory":"OFF",
-	   "Name":"Javonte Williams",
-	   "Age":21,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22558.png",
-	   "CollegeDraftTeam":"DEN",
-	   "CollegeDraftYear":2021
-	},
-	{
 	   "Team":"SEA",
 	   "Position":"WR",
 	   "PositionCategory":"OFF",
@@ -13177,16 +12127,6 @@ const players = [
 	   "Age":23,
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22567.png",
 	   "CollegeDraftTeam":"SEA",
-	   "CollegeDraftYear":2021
-	},
-	{
-	   "Team":"DET",
-	   "Position":"WR",
-	   "PositionCategory":"OFF",
-	   "Name":"Amon-Ra St. Brown",
-	   "Age":22,
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/0.png",
-	   "CollegeDraftTeam":"DET",
 	   "CollegeDraftYear":2021
 	},
 	{
@@ -13321,7 +12261,7 @@ const players = [
 	},
 	{
 	   "Team":"IND",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Kwity Paye",
 	   "Age":23,
@@ -13331,7 +12271,7 @@ const players = [
 	},
 	{
 	   "Team":"LAC",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Rashawn Slater",
 	   "Age":23,
@@ -13341,7 +12281,7 @@ const players = [
 	},
 	{
 	   "Team":"DET",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Penei Sewell",
 	   "Age":21,
@@ -13361,7 +12301,7 @@ const players = [
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"DB",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Caleb Farley",
 	   "Age":23,
@@ -13401,7 +12341,7 @@ const players = [
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Zaven Collins",
 	   "Age":22,
@@ -13411,7 +12351,7 @@ const players = [
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Greg Rousseau",
 	   "Age":21,
@@ -13441,7 +12381,7 @@ const players = [
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Jack Anderson",
 	   "Age":23,
@@ -13451,7 +12391,7 @@ const players = [
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Kayode Awosika",
 	   "Age":23,
@@ -13461,7 +12401,7 @@ const players = [
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Josh Ball",
 	   "Age":23,
@@ -13481,7 +12421,7 @@ const players = [
 	},
 	{
 	   "Team":"NE",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Christian Barmore",
 	   "Age":22,
@@ -13511,7 +12451,7 @@ const players = [
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Quinton Bohanna",
 	   "Age":23,
@@ -13551,7 +12491,7 @@ const players = [
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Will Bradley-King",
 	   "Age":24,
@@ -13571,7 +12511,7 @@ const players = [
 	},
 	{
 	   "Team":"TB",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"K.J. Britt",
 	   "Age":22,
@@ -13591,7 +12531,7 @@ const players = [
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Deonte Brown",
 	   "Age":24,
@@ -13611,7 +12551,7 @@ const players = [
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Spencer Brown",
 	   "Age":24,
@@ -13661,7 +12601,7 @@ const players = [
 	},
 	{
 	   "Team":"NO",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Landon Young",
 	   "Age":24,
@@ -13681,7 +12621,7 @@ const players = [
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Jackson Carman",
 	   "Age":22,
@@ -13701,7 +12641,7 @@ const players = [
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Marvin Wilson",
 	   "Age":23,
@@ -13731,7 +12671,7 @@ const players = [
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Brady Christensen",
 	   "Age":25,
@@ -13781,7 +12721,7 @@ const players = [
 	},
 	{
 	   "Team":"BAL",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Ben Cleveland",
 	   "Age":23,
@@ -13791,7 +12731,7 @@ const players = [
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Milton Williams",
 	   "Age":22,
@@ -13811,7 +12751,7 @@ const players = [
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Jonathon Cooper",
 	   "Age":24,
@@ -13821,7 +12761,7 @@ const players = [
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Sam Cosmi",
 	   "Age":23,
@@ -13861,7 +12801,7 @@ const players = [
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Jake Curhan",
 	   "Age":24,
@@ -13901,7 +12841,7 @@ const players = [
 	},
 	{
 	   "Team":"LAC",
-	   "Position":"DB",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Mark Webb Jr.",
 	   "Age":23,
@@ -13911,7 +12851,7 @@ const players = [
 	},
 	{
 	   "Team":"MIN",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Christian Darrisaw",
 	   "Age":22,
@@ -13981,7 +12921,7 @@ const players = [
 	},
 	{
 	   "Team":"MIN",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Wyatt Davis",
 	   "Age":23,
@@ -14001,7 +12941,7 @@ const players = [
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Alijah Vera-Tucker",
 	   "Age":22,
@@ -14021,7 +12961,7 @@ const players = [
 	},
 	{
 	   "Team":"GB",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Cole Van Lanen",
 	   "Age":23,
@@ -14041,7 +12981,7 @@ const players = [
 	},
 	{
 	   "Team":"MIN",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Jaylen Twyman",
 	   "Age":22,
@@ -14051,7 +12991,7 @@ const players = [
 	},
 	{
 	   "Team":"NO",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Payton Turner",
 	   "Age":23,
@@ -14061,7 +13001,7 @@ const players = [
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Marlon Tuipulotu",
 	   "Age":22,
@@ -14071,7 +13011,7 @@ const players = [
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Jay Tufele",
 	   "Age":22,
@@ -14081,7 +13021,7 @@ const players = [
 	},
 	{
 	   "Team":"TB",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Joe Tryon-Shoyinka",
 	   "Age":22,
@@ -14101,7 +13041,7 @@ const players = [
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Shaka Toney",
 	   "Age":24,
@@ -14111,7 +13051,7 @@ const players = [
 	},
 	{
 	   "Team":"CLE",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Tommy Togiai",
 	   "Age":22,
@@ -14161,7 +13101,7 @@ const players = [
 	},
 	{
 	   "Team":"TB",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Grant Stuard",
 	   "Age":23,
@@ -14191,7 +13131,7 @@ const players = [
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Victor Dimukeje",
 	   "Age":22,
@@ -14201,7 +13141,7 @@ const players = [
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Tommy Doyle",
 	   "Age":23,
@@ -14231,7 +13171,7 @@ const players = [
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Marquiss Spencer",
 	   "Age":24,
@@ -14261,7 +13201,7 @@ const players = [
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Jordan Smith",
 	   "Age":23,
@@ -14271,7 +13211,7 @@ const players = [
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Adrian Ealy",
 	   "Age":22,
@@ -14291,7 +13231,7 @@ const players = [
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"D'Ante Smith",
 	   "Age":23,
@@ -14321,7 +13261,7 @@ const players = [
 	},
 	{
 	   "Team":"NE",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Will Sherman",
 	   "Age":22,
@@ -14331,7 +13271,7 @@ const players = [
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Tyler Shelvin",
 	   "Age":23,
@@ -14361,7 +13301,7 @@ const players = [
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Liam Eichenberg",
 	   "Age":24,
@@ -14371,7 +13311,7 @@ const players = [
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Austin Faoliu",
 	   "Age":23,
@@ -14401,7 +13341,7 @@ const players = [
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Stone Forsythe",
 	   "Age":24,
@@ -14411,7 +13351,7 @@ const players = [
 	},
 	{
 	   "Team":"IND",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Will Fries",
 	   "Age":23,
@@ -14441,7 +13381,7 @@ const players = [
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Chauncey Golston",
 	   "Age":24,
@@ -14461,7 +13401,7 @@ const players = [
 	},
 	{
 	   "Team":"ATL",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Ta'Quon Graham",
 	   "Age":23,
@@ -14491,7 +13431,7 @@ const players = [
 	},
 	{
 	   "Team":"PIT",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Kendrick Green",
 	   "Age":23,
@@ -14511,7 +13451,7 @@ const players = [
 	},
 	{
 	   "Team":"TB",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Robert Hainsey",
 	   "Age":23,
@@ -14541,7 +13481,7 @@ const players = [
 	},
 	{
 	   "Team":"KC",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Malik Herring",
 	   "Age":24,
@@ -14551,7 +13491,7 @@ const players = [
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Trey Hill",
 	   "Age":22,
@@ -14561,7 +13501,7 @@ const players = [
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Cam Sample",
 	   "Age":22,
@@ -14571,7 +13511,7 @@ const players = [
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Justin Hilliard",
 	   "Age":25,
@@ -14581,7 +13521,7 @@ const players = [
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Drew Himmelman",
 	   "Age":25,
@@ -14591,7 +13531,7 @@ const players = [
 	},
 	{
 	   "Team":"LAC",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Chris Rumph II",
 	   "Age":23,
@@ -14611,7 +13551,7 @@ const players = [
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Jared Hocker",
 	   "Age":23,
@@ -14631,7 +13571,7 @@ const players = [
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Wyatt Hubert",
 	   "Age":23,
@@ -14641,7 +13581,7 @@ const players = [
 	},
 	{
 	   "Team":"CLE",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"James Hudson III",
 	   "Age":22,
@@ -14671,7 +13611,7 @@ const players = [
 	},
 	{
 	   "Team":"TB",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Sadarius Hutcherson",
 	   "Age":23,
@@ -14691,7 +13631,7 @@ const players = [
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"DB",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Robert Rochell",
 	   "Age":23,
@@ -14711,7 +13651,7 @@ const players = [
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Tarron Jackson",
 	   "Age":23,
@@ -14721,7 +13661,7 @@ const players = [
 	},
 	{
 	   "Team":"MIN",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Janarius Robinson",
 	   "Age":23,
@@ -14731,7 +13671,7 @@ const players = [
 	},
 	{
 	   "Team":"LAC",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Brenden Jaimes",
 	   "Age":22,
@@ -14771,7 +13711,7 @@ const players = [
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Dillon Radunz",
 	   "Age":24,
@@ -14791,7 +13731,7 @@ const players = [
 	},
 	{
 	   "Team":"CHI",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Teven Jenkins",
 	   "Age":24,
@@ -14821,7 +13761,7 @@ const players = [
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Patrick Johnson",
 	   "Age":23,
@@ -14841,7 +13781,7 @@ const players = [
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Naquan Jones",
 	   "Age":24,
@@ -14851,7 +13791,7 @@ const players = [
 	},
 	{
 	   "Team":"BAL",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Odafe Oweh",
 	   "Age":23,
@@ -14861,7 +13801,7 @@ const players = [
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Joseph Ossai",
 	   "Age":21,
@@ -14871,7 +13811,7 @@ const players = [
 	},
 	{
 	   "Team":"DET",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Levi Onwuzurike",
 	   "Age":24,
@@ -14891,7 +13831,7 @@ const players = [
 	},
 	{
 	   "Team":"LAC",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Amen Ogbongbemiga",
 	   "Age":23,
@@ -14901,7 +13841,7 @@ const players = [
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Osa Odighizuwa",
 	   "Age":23,
@@ -14911,7 +13851,7 @@ const players = [
 	},
 	{
 	   "Team":"IND",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Dayo Odeyingbo",
 	   "Age":22,
@@ -14931,7 +13871,7 @@ const players = [
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Daviyon Nixon",
 	   "Age":23,
@@ -14951,7 +13891,7 @@ const players = [
 	},
 	{
 	   "Team":"GB",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Royce Newman",
 	   "Age":24,
@@ -14971,7 +13911,7 @@ const players = [
 	},
 	{
 	   "Team":"GB",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Josh Myers",
 	   "Age":23,
@@ -15001,7 +13941,7 @@ const players = [
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Jimmy Morrissey",
 	   "Age":23,
@@ -15011,7 +13951,7 @@ const players = [
 	},
 	{
 	   "Team":"SF",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Jaylon Moore",
 	   "Age":24,
@@ -15021,7 +13961,7 @@ const players = [
 	},
 	{
 	   "Team":"CLE",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"David Moore",
 	   "Age":23,
@@ -15031,7 +13971,7 @@ const players = [
 	},
 	{
 	   "Team":"PIT",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Dan Moore Jr.",
 	   "Age":23,
@@ -15071,7 +14011,7 @@ const players = [
 	},
 	{
 	   "Team":"MIN",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Patrick Jones II",
 	   "Age":23,
@@ -15081,7 +14021,7 @@ const players = [
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Robert Jones",
 	   "Age":23,
@@ -15111,7 +14051,7 @@ const players = [
 	},
 	{
 	   "Team":"KC",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Joshua Kaindoh",
 	   "Age":23,
@@ -15121,7 +14061,7 @@ const players = [
 	},
 	{
 	   "Team":"LV",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Malcolm Koonce",
 	   "Age":23,
@@ -15161,17 +14101,17 @@ const players = [
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Walker Little",
-	   "Age":22,
+	   "Age":23,
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22900.png",
 	   "CollegeDraftTeam":"JAX",
 	   "CollegeDraftYear":2021
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Jonathan Marshall",
 	   "Age":24,
@@ -15211,7 +14151,7 @@ const players = [
 	},
 	{
 	   "Team":"DET",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Alim McNeill",
 	   "Age":21,
@@ -15231,7 +14171,7 @@ const players = [
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Quinn Meinerz",
 	   "Age":23,
@@ -15241,7 +14181,7 @@ const players = [
 	},
 	{
 	   "Team":"DET",
-	   "Position":"DB",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Ifeatu Melifonwu",
 	   "Age":22,
@@ -15261,7 +14201,7 @@ const players = [
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Boogie Basham",
 	   "Age":24,
@@ -15271,7 +14211,7 @@ const players = [
 	},
 	{
 	   "Team":"PIT",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Isaiahh Loudermilk",
 	   "Age":24,
@@ -15311,7 +14251,7 @@ const players = [
 	},
 	{
 	   "Team":"ATL",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Adetokunbo Ogundeji",
 	   "Age":23,
@@ -15361,7 +14301,7 @@ const players = [
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Larnel Coleman",
 	   "Age":23,
@@ -15371,7 +14311,7 @@ const players = [
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Phil Hoskins",
 	   "Age":25,
@@ -15381,7 +14321,7 @@ const players = [
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Matt Farniok",
 	   "Age":24,
@@ -15391,7 +14331,7 @@ const players = [
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Chris Garrett",
 	   "Age":23,
@@ -15401,7 +14341,7 @@ const players = [
 	},
 	{
 	   "Team":"LV",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Brett Heggie",
 	   "Age":23,
@@ -15461,7 +14401,7 @@ const players = [
 	},
 	{
 	   "Team":"KC",
-	   "Position":"DB",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Devon Key",
 	   "Age":23,
@@ -15501,7 +14441,7 @@ const players = [
 	},
 	{
 	   "Team":"LAC",
-	   "Position":"DB",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Ben DeLuca",
 	   "Age":23,
@@ -15511,7 +14451,7 @@ const players = [
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Josiah Bronson",
 	   "Age":24,
@@ -15521,7 +14461,7 @@ const players = [
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Sam Cooper",
 	   "Age":24,
@@ -15531,7 +14471,7 @@ const players = [
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Kion Smith",
 	   "Age":23,
@@ -15551,7 +14491,7 @@ const players = [
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Kobe Jones",
 	   "Age":23,
@@ -15561,7 +14501,7 @@ const players = [
 	},
 	{
 	   "Team":"BAL",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Xavier Kelly",
 	   "Age":24,
@@ -15571,7 +14511,7 @@ const players = [
 	},
 	{
 	   "Team":"LAC",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Foster Sarell",
 	   "Age":23,
@@ -15591,7 +14531,7 @@ const players = [
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Darius Hodge",
 	   "Age":23,
@@ -15601,7 +14541,7 @@ const players = [
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Andre Mintze",
 	   "Age":23,
@@ -15661,7 +14601,7 @@ const players = [
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"C",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Braylon Jones",
 	   "Age":24,
@@ -15691,7 +14631,7 @@ const players = [
 	},
 	{
 	   "Team":"SF",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Curtis Robinson",
 	   "Age":23,
@@ -15711,7 +14651,7 @@ const players = [
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Nolan Laufenberg",
 	   "Age":23,
@@ -15731,7 +14671,7 @@ const players = [
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Raymond Johnson III",
 	   "Age":23,
@@ -15781,7 +14721,7 @@ const players = [
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Devery Hamilton",
 	   "Age":23,
@@ -15811,7 +14751,7 @@ const players = [
 	},
 	{
 	   "Team":"KC",
-	   "Position":"DB",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Zayne Anderson",
 	   "Age":25,
@@ -15821,7 +14761,7 @@ const players = [
 	},
 	{
 	   "Team":"KC",
-	   "Position":"DB",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Dicaprio Bootle",
 	   "Age":24,
@@ -15851,7 +14791,7 @@ const players = [
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Greg Eiland",
 	   "Age":24,
@@ -15861,7 +14801,7 @@ const players = [
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Pier-Olivier Lestage",
 	   "Age":24,
@@ -15871,7 +14811,7 @@ const players = [
 	},
 	{
 	   "Team":"TB",
-	   "Position":"OLB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Elijah Ponder",
 	   "Age":24,
@@ -15881,7 +14821,7 @@ const players = [
 	},
 	{
 	   "Team":"MIN",
-	   "Position":"G",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Cole Banwart",
 	   "Age":24,
@@ -15911,7 +14851,7 @@ const players = [
 	},
 	{
 	   "Team":"ATL",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Dorian Etheridge",
 	   "Age":23,
@@ -16021,7 +14961,7 @@ const players = [
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"DB",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Isaiah Dunn",
 	   "Age":23,
@@ -16031,7 +14971,7 @@ const players = [
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"OT",
+	   "Position":"OL",
 	   "PositionCategory":"OFF",
 	   "Name":"Parker Ferguson",
 	   "Age":22,
@@ -16061,7 +15001,7 @@ const players = [
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"ILB",
+	   "Position":"LB",
 	   "PositionCategory":"DEF",
 	   "Name":"Barrington Wade",
 	   "Age":24,
@@ -16071,7 +15011,7 @@ const players = [
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"DT",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Jarrod Hewitt",
 	   "Age":24,
@@ -16161,7 +15101,7 @@ const players = [
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"DE",
+	   "Position":"DL",
 	   "PositionCategory":"DEF",
 	   "Name":"Alex Tchangam",
 	   "Age":24,
@@ -16191,7 +15131,7 @@ const players = [
 	},
 	{
 	   "Team":"ATL",
-	   "Position":"DB",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"DeAundre Alford",
 	   "Age":24,
@@ -16251,7 +15191,7 @@ const players = [
 	},
 	{
 	   "Team":"KC",
-	   "Position":"DB",
+	   "Position":"S",
 	   "PositionCategory":"DEF",
 	   "Name":"Brandin Dandridge",
 	   "Age":25,
@@ -16261,4 +15201,4 @@ const players = [
 	}
 ]
 
-export default players
+export default players;
