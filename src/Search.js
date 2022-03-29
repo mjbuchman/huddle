@@ -52,7 +52,7 @@ class Search extends Component {
 					<h2>NFL Player Guessing Game</h2>
 				</Row>
 				<Row>
-					<Col sm={{span: 4, offset: 4}}>
+					<Col sm={{span: 6, offset: 3}}>
 						<div style={this.props.disabled ? {pointerEvents: "none"} : {pointerEvents: "auto"}}>
 							<ReactSearchAutocomplete
 								key={this.state.resetSearch}

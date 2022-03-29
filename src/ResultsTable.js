@@ -34,7 +34,7 @@ class ResultsTable extends Component {
         return (
             <Container fluid>
 				<Row>
-					<Col sm={{span: 6, offset: 3}}>
+					<Col sm={{span: 10, offset: 1}}>
 						<Table responsive>
 							<thead>
 								<tr>
