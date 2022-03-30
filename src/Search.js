@@ -58,7 +58,8 @@ class Search extends Component {
 								key={this.state.resetSearch}
 								items={players}
 								fuseOptions={{ keys: ["Name"] }} // Search on both fields
-								maxResults={3}
+								inputDebounce={500}
+								maxResults={5}
 								onSelect={this.handleOnSelect}
 								showIcon={false}
 								placeholder={this.props.disabled ? "Game Over" : "Guess " + this.state.totalGuesses + " of 6"}
