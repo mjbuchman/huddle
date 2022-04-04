@@ -81,12 +81,12 @@ class Search extends Component {
 					</Col>
 				</Row>
 				<Row>
-					<Stack direction="horizontal">
+					<Col className="center" sm={12}>
 						<p>Search by: </p>
-						<input type="radio" value="Name" name="searchParam" onChange={this.handleOnChange} checked={this.state.searchParam === "Name"}/> Name
-						<input type="radio" value="Team" name="searchParam" onChange={this.handleOnChange} checked={this.state.searchParam === "Team"}/> Team
-						<input type="radio" value="Position" name="searchParam" onChange={this.handleOnChange} checked={this.state.searchParam === "Position"}/> Position
-					</Stack>
+						<input className="searchRadio" type="radio" value="Name" name="searchParam" onChange={this.handleOnChange} checked={this.state.searchParam === "Name"}/> Name
+						<input className="searchRadio" type="radio" value="Team" name="searchParam" onChange={this.handleOnChange} checked={this.state.searchParam === "Team"}/> Team
+						<input className="searchRadio" type="radio" value="Position" name="searchParam" onChange={this.handleOnChange} checked={this.state.searchParam === "Position"}/> Position
+					</Col>
 				</Row>
             </Container>
         );
