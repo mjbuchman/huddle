@@ -3,6 +3,8 @@ import { Container, Row, Col, Stack } from 'react-bootstrap';
 import { ReactSearchAutocomplete } from 'react-search-autocomplete';
 import players from './Players';
 import eventBus from "./EventBus";
+import HelpIcon from '@material-ui/icons/HelpOutline';
+import ReactTooltip from 'react-tooltip';
 
 class Search extends Component {
     constructor(props) {
@@ -86,6 +88,8 @@ class Search extends Component {
 						<input className="searchRadio" type="radio" value="Name" name="searchParam" onChange={this.handleOnChange} checked={this.state.searchParam === "Name"}/> Name
 						<input className="searchRadio" type="radio" value="Team" name="searchParam" onChange={this.handleOnChange} checked={this.state.searchParam === "Team"}/> Team
 						<input className="searchRadio" type="radio" value="Position" name="searchParam" onChange={this.handleOnChange} checked={this.state.searchParam === "Position"}/> Position
+						<ReactTooltip id="help-tooltip">Team uses 2 or 3 letter abbreviation (e.g. "LAC", "GB")<br></br>Position uses 2 letter abbreviation (e.g. "QB", "DB")</ReactTooltip>
+						<HelpIcon data-tip="help" data-for="help-tooltip" data-place="bottom" data-effect="solid"/>				
 					</Col>
 				</Row>
             </Container>
