@@ -9,7 +9,8 @@ class Search extends Component {
         super(props);
         this.state = {
 			resetSearch: false,
-			totalGuesses: 1
+			totalGuesses: 1,
+			searchParam: "Name"
 		}
     }
 
@@ -26,6 +27,13 @@ class Search extends Component {
 			resetSearch: !prevState.resetSearch 	// changing this variable triggers the ReactSearchAutocomplete to reset itself
 		 }));
 		eventBus.dispatch("playerSelected", { guess: player });
+	};
+
+	handleOnChange = (param) => {
+		this.setState(prevState => ({
+			searchParam: param.target.value,
+			resetSearch: !prevState.resetSearch
+		 }));
 	};
 
 	formatResult = (item) => {
@@ -57,7 +65,7 @@ class Search extends Component {
 							<ReactSearchAutocomplete
 								key={this.state.resetSearch}
 								items={players}
-								fuseOptions={{ keys: ["Name"] }} // Search on both fields
+								fuseOptions={{ keys: [this.state.searchParam] }}
 								inputDebounce={500}
 								maxResults={5}
 								onSelect={this.handleOnSelect}
@@ -71,6 +79,14 @@ class Search extends Component {
 							/>
 						</div>
 					</Col>
+				</Row>
+				<Row>
+					<Stack direction="horizontal">
+						<p>Search by: </p>
+						<input type="radio" value="Name" name="searchParam" onChange={this.handleOnChange} checked={this.state.searchParam === "Name"}/> Name
+						<input type="radio" value="Team" name="searchParam" onChange={this.handleOnChange} checked={this.state.searchParam === "Team"}/> Team
+						<input type="radio" value="Position" name="searchParam" onChange={this.handleOnChange} checked={this.state.searchParam === "Position"}/> Position
+					</Stack>
 				</Row>
             </Container>
         );

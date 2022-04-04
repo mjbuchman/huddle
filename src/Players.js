@@ -1,6591 +1,14029 @@
 const players = [
 	{
 	   "Team":"IND",
-	   "Position":"QB",
+	   "FirstName":"Matt",
+	   "LastName":"Ryan",
 	   "PositionCategory":"OFF",
 	   "Name":"Matt Ryan",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/732.png",
 	   "CollegeDraftTeam":"ATL",
-	   "CollegeDraftYear":2008
+	   "CollegeDraftYear":2008,
+	   "id":0,
+	   "Position":"QB",
+	   "AllTeams":[
+		  "ATL"
+	   ],
+	   "ProBowls":4,
+	   "Rings":0
 	},
 	{
 	   "Team":"GB",
-	   "Position":"QB",
+	   "FirstName":"Aaron",
+	   "LastName":"Rodgers",
 	   "PositionCategory":"OFF",
 	   "Name":"Aaron Rodgers",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/2593.png",
 	   "CollegeDraftTeam":"GB",
-	   "CollegeDraftYear":2005
+	   "CollegeDraftYear":2005,
+	   "id":1,
+	   "Position":"QB",
+	   "AllTeams":[
+		  "GB",
+		  "GB",
+		  "GB",
+		  "GB",
+		  "GB",
+		  "GB",
+		  "GB",
+		  "GB",
+		  "GB",
+		  "GB"
+	   ],
+	   "ProBowls":10,
+	   "Rings":1
 	},
 	{
 	   "Team":"TB",
-	   "Position":"QB",
+	   "FirstName":"Tom",
+	   "LastName":"Brady",
 	   "PositionCategory":"OFF",
 	   "Name":"Tom Brady",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/4314.png",
 	   "CollegeDraftTeam":"NE",
-	   "CollegeDraftYear":2000
+	   "CollegeDraftYear":2000,
+	   "id":2,
+	   "Position":"QB",
+	   "AllTeams":[
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NE",
+		  "TB",
+		  "TB"
+	   ],
+	   "ProBowls":15,
+	   "Rings":7
 	},
 	{
 	   "Team":"SF",
-	   "Position":"OL",
+	   "FirstName":"Alex",
+	   "LastName":"Mack",
 	   "PositionCategory":"OFF",
 	   "Name":"Alex Mack",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/8485.png",
 	   "CollegeDraftTeam":"CLE",
-	   "CollegeDraftYear":2009
+	   "CollegeDraftYear":2009,
+	   "id":3,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "CLE",
+		  "ATL",
+		  "SF"
+	   ],
+	   "ProBowls":7,
+	   "Rings":0
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"QB",
+	   "FirstName":"Matthew",
+	   "LastName":"Stafford",
 	   "PositionCategory":"OFF",
 	   "Name":"Matthew Stafford",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/9038.png",
 	   "CollegeDraftTeam":"DET",
-	   "CollegeDraftYear":2009
-	},
-	{
-	   "Team":"NO",
-	   "Position":"DB",
-	   "PositionCategory":"DEF",
-	   "Name":"Malcolm Jenkins",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/9196.png",
-	   "CollegeDraftTeam":"NO",
-	   "CollegeDraftYear":2009
+	   "CollegeDraftYear":2009,
+	   "id":4,
+	   "Position":"QB",
+	   "AllTeams":[
+		  "DET",
+		  "LAR"
+	   ],
+	   "ProBowls":1,
+	   "Rings":1
 	},
 	{
 	   "Team":"NE",
-	   "Position":"DB",
+	   "FirstName":"Devin",
+	   "LastName":"McCourty",
 	   "PositionCategory":"DEF",
 	   "Name":"Devin McCourty",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/10978.png",
 	   "CollegeDraftTeam":"NE",
-	   "CollegeDraftYear":2010
-	},
-	{
-	   "Team":"PIT",
+	   "CollegeDraftYear":2010,
+	   "id":5,
 	   "Position":"DB",
-	   "PositionCategory":"DEF",
-	   "Name":"Joe Haden",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/11043.png",
-	   "CollegeDraftTeam":"CLE",
-	   "CollegeDraftYear":2010
+	   "AllTeams":[
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NE"
+	   ],
+	   "ProBowls":2,
+	   "Rings":3
 	},
 	{
 	   "Team":"PIT",
-	   "Position":"DL",
+	   "FirstName":"Tyson",
+	   "LastName":"Alualu",
 	   "PositionCategory":"DEF",
 	   "Name":"Tyson Alualu",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/11151.png",
 	   "CollegeDraftTeam":"JAX",
-	   "CollegeDraftYear":2010
+	   "CollegeDraftYear":2010,
+	   "id":6,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "JAX",
+		  "PIT"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"DL",
+	   "FirstName":"Brandon",
+	   "LastName":"Graham",
 	   "PositionCategory":"DEF",
 	   "Name":"Brandon Graham",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/11315.png",
 	   "CollegeDraftTeam":"PHI",
-	   "CollegeDraftYear":2010
+	   "CollegeDraftYear":2010,
+	   "id":7,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "PHI"
+	   ],
+	   "ProBowls":1,
+	   "Rings":1
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"OL",
+	   "FirstName":"Rodger",
+	   "LastName":"Saffold III",
 	   "PositionCategory":"OFF",
 	   "Name":"Rodger Saffold III",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/11545.png",
 	   "CollegeDraftTeam":"LAR",
-	   "CollegeDraftYear":2010
+	   "CollegeDraftYear":2010,
+	   "id":8,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "STL",
+		  "LAR",
+		  "TEN"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"SF",
-	   "Position":"OL",
+	   "FirstName":"Trent",
+	   "LastName":"Williams",
 	   "PositionCategory":"OFF",
 	   "Name":"Trent Williams",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/12308.png",
 	   "CollegeDraftTeam":"WAS",
-	   "CollegeDraftYear":2010
+	   "CollegeDraftYear":2010,
+	   "id":9,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "WAS",
+		  "SF",
+		  "SF"
+	   ],
+	   "ProBowls":9,
+	   "Rings":0
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"OL",
+	   "FirstName":"Jason",
+	   "LastName":"Kelce",
 	   "PositionCategory":"OFF",
 	   "Name":"Jason Kelce",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/12707.png",
 	   "CollegeDraftTeam":"PHI",
-	   "CollegeDraftYear":2011
+	   "CollegeDraftYear":2011,
+	   "id":10,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "PHI"
+	   ],
+	   "ProBowls":5,
+	   "Rings":1
 	},
 	{
 	   "Team":"PIT",
-	   "Position":"DL",
+	   "FirstName":"Cameron",
+	   "LastName":"Heyward",
 	   "PositionCategory":"DEF",
 	   "Name":"Cameron Heyward",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/12902.png",
 	   "CollegeDraftTeam":"PIT",
-	   "CollegeDraftYear":2011
+	   "CollegeDraftYear":2011,
+	   "id":11,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "PIT"
+	   ],
+	   "ProBowls":5,
+	   "Rings":0
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"DL",
+	   "FirstName":"J.J.",
+	   "LastName":"Watt",
 	   "PositionCategory":"DEF",
 	   "Name":"J.J. Watt",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/12955.png",
 	   "CollegeDraftTeam":"HOU",
-	   "CollegeDraftYear":2011
+	   "CollegeDraftYear":2011,
+	   "id":12,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "HOU",
+		  "ARI"
+	   ],
+	   "ProBowls":5,
+	   "Rings":0
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"LB",
+	   "FirstName":"Von",
+	   "LastName":"Miller",
 	   "PositionCategory":"DEF",
 	   "Name":"Von Miller",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/13022.png",
 	   "CollegeDraftTeam":"DEN",
-	   "CollegeDraftYear":2011
+	   "CollegeDraftYear":2011,
+	   "id":13,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "DEN",
+		  "LAR"
+	   ],
+	   "ProBowls":8,
+	   "Rings":2
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"OL",
+	   "FirstName":"Rodney",
+	   "LastName":"Hudson",
 	   "PositionCategory":"OFF",
 	   "Name":"Rodney Hudson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/13037.png",
 	   "CollegeDraftTeam":"KC",
-	   "CollegeDraftYear":2011
+	   "CollegeDraftYear":2011,
+	   "id":14,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "KC",
+		  "KC",
+		  "KC",
+		  "OAK",
+		  "LV",
+		  "ARI"
+	   ],
+	   "ProBowls":3,
+	   "Rings":0
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"OL",
+	   "FirstName":"Tyron",
+	   "LastName":"Smith",
 	   "PositionCategory":"OFF",
 	   "Name":"Tyron Smith",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/13129.png",
 	   "CollegeDraftTeam":"DAL",
-	   "CollegeDraftYear":2011
+	   "CollegeDraftYear":2011,
+	   "id":15,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "DAL"
+	   ],
+	   "ProBowls":8,
+	   "Rings":0
 	},
 	{
 	   "Team":"GB",
-	   "Position":"WR",
+	   "FirstName":"Randall",
+	   "LastName":"Cobb",
 	   "PositionCategory":"OFF",
 	   "Name":"Randall Cobb",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/13227.png",
 	   "CollegeDraftTeam":"GB",
-	   "CollegeDraftYear":2011
+	   "CollegeDraftYear":2011,
+	   "id":16,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "GB",
+		  "GB",
+		  "GB",
+		  "GB",
+		  "GB",
+		  "GB",
+		  "GB",
+		  "DAL",
+		  "HOU",
+		  "GB"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"NO",
-	   "Position":"RB",
+	   "FirstName":"Mark",
+	   "LastName":"Ingram II",
 	   "PositionCategory":"OFF",
 	   "Name":"Mark Ingram II",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/13337.png",
 	   "CollegeDraftTeam":"NO",
-	   "CollegeDraftYear":2011
+	   "CollegeDraftYear":2011,
+	   "id":17,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "NO",
+		  "NO",
+		  "NO",
+		  "NO",
+		  "NO",
+		  "NO",
+		  "NO",
+		  "BAL",
+		  "HOU",
+		  "NO"
+	   ],
+	   "ProBowls":3,
+	   "Rings":0
 	},
 	{
 	   "Team":"NO",
-	   "Position":"DL",
+	   "FirstName":"Cameron",
+	   "LastName":"Jordan",
 	   "PositionCategory":"DEF",
 	   "Name":"Cameron Jordan",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/13338.png",
 	   "CollegeDraftTeam":"NO",
-	   "CollegeDraftYear":2011
+	   "CollegeDraftYear":2011,
+	   "id":18,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "NO",
+		  "NO",
+		  "NO",
+		  "NO",
+		  "NO",
+		  "NO",
+		  "NO",
+		  "NO",
+		  "NO",
+		  "NO"
+	   ],
+	   "ProBowls":7,
+	   "Rings":0
 	},
 	{
 	   "Team":"CHI",
-	   "Position":"LB",
+	   "FirstName":"Robert",
+	   "LastName":"Quinn",
 	   "PositionCategory":"DEF",
 	   "Name":"Robert Quinn",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/13393.png",
 	   "CollegeDraftTeam":"LAR",
-	   "CollegeDraftYear":2011
+	   "CollegeDraftYear":2011,
+	   "id":19,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "STL",
+		  "LAR",
+		  "MIA",
+		  "DAL",
+		  "CHI"
+	   ],
+	   "ProBowls":3,
+	   "Rings":0
+	},
+	{
+	   "Team":"MIN",
+	   "FirstName":"Patrick",
+	   "LastName":"Peterson",
+	   "PositionCategory":"DEF",
+	   "Name":"Patrick Peterson",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/13415.png",
+	   "CollegeDraftTeam":"ARI",
+	   "CollegeDraftYear":2011,
+	   "id":20,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "ARI",
+		  "MIN"
+	   ],
+	   "ProBowls":8,
+	   "Rings":0
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"DL",
+	   "FirstName":"Fletcher",
+	   "LastName":"Cox",
 	   "PositionCategory":"DEF",
 	   "Name":"Fletcher Cox",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/13721.png",
 	   "CollegeDraftTeam":"PHI",
-	   "CollegeDraftYear":2012
+	   "CollegeDraftYear":2012,
+	   "id":21,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "PHI"
+	   ],
+	   "ProBowls":6,
+	   "Rings":1
 	},
 	{
 	   "Team":"LV",
-	   "Position":"LB",
+	   "FirstName":"Brandon",
+	   "LastName":"Bolden",
+	   "PositionCategory":"OFF",
+	   "Name":"Brandon Bolden",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/13741.png",
+	   "CollegeDraftTeam":"NE",
+	   "CollegeDraftYear":2012,
+	   "id":22,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NE",
+		  "MIA",
+		  "NE",
+		  "NE"
+	   ],
+	   "ProBowls":0,
+	   "Rings":2
+	},
+	{
+	   "Team":"LV",
+	   "FirstName":"Chandler",
+	   "LastName":"Jones",
 	   "PositionCategory":"DEF",
 	   "Name":"Chandler Jones",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/13749.png",
 	   "CollegeDraftTeam":"NE",
-	   "CollegeDraftYear":2012
+	   "CollegeDraftYear":2012,
+	   "id":23,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NE",
+		  "ARI"
+	   ],
+	   "ProBowls":4,
+	   "Rings":1
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"QB",
+	   "FirstName":"Ryan",
+	   "LastName":"Tannehill",
 	   "PositionCategory":"OFF",
 	   "Name":"Ryan Tannehill",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/13799.png",
 	   "CollegeDraftTeam":"MIA",
-	   "CollegeDraftYear":2012
+	   "CollegeDraftYear":2012,
+	   "id":24,
+	   "Position":"QB",
+	   "AllTeams":[
+		  "MIA",
+		  "TEN"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"NO",
-	   "Position":"LB",
+	   "FirstName":"Demario",
+	   "LastName":"Davis",
 	   "PositionCategory":"DEF",
 	   "Name":"Demario Davis",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/13810.png",
 	   "CollegeDraftTeam":"NYJ",
-	   "CollegeDraftYear":2012
+	   "CollegeDraftYear":2012,
+	   "id":25,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "NYJ",
+		  "CLE",
+		  "NO",
+		  "NO",
+		  "NO",
+		  "NO"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"WR",
+	   "FirstName":"Marvin",
+	   "LastName":"Jones Jr.",
 	   "PositionCategory":"OFF",
 	   "Name":"Marvin Jones Jr.",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/13870.png",
 	   "CollegeDraftTeam":"CIN",
-	   "CollegeDraftYear":2012
+	   "CollegeDraftYear":2012,
+	   "id":26,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "CIN",
+		  "DET",
+		  "JAX"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"BAL",
-	   "Position":"OL",
+	   "FirstName":"Kevin",
+	   "LastName":"Zeitler",
 	   "PositionCategory":"OFF",
 	   "Name":"Kevin Zeitler",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/13882.png",
 	   "CollegeDraftTeam":"CIN",
-	   "CollegeDraftYear":2012
+	   "CollegeDraftYear":2012,
+	   "id":27,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "CIN",
+		  "CLE",
+		  "NYG",
+		  "BAL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"OL",
+	   "FirstName":"Kelvin",
+	   "LastName":"Beachum",
 	   "PositionCategory":"OFF",
 	   "Name":"Kelvin Beachum",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/13913.png",
 	   "CollegeDraftTeam":"PIT",
-	   "CollegeDraftYear":2012
+	   "CollegeDraftYear":2012,
+	   "id":28,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "PIT",
+		  "JAX",
+		  "NYJ",
+		  "ARI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"OL",
+	   "FirstName":"Ben",
+	   "LastName":"Jones",
 	   "PositionCategory":"OFF",
 	   "Name":"Ben Jones",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/13969.png",
 	   "CollegeDraftTeam":"HOU",
-	   "CollegeDraftYear":2012
+	   "CollegeDraftYear":2012,
+	   "id":29,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "HOU",
+		  "TEN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"BAL",
-	   "Position":"DL",
+	   "FirstName":"Derek",
+	   "LastName":"Wolfe",
 	   "PositionCategory":"DEF",
 	   "Name":"Derek Wolfe",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/14059.png",
 	   "CollegeDraftTeam":"DEN",
-	   "CollegeDraftYear":2012
+	   "CollegeDraftYear":2012,
+	   "id":30,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "DEN",
+		  "BAL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"MIN",
-	   "Position":"QB",
+	   "FirstName":"Kirk",
+	   "LastName":"Cousins",
 	   "PositionCategory":"OFF",
 	   "Name":"Kirk Cousins",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/14252.png",
 	   "CollegeDraftTeam":"WAS",
-	   "CollegeDraftYear":2012
+	   "CollegeDraftYear":2012,
+	   "id":31,
+	   "Position":"QB",
+	   "AllTeams":[
+		  "WAS",
+		  "MIN"
+	   ],
+	   "ProBowls":3,
+	   "Rings":0
 	},
 	{
 	   "Team":"ATL",
-	   "Position":"DB",
+	   "FirstName":"Casey",
+	   "LastName":"Hayward Jr.",
 	   "PositionCategory":"DEF",
 	   "Name":"Casey Hayward Jr.",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/14285.png",
 	   "CollegeDraftTeam":"GB",
-	   "CollegeDraftYear":2012
+	   "CollegeDraftYear":2012,
+	   "id":32,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "GB",
+		  "GB",
+		  "GB",
+		  "GB",
+		  "SDG",
+		  "LAC",
+		  "LV"
+	   ],
+	   "ProBowls":2,
+	   "Rings":0
 	},
 	{
 	   "Team":"TB",
-	   "Position":"LB",
+	   "FirstName":"Lavonte",
+	   "LastName":"David",
 	   "PositionCategory":"DEF",
 	   "Name":"Lavonte David",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/14375.png",
 	   "CollegeDraftTeam":"TB",
-	   "CollegeDraftYear":2012
+	   "CollegeDraftYear":2012,
+	   "id":33,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "TB",
+		  "TB",
+		  "TB",
+		  "TB",
+		  "TB",
+		  "TB",
+		  "TB",
+		  "TB",
+		  "TB",
+		  "TB"
+	   ],
+	   "ProBowls":1,
+	   "Rings":1
 	},
 	{
 	   "Team":"DET",
-	   "Position":"DL",
+	   "FirstName":"Michael",
+	   "LastName":"Brockers",
 	   "PositionCategory":"DEF",
 	   "Name":"Michael Brockers",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/14397.png",
 	   "CollegeDraftTeam":"LAR",
-	   "CollegeDraftYear":2012
+	   "CollegeDraftYear":2012,
+	   "id":34,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "STL",
+		  "LAR",
+		  "DET"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"MIN",
-	   "Position":"DB",
+	   "FirstName":"Harrison",
+	   "LastName":"Smith",
 	   "PositionCategory":"DEF",
 	   "Name":"Harrison Smith",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/14461.png",
 	   "CollegeDraftTeam":"MIN",
-	   "CollegeDraftYear":2012
+	   "CollegeDraftYear":2012,
+	   "id":35,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "MIN"
+	   ],
+	   "ProBowls":6,
+	   "Rings":0
+	},
+	{
+	   "Team":"LAR",
+	   "FirstName":"Bobby",
+	   "LastName":"Wagner",
+	   "PositionCategory":"DEF",
+	   "Name":"Bobby Wagner",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/14534.png",
+	   "CollegeDraftTeam":"SEA",
+	   "CollegeDraftYear":2012,
+	   "id":36,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "SEA"
+	   ],
+	   "ProBowls":8,
+	   "Rings":1
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"QB",
+	   "FirstName":"Russell",
+	   "LastName":"Wilson",
 	   "PositionCategory":"OFF",
 	   "Name":"Russell Wilson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/14536.png",
 	   "CollegeDraftTeam":"SEA",
-	   "CollegeDraftYear":2012
+	   "CollegeDraftYear":2012,
+	   "id":37,
+	   "Position":"QB",
+	   "AllTeams":[
+		  "SEA"
+	   ],
+	   "ProBowls":9,
+	   "Rings":1
 	},
 	{
 	   "Team":"NE",
-	   "Position":"DL",
+	   "FirstName":"Lawrence",
+	   "LastName":"Guy",
 	   "PositionCategory":"DEF",
 	   "Name":"Lawrence Guy",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/14743.png",
 	   "CollegeDraftTeam":"GB",
-	   "CollegeDraftYear":2011
+	   "CollegeDraftYear":2011,
+	   "id":38,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "IND",
+		  "SDG",
+		  "BAL",
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NE"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"TE",
+	   "FirstName":"Zach",
+	   "LastName":"Ertz",
 	   "PositionCategory":"OFF",
 	   "Name":"Zach Ertz",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/14856.png",
 	   "CollegeDraftTeam":"PHI",
-	   "CollegeDraftYear":2013
+	   "CollegeDraftYear":2013,
+	   "id":39,
+	   "Position":"TE",
+	   "AllTeams":[
+		  "PHI",
+		  "ARI"
+	   ],
+	   "ProBowls":3,
+	   "Rings":1
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"OL",
+	   "FirstName":"Lane",
+	   "LastName":"Johnson",
 	   "PositionCategory":"OFF",
 	   "Name":"Lane Johnson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/14857.png",
 	   "CollegeDraftTeam":"PHI",
-	   "CollegeDraftYear":2013
+	   "CollegeDraftYear":2013,
+	   "id":40,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "PHI"
+	   ],
+	   "ProBowls":3,
+	   "Rings":1
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"DB",
+	   "FirstName":"Jordan",
+	   "LastName":"Poyer",
 	   "PositionCategory":"DEF",
 	   "Name":"Jordan Poyer",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/14860.png",
 	   "CollegeDraftTeam":"PHI",
-	   "CollegeDraftYear":2013
+	   "CollegeDraftYear":2013,
+	   "id":41,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "CLE",
+		  "PHI",
+		  "BUF"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"WR",
+	   "FirstName":"Robert",
+	   "LastName":"Woods",
 	   "PositionCategory":"OFF",
 	   "Name":"Robert Woods",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/14871.png",
 	   "CollegeDraftTeam":"BUF",
-	   "CollegeDraftYear":2013
+	   "CollegeDraftYear":2013,
+	   "id":42,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "BUF",
+		  "LAR"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"TB",
-	   "Position":"DB",
+	   "FirstName":"Logan",
+	   "LastName":"Ryan",
 	   "PositionCategory":"DEF",
 	   "Name":"Logan Ryan",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/14888.png",
 	   "CollegeDraftTeam":"NE",
-	   "CollegeDraftYear":2013
+	   "CollegeDraftYear":2013,
+	   "id":43,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NE",
+		  "TEN",
+		  "NYG"
+	   ],
+	   "ProBowls":0,
+	   "Rings":2
 	},
 	{
 	   "Team":"TB",
-	   "Position":"OL",
+	   "FirstName":"Ryan",
+	   "LastName":"Jensen",
 	   "PositionCategory":"OFF",
 	   "Name":"Ryan Jensen",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/14900.png",
 	   "CollegeDraftTeam":"BAL",
-	   "CollegeDraftYear":2013
+	   "CollegeDraftYear":2013,
+	   "id":44,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "BAL",
+		  "TB",
+		  "TB",
+		  "TB",
+		  "TB"
+	   ],
+	   "ProBowls":1,
+	   "Rings":1
+	},
+	{
+	   "Team":"TB",
+	   "FirstName":"Giovani",
+	   "LastName":"Bernard",
+	   "PositionCategory":"OFF",
+	   "Name":"Giovani Bernard",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/14916.png",
+	   "CollegeDraftTeam":"CIN",
+	   "CollegeDraftYear":2013,
+	   "id":45,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "CIN",
+		  "TB"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"RB",
+	   "FirstName":"Rex",
+	   "LastName":"Burkhead",
 	   "PositionCategory":"OFF",
 	   "Name":"Rex Burkhead",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/14917.png",
 	   "CollegeDraftTeam":"CIN",
-	   "CollegeDraftYear":2013
+	   "CollegeDraftYear":2013,
+	   "id":46,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "CIN",
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NE",
+		  "HOU"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"WR",
+	   "FirstName":"DeAndre",
+	   "LastName":"Hopkins",
 	   "PositionCategory":"OFF",
 	   "Name":"DeAndre Hopkins",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/14986.png",
 	   "CollegeDraftTeam":"HOU",
-	   "CollegeDraftYear":2013
-	},
-	{
-	   "Team":"TEN",
-	   "Position":"OL",
-	   "PositionCategory":"OFF",
-	   "Name":"David Quessenberry",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/14988.png",
-	   "CollegeDraftTeam":"HOU",
-	   "CollegeDraftYear":2013
+	   "CollegeDraftYear":2013,
+	   "id":47,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "HOU",
+		  "ARI"
+	   ],
+	   "ProBowls":5,
+	   "Rings":0
 	},
 	{
 	   "Team":"KC",
-	   "Position":"TE",
+	   "FirstName":"Travis",
+	   "LastName":"Kelce",
 	   "PositionCategory":"OFF",
 	   "Name":"Travis Kelce",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/15048.png",
 	   "CollegeDraftTeam":"KC",
-	   "CollegeDraftYear":2013
+	   "CollegeDraftYear":2013,
+	   "id":48,
+	   "Position":"TE",
+	   "AllTeams":[
+		  "KC",
+		  "KC",
+		  "KC",
+		  "KC",
+		  "KC",
+		  "KC",
+		  "KC",
+		  "KC",
+		  "KC"
+	   ],
+	   "ProBowls":7,
+	   "Rings":1
 	},
 	{
 	   "Team":"LAC",
-	   "Position":"WR",
+	   "FirstName":"Keenan",
+	   "LastName":"Allen",
 	   "PositionCategory":"OFF",
 	   "Name":"Keenan Allen",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/15076.png",
 	   "CollegeDraftTeam":"LAC",
-	   "CollegeDraftYear":2013
+	   "CollegeDraftYear":2013,
+	   "id":49,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "SDG",
+		  "LAC"
+	   ],
+	   "ProBowls":5,
+	   "Rings":0
+	},
+	{
+	   "Team":"LV",
+	   "FirstName":"Johnathan",
+	   "LastName":"Hankins",
+	   "PositionCategory":"DEF",
+	   "Name":"Johnathan Hankins",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/15090.png",
+	   "CollegeDraftTeam":"NYG",
+	   "CollegeDraftYear":2013,
+	   "id":50,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "NYG",
+		  "IND",
+		  "OAK",
+		  "LV",
+		  "LV"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"OL",
+	   "FirstName":"Justin",
+	   "LastName":"Pugh",
 	   "PositionCategory":"OFF",
 	   "Name":"Justin Pugh",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/15094.png",
 	   "CollegeDraftTeam":"NYG",
-	   "CollegeDraftYear":2013
+	   "CollegeDraftYear":2013,
+	   "id":51,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "NYG",
+		  "ARI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"DB",
+	   "FirstName":"Darius",
+	   "LastName":"Slay",
 	   "PositionCategory":"DEF",
 	   "Name":"Darius Slay",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/15127.png",
 	   "CollegeDraftTeam":"DET",
-	   "CollegeDraftYear":2013
+	   "CollegeDraftYear":2013,
+	   "id":52,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "DET",
+		  "PHI"
+	   ],
+	   "ProBowls":4,
+	   "Rings":0
 	},
 	{
 	   "Team":"GB",
-	   "Position":"OL",
+	   "FirstName":"David",
+	   "LastName":"Bakhtiari",
 	   "PositionCategory":"OFF",
 	   "Name":"David Bakhtiari",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/15131.png",
 	   "CollegeDraftTeam":"GB",
-	   "CollegeDraftYear":2013
+	   "CollegeDraftYear":2013,
+	   "id":53,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "GB",
+		  "GB",
+		  "GB",
+		  "GB",
+		  "GB",
+		  "GB",
+		  "GB",
+		  "GB",
+		  "GB"
+	   ],
+	   "ProBowls":3,
+	   "Rings":0
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"DB",
+	   "FirstName":"Micah",
+	   "LastName":"Hyde",
 	   "PositionCategory":"DEF",
 	   "Name":"Micah Hyde",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/15136.png",
 	   "CollegeDraftTeam":"GB",
-	   "CollegeDraftYear":2013
+	   "CollegeDraftYear":2013,
+	   "id":54,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "GB",
+		  "GB",
+		  "GB",
+		  "GB",
+		  "BUF"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"ATL",
-	   "Position":"RB",
+	   "FirstName":"Cordarrelle",
+	   "LastName":"Patterson",
 	   "PositionCategory":"OFF",
 	   "Name":"Cordarrelle Patterson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/15150.png",
 	   "CollegeDraftTeam":"MIN",
-	   "CollegeDraftYear":2013
+	   "CollegeDraftYear":2013,
+	   "id":55,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "MIN",
+		  "OAK",
+		  "NE",
+		  "CHI",
+		  "ATL"
+	   ],
+	   "ProBowls":4,
+	   "Rings":1
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"OL",
+	   "FirstName":"Terron",
+	   "LastName":"Armstead",
 	   "PositionCategory":"OFF",
 	   "Name":"Terron Armstead",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/15193.png",
 	   "CollegeDraftTeam":"NO",
-	   "CollegeDraftYear":2013
-	},
-	{
-	   "Team":"DEN",
-	   "Position":"DL",
-	   "PositionCategory":"DEF",
-	   "Name":"Mike Purcell",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/15375.png",
-	   "CollegeDraftTeam":"SF",
-	   "CollegeDraftYear":2013
+	   "CollegeDraftYear":2013,
+	   "id":56,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "NO",
+		  "NO",
+		  "NO",
+		  "NO",
+		  "NO",
+		  "NO",
+		  "NO",
+		  "NO",
+		  "NO"
+	   ],
+	   "ProBowls":3,
+	   "Rings":0
 	},
 	{
 	   "Team":"MIN",
-	   "Position":"WR",
+	   "FirstName":"Adam",
+	   "LastName":"Thielen",
 	   "PositionCategory":"OFF",
 	   "Name":"Adam Thielen",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/15534.png",
 	   "CollegeDraftTeam":"MIN",
-	   "CollegeDraftYear":2013
+	   "CollegeDraftYear":2013,
+	   "id":57,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "MIN"
+	   ],
+	   "ProBowls":2,
+	   "Rings":0
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"OL",
+	   "FirstName":"Billy",
+	   "LastName":"Turner",
 	   "PositionCategory":"OFF",
 	   "Name":"Billy Turner",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16029.png",
 	   "CollegeDraftTeam":"MIA",
-	   "CollegeDraftYear":2014
+	   "CollegeDraftYear":2014,
+	   "id":58,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "MIA",
+		  "DEN",
+		  "GB",
+		  "GB",
+		  "GB"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"ATL",
-	   "Position":"RB",
+	   "FirstName":"Damien",
+	   "LastName":"Williams",
 	   "PositionCategory":"OFF",
 	   "Name":"Damien Williams",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16031.png",
 	   "CollegeDraftTeam":"MIA",
-	   "CollegeDraftYear":2014
+	   "CollegeDraftYear":2014,
+	   "id":59,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "MIA",
+		  "KC",
+		  "KC",
+		  "CHI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"NE",
-	   "Position":"DB",
+	   "FirstName":"Malcolm",
+	   "LastName":"Butler",
 	   "PositionCategory":"DEF",
 	   "Name":"Malcolm Butler",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16035.png",
 	   "CollegeDraftTeam":"NE",
-	   "CollegeDraftYear":2014
-	},
-	{
-	   "Team":"SF",
-	   "Position":"QB",
-	   "PositionCategory":"OFF",
-	   "Name":"Jimmy Garoppolo",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16041.png",
-	   "CollegeDraftTeam":"NE",
-	   "CollegeDraftYear":2014
+	   "CollegeDraftYear":2014,
+	   "id":60,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NE",
+		  "TEN"
+	   ],
+	   "ProBowls":1,
+	   "Rings":2
 	},
 	{
 	   "Team":"NE",
-	   "Position":"RB",
+	   "FirstName":"James",
+	   "LastName":"White",
 	   "PositionCategory":"OFF",
 	   "Name":"James White",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16056.png",
 	   "CollegeDraftTeam":"NE",
-	   "CollegeDraftYear":2014
+	   "CollegeDraftYear":2014,
+	   "id":61,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NE"
+	   ],
+	   "ProBowls":0,
+	   "Rings":3
 	},
 	{
 	   "Team":"CHI",
-	   "Position":"OL",
+	   "FirstName":"Dakota",
+	   "LastName":"Dozier",
 	   "PositionCategory":"OFF",
 	   "Name":"Dakota Dozier",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16061.png",
 	   "CollegeDraftTeam":"NYJ",
-	   "CollegeDraftYear":2014
+	   "CollegeDraftYear":2014,
+	   "id":62,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "NYJ",
+		  "MIN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"DB",
+	   "FirstName":"Terrence",
+	   "LastName":"Brooks",
 	   "PositionCategory":"DEF",
 	   "Name":"Terrence Brooks",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16078.png",
 	   "CollegeDraftTeam":"BAL",
-	   "CollegeDraftYear":2014
+	   "CollegeDraftYear":2014,
+	   "id":63,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "BAL",
+		  "PHI",
+		  "NYJ",
+		  "NE",
+		  "NE",
+		  "HOU"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NO",
-	   "Position":"OL",
+	   "FirstName":"James",
+	   "LastName":"Hurst",
 	   "PositionCategory":"OFF",
 	   "Name":"James Hurst",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16086.png",
 	   "CollegeDraftTeam":"BAL",
-	   "CollegeDraftYear":2014
+	   "CollegeDraftYear":2014,
+	   "id":64,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "BAL",
+		  "NO",
+		  "NO"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"LB",
+	   "FirstName":"C.J.",
+	   "LastName":"Mosley",
 	   "PositionCategory":"DEF",
 	   "Name":"C.J. Mosley",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16093.png",
 	   "CollegeDraftTeam":"BAL",
-	   "CollegeDraftYear":2014
+	   "CollegeDraftYear":2014,
+	   "id":65,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "BAL",
+		  "NYJ"
+	   ],
+	   "ProBowls":4,
+	   "Rings":0
 	},
 	{
 	   "Team":"CLE",
-	   "Position":"OL",
+	   "FirstName":"Joel",
+	   "LastName":"Bitonio",
 	   "PositionCategory":"OFF",
 	   "Name":"Joel Bitonio",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16125.png",
 	   "CollegeDraftTeam":"CLE",
-	   "CollegeDraftYear":2014
+	   "CollegeDraftYear":2014,
+	   "id":66,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "CLE"
+	   ],
+	   "ProBowls":4,
+	   "Rings":0
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"LB",
+	   "FirstName":"Christian",
+	   "LastName":"Kirksey",
 	   "PositionCategory":"DEF",
 	   "Name":"Christian Kirksey",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16133.png",
 	   "CollegeDraftTeam":"CLE",
-	   "CollegeDraftYear":2014
+	   "CollegeDraftYear":2014,
+	   "id":67,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "CLE",
+		  "GB",
+		  "HOU"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"DB",
+	   "FirstName":"K'Waun",
+	   "LastName":"Williams",
 	   "PositionCategory":"DEF",
 	   "Name":"K'Waun Williams",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16143.png",
 	   "CollegeDraftTeam":"CLE",
-	   "CollegeDraftYear":2014
+	   "CollegeDraftYear":2014,
+	   "id":68,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "CLE",
+		  "SF",
+		  "SF",
+		  "SF",
+		  "SF",
+		  "SF"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"PIT",
-	   "Position":"DL",
+	   "FirstName":"Stephon",
+	   "LastName":"Tuitt",
 	   "PositionCategory":"DEF",
 	   "Name":"Stephon Tuitt",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16159.png",
 	   "CollegeDraftTeam":"PIT",
-	   "CollegeDraftYear":2014
+	   "CollegeDraftYear":2014,
+	   "id":69,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "PIT"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"BUF",
+	   "FirstName":"DaQuan",
+	   "LastName":"Jones",
+	   "PositionCategory":"DEF",
+	   "Name":"DaQuan Jones",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16171.png",
+	   "CollegeDraftTeam":"TEN",
+	   "CollegeDraftYear":2014,
+	   "id":70,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "TEN",
+		  "CAR"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"OL",
+	   "FirstName":"Taylor",
+	   "LastName":"Lewan",
 	   "PositionCategory":"OFF",
 	   "Name":"Taylor Lewan",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16172.png",
 	   "CollegeDraftTeam":"TEN",
-	   "CollegeDraftYear":2014
+	   "CollegeDraftYear":2014,
+	   "id":71,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "TEN"
+	   ],
+	   "ProBowls":3,
+	   "Rings":0
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"OL",
+	   "FirstName":"Justin",
+	   "LastName":"McCray",
 	   "PositionCategory":"OFF",
 	   "Name":"Justin McCray",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16173.png",
 	   "CollegeDraftTeam":"TEN",
-	   "CollegeDraftYear":2014
+	   "CollegeDraftYear":2014,
+	   "id":72,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "GB",
+		  "GB",
+		  "CLE",
+		  "ATL",
+		  "HOU"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"LAC",
-	   "Position":"OL",
+	   "FirstName":"Matt",
+	   "LastName":"Feiler",
 	   "PositionCategory":"OFF",
 	   "Name":"Matt Feiler",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16198.png",
 	   "CollegeDraftTeam":"HOU",
-	   "CollegeDraftYear":2014
+	   "CollegeDraftYear":2014,
+	   "id":73,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "PIT",
+		  "LAC"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NE",
-	   "Position":"OL",
+	   "FirstName":"James",
+	   "LastName":"Ferentz",
 	   "PositionCategory":"OFF",
 	   "Name":"James Ferentz",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16199.png",
 	   "CollegeDraftTeam":"HOU",
-	   "CollegeDraftYear":2014
+	   "CollegeDraftYear":2014,
+	   "id":74,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "DEN",
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NE"
+	   ],
+	   "ProBowls":0,
+	   "Rings":2
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"WR",
+	   "FirstName":"Allen",
+	   "LastName":"Robinson II",
 	   "PositionCategory":"OFF",
 	   "Name":"Allen Robinson II",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16263.png",
 	   "CollegeDraftTeam":"JAX",
-	   "CollegeDraftYear":2014
+	   "CollegeDraftYear":2014,
+	   "id":75,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "JAX",
+		  "CHI"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"TB",
-	   "Position":"LB",
+	   "FirstName":"Shaquil",
+	   "LastName":"Barrett",
 	   "PositionCategory":"DEF",
 	   "Name":"Shaquil Barrett",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16271.png",
 	   "CollegeDraftTeam":"DEN",
-	   "CollegeDraftYear":2014
+	   "CollegeDraftYear":2014,
+	   "id":76,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "DEN",
+		  "TB",
+		  "TB",
+		  "TB"
+	   ],
+	   "ProBowls":2,
+	   "Rings":2
 	},
 	{
 	   "Team":"SF",
-	   "Position":"DL",
+	   "FirstName":"Dee",
+	   "LastName":"Ford",
 	   "PositionCategory":"DEF",
 	   "Name":"Dee Ford",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16294.png",
 	   "CollegeDraftTeam":"KC",
-	   "CollegeDraftYear":2014
+	   "CollegeDraftYear":2014,
+	   "id":77,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "KC",
+		  "KC",
+		  "KC",
+		  "KC",
+		  "KC",
+		  "SF",
+		  "SF",
+		  "SF"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"DL",
+	   "FirstName":"Denico",
+	   "LastName":"Autry",
 	   "PositionCategory":"DEF",
 	   "Name":"Denico Autry",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16310.png",
 	   "CollegeDraftTeam":"LV",
-	   "CollegeDraftYear":2014
+	   "CollegeDraftYear":2014,
+	   "id":78,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "OAK",
+		  "IND",
+		  "TEN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"LV",
-	   "Position":"QB",
+	   "FirstName":"Derek",
+	   "LastName":"Carr",
 	   "PositionCategory":"OFF",
 	   "Name":"Derek Carr",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16311.png",
 	   "CollegeDraftTeam":"LV",
-	   "CollegeDraftYear":2014
+	   "CollegeDraftYear":2014,
+	   "id":79,
+	   "Position":"QB",
+	   "AllTeams":[
+		  "OAK",
+		  "LV",
+		  "LV"
+	   ],
+	   "ProBowls":3,
+	   "Rings":0
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"DL",
+	   "FirstName":"Justin",
+	   "LastName":"Ellis",
 	   "PositionCategory":"DEF",
 	   "Name":"Justin Ellis",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16315.png",
 	   "CollegeDraftTeam":"LV",
-	   "CollegeDraftYear":2014
+	   "CollegeDraftYear":2014,
+	   "id":80,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "OAK",
+		  "BAL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"DL",
+	   "FirstName":"Shelby",
+	   "LastName":"Harris",
 	   "PositionCategory":"DEF",
 	   "Name":"Shelby Harris",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16319.png",
 	   "CollegeDraftTeam":"LV",
-	   "CollegeDraftYear":2014
+	   "CollegeDraftYear":2014,
+	   "id":81,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "OAK",
+		  "DEN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"OL",
+	   "FirstName":"Gabe",
+	   "LastName":"Jackson",
 	   "PositionCategory":"OFF",
 	   "Name":"Gabe Jackson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16320.png",
 	   "CollegeDraftTeam":"LV",
-	   "CollegeDraftYear":2014
+	   "CollegeDraftYear":2014,
+	   "id":82,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "OAK",
+		  "LV",
+		  "SEA"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"LAC",
-	   "Position":"LB",
+	   "FirstName":"Khalil",
+	   "LastName":"Mack",
 	   "PositionCategory":"DEF",
 	   "Name":"Khalil Mack",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16323.png",
 	   "CollegeDraftTeam":"LV",
-	   "CollegeDraftYear":2014
+	   "CollegeDraftYear":2014,
+	   "id":83,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "OAK",
+		  "CHI"
+	   ],
+	   "ProBowls":6,
+	   "Rings":0
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"DL",
+	   "FirstName":"DeMarcus",
+	   "LastName":"Lawrence",
 	   "PositionCategory":"DEF",
 	   "Name":"DeMarcus Lawrence",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16366.png",
 	   "CollegeDraftTeam":"DAL",
-	   "CollegeDraftYear":2014
+	   "CollegeDraftYear":2014,
+	   "id":84,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "DAL"
+	   ],
+	   "ProBowls":2,
+	   "Rings":0
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"OL",
+	   "FirstName":"Zack",
+	   "LastName":"Martin",
 	   "PositionCategory":"OFF",
 	   "Name":"Zack Martin",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16369.png",
 	   "CollegeDraftTeam":"DAL",
-	   "CollegeDraftYear":2014
+	   "CollegeDraftYear":2014,
+	   "id":85,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "DAL"
+	   ],
+	   "ProBowls":7,
+	   "Rings":0
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"LB",
+	   "FirstName":"Devon",
+	   "LastName":"Kennard",
 	   "PositionCategory":"DEF",
 	   "Name":"Devon Kennard",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16397.png",
 	   "CollegeDraftTeam":"NYG",
-	   "CollegeDraftYear":2014
+	   "CollegeDraftYear":2014,
+	   "id":86,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "NYG",
+		  "DET",
+		  "ARI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"BAL",
-	   "Position":"OL",
+	   "FirstName":"Morgan",
+	   "LastName":"Moses",
 	   "PositionCategory":"OFF",
 	   "Name":"Morgan Moses",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16419.png",
 	   "CollegeDraftTeam":"WAS",
-	   "CollegeDraftYear":2014
+	   "CollegeDraftYear":2014,
+	   "id":87,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "WAS",
+		  "NYJ"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"OL",
+	   "FirstName":"Charles",
+	   "LastName":"Leno Jr.",
 	   "PositionCategory":"OFF",
 	   "Name":"Charles Leno Jr.",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16436.png",
 	   "CollegeDraftTeam":"CHI",
-	   "CollegeDraftYear":2014
+	   "CollegeDraftYear":2014,
+	   "id":88,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "CHI",
+		  "WAS"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"LV",
-	   "Position":"WR",
+	   "FirstName":"Davante",
+	   "LastName":"Adams",
 	   "PositionCategory":"OFF",
 	   "Name":"Davante Adams",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16470.png",
 	   "CollegeDraftTeam":"GB",
-	   "CollegeDraftYear":2014
+	   "CollegeDraftYear":2014,
+	   "id":89,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "GB",
+		  "GB",
+		  "GB",
+		  "GB",
+		  "GB",
+		  "GB",
+		  "GB",
+		  "GB"
+	   ],
+	   "ProBowls":5,
+	   "Rings":0
 	},
 	{
 	   "Team":"LAC",
-	   "Position":"OL",
+	   "FirstName":"Corey",
+	   "LastName":"Linsley",
 	   "PositionCategory":"OFF",
 	   "Name":"Corey Linsley",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16481.png",
 	   "CollegeDraftTeam":"GB",
-	   "CollegeDraftYear":2014
+	   "CollegeDraftYear":2014,
+	   "id":90,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "GB",
+		  "GB",
+		  "GB",
+		  "GB",
+		  "GB",
+		  "GB",
+		  "GB",
+		  "LAC"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"ATL",
-	   "Position":"OL",
+	   "FirstName":"Jake",
+	   "LastName":"Matthews",
 	   "PositionCategory":"OFF",
 	   "Name":"Jake Matthews",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16531.png",
 	   "CollegeDraftTeam":"ATL",
-	   "CollegeDraftYear":2014
+	   "CollegeDraftYear":2014,
+	   "id":91,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "ATL"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"OL",
+	   "FirstName":"Andrew",
+	   "LastName":"Norwell",
 	   "PositionCategory":"OFF",
 	   "Name":"Andrew Norwell",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16560.png",
 	   "CollegeDraftTeam":"CAR",
-	   "CollegeDraftYear":2014
+	   "CollegeDraftYear":2014,
+	   "id":92,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "CAR",
+		  "JAX"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"WR",
+	   "FirstName":"Brandin",
+	   "LastName":"Cooks",
 	   "PositionCategory":"OFF",
 	   "Name":"Brandin Cooks",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16568.png",
 	   "CollegeDraftTeam":"NO",
-	   "CollegeDraftYear":2014
+	   "CollegeDraftYear":2014,
+	   "id":93,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "NO",
+		  "NO",
+		  "NO",
+		  "NE",
+		  "LAR",
+		  "HOU"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"TB",
-	   "Position":"WR",
+	   "FirstName":"Cameron",
+	   "LastName":"Brate",
+	   "PositionCategory":"OFF",
+	   "Name":"Cameron Brate",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16593.png",
+	   "CollegeDraftTeam":"TB",
+	   "CollegeDraftYear":2014,
+	   "id":94,
+	   "Position":"TE",
+	   "AllTeams":[
+		  "TB",
+		  "TB",
+		  "TB",
+		  "TB",
+		  "TB",
+		  "TB",
+		  "TB",
+		  "TB"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
+	},
+	{
+	   "Team":"TB",
+	   "FirstName":"Mike",
+	   "LastName":"Evans",
 	   "PositionCategory":"OFF",
 	   "Name":"Mike Evans",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16597.png",
 	   "CollegeDraftTeam":"TB",
-	   "CollegeDraftYear":2014
+	   "CollegeDraftYear":2014,
+	   "id":95,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "TB",
+		  "TB",
+		  "TB",
+		  "TB",
+		  "TB",
+		  "TB",
+		  "TB",
+		  "TB"
+	   ],
+	   "ProBowls":4,
+	   "Rings":1
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"DL",
+	   "FirstName":"Aaron",
+	   "LastName":"Donald",
 	   "PositionCategory":"DEF",
 	   "Name":"Aaron Donald",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16618.png",
 	   "CollegeDraftTeam":"LAR",
-	   "CollegeDraftYear":2014
+	   "CollegeDraftYear":2014,
+	   "id":96,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "STL",
+		  "LAR"
+	   ],
+	   "ProBowls":8,
+	   "Rings":1
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"TE",
+	   "FirstName":"Logan",
+	   "LastName":"Thomas",
 	   "PositionCategory":"OFF",
 	   "Name":"Logan Thomas",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16656.png",
 	   "CollegeDraftTeam":"ARI",
-	   "CollegeDraftYear":2014
+	   "CollegeDraftYear":2014,
+	   "id":97,
+	   "Position":"TE",
+	   "AllTeams":[
+		  "ARI",
+		  "BUF",
+		  "DET",
+		  "WAS"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"SF",
-	   "Position":"DB",
+	   "FirstName":"Jimmie",
+	   "LastName":"Ward",
 	   "PositionCategory":"DEF",
 	   "Name":"Jimmie Ward",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16678.png",
 	   "CollegeDraftTeam":"SF",
-	   "CollegeDraftYear":2014
+	   "CollegeDraftYear":2014,
+	   "id":98,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "SF",
+		  "SF",
+		  "SF",
+		  "SF",
+		  "SF",
+		  "SF",
+		  "SF",
+		  "SF"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"OL",
+	   "FirstName":"Justin",
+	   "LastName":"Britt",
 	   "PositionCategory":"OFF",
 	   "Name":"Justin Britt",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16681.png",
 	   "CollegeDraftTeam":"SEA",
-	   "CollegeDraftYear":2014
+	   "CollegeDraftYear":2014,
+	   "id":99,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "SEA",
+		  "HOU"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NE",
-	   "Position":"DB",
+	   "FirstName":"Adrian",
+	   "LastName":"Phillips",
 	   "PositionCategory":"DEF",
 	   "Name":"Adrian Phillips",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16724.png",
 	   "CollegeDraftTeam":"LAC",
-	   "CollegeDraftYear":2014
+	   "CollegeDraftYear":2014,
+	   "id":100,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "SDG",
+		  "LAC",
+		  "NE",
+		  "NE"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"NO",
-	   "Position":"QB",
+	   "FirstName":"Jameis",
+	   "LastName":"Winston",
 	   "PositionCategory":"OFF",
 	   "Name":"Jameis Winston",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16762.png",
 	   "CollegeDraftTeam":"TB",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":101,
+	   "Position":"QB",
+	   "AllTeams":[
+		  "TB",
+		  "TB",
+		  "TB",
+		  "TB",
+		  "TB",
+		  "NO",
+		  "NO"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"ATL",
-	   "Position":"QB",
+	   "FirstName":"Marcus",
+	   "LastName":"Mariota",
 	   "PositionCategory":"OFF",
 	   "Name":"Marcus Mariota",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16763.png",
 	   "CollegeDraftTeam":"TEN",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":102,
+	   "Position":"QB",
+	   "AllTeams":[
+		  "TEN",
+		  "LV",
+		  "LV"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"LB",
+	   "FirstName":"Dante",
+	   "LastName":"Fowler Jr.",
 	   "PositionCategory":"DEF",
 	   "Name":"Dante Fowler Jr.",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16764.png",
 	   "CollegeDraftTeam":"JAX",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":103,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "JAX",
+		  "LAR",
+		  "ATL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CLE",
-	   "Position":"WR",
+	   "FirstName":"Amari",
+	   "LastName":"Cooper",
 	   "PositionCategory":"OFF",
 	   "Name":"Amari Cooper",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16765.png",
 	   "CollegeDraftTeam":"LV",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":104,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "OAK",
+		  "DAL"
+	   ],
+	   "ProBowls":4,
+	   "Rings":0
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"OL",
+	   "FirstName":"Brandon",
+	   "LastName":"Scherff",
 	   "PositionCategory":"OFF",
 	   "Name":"Brandon Scherff",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16766.png",
 	   "CollegeDraftTeam":"WAS",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":105,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "WAS"
+	   ],
+	   "ProBowls":5,
+	   "Rings":0
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"DL",
+	   "FirstName":"Leonard",
+	   "LastName":"Williams",
 	   "PositionCategory":"DEF",
 	   "Name":"Leonard Williams",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16767.png",
 	   "CollegeDraftTeam":"NYJ",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":106,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "NYJ",
+		  "NYG"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"NO",
-	   "Position":"OL",
+	   "FirstName":"Andrus",
+	   "LastName":"Peat",
 	   "PositionCategory":"OFF",
 	   "Name":"Andrus Peat",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16774.png",
 	   "CollegeDraftTeam":"NO",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":107,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "NO",
+		  "NO",
+		  "NO",
+		  "NO",
+		  "NO",
+		  "NO",
+		  "NO"
+	   ],
+	   "ProBowls":3,
+	   "Rings":0
+	},
+	{
+	   "Team":"NE",
+	   "FirstName":"DeVante",
+	   "LastName":"Parker",
+	   "PositionCategory":"OFF",
+	   "Name":"DeVante Parker",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16775.png",
+	   "CollegeDraftTeam":"MIA",
+	   "CollegeDraftYear":2015,
+	   "id":108,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "MIA"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"SF",
-	   "Position":"DL",
+	   "FirstName":"Arik",
+	   "LastName":"Armstead",
 	   "PositionCategory":"DEF",
 	   "Name":"Arik Armstead",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16778.png",
 	   "CollegeDraftTeam":"SF",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":109,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "SF",
+		  "SF",
+		  "SF",
+		  "SF",
+		  "SF",
+		  "SF",
+		  "SF"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"BAL",
-	   "Position":"DB",
+	   "FirstName":"Marcus",
+	   "LastName":"Peters",
 	   "PositionCategory":"DEF",
 	   "Name":"Marcus Peters",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16779.png",
 	   "CollegeDraftTeam":"KC",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":110,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "KC",
+		  "KC",
+		  "KC",
+		  "LAR",
+		  "BAL"
+	   ],
+	   "ProBowls":3,
+	   "Rings":0
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"OL",
+	   "FirstName":"Cameron",
+	   "LastName":"Erving",
 	   "PositionCategory":"OFF",
 	   "Name":"Cameron Erving",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16780.png",
 	   "CollegeDraftTeam":"CLE",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":111,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "CLE",
+		  "KC",
+		  "KC",
+		  "KC",
+		  "DAL",
+		  "CAR"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"NE",
-	   "Position":"WR",
+	   "FirstName":"Nelson",
+	   "LastName":"Agholor",
 	   "PositionCategory":"OFF",
 	   "Name":"Nelson Agholor",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16781.png",
 	   "CollegeDraftTeam":"PHI",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":112,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "PHI",
+		  "LV",
+		  "NE"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"LB",
+	   "FirstName":"Bud",
+	   "LastName":"Dupree",
 	   "PositionCategory":"DEF",
 	   "Name":"Bud Dupree",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16783.png",
 	   "CollegeDraftTeam":"PIT",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":113,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "PIT",
+		  "TEN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"OL",
+	   "FirstName":"D.J.",
+	   "LastName":"Humphries",
 	   "PositionCategory":"OFF",
 	   "Name":"D.J. Humphries",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16785.png",
 	   "CollegeDraftTeam":"ARI",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":114,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "ARI"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"LB",
+	   "FirstName":"Shaq",
+	   "LastName":"Thompson",
 	   "PositionCategory":"DEF",
 	   "Name":"Shaq Thompson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16786.png",
 	   "CollegeDraftTeam":"CAR",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":115,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "CAR"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"DB",
+	   "FirstName":"Byron",
+	   "LastName":"Jones",
 	   "PositionCategory":"DEF",
 	   "Name":"Byron Jones",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16788.png",
 	   "CollegeDraftTeam":"DAL",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":116,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "DAL",
+		  "MIA"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"OL",
+	   "FirstName":"Laken",
+	   "LastName":"Tomlinson",
 	   "PositionCategory":"OFF",
 	   "Name":"Laken Tomlinson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16789.png",
 	   "CollegeDraftTeam":"DET",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":117,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "DET",
+		  "SF",
+		  "SF",
+		  "SF",
+		  "SF",
+		  "SF"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"DL",
+	   "FirstName":"Malcom",
+	   "LastName":"Brown",
 	   "PositionCategory":"DEF",
 	   "Name":"Malcom Brown",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16793.png",
 	   "CollegeDraftTeam":"NE",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":118,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NO",
+		  "NO",
+		  "JAX"
+	   ],
+	   "ProBowls":0,
+	   "Rings":2
 	},
 	{
 	   "Team":"TB",
-	   "Position":"OL",
+	   "FirstName":"Donovan",
+	   "LastName":"Smith",
 	   "PositionCategory":"OFF",
 	   "Name":"Donovan Smith",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16795.png",
 	   "CollegeDraftTeam":"TB",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":119,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "TB",
+		  "TB",
+		  "TB",
+		  "TB",
+		  "TB",
+		  "TB",
+		  "TB"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"GB",
-	   "Position":"LB",
+	   "FirstName":"Preston",
+	   "LastName":"Smith",
 	   "PositionCategory":"DEF",
 	   "Name":"Preston Smith",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16799.png",
 	   "CollegeDraftTeam":"WAS",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":120,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "WAS",
+		  "GB",
+		  "GB",
+		  "GB"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"MIN",
-	   "Position":"LB",
+	   "FirstName":"Eric",
+	   "LastName":"Kendricks",
 	   "PositionCategory":"DEF",
 	   "Name":"Eric Kendricks",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16806.png",
 	   "CollegeDraftTeam":"MIN",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":121,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "MIN"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"LV",
-	   "Position":"LB",
+	   "FirstName":"Denzel",
+	   "LastName":"Perryman",
 	   "PositionCategory":"DEF",
 	   "Name":"Denzel Perryman",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16809.png",
 	   "CollegeDraftTeam":"LAC",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":122,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "SDG",
+		  "LAC",
+		  "LV"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"OL",
+	   "FirstName":"Mitch",
+	   "LastName":"Morse",
 	   "PositionCategory":"OFF",
 	   "Name":"Mitch Morse",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16810.png",
 	   "CollegeDraftTeam":"KC",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":123,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "KC",
+		  "KC",
+		  "KC",
+		  "KC",
+		  "BUF"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"DB",
+	   "FirstName":"Ronald",
+	   "LastName":"Darby",
 	   "PositionCategory":"DEF",
 	   "Name":"Ronald Darby",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16811.png",
 	   "CollegeDraftTeam":"BUF",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":124,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "BUF",
+		  "PHI",
+		  "WAS",
+		  "DEN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"OL",
+	   "FirstName":"Rob",
+	   "LastName":"Havenstein",
 	   "PositionCategory":"OFF",
 	   "Name":"Rob Havenstein",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16818.png",
 	   "CollegeDraftTeam":"LAR",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":125,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "STL",
+		  "LAR"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"LB",
+	   "FirstName":"Markus",
+	   "LastName":"Golden",
 	   "PositionCategory":"DEF",
 	   "Name":"Markus Golden",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16819.png",
 	   "CollegeDraftTeam":"ARI",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":126,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "ARI",
+		  "NYG"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"DL",
+	   "FirstName":"Randy",
+	   "LastName":"Gregory",
 	   "PositionCategory":"DEF",
 	   "Name":"Randy Gregory",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16821.png",
 	   "CollegeDraftTeam":"DAL",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":127,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "DAL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"KC",
-	   "Position":"DL",
+	   "FirstName":"Frank",
+	   "LastName":"Clark",
 	   "PositionCategory":"DEF",
 	   "Name":"Frank Clark",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16824.png",
 	   "CollegeDraftTeam":"SEA",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":128,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "SEA",
+		  "KC",
+		  "KC",
+		  "KC"
+	   ],
+	   "ProBowls":3,
+	   "Rings":1
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"WR",
+	   "FirstName":"Tyler",
+	   "LastName":"Lockett",
 	   "PositionCategory":"OFF",
 	   "Name":"Tyler Lockett",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16830.png",
 	   "CollegeDraftTeam":"SEA",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":129,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "SEA"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"RB",
+	   "FirstName":"Tevin",
+	   "LastName":"Coleman",
 	   "PositionCategory":"OFF",
 	   "Name":"Tevin Coleman",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16834.png",
 	   "CollegeDraftTeam":"ATL",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":130,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "ATL",
+		  "SF",
+		  "SF",
+		  "NYJ"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"HOU",
+	   "FirstName":"Chris",
+	   "LastName":"Conley",
+	   "PositionCategory":"OFF",
+	   "Name":"Chris Conley",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16837.png",
+	   "CollegeDraftTeam":"KC",
+	   "CollegeDraftYear":2015,
+	   "id":131,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "KC",
+		  "KC",
+		  "KC",
+		  "KC",
+		  "JAX",
+		  "HOU"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"RB",
+	   "FirstName":"Duke",
+	   "LastName":"Johnson",
 	   "PositionCategory":"OFF",
 	   "Name":"Duke Johnson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16838.png",
 	   "CollegeDraftTeam":"CLE",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":132,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "CLE",
+		  "HOU",
+		  "MIA"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"NO",
+	   "FirstName":"P.J.",
+	   "LastName":"Williams",
+	   "PositionCategory":"DEF",
+	   "Name":"P.J. Williams",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16839.png",
+	   "CollegeDraftTeam":"NO",
+	   "CollegeDraftYear":2015,
+	   "id":133,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "NO",
+		  "NO",
+		  "NO",
+		  "NO",
+		  "NO",
+		  "NO"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"MIN",
-	   "Position":"LB",
+	   "FirstName":"Jordan",
+	   "LastName":"Hicks",
 	   "PositionCategory":"DEF",
 	   "Name":"Jordan Hicks",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16845.png",
 	   "CollegeDraftTeam":"PHI",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":134,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "PHI",
+		  "ARI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"MIN",
-	   "Position":"DL",
+	   "FirstName":"Danielle",
+	   "LastName":"Hunter",
 	   "PositionCategory":"DEF",
 	   "Name":"Danielle Hunter",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16849.png",
 	   "CollegeDraftTeam":"MIN",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":135,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "MIN"
+	   ],
+	   "ProBowls":2,
+	   "Rings":0
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"WR",
+	   "FirstName":"Jamison",
+	   "LastName":"Crowder",
 	   "PositionCategory":"OFF",
 	   "Name":"Jamison Crowder",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16866.png",
 	   "CollegeDraftTeam":"WAS",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":136,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "WAS",
+		  "NYJ"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"MIN",
-	   "Position":"LB",
+	   "FirstName":"Za'Darius",
+	   "LastName":"Smith",
 	   "PositionCategory":"DEF",
 	   "Name":"Za'Darius Smith",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16883.png",
 	   "CollegeDraftTeam":"BAL",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":137,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "BAL",
+		  "GB",
+		  "GB",
+		  "GB"
+	   ],
+	   "ProBowls":2,
+	   "Rings":0
 	},
 	{
 	   "Team":"ATL",
-	   "Position":"RB",
+	   "FirstName":"Mike",
+	   "LastName":"Davis",
 	   "PositionCategory":"OFF",
 	   "Name":"Mike Davis",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16887.png",
 	   "CollegeDraftTeam":"SF",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":138,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "SF",
+		  "SF",
+		  "SEA",
+		  "CAR",
+		  "CHI",
+		  "ATL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"LB",
+	   "FirstName":"Damien",
+	   "LastName":"Wilson",
 	   "PositionCategory":"DEF",
 	   "Name":"Damien Wilson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16888.png",
 	   "CollegeDraftTeam":"DAL",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":139,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "DAL",
+		  "KC",
+		  "KC",
+		  "JAX"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"OL",
+	   "FirstName":"Jon",
+	   "LastName":"Feliciano",
 	   "PositionCategory":"OFF",
 	   "Name":"Jon Feliciano",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16889.png",
 	   "CollegeDraftTeam":"LV",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":140,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "OAK",
+		  "BUF"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"TB",
-	   "Position":"OL",
+	   "FirstName":"Shaq",
+	   "LastName":"Mason",
 	   "PositionCategory":"OFF",
 	   "Name":"Shaq Mason",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16892.png",
 	   "CollegeDraftTeam":"NE",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":141,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NE"
+	   ],
+	   "ProBowls":0,
+	   "Rings":2
 	},
 	{
 	   "Team":"NYG",
+	   "FirstName":"Max",
+	   "LastName":"Garcia",
+	   "PositionCategory":"OFF",
+	   "Name":"Max Garcia",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16894.png",
+	   "CollegeDraftTeam":"DEN",
+	   "CollegeDraftYear":2015,
+	   "id":142,
 	   "Position":"OL",
+	   "AllTeams":[
+		  "DEN",
+		  "ARI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
+	},
+	{
+	   "Team":"NYG",
+	   "FirstName":"Mark",
+	   "LastName":"Glowinski",
 	   "PositionCategory":"OFF",
 	   "Name":"Mark Glowinski",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16895.png",
 	   "CollegeDraftTeam":"SEA",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":143,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "SEA",
+		  "IND"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"GB",
-	   "Position":"DB",
+	   "FirstName":"Adrian",
+	   "LastName":"Amos",
 	   "PositionCategory":"DEF",
 	   "Name":"Adrian Amos",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16902.png",
 	   "CollegeDraftTeam":"CHI",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":144,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "CHI",
+		  "GB",
+		  "GB",
+		  "GB"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"DB",
+	   "FirstName":"Bobby",
+	   "LastName":"McCain",
 	   "PositionCategory":"DEF",
 	   "Name":"Bobby McCain",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16905.png",
 	   "CollegeDraftTeam":"MIA",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":145,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "MIA",
+		  "WAS"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"WR",
+	   "FirstName":"Stefon",
+	   "LastName":"Diggs",
 	   "PositionCategory":"OFF",
 	   "Name":"Stefon Diggs",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16906.png",
 	   "CollegeDraftTeam":"MIN",
-	   "CollegeDraftYear":2015
-	},
-	{
-	   "Team":"NYJ",
-	   "Position":"TE",
-	   "PositionCategory":"OFF",
-	   "Name":"C.J. Uzomah",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16917.png",
-	   "CollegeDraftTeam":"CIN",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":146,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "MIN",
+		  "BUF"
+	   ],
+	   "ProBowls":2,
+	   "Rings":0
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"DB",
+	   "FirstName":"Quandre",
+	   "LastName":"Diggs",
 	   "PositionCategory":"DEF",
 	   "Name":"Quandre Diggs",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16960.png",
 	   "CollegeDraftTeam":"DET",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":147,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "DET",
+		  "SEA"
+	   ],
+	   "ProBowls":2,
+	   "Rings":0
 	},
 	{
 	   "Team":"LV",
-	   "Position":"TE",
+	   "FirstName":"Darren",
+	   "LastName":"Waller",
 	   "PositionCategory":"OFF",
 	   "Name":"Darren Waller",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/16964.png",
 	   "CollegeDraftTeam":"BAL",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":148,
+	   "Position":"TE",
+	   "AllTeams":[
+		  "BAL",
+		  "OAK",
+		  "LV",
+		  "LV"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"NE",
-	   "Position":"OL",
+	   "FirstName":"Trent",
+	   "LastName":"Brown",
 	   "PositionCategory":"OFF",
 	   "Name":"Trent Brown",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17003.png",
 	   "CollegeDraftTeam":"SF",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":149,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "SF",
+		  "SF",
+		  "SF",
+		  "NE",
+		  "OAK",
+		  "LV",
+		  "NE"
+	   ],
+	   "ProBowls":1,
+	   "Rings":1
 	},
 	{
 	   "Team":"LV",
-	   "Position":"OL",
+	   "FirstName":"Denzelle",
+	   "LastName":"Good",
 	   "PositionCategory":"OFF",
 	   "Name":"Denzelle Good",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17014.png",
 	   "CollegeDraftTeam":"IND",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":150,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "IND",
+		  "OAK",
+		  "LV",
+		  "LV"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"SEA",
+	   "FirstName":"Justin",
+	   "LastName":"Coleman",
+	   "PositionCategory":"DEF",
+	   "Name":"Justin Coleman",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17037.png",
+	   "CollegeDraftTeam":"MIN",
+	   "CollegeDraftYear":2015,
+	   "id":151,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "NE",
+		  "NE",
+		  "SEA",
+		  "DET",
+		  "MIA"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"OL",
+	   "FirstName":"La'el",
+	   "LastName":"Collins",
 	   "PositionCategory":"OFF",
 	   "Name":"La'el Collins",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17058.png",
 	   "CollegeDraftTeam":"DAL",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":152,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "DAL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"ATL",
-	   "Position":"DL",
+	   "FirstName":"Grady",
+	   "LastName":"Jarrett",
 	   "PositionCategory":"DEF",
 	   "Name":"Grady Jarrett",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17059.png",
 	   "CollegeDraftTeam":"ATL",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":153,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "ATL"
+	   ],
+	   "ProBowls":2,
+	   "Rings":0
+	},
+	{
+	   "Team":"DEN",
+	   "FirstName":"Alex",
+	   "LastName":"Singleton",
+	   "PositionCategory":"DEF",
+	   "Name":"Alex Singleton",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17085.png",
+	   "CollegeDraftTeam":"SEA",
+	   "CollegeDraftYear":2015,
+	   "id":154,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "PHI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"ATL",
+	   "FirstName":"Dean",
+	   "LastName":"Marlowe",
+	   "PositionCategory":"DEF",
+	   "Name":"Dean Marlowe",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17147.png",
+	   "CollegeDraftTeam":"CAR",
+	   "CollegeDraftYear":2015,
+	   "id":155,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "CAR",
+		  "BUF",
+		  "DET"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"DB",
+	   "FirstName":"Anthony",
+	   "LastName":"Harris",
 	   "PositionCategory":"DEF",
 	   "Name":"Anthony Harris",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17187.png",
 	   "CollegeDraftTeam":"MIN",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":156,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "MIN",
+		  "PHI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"RB",
+	   "FirstName":"Raheem",
+	   "LastName":"Mostert",
 	   "PositionCategory":"OFF",
 	   "Name":"Raheem Mostert",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17217.png",
 	   "CollegeDraftTeam":"PHI",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":157,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "CLE",
+		  "MIA",
+		  "BAL",
+		  "CHI",
+		  "SF",
+		  "SF",
+		  "SF",
+		  "SF",
+		  "SF",
+		  "SF"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CLE",
-	   "Position":"DB",
+	   "FirstName":"Troy",
+	   "LastName":"Hill",
 	   "PositionCategory":"DEF",
 	   "Name":"Troy Hill",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17294.png",
 	   "CollegeDraftTeam":"CIN",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":158,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "CIN",
+		  "LAR",
+		  "CLE"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"DEN",
+	   "FirstName":"DeShawn",
+	   "LastName":"Williams",
+	   "PositionCategory":"DEF",
+	   "Name":"DeShawn Williams",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17295.png",
+	   "CollegeDraftTeam":"CIN",
+	   "CollegeDraftYear":2015,
+	   "id":159,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "CIN",
+		  "DEN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NE",
-	   "Position":"OL",
+	   "FirstName":"David",
+	   "LastName":"Andrews",
 	   "PositionCategory":"OFF",
 	   "Name":"David Andrews",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17443.png",
 	   "CollegeDraftTeam":"NE",
-	   "CollegeDraftYear":2015
+	   "CollegeDraftYear":2015,
+	   "id":160,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NE"
+	   ],
+	   "ProBowls":0,
+	   "Rings":2
+	},
+	{
+	   "Team":"TB",
+	   "FirstName":"Rakeem",
+	   "LastName":"Nunez-Roches",
+	   "PositionCategory":"DEF",
+	   "Name":"Rakeem Nunez-Roches",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17512.png",
+	   "CollegeDraftTeam":"KC",
+	   "CollegeDraftYear":2015,
+	   "id":161,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "KC",
+		  "KC",
+		  "KC",
+		  "TB",
+		  "TB",
+		  "TB",
+		  "TB"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
+	},
+	{
+	   "Team":"MIN",
+	   "FirstName":"Jesse",
+	   "LastName":"Davis",
+	   "PositionCategory":"OFF",
+	   "Name":"Jesse Davis",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17566.png",
+	   "CollegeDraftTeam":"SEA",
+	   "CollegeDraftYear":2015,
+	   "id":162,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "MIA"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"ATL",
-	   "Position":"DB",
+	   "FirstName":"Erik",
+	   "LastName":"Harris",
 	   "PositionCategory":"DEF",
 	   "Name":"Erik Harris",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17899.png",
 	   "CollegeDraftTeam":"NO",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":163,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "NO",
+		  "OAK",
+		  "LV",
+		  "ATL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"LAC",
-	   "Position":"DL",
+	   "FirstName":"Joey",
+	   "LastName":"Bosa",
 	   "PositionCategory":"DEF",
 	   "Name":"Joey Bosa",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17915.png",
 	   "CollegeDraftTeam":"LAC",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":164,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "SDG",
+		  "LAC"
+	   ],
+	   "ProBowls":4,
+	   "Rings":0
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"OL",
+	   "FirstName":"Laremy",
+	   "LastName":"Tunsil",
 	   "PositionCategory":"OFF",
 	   "Name":"Laremy Tunsil",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17918.png",
 	   "CollegeDraftTeam":"MIA",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":165,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "MIA",
+		  "HOU"
+	   ],
+	   "ProBowls":2,
+	   "Rings":0
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"DB",
+	   "FirstName":"Jalen",
+	   "LastName":"Ramsey",
 	   "PositionCategory":"DEF",
 	   "Name":"Jalen Ramsey",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17919.png",
 	   "CollegeDraftTeam":"JAX",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":166,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "JAX",
+		  "LAR"
+	   ],
+	   "ProBowls":5,
+	   "Rings":1
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"QB",
+	   "FirstName":"Carson",
+	   "LastName":"Wentz",
 	   "PositionCategory":"OFF",
 	   "Name":"Carson Wentz",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17920.png",
 	   "CollegeDraftTeam":"PHI",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":167,
+	   "Position":"QB",
+	   "AllTeams":[
+		  "PHI",
+		  "IND"
+	   ],
+	   "ProBowls":1,
+	   "Rings":1
 	},
 	{
 	   "Team":"BAL",
-	   "Position":"OL",
+	   "FirstName":"Ronnie",
+	   "LastName":"Stanley",
 	   "PositionCategory":"OFF",
 	   "Name":"Ronnie Stanley",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17921.png",
 	   "CollegeDraftTeam":"BAL",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":168,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "BAL"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"DET",
-	   "Position":"QB",
+	   "FirstName":"Jared",
+	   "LastName":"Goff",
 	   "PositionCategory":"OFF",
 	   "Name":"Jared Goff",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17922.png",
 	   "CollegeDraftTeam":"LAR",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":169,
+	   "Position":"QB",
+	   "AllTeams":[
+		  "LAR",
+		  "DET"
+	   ],
+	   "ProBowls":2,
+	   "Rings":0
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"RB",
+	   "FirstName":"Ezekiel",
+	   "LastName":"Elliott",
 	   "PositionCategory":"OFF",
 	   "Name":"Ezekiel Elliott",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17923.png",
 	   "CollegeDraftTeam":"DAL",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":170,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "DAL"
+	   ],
+	   "ProBowls":3,
+	   "Rings":0
 	},
 	{
 	   "Team":"PIT",
-	   "Position":"LB",
+	   "FirstName":"Myles",
+	   "LastName":"Jack",
 	   "PositionCategory":"DEF",
 	   "Name":"Myles Jack",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17925.png",
 	   "CollegeDraftTeam":"JAX",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":171,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "JAX"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"IND",
-	   "Position":"DL",
+	   "FirstName":"DeForest",
+	   "LastName":"Buckner",
 	   "PositionCategory":"DEF",
 	   "Name":"DeForest Buckner",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17933.png",
 	   "CollegeDraftTeam":"SF",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":172,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "SF",
+		  "SF",
+		  "SF",
+		  "SF",
+		  "IND"
+	   ],
+	   "ProBowls":2,
+	   "Rings":0
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"LB",
+	   "FirstName":"Leonard",
+	   "LastName":"Floyd",
 	   "PositionCategory":"DEF",
 	   "Name":"Leonard Floyd",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17935.png",
 	   "CollegeDraftTeam":"CHI",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":173,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "CHI",
+		  "LAR"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"CLE",
-	   "Position":"OL",
+	   "FirstName":"Jack",
+	   "LastName":"Conklin",
 	   "PositionCategory":"OFF",
 	   "Name":"Jack Conklin",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17936.png",
 	   "CollegeDraftTeam":"TEN",
-	   "CollegeDraftYear":2016
-	},
-	{
-	   "Team":"LV",
-	   "Position":"DL",
-	   "PositionCategory":"DEF",
-	   "Name":"Vernon Butler",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17944.png",
-	   "CollegeDraftTeam":"CAR",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":174,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "TEN",
+		  "CLE"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"DB",
+	   "FirstName":"William",
+	   "LastName":"Jackson III",
 	   "PositionCategory":"DEF",
 	   "Name":"William Jackson III",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17945.png",
 	   "CollegeDraftTeam":"CIN",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":175,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "CIN",
+		  "WAS"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"DET",
-	   "Position":"OL",
+	   "FirstName":"Taylor",
+	   "LastName":"Decker",
 	   "PositionCategory":"OFF",
 	   "Name":"Taylor Decker",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17946.png",
 	   "CollegeDraftTeam":"DET",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":176,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "DET"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"GB",
-	   "Position":"DL",
+	   "FirstName":"Kenny",
+	   "LastName":"Clark",
 	   "PositionCategory":"DEF",
 	   "Name":"Kenny Clark",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17947.png",
 	   "CollegeDraftTeam":"GB",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":177,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "GB",
+		  "GB",
+		  "GB",
+		  "GB",
+		  "GB",
+		  "GB"
+	   ],
+	   "ProBowls":2,
+	   "Rings":0
 	},
 	{
 	   "Team":"IND",
-	   "Position":"OL",
+	   "FirstName":"Ryan",
+	   "LastName":"Kelly",
 	   "PositionCategory":"OFF",
 	   "Name":"Ryan Kelly",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17948.png",
 	   "CollegeDraftTeam":"IND",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":178,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "IND"
+	   ],
+	   "ProBowls":3,
+	   "Rings":0
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"DL",
+	   "FirstName":"Sheldon",
+	   "LastName":"Rankins",
 	   "PositionCategory":"DEF",
 	   "Name":"Sheldon Rankins",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17949.png",
 	   "CollegeDraftTeam":"NO",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":179,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "NO",
+		  "NO",
+		  "NO",
+		  "NO",
+		  "NO",
+		  "NYJ"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"DB",
+	   "FirstName":"Eli",
+	   "LastName":"Apple",
 	   "PositionCategory":"DEF",
 	   "Name":"Eli Apple",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17950.png",
 	   "CollegeDraftTeam":"CIN",
-	   "CollegeDraftYear":2016
-	},
-	{
-	   "Team":"SEA",
+	   "CollegeDraftYear":2016,
+	   "id":180,
 	   "Position":"DB",
-	   "PositionCategory":"DEF",
-	   "Name":"Artie Burns",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17953.png",
-	   "CollegeDraftTeam":"PIT",
-	   "CollegeDraftYear":2016
+	   "AllTeams":[
+		  "NYG",
+		  "NO",
+		  "NO",
+		  "CAR",
+		  "CIN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"DL",
+	   "FirstName":"Emmanuel",
+	   "LastName":"Ogbah",
 	   "PositionCategory":"DEF",
 	   "Name":"Emmanuel Ogbah",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17958.png",
 	   "CollegeDraftTeam":"CLE",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":181,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "CLE",
+		  "KC",
+		  "MIA"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"RB",
+	   "FirstName":"Derrick",
+	   "LastName":"Henry",
 	   "PositionCategory":"OFF",
 	   "Name":"Derrick Henry",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17959.png",
 	   "CollegeDraftTeam":"TEN",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":182,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "TEN"
+	   ],
+	   "ProBowls":2,
+	   "Rings":0
 	},
 	{
 	   "Team":"NO",
-	   "Position":"WR",
+	   "FirstName":"Michael",
+	   "LastName":"Thomas",
 	   "PositionCategory":"OFF",
 	   "Name":"Michael Thomas",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17960.png",
 	   "CollegeDraftTeam":"NO",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":183,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "NO",
+		  "NO",
+		  "NO",
+		  "NO",
+		  "NO"
+	   ],
+	   "ProBowls":3,
+	   "Rings":0
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"WR",
+	   "FirstName":"Sterling",
+	   "LastName":"Shepard",
 	   "PositionCategory":"OFF",
 	   "Name":"Sterling Shepard",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17961.png",
 	   "CollegeDraftTeam":"NYG",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":184,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "NYG"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"TE",
+	   "FirstName":"Austin",
+	   "LastName":"Hooper",
 	   "PositionCategory":"OFF",
 	   "Name":"Austin Hooper",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17963.png",
 	   "CollegeDraftTeam":"ATL",
-	   "CollegeDraftYear":2016
-	},
-	{
-	   "Team":"NE",
+	   "CollegeDraftYear":2016,
+	   "id":185,
 	   "Position":"TE",
-	   "PositionCategory":"OFF",
-	   "Name":"Hunter Henry",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17975.png",
-	   "CollegeDraftTeam":"LAC",
-	   "CollegeDraftYear":2016
+	   "AllTeams":[
+		  "ATL",
+		  "CLE"
+	   ],
+	   "ProBowls":2,
+	   "Rings":0
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"DB",
+	   "FirstName":"Xavien",
+	   "LastName":"Howard",
 	   "PositionCategory":"DEF",
 	   "Name":"Xavien Howard",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17976.png",
 	   "CollegeDraftTeam":"MIA",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":186,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "MIA"
+	   ],
+	   "ProBowls":3,
+	   "Rings":0
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"DL",
+	   "FirstName":"A'Shawn",
+	   "LastName":"Robinson",
 	   "PositionCategory":"DEF",
 	   "Name":"A'Shawn Robinson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17979.png",
 	   "CollegeDraftTeam":"DET",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":187,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "DET",
+		  "LAR"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"GB",
-	   "Position":"DL",
+	   "FirstName":"Jarran",
+	   "LastName":"Reed",
 	   "PositionCategory":"DEF",
 	   "Name":"Jarran Reed",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17981.png",
 	   "CollegeDraftTeam":"SEA",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":188,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "SEA",
+		  "KC"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"ATL",
-	   "Position":"LB",
+	   "FirstName":"Deion",
+	   "LastName":"Jones",
 	   "PositionCategory":"DEF",
 	   "Name":"Deion Jones",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17983.png",
 	   "CollegeDraftTeam":"ATL",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":189,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "ATL"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"WR",
+	   "FirstName":"Tyler",
+	   "LastName":"Boyd",
 	   "PositionCategory":"OFF",
 	   "Name":"Tyler Boyd",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17986.png",
 	   "CollegeDraftTeam":"CIN",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":190,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "CIN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CHI",
-	   "Position":"OL",
+	   "FirstName":"Cody",
+	   "LastName":"Whitehair",
 	   "PositionCategory":"OFF",
 	   "Name":"Cody Whitehair",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17987.png",
 	   "CollegeDraftTeam":"CHI",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":191,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "CHI"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"DB",
+	   "FirstName":"Vonn",
+	   "LastName":"Bell",
 	   "PositionCategory":"DEF",
 	   "Name":"Vonn Bell",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17991.png",
 	   "CollegeDraftTeam":"NO",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":192,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "NO",
+		  "NO",
+		  "NO",
+		  "NO",
+		  "CIN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"DB",
+	   "FirstName":"James",
+	   "LastName":"Bradberry",
 	   "PositionCategory":"DEF",
 	   "Name":"James Bradberry",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17992.png",
 	   "CollegeDraftTeam":"CAR",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":193,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "CAR",
+		  "NYG"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"DB",
+	   "FirstName":"Kevin",
+	   "LastName":"Byard",
 	   "PositionCategory":"DEF",
 	   "Name":"Kevin Byard",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17994.png",
 	   "CollegeDraftTeam":"TEN",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":194,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "TEN"
+	   ],
+	   "ProBowls":2,
+	   "Rings":0
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"DL",
+	   "FirstName":"Maliek",
+	   "LastName":"Collins",
 	   "PositionCategory":"DEF",
 	   "Name":"Maliek Collins",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17997.png",
 	   "CollegeDraftTeam":"DAL",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":195,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "DAL",
+		  "LV",
+		  "HOU"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"IND",
-	   "Position":"DL",
+	   "FirstName":"Yannick",
+	   "LastName":"Ngakoue",
 	   "PositionCategory":"DEF",
 	   "Name":"Yannick Ngakoue",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/17999.png",
 	   "CollegeDraftTeam":"JAX",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":196,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "JAX",
+		  "MIN",
+		  "BAL",
+		  "LV"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"LV",
-	   "Position":"RB",
+	   "FirstName":"Kenyan",
+	   "LastName":"Drake",
 	   "PositionCategory":"OFF",
 	   "Name":"Kenyan Drake",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18003.png",
 	   "CollegeDraftTeam":"MIA",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":197,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "MIA",
+		  "ARI",
+		  "LV"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"KC",
-	   "Position":"OL",
+	   "FirstName":"Joe",
+	   "LastName":"Thuney",
 	   "PositionCategory":"OFF",
 	   "Name":"Joe Thuney",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18008.png",
 	   "CollegeDraftTeam":"NE",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":198,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NE",
+		  "KC"
+	   ],
+	   "ProBowls":0,
+	   "Rings":2
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"OL",
+	   "FirstName":"Isaac",
+	   "LastName":"Seumalo",
 	   "PositionCategory":"OFF",
 	   "Name":"Isaac Seumalo",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18009.png",
 	   "CollegeDraftTeam":"PHI",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":199,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "PHI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"DB",
+	   "FirstName":"Kendall",
+	   "LastName":"Fuller",
 	   "PositionCategory":"DEF",
 	   "Name":"Kendall Fuller",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18013.png",
 	   "CollegeDraftTeam":"WAS",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":200,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "WAS",
+		  "KC",
+		  "KC"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"DL",
+	   "FirstName":"Javon",
+	   "LastName":"Hargrave",
 	   "PositionCategory":"DEF",
 	   "Name":"Javon Hargrave",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18017.png",
 	   "CollegeDraftTeam":"PIT",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":201,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "PIT",
+		  "PHI"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"OL",
+	   "FirstName":"Graham",
+	   "LastName":"Glasgow",
 	   "PositionCategory":"OFF",
 	   "Name":"Graham Glasgow",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18020.png",
 	   "CollegeDraftTeam":"DET",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":202,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "DET",
+		  "DEN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"DB",
+	   "FirstName":"Justin",
+	   "LastName":"Simmons",
 	   "PositionCategory":"DEF",
 	   "Name":"Justin Simmons",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18023.png",
 	   "CollegeDraftTeam":"DEN",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":203,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "DEN"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"DB",
+	   "FirstName":"Eric",
+	   "LastName":"Murray",
 	   "PositionCategory":"DEF",
 	   "Name":"Eric Murray",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18029.png",
 	   "CollegeDraftTeam":"KC",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":204,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "KC",
+		  "KC",
+		  "KC",
+		  "CLE",
+		  "HOU"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"TE",
+	   "FirstName":"Tyler",
+	   "LastName":"Higbee",
 	   "PositionCategory":"OFF",
 	   "Name":"Tyler Higbee",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18032.png",
 	   "CollegeDraftTeam":"LAR",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":205,
+	   "Position":"TE",
+	   "AllTeams":[
+		  "LAR"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
+	},
+	{
+	   "Team":"PIT",
+	   "FirstName":"Miles",
+	   "LastName":"Killebrew",
+	   "PositionCategory":"DEF",
+	   "Name":"Miles Killebrew",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18033.png",
+	   "CollegeDraftTeam":"DET",
+	   "CollegeDraftYear":2016,
+	   "id":206,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "DET",
+		  "PIT"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"GB",
-	   "Position":"LB",
+	   "FirstName":"De'Vondre",
+	   "LastName":"Campbell",
 	   "PositionCategory":"DEF",
 	   "Name":"De'Vondre Campbell",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18037.png",
 	   "CollegeDraftTeam":"ATL",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":207,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "ATL",
+		  "ARI",
+		  "GB"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NO",
-	   "Position":"DL",
+	   "FirstName":"David",
+	   "LastName":"Onyemata",
 	   "PositionCategory":"DEF",
 	   "Name":"David Onyemata",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18042.png",
 	   "CollegeDraftTeam":"NO",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":208,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "NO",
+		  "NO",
+		  "NO",
+		  "NO",
+		  "NO",
+		  "NO"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"LB",
+	   "FirstName":"Blake",
+	   "LastName":"Martinez",
 	   "PositionCategory":"DEF",
 	   "Name":"Blake Martinez",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18052.png",
 	   "CollegeDraftTeam":"GB",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":209,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "GB",
+		  "GB",
+		  "GB",
+		  "GB",
+		  "NYG"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"QB",
+	   "FirstName":"Dak",
+	   "LastName":"Prescott",
 	   "PositionCategory":"OFF",
 	   "Name":"Dak Prescott",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18055.png",
 	   "CollegeDraftTeam":"DAL",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":210,
+	   "Position":"QB",
+	   "AllTeams":[
+		  "DAL"
+	   ],
+	   "ProBowls":2,
+	   "Rings":0
 	},
 	{
 	   "Team":"GB",
-	   "Position":"DL",
+	   "FirstName":"Dean",
+	   "LastName":"Lowry",
 	   "PositionCategory":"DEF",
 	   "Name":"Dean Lowry",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18056.png",
 	   "CollegeDraftTeam":"GB",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":211,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "GB",
+		  "GB",
+		  "GB",
+		  "GB",
+		  "GB",
+		  "GB"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"OL",
+	   "FirstName":"Connor",
+	   "LastName":"McGovern",
 	   "PositionCategory":"OFF",
 	   "Name":"Connor McGovern",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18062.png",
 	   "CollegeDraftTeam":"DEN",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":212,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "DAL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NE",
-	   "Position":"LB",
+	   "FirstName":"Matthew",
+	   "LastName":"Judon",
 	   "PositionCategory":"DEF",
 	   "Name":"Matthew Judon",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18064.png",
 	   "CollegeDraftTeam":"BAL",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":213,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "BAL",
+		  "NE"
+	   ],
+	   "ProBowls":3,
+	   "Rings":0
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"DL",
+	   "FirstName":"Quinton",
+	   "LastName":"Jefferson",
 	   "PositionCategory":"DEF",
 	   "Name":"Quinton Jefferson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18065.png",
 	   "CollegeDraftTeam":"SEA",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":214,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "SEA",
+		  "BUF",
+		  "LV"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"DL",
+	   "FirstName":"Matt",
+	   "LastName":"Ioannidis",
 	   "PositionCategory":"DEF",
 	   "Name":"Matt Ioannidis",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18069.png",
 	   "CollegeDraftTeam":"WAS",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":215,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "WAS"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"DET",
-	   "Position":"OL",
+	   "FirstName":"Halapoulivaati",
+	   "LastName":"Vaitai",
 	   "PositionCategory":"OFF",
 	   "Name":"Halapoulivaati Vaitai",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18081.png",
 	   "CollegeDraftTeam":"PHI",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":216,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "PHI",
+		  "DET"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"WR",
+	   "FirstName":"Tyreek",
+	   "LastName":"Hill",
 	   "PositionCategory":"OFF",
 	   "Name":"Tyreek Hill",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18082.png",
 	   "CollegeDraftTeam":"KC",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":217,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "KC",
+		  "KC",
+		  "KC",
+		  "KC",
+		  "KC",
+		  "KC"
+	   ],
+	   "ProBowls":6,
+	   "Rings":1
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"DL",
+	   "FirstName":"D.J.",
+	   "LastName":"Reader",
 	   "PositionCategory":"DEF",
 	   "Name":"D.J. Reader",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18083.png",
 	   "CollegeDraftTeam":"HOU",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":218,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "HOU",
+		  "CIN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
-	   "Team":"CLE",
-	   "Position":"WR",
-	   "PositionCategory":"OFF",
-	   "Name":"Jakeem Grant Sr.",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18103.png",
-	   "CollegeDraftTeam":"MIA",
-	   "CollegeDraftYear":2016
+	   "Team":"CHI",
+	   "FirstName":"DeAndre",
+	   "LastName":"Houston-Carson",
+	   "PositionCategory":"DEF",
+	   "Name":"DeAndre Houston-Carson",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18102.png",
+	   "CollegeDraftTeam":"CHI",
+	   "CollegeDraftYear":2016,
+	   "id":219,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "CHI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"DB",
+	   "FirstName":"Anthony",
+	   "LastName":"Brown",
 	   "PositionCategory":"DEF",
 	   "Name":"Anthony Brown",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18106.png",
 	   "CollegeDraftTeam":"DAL",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":220,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "DAL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"OL",
+	   "FirstName":"Wes",
+	   "LastName":"Schweitzer",
 	   "PositionCategory":"OFF",
 	   "Name":"Wes Schweitzer",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18112.png",
 	   "CollegeDraftTeam":"ATL",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":221,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "ATL",
+		  "WAS"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"LB",
+	   "FirstName":"Kamu",
+	   "LastName":"Grugier-Hill",
 	   "PositionCategory":"DEF",
 	   "Name":"Kamu Grugier-Hill",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18124.png",
 	   "CollegeDraftTeam":"NE",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":222,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "PHI",
+		  "MIA",
+		  "HOU"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"LB",
+	   "FirstName":"Elandon",
+	   "LastName":"Roberts",
 	   "PositionCategory":"DEF",
 	   "Name":"Elandon Roberts",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18130.png",
 	   "CollegeDraftTeam":"NE",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":223,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NE",
+		  "MIA"
+	   ],
+	   "ProBowls":0,
+	   "Rings":2
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"OL",
+	   "FirstName":"Ted",
+	   "LastName":"Karras",
 	   "PositionCategory":"OFF",
 	   "Name":"Ted Karras",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18137.png",
 	   "CollegeDraftTeam":"NE",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":224,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NE",
+		  "MIA",
+		  "NE"
+	   ],
+	   "ProBowls":0,
+	   "Rings":2
 	},
 	{
 	   "Team":"NE",
-	   "Position":"DB",
+	   "FirstName":"Jalen",
+	   "LastName":"Mills",
 	   "PositionCategory":"DEF",
 	   "Name":"Jalen Mills",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18149.png",
 	   "CollegeDraftTeam":"PHI",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":225,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "PHI",
+		  "NE"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"DB",
+	   "FirstName":"Jayron",
+	   "LastName":"Kearse",
 	   "PositionCategory":"DEF",
 	   "Name":"Jayron Kearse",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18160.png",
 	   "CollegeDraftTeam":"MIN",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":226,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "MIN",
+		  "DET",
+		  "DAL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"OL",
+	   "FirstName":"Austin",
+	   "LastName":"Blythe",
 	   "PositionCategory":"OFF",
 	   "Name":"Austin Blythe",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18164.png",
 	   "CollegeDraftTeam":"IND",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":227,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "IND",
+		  "LAR",
+		  "KC"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NE",
-	   "Position":"DB",
+	   "FirstName":"Jonathan",
+	   "LastName":"Jones",
 	   "PositionCategory":"DEF",
 	   "Name":"Jonathan Jones",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18177.png",
 	   "CollegeDraftTeam":"NE",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":228,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NE"
+	   ],
+	   "ProBowls":0,
+	   "Rings":2
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"WR",
+	   "FirstName":"Robby",
+	   "LastName":"Anderson",
 	   "PositionCategory":"OFF",
 	   "Name":"Robby Anderson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18187.png",
 	   "CollegeDraftTeam":"NYJ",
-	   "CollegeDraftYear":2016
-	},
-	{
-	   "Team":"DET",
-	   "Position":"LB",
-	   "PositionCategory":"DEF",
-	   "Name":"Romeo Okwara",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18268.png",
-	   "CollegeDraftTeam":"NYG",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":229,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "NYJ",
+		  "CAR"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"DL",
+	   "FirstName":"Roy",
+	   "LastName":"Robertson-Harris",
 	   "PositionCategory":"DEF",
 	   "Name":"Roy Robertson-Harris",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18292.png",
 	   "CollegeDraftTeam":"CHI",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":230,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "CHI",
+		  "JAX"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"DB",
+	   "FirstName":"Mike",
+	   "LastName":"Hilton",
 	   "PositionCategory":"DEF",
 	   "Name":"Mike Hilton",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18316.png",
 	   "CollegeDraftTeam":"JAX",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":231,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "PIT",
+		  "CIN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"KC",
-	   "Position":"DL",
+	   "FirstName":"Chris",
+	   "LastName":"Jones",
 	   "PositionCategory":"DEF",
 	   "Name":"Chris Jones",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18331.png",
 	   "CollegeDraftTeam":"KC",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":232,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "ARI",
+		  "DET",
+		  "MIN",
+		  "TEN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"LAC",
-	   "Position":"DL",
+	   "FirstName":"Austin",
+	   "LastName":"Johnson",
 	   "PositionCategory":"DEF",
 	   "Name":"Austin Johnson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18333.png",
 	   "CollegeDraftTeam":"TEN",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":233,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "TEN",
+		  "NYG"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"RB",
+	   "FirstName":"J.D.",
+	   "LastName":"McKissic",
 	   "PositionCategory":"OFF",
 	   "Name":"J.D. McKissic",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18464.png",
 	   "CollegeDraftTeam":"ATL",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":234,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "SEA",
+		  "DET",
+		  "WAS"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"BAL",
+	   "FirstName":"Michael",
+	   "LastName":"Pierce",
+	   "PositionCategory":"DEF",
+	   "Name":"Michael Pierce",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18481.png",
+	   "CollegeDraftTeam":"BAL",
+	   "CollegeDraftYear":2016,
+	   "id":235,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "BAL",
+		  "MIN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"LB",
+	   "FirstName":"Cory",
+	   "LastName":"Littleton",
 	   "PositionCategory":"DEF",
 	   "Name":"Cory Littleton",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18559.png",
 	   "CollegeDraftTeam":"LAR",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":236,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "LAR",
+		  "LV",
+		  "LV"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"OL",
+	   "FirstName":"George",
+	   "LastName":"Fant",
 	   "PositionCategory":"OFF",
 	   "Name":"George Fant",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18599.png",
 	   "CollegeDraftTeam":"SEA",
-	   "CollegeDraftYear":2016
-	},
-	{
-	   "Team":"NYG",
-	   "Position":"RB",
-	   "PositionCategory":"OFF",
-	   "Name":"Elijhaa Penny",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18617.png",
-	   "CollegeDraftTeam":"ARI",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":237,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "SEA",
+		  "NYJ"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CHI",
-	   "Position":"OL",
+	   "FirstName":"Lucas",
+	   "LastName":"Patrick",
 	   "PositionCategory":"OFF",
 	   "Name":"Lucas Patrick",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18710.png",
 	   "CollegeDraftTeam":"GB",
-	   "CollegeDraftYear":2016
+	   "CollegeDraftYear":2016,
+	   "id":238,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "GB",
+		  "GB",
+		  "GB",
+		  "GB",
+		  "GB"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"TB",
-	   "Position":"RB",
+	   "FirstName":"Leonard",
+	   "LastName":"Fournette",
 	   "PositionCategory":"OFF",
 	   "Name":"Leonard Fournette",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18803.png",
 	   "CollegeDraftTeam":"JAX",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":239,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "JAX",
+		  "TB",
+		  "TB"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"CLE",
-	   "Position":"DL",
+	   "FirstName":"Myles",
+	   "LastName":"Garrett",
 	   "PositionCategory":"DEF",
 	   "Name":"Myles Garrett",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18807.png",
 	   "CollegeDraftTeam":"CLE",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":240,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "CLE"
+	   ],
+	   "ProBowls":3,
+	   "Rings":0
 	},
 	{
 	   "Team":"PIT",
-	   "Position":"QB",
+	   "FirstName":"Mitchell",
+	   "LastName":"Trubisky",
 	   "PositionCategory":"OFF",
 	   "Name":"Mitchell Trubisky",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18811.png",
 	   "CollegeDraftTeam":"CHI",
-	   "CollegeDraftYear":2017
-	},
-	{
-	   "Team":"CLE",
+	   "CollegeDraftYear":2017,
+	   "id":241,
 	   "Position":"QB",
-	   "PositionCategory":"OFF",
-	   "Name":"Deshaun Watson",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18857.png",
-	   "CollegeDraftTeam":"HOU",
-	   "CollegeDraftYear":2017
+	   "AllTeams":[
+		  "CHI",
+		  "BUF"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"RB",
+	   "FirstName":"Joe",
+	   "LastName":"Mixon",
 	   "PositionCategory":"OFF",
 	   "Name":"Joe Mixon",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18858.png",
 	   "CollegeDraftTeam":"CIN",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":242,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "CIN"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"MIN",
-	   "Position":"RB",
+	   "FirstName":"Dalvin",
+	   "LastName":"Cook",
 	   "PositionCategory":"OFF",
 	   "Name":"Dalvin Cook",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18872.png",
 	   "CollegeDraftTeam":"MIN",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":243,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "MIN"
+	   ],
+	   "ProBowls":3,
+	   "Rings":0
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"DL",
+	   "FirstName":"Jonathan",
+	   "LastName":"Allen",
 	   "PositionCategory":"DEF",
 	   "Name":"Jonathan Allen",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18875.png",
 	   "CollegeDraftTeam":"WAS",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":244,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "WAS"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"CLE",
-	   "Position":"TE",
+	   "FirstName":"David",
+	   "LastName":"Njoku",
 	   "PositionCategory":"OFF",
 	   "Name":"David Njoku",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18876.png",
 	   "CollegeDraftTeam":"CLE",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":245,
+	   "Position":"TE",
+	   "AllTeams":[
+		  "CLE"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"RB",
+	   "FirstName":"Christian",
+	   "LastName":"McCaffrey",
 	   "PositionCategory":"OFF",
 	   "Name":"Christian McCaffrey",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18877.png",
 	   "CollegeDraftTeam":"CAR",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":246,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "CAR"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"NO",
-	   "Position":"RB",
+	   "FirstName":"Alvin",
+	   "LastName":"Kamara",
 	   "PositionCategory":"OFF",
 	   "Name":"Alvin Kamara",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18878.png",
 	   "CollegeDraftTeam":"NO",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":247,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "NO",
+		  "NO",
+		  "NO",
+		  "NO",
+		  "NO"
+	   ],
+	   "ProBowls":5,
+	   "Rings":0
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"WR",
+	   "FirstName":"Corey",
+	   "LastName":"Davis",
 	   "PositionCategory":"OFF",
 	   "Name":"Corey Davis",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18879.png",
 	   "CollegeDraftTeam":"TEN",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":248,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "TEN",
+		  "NYJ"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"TB",
-	   "Position":"WR",
+	   "FirstName":"Chris",
+	   "LastName":"Godwin",
 	   "PositionCategory":"OFF",
 	   "Name":"Chris Godwin",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18880.png",
 	   "CollegeDraftTeam":"TB",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":249,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "TB",
+		  "TB",
+		  "TB",
+		  "TB",
+		  "TB"
+	   ],
+	   "ProBowls":1,
+	   "Rings":1
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"WR",
+	   "FirstName":"Cooper",
+	   "LastName":"Kupp",
 	   "PositionCategory":"OFF",
 	   "Name":"Cooper Kupp",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18882.png",
 	   "CollegeDraftTeam":"LAR",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":250,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "LAR"
+	   ],
+	   "ProBowls":1,
+	   "Rings":1
 	},
 	{
 	   "Team":"KC",
-	   "Position":"WR",
+	   "FirstName":"JuJu",
+	   "LastName":"Smith-Schuster",
 	   "PositionCategory":"OFF",
 	   "Name":"JuJu Smith-Schuster",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18883.png",
 	   "CollegeDraftTeam":"PIT",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":251,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "PIT"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"KC",
-	   "Position":"QB",
+	   "FirstName":"Patrick",
+	   "LastName":"Mahomes",
 	   "PositionCategory":"OFF",
 	   "Name":"Patrick Mahomes",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18890.png",
 	   "CollegeDraftTeam":"KC",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":252,
+	   "Position":"QB",
+	   "AllTeams":[
+		  "KC",
+		  "KC",
+		  "KC",
+		  "KC",
+		  "KC"
+	   ],
+	   "ProBowls":4,
+	   "Rings":1
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"OL",
+	   "FirstName":"Garett",
+	   "LastName":"Bolles",
 	   "PositionCategory":"OFF",
 	   "Name":"Garett Bolles",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18899.png",
 	   "CollegeDraftTeam":"DEN",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":253,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "DEN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"IND",
-	   "Position":"TE",
+	   "FirstName":"Mo",
+	   "LastName":"Alie-Cox",
 	   "PositionCategory":"OFF",
 	   "Name":"Mo Alie-Cox",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18900.png",
 	   "CollegeDraftTeam":"IND",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":254,
+	   "Position":"TE",
+	   "AllTeams":[
+		  "IND"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NO",
-	   "Position":"DB",
+	   "FirstName":"Marshon",
+	   "LastName":"Lattimore",
 	   "PositionCategory":"DEF",
 	   "Name":"Marshon Lattimore",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18905.png",
 	   "CollegeDraftTeam":"NO",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":255,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "NO",
+		  "NO",
+		  "NO",
+		  "NO",
+		  "NO"
+	   ],
+	   "ProBowls":4,
+	   "Rings":0
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"LB",
+	   "FirstName":"Haason",
+	   "LastName":"Reddick",
 	   "PositionCategory":"DEF",
 	   "Name":"Haason Reddick",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18909.png",
 	   "CollegeDraftTeam":"ARI",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":256,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "ARI",
+		  "CAR"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"OL",
+	   "FirstName":"Cam",
+	   "LastName":"Robinson",
 	   "PositionCategory":"OFF",
 	   "Name":"Cam Robinson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18910.png",
 	   "CollegeDraftTeam":"JAX",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":257,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "JAX"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"DL",
+	   "FirstName":"Derek",
+	   "LastName":"Barnett",
 	   "PositionCategory":"DEF",
 	   "Name":"Derek Barnett",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18911.png",
 	   "CollegeDraftTeam":"PHI",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":258,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "PHI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"TE",
+	   "FirstName":"Evan",
+	   "LastName":"Engram",
 	   "PositionCategory":"OFF",
 	   "Name":"Evan Engram",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18912.png",
 	   "CollegeDraftTeam":"NYG",
-	   "CollegeDraftYear":2017
-	},
-	{
-	   "Team":"DET",
-	   "Position":"LB",
-	   "PositionCategory":"DEF",
-	   "Name":"Jarrad Davis",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18913.png",
-	   "CollegeDraftTeam":"DET",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":259,
+	   "Position":"TE",
+	   "AllTeams":[
+		  "NYG"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"LAC",
-	   "Position":"WR",
+	   "FirstName":"Mike",
+	   "LastName":"Williams",
 	   "PositionCategory":"OFF",
 	   "Name":"Mike Williams",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18914.png",
 	   "CollegeDraftTeam":"LAC",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":260,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "LAC"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"PIT",
-	   "Position":"LB",
+	   "FirstName":"T.J.",
+	   "LastName":"Watt",
 	   "PositionCategory":"DEF",
 	   "Name":"T.J. Watt",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18916.png",
 	   "CollegeDraftTeam":"PIT",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":261,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "PIT"
+	   ],
+	   "ProBowls":4,
+	   "Rings":0
 	},
 	{
 	   "Team":"BAL",
-	   "Position":"DB",
+	   "FirstName":"Marlon",
+	   "LastName":"Humphrey",
 	   "PositionCategory":"DEF",
 	   "Name":"Marlon Humphrey",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18917.png",
 	   "CollegeDraftTeam":"BAL",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":262,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "BAL"
+	   ],
+	   "ProBowls":2,
+	   "Rings":0
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"DB",
+	   "FirstName":"Tre'Davious",
+	   "LastName":"White",
 	   "PositionCategory":"DEF",
 	   "Name":"Tre'Davious White",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18918.png",
 	   "CollegeDraftTeam":"BUF",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":263,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "BUF"
+	   ],
+	   "ProBowls":2,
+	   "Rings":0
 	},
 	{
 	   "Team":"DET",
-	   "Position":"LB",
+	   "FirstName":"Charles",
+	   "LastName":"Harris",
 	   "PositionCategory":"DEF",
 	   "Name":"Charles Harris",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18921.png",
 	   "CollegeDraftTeam":"MIA",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":264,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "MIA",
+		  "ATL",
+		  "DET"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NO",
-	   "Position":"OL",
+	   "FirstName":"Ryan",
+	   "LastName":"Ramczyk",
 	   "PositionCategory":"OFF",
 	   "Name":"Ryan Ramczyk",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18922.png",
 	   "CollegeDraftTeam":"NO",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":265,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "NO",
+		  "NO",
+		  "NO",
+		  "NO",
+		  "NO"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"DB",
+	   "FirstName":"Jamal",
+	   "LastName":"Adams",
 	   "PositionCategory":"DEF",
 	   "Name":"Jamal Adams",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18923.png",
 	   "CollegeDraftTeam":"NYJ",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":266,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "NYJ",
+		  "SEA"
+	   ],
+	   "ProBowls":3,
+	   "Rings":0
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"DB",
+	   "FirstName":"Adoree'",
+	   "LastName":"Jackson",
 	   "PositionCategory":"DEF",
 	   "Name":"Adoree' Jackson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18924.png",
 	   "CollegeDraftTeam":"TEN",
-	   "CollegeDraftYear":2017
-	},
-	{
-	   "Team":"JAX",
-	   "Position":"WR",
-	   "PositionCategory":"OFF",
-	   "Name":"Zay Jones",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18926.png",
-	   "CollegeDraftTeam":"BUF",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":267,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "TEN",
+		  "NYG"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"DB",
+	   "FirstName":"Budda",
+	   "LastName":"Baker",
 	   "PositionCategory":"DEF",
 	   "Name":"Budda Baker",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18927.png",
 	   "CollegeDraftTeam":"ARI",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":268,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "ARI"
+	   ],
+	   "ProBowls":4,
+	   "Rings":0
+	},
+	{
+	   "Team":"WAS",
+	   "FirstName":"Curtis",
+	   "LastName":"Samuel",
+	   "PositionCategory":"OFF",
+	   "Name":"Curtis Samuel",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18928.png",
+	   "CollegeDraftTeam":"CAR",
+	   "CollegeDraftYear":2017,
+	   "id":269,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "CAR",
+		  "WAS"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"DB",
+	   "FirstName":"Sidney",
+	   "LastName":"Jones IV",
 	   "PositionCategory":"DEF",
 	   "Name":"Sidney Jones IV",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18929.png",
 	   "CollegeDraftTeam":"PHI",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":270,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "PHI",
+		  "JAX",
+		  "SEA"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"BAL",
-	   "Position":"LB",
+	   "FirstName":"Tyus",
+	   "LastName":"Bowser",
 	   "PositionCategory":"DEF",
 	   "Name":"Tyus Bowser",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18930.png",
 	   "CollegeDraftTeam":"BAL",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":271,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "BAL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"LAC",
-	   "Position":"TE",
+	   "FirstName":"Gerald",
+	   "LastName":"Everett",
 	   "PositionCategory":"OFF",
 	   "Name":"Gerald Everett",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18935.png",
 	   "CollegeDraftTeam":"LAR",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":272,
+	   "Position":"TE",
+	   "AllTeams":[
+		  "LAR",
+		  "SEA"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"BAL",
-	   "Position":"DB",
+	   "FirstName":"Marcus",
+	   "LastName":"Williams",
 	   "PositionCategory":"DEF",
 	   "Name":"Marcus Williams",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18937.png",
 	   "CollegeDraftTeam":"NO",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":273,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "NO",
+		  "NO",
+		  "NO",
+		  "NO",
+		  "NO"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"MIN",
-	   "Position":"DL",
+	   "FirstName":"Dalvin",
+	   "LastName":"Tomlinson",
 	   "PositionCategory":"DEF",
 	   "Name":"Dalvin Tomlinson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18938.png",
 	   "CollegeDraftTeam":"NYG",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":274,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "NYG",
+		  "MIN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NO",
-	   "Position":"DB",
+	   "FirstName":"Marcus",
+	   "LastName":"Maye",
 	   "PositionCategory":"DEF",
 	   "Name":"Marcus Maye",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18939.png",
 	   "CollegeDraftTeam":"NYJ",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":275,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "NYJ"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CLE",
-	   "Position":"DL",
-	   "PositionCategory":"DEF",
-	   "Name":"Malik McDowell",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18941.png",
-	   "CollegeDraftTeam":"SEA",
-	   "CollegeDraftYear":2017
-	},
-	{
-	   "Team":"CLE",
-	   "Position":"RB",
+	   "FirstName":"Kareem",
+	   "LastName":"Hunt",
 	   "PositionCategory":"OFF",
 	   "Name":"Kareem Hunt",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18944.png",
 	   "CollegeDraftTeam":"KC",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":276,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "KC",
+		  "KC",
+		  "CLE"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"OL",
+	   "FirstName":"Dion",
+	   "LastName":"Dawkins",
 	   "PositionCategory":"OFF",
 	   "Name":"Dion Dawkins",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18948.png",
 	   "CollegeDraftTeam":"BUF",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":277,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "BUF"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"OL",
+	   "FirstName":"Taylor",
+	   "LastName":"Moton",
 	   "PositionCategory":"OFF",
 	   "Name":"Taylor Moton",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18950.png",
 	   "CollegeDraftTeam":"CAR",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":278,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "CAR"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"DB",
+	   "FirstName":"Chidobe",
+	   "LastName":"Awuzie",
 	   "PositionCategory":"DEF",
 	   "Name":"Chidobe Awuzie",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18953.png",
 	   "CollegeDraftTeam":"DAL",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":279,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "DAL",
+		  "CIN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"LB",
+	   "FirstName":"Zach",
+	   "LastName":"Cunningham",
 	   "PositionCategory":"DEF",
 	   "Name":"Zach Cunningham",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18956.png",
 	   "CollegeDraftTeam":"HOU",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":280,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "HOU",
+		  "TEN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"RB",
+	   "FirstName":"D'Onta",
+	   "LastName":"Foreman",
 	   "PositionCategory":"OFF",
 	   "Name":"D'Onta Foreman",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18957.png",
 	   "CollegeDraftTeam":"HOU",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":281,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "HOU",
+		  "TEN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"PIT",
+	   "FirstName":"Ahkello",
+	   "LastName":"Witherspoon",
+	   "PositionCategory":"DEF",
+	   "Name":"Ahkello Witherspoon",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18970.png",
+	   "CollegeDraftTeam":"SF",
+	   "CollegeDraftYear":2017,
+	   "id":282,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "SF",
+		  "SF",
+		  "SF",
+		  "SF",
+		  "PIT"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"DB",
+	   "FirstName":"Jourdan",
+	   "LastName":"Lewis",
 	   "PositionCategory":"DEF",
 	   "Name":"Jourdan Lewis",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18975.png",
 	   "CollegeDraftTeam":"DAL",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":283,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "DAL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"WR",
+	   "FirstName":"Kenny",
+	   "LastName":"Golladay",
 	   "PositionCategory":"OFF",
 	   "Name":"Kenny Golladay",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18977.png",
 	   "CollegeDraftTeam":"DET",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":284,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "DET",
+		  "NYG"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"CLE",
-	   "Position":"DB",
+	   "FirstName":"John",
+	   "LastName":"Johnson III",
 	   "PositionCategory":"DEF",
 	   "Name":"John Johnson III",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18979.png",
 	   "CollegeDraftTeam":"LAR",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":285,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "LAR",
+		  "CLE"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"DL",
+	   "FirstName":"Trey",
+	   "LastName":"Hendrickson",
 	   "PositionCategory":"DEF",
 	   "Name":"Trey Hendrickson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18981.png",
 	   "CollegeDraftTeam":"NO",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":286,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "NO",
+		  "NO",
+		  "NO",
+		  "NO",
+		  "CIN"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"GB",
-	   "Position":"DB",
+	   "FirstName":"Rasul",
+	   "LastName":"Douglas",
 	   "PositionCategory":"DEF",
 	   "Name":"Rasul Douglas",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18982.png",
 	   "CollegeDraftTeam":"PHI",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":287,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "PHI",
+		  "CAR",
+		  "GB"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"RB",
+	   "FirstName":"James",
+	   "LastName":"Conner",
 	   "PositionCategory":"OFF",
 	   "Name":"James Conner",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18983.png",
 	   "CollegeDraftTeam":"PIT",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":288,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "PIT",
+		  "ARI"
+	   ],
+	   "ProBowls":2,
+	   "Rings":0
 	},
 	{
 	   "Team":"PIT",
-	   "Position":"DB",
+	   "FirstName":"Cameron",
+	   "LastName":"Sutton",
 	   "PositionCategory":"DEF",
 	   "Name":"Cameron Sutton",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18984.png",
 	   "CollegeDraftTeam":"PIT",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":289,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "PIT"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"DB",
+	   "FirstName":"Shaquill",
+	   "LastName":"Griffin",
 	   "PositionCategory":"DEF",
 	   "Name":"Shaquill Griffin",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18986.png",
 	   "CollegeDraftTeam":"SEA",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":290,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "SEA",
+		  "JAX"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
+	},
+	{
+	   "Team":"NE",
+	   "FirstName":"Jonnu",
+	   "LastName":"Smith",
+	   "PositionCategory":"OFF",
+	   "Name":"Jonnu Smith",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18990.png",
+	   "CollegeDraftTeam":"TEN",
+	   "CollegeDraftYear":2017,
+	   "id":291,
+	   "Position":"TE",
+	   "AllTeams":[
+		  "TEN",
+		  "NE"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"RB",
+	   "FirstName":"Samaje",
+	   "LastName":"Perine",
 	   "PositionCategory":"OFF",
 	   "Name":"Samaje Perine",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18993.png",
 	   "CollegeDraftTeam":"WAS",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":292,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "WAS",
+		  "CIN",
+		  "MIA"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"DL",
+	   "FirstName":"Carl",
+	   "LastName":"Lawson",
 	   "PositionCategory":"DEF",
 	   "Name":"Carl Lawson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18994.png",
 	   "CollegeDraftTeam":"CIN",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":293,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "CIN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"DET",
-	   "Position":"RB",
+	   "FirstName":"Jamaal",
+	   "LastName":"Williams",
 	   "PositionCategory":"OFF",
 	   "Name":"Jamaal Williams",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18995.png",
 	   "CollegeDraftTeam":"GB",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":294,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "GB",
+		  "GB",
+		  "GB",
+		  "GB",
+		  "DET"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"HOU",
+	   "FirstName":"Marlon",
+	   "LastName":"Mack",
+	   "PositionCategory":"OFF",
+	   "Name":"Marlon Mack",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/18998.png",
+	   "CollegeDraftTeam":"IND",
+	   "CollegeDraftYear":2017,
+	   "id":295,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "IND"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CHI",
-	   "Position":"DB",
+	   "FirstName":"Eddie",
+	   "LastName":"Jackson",
 	   "PositionCategory":"DEF",
 	   "Name":"Eddie Jackson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19004.png",
 	   "CollegeDraftTeam":"CHI",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":296,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "CHI"
+	   ],
+	   "ProBowls":2,
+	   "Rings":0
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"LB",
+	   "FirstName":"Jalen",
+	   "LastName":"Reeves-Maybin",
 	   "PositionCategory":"DEF",
 	   "Name":"Jalen Reeves-Maybin",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19009.png",
 	   "CollegeDraftTeam":"DET",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":297,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "DET"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"IND",
-	   "Position":"DL",
+	   "FirstName":"Grover",
+	   "LastName":"Stewart",
 	   "PositionCategory":"DEF",
 	   "Name":"Grover Stewart",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19014.png",
 	   "CollegeDraftTeam":"IND",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":298,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "IND"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NE",
-	   "Position":"DL",
+	   "FirstName":"Deatrich",
+	   "LastName":"Wise Jr.",
 	   "PositionCategory":"DEF",
 	   "Name":"Deatrich Wise Jr.",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19020.png",
 	   "CollegeDraftTeam":"NE",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":299,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NE"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"DB",
+	   "FirstName":"Rayshawn",
+	   "LastName":"Jenkins",
 	   "PositionCategory":"DEF",
 	   "Name":"Rayshawn Jenkins",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19026.png",
 	   "CollegeDraftTeam":"LAC",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":300,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "LAC",
+		  "JAX"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"LV",
+	   "FirstName":"Jermaine",
+	   "LastName":"Eluemunor",
+	   "PositionCategory":"OFF",
+	   "Name":"Jermaine Eluemunor",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19036.png",
+	   "CollegeDraftTeam":"BAL",
+	   "CollegeDraftYear":2017,
+	   "id":301,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "BAL",
+		  "NE",
+		  "NE",
+		  "LV"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"LB",
+	   "FirstName":"Matt",
+	   "LastName":"Milano",
 	   "PositionCategory":"DEF",
 	   "Name":"Matt Milano",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19037.png",
 	   "CollegeDraftTeam":"BUF",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":302,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "BUF"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"GB",
-	   "Position":"RB",
+	   "FirstName":"Aaron",
+	   "LastName":"Jones",
 	   "PositionCategory":"OFF",
 	   "Name":"Aaron Jones",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19045.png",
 	   "CollegeDraftTeam":"GB",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":303,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "GB",
+		  "GB",
+		  "GB",
+		  "GB",
+		  "GB"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"CLE",
-	   "Position":"LB",
+	   "FirstName":"Anthony",
+	   "LastName":"Walker",
 	   "PositionCategory":"DEF",
 	   "Name":"Anthony Walker",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19049.png",
 	   "CollegeDraftTeam":"IND",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":304,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "IND",
+		  "CLE"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NE",
-	   "Position":"DL",
+	   "FirstName":"Davon",
+	   "LastName":"Godchaux",
 	   "PositionCategory":"DEF",
 	   "Name":"Davon Godchaux",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19053.png",
 	   "CollegeDraftTeam":"MIA",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":305,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "MIA",
+		  "NE"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"DB",
+	   "FirstName":"Desmond",
+	   "LastName":"King II",
 	   "PositionCategory":"DEF",
 	   "Name":"Desmond King II",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19062.png",
 	   "CollegeDraftTeam":"LAC",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":306,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "LAC",
+		  "TEN",
+		  "HOU"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"SF",
-	   "Position":"TE",
+	   "FirstName":"George",
+	   "LastName":"Kittle",
 	   "PositionCategory":"OFF",
 	   "Name":"George Kittle",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19063.png",
 	   "CollegeDraftTeam":"SF",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":307,
+	   "Position":"TE",
+	   "AllTeams":[
+		  "SF",
+		  "SF",
+		  "SF",
+		  "SF",
+		  "SF"
+	   ],
+	   "ProBowls":3,
+	   "Rings":0
+	},
+	{
+	   "Team":"TEN",
+	   "FirstName":"Jeremy",
+	   "LastName":"McNichols",
+	   "PositionCategory":"OFF",
+	   "Name":"Jeremy McNichols",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19065.png",
+	   "CollegeDraftTeam":"TB",
+	   "CollegeDraftYear":2017,
+	   "id":308,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "SF",
+		  "IND",
+		  "JAX",
+		  "TEN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"LV",
-	   "Position":"LB",
+	   "FirstName":"Jayon",
+	   "LastName":"Brown",
 	   "PositionCategory":"DEF",
 	   "Name":"Jayon Brown",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19066.png",
 	   "CollegeDraftTeam":"TEN",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":309,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "TEN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"BAL",
-	   "Position":"DB",
+	   "FirstName":"Chuck",
+	   "LastName":"Clark",
 	   "PositionCategory":"DEF",
 	   "Name":"Chuck Clark",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19070.png",
 	   "CollegeDraftTeam":"BAL",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":310,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "BAL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"DB",
+	   "FirstName":"Xavier",
+	   "LastName":"Woods",
 	   "PositionCategory":"DEF",
 	   "Name":"Xavier Woods",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19084.png",
 	   "CollegeDraftTeam":"DAL",
-	   "CollegeDraftYear":2017
-	},
-	{
-	   "Team":"CHI",
-	   "Position":"DL",
-	   "PositionCategory":"DEF",
-	   "Name":"Al-Quadin Muhammad",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19105.png",
-	   "CollegeDraftTeam":"NO",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":311,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "DAL",
+		  "MIN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"RB",
+	   "FirstName":"Chris",
+	   "LastName":"Carson",
 	   "PositionCategory":"OFF",
 	   "Name":"Chris Carson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19119.png",
 	   "CollegeDraftTeam":"SEA",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":312,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "SEA"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"OL",
+	   "FirstName":"Chase",
+	   "LastName":"Roullier",
 	   "PositionCategory":"OFF",
 	   "Name":"Chase Roullier",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19134.png",
 	   "CollegeDraftTeam":"WAS",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":313,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "WAS"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"SF",
-	   "Position":"OL",
+	   "FirstName":"Daniel",
+	   "LastName":"Brunskill",
 	   "PositionCategory":"OFF",
 	   "Name":"Daniel Brunskill",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19139.png",
 	   "CollegeDraftTeam":"ATL",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":314,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "SF",
+		  "SF",
+		  "SF"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
-	   "Team":"DEN",
+	   "Team":"MIN",
+	   "FirstName":"Johnny",
+	   "LastName":"Mundt",
+	   "PositionCategory":"OFF",
+	   "Name":"Johnny Mundt",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19165.png",
+	   "CollegeDraftTeam":"LAR",
+	   "CollegeDraftYear":2017,
+	   "id":315,
+	   "Position":"TE",
+	   "AllTeams":[
+		  "LAR"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
+	},
+	{
+	   "Team":"PHI",
+	   "FirstName":"Zach",
+	   "LastName":"Pascal",
+	   "PositionCategory":"OFF",
+	   "Name":"Zach Pascal",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19172.png",
+	   "CollegeDraftTeam":"WAS",
+	   "CollegeDraftYear":2017,
+	   "id":316,
 	   "Position":"WR",
-	   "PositionCategory":"OFF",
-	   "Name":"Tim Patrick",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19207.png",
-	   "CollegeDraftTeam":"BAL",
-	   "CollegeDraftYear":2017
-	},
-	{
-	   "Team":"NO",
-	   "Position":"QB",
-	   "PositionCategory":"OFF",
-	   "Name":"Taysom Hill",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19238.png",
-	   "CollegeDraftTeam":"GB",
-	   "CollegeDraftYear":2017
+	   "AllTeams":[
+		  "IND"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"IND",
-	   "Position":"DB",
+	   "FirstName":"Kenny",
+	   "LastName":"Moore II",
 	   "PositionCategory":"DEF",
 	   "Name":"Kenny Moore II",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19287.png",
 	   "CollegeDraftTeam":"NE",
-	   "CollegeDraftYear":2017
-	},
-	{
-	   "Team":"HOU",
-	   "Position":"TE",
-	   "PositionCategory":"OFF",
-	   "Name":"Pharaoh Brown",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19304.png",
-	   "CollegeDraftTeam":"LV",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":317,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "IND"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"CHI",
-	   "Position":"LB",
+	   "FirstName":"Nicholas",
+	   "LastName":"Morrow",
 	   "PositionCategory":"DEF",
 	   "Name":"Nicholas Morrow",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19310.png",
 	   "CollegeDraftTeam":"LV",
-	   "CollegeDraftYear":2017
-	},
-	{
-	   "Team":"NE",
-	   "Position":"WR",
-	   "PositionCategory":"OFF",
-	   "Name":"Kendrick Bourne",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19318.png",
-	   "CollegeDraftTeam":"SF",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":318,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "OAK",
+		  "LV"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"RB",
+	   "FirstName":"Matt",
+	   "LastName":"Breida",
 	   "PositionCategory":"OFF",
 	   "Name":"Matt Breida",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19319.png",
 	   "CollegeDraftTeam":"SF",
-	   "CollegeDraftYear":2017
-	},
-	{
-	   "Team":"PIT",
-	   "Position":"DB",
-	   "PositionCategory":"DEF",
-	   "Name":"Arthur Maulet",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19375.png",
-	   "CollegeDraftTeam":"NO",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":319,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "SF",
+		  "SF",
+		  "SF",
+		  "MIA",
+		  "BUF"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"TE",
+	   "FirstName":"Ricky",
+	   "LastName":"Seals-Jones",
 	   "PositionCategory":"OFF",
 	   "Name":"Ricky Seals-Jones",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19410.png",
 	   "CollegeDraftTeam":"ARI",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":320,
+	   "Position":"TE",
+	   "AllTeams":[
+		  "ARI",
+		  "CLE",
+		  "KC",
+		  "WAS"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"LAC",
-	   "Position":"OL",
+	   "FirstName":"Storm",
+	   "LastName":"Norton",
 	   "PositionCategory":"OFF",
 	   "Name":"Storm Norton",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19486.png",
 	   "CollegeDraftTeam":"DET",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":321,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "MIN",
+		  "LAC"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"GB",
-	   "Position":"TE",
+	   "FirstName":"Robert",
+	   "LastName":"Tonyan",
 	   "PositionCategory":"OFF",
 	   "Name":"Robert Tonyan",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19491.png",
 	   "CollegeDraftTeam":"DET",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":322,
+	   "Position":"TE",
+	   "AllTeams":[
+		  "GB",
+		  "GB",
+		  "GB",
+		  "GB"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"LAC",
-	   "Position":"DB",
+	   "FirstName":"Michael",
+	   "LastName":"Davis",
 	   "PositionCategory":"DEF",
 	   "Name":"Michael Davis",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19560.png",
 	   "CollegeDraftTeam":"LAC",
-	   "CollegeDraftYear":2017
+	   "CollegeDraftYear":2017,
+	   "id":323,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "LAC"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"LAC",
-	   "Position":"RB",
+	   "FirstName":"Austin",
+	   "LastName":"Ekeler",
 	   "PositionCategory":"OFF",
 	   "Name":"Austin Ekeler",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19562.png",
 	   "CollegeDraftTeam":"LAC",
-	   "CollegeDraftYear":2017
-	},
-	{
-	   "Team":"PIT",
+	   "CollegeDraftYear":2017,
+	   "id":324,
 	   "Position":"RB",
-	   "PositionCategory":"OFF",
-	   "Name":"Trey Edmunds",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19599.png",
-	   "CollegeDraftTeam":"NO",
-	   "CollegeDraftYear":2017
-	},
-	{
-	   "Team":"HOU",
-	   "Position":"RB",
-	   "PositionCategory":"OFF",
-	   "Name":"Dare Ogunbowale",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19626.png",
-	   "CollegeDraftTeam":"HOU",
-	   "CollegeDraftYear":2017
+	   "AllTeams":[
+		  "LAC"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"RB",
+	   "FirstName":"Saquon",
+	   "LastName":"Barkley",
 	   "PositionCategory":"OFF",
 	   "Name":"Saquon Barkley",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19766.png",
 	   "CollegeDraftTeam":"NYG",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":325,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "NYG"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"BAL",
-	   "Position":"QB",
+	   "FirstName":"Lamar",
+	   "LastName":"Jackson",
 	   "PositionCategory":"OFF",
 	   "Name":"Lamar Jackson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19781.png",
 	   "CollegeDraftTeam":"BAL",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":326,
+	   "Position":"QB",
+	   "AllTeams":[
+		  "NYJ"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CLE",
-	   "Position":"RB",
+	   "FirstName":"Baker",
+	   "LastName":"Mayfield",
+	   "PositionCategory":"OFF",
+	   "Name":"Baker Mayfield",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19790.png",
+	   "CollegeDraftTeam":"CLE",
+	   "CollegeDraftYear":2018,
+	   "id":327,
+	   "Position":"QB",
+	   "AllTeams":[
+		  "CLE"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"CLE",
+	   "FirstName":"Nick",
+	   "LastName":"Chubb",
 	   "PositionCategory":"OFF",
 	   "Name":"Nick Chubb",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19798.png",
 	   "CollegeDraftTeam":"CLE",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":328,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "CLE"
+	   ],
+	   "ProBowls":3,
+	   "Rings":0
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"RB",
+	   "FirstName":"Rashaad",
+	   "LastName":"Penny",
 	   "PositionCategory":"OFF",
 	   "Name":"Rashaad Penny",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19799.png",
 	   "CollegeDraftTeam":"SEA",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":329,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "SEA"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"WR",
+	   "FirstName":"Courtland",
+	   "LastName":"Sutton",
 	   "PositionCategory":"OFF",
 	   "Name":"Courtland Sutton",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19800.png",
 	   "CollegeDraftTeam":"DEN",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":330,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "DEN"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"QB",
+	   "FirstName":"Josh",
+	   "LastName":"Allen",
 	   "PositionCategory":"OFF",
 	   "Name":"Josh Allen",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19801.png",
 	   "CollegeDraftTeam":"BUF",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":331,
+	   "Position":"QB",
+	   "AllTeams":[
+		  "JAX"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
+	},
+	{
+	   "Team":"ATL",
+	   "FirstName":"Calvin",
+	   "LastName":"Ridley",
+	   "PositionCategory":"OFF",
+	   "Name":"Calvin Ridley",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19802.png",
+	   "CollegeDraftTeam":"ATL",
+	   "CollegeDraftYear":2018,
+	   "id":332,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "ATL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"BAL",
-	   "Position":"TE",
+	   "FirstName":"Mark",
+	   "LastName":"Andrews",
 	   "PositionCategory":"OFF",
 	   "Name":"Mark Andrews",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19803.png",
 	   "CollegeDraftTeam":"BAL",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":333,
+	   "Position":"TE",
+	   "AllTeams":[
+		  "BAL"
+	   ],
+	   "ProBowls":2,
+	   "Rings":0
+	},
+	{
+	   "Team":"CAR",
+	   "FirstName":"Sam",
+	   "LastName":"Darnold",
+	   "PositionCategory":"OFF",
+	   "Name":"Sam Darnold",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19812.png",
+	   "CollegeDraftTeam":"NYJ",
+	   "CollegeDraftYear":2018,
+	   "id":334,
+	   "Position":"QB",
+	   "AllTeams":[
+		  "NYJ",
+		  "CAR"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"KC",
-	   "Position":"OL",
+	   "FirstName":"Orlando",
+	   "LastName":"Brown",
 	   "PositionCategory":"OFF",
 	   "Name":"Orlando Brown",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19814.png",
 	   "CollegeDraftTeam":"BAL",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":335,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "BAL",
+		  "KC"
+	   ],
+	   "ProBowls":3,
+	   "Rings":0
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"WR",
+	   "FirstName":"Christian",
+	   "LastName":"Kirk",
 	   "PositionCategory":"OFF",
 	   "Name":"Christian Kirk",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19815.png",
 	   "CollegeDraftTeam":"ARI",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":336,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "ARI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"DET",
-	   "Position":"WR",
+	   "FirstName":"DJ",
+	   "LastName":"Chark Jr.",
 	   "PositionCategory":"OFF",
 	   "Name":"DJ Chark Jr.",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19816.png",
 	   "CollegeDraftTeam":"JAX",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":337,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "JAX"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
+	},
+	{
+	   "Team":"HOU",
+	   "FirstName":"Royce",
+	   "LastName":"Freeman",
+	   "PositionCategory":"OFF",
+	   "Name":"Royce Freeman",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19823.png",
+	   "CollegeDraftTeam":"DEN",
+	   "CollegeDraftYear":2018,
+	   "id":338,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "DEN",
+		  "CAR",
+		  "HOU"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CHI",
-	   "Position":"LB",
+	   "FirstName":"Roquan",
+	   "LastName":"Smith",
 	   "PositionCategory":"DEF",
 	   "Name":"Roquan Smith",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19827.png",
 	   "CollegeDraftTeam":"CHI",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":339,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "CHI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"PIT",
-	   "Position":"DB",
+	   "FirstName":"Minkah",
+	   "LastName":"Fitzpatrick",
 	   "PositionCategory":"DEF",
 	   "Name":"Minkah Fitzpatrick",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19829.png",
 	   "CollegeDraftTeam":"MIA",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":340,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "MIA",
+		  "PIT"
+	   ],
+	   "ProBowls":2,
+	   "Rings":0
 	},
 	{
 	   "Team":"CLE",
-	   "Position":"DB",
+	   "FirstName":"Denzel",
+	   "LastName":"Ward",
 	   "PositionCategory":"DEF",
 	   "Name":"Denzel Ward",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19830.png",
 	   "CollegeDraftTeam":"CLE",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":341,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "CLE"
+	   ],
+	   "ProBowls":2,
+	   "Rings":0
 	},
 	{
 	   "Team":"IND",
-	   "Position":"OL",
+	   "FirstName":"Quenton",
+	   "LastName":"Nelson",
 	   "PositionCategory":"OFF",
 	   "Name":"Quenton Nelson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19831.png",
 	   "CollegeDraftTeam":"IND",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":342,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "IND"
+	   ],
+	   "ProBowls":4,
+	   "Rings":0
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"LB",
+	   "FirstName":"Bradley",
+	   "LastName":"Chubb",
 	   "PositionCategory":"DEF",
 	   "Name":"Bradley Chubb",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19832.png",
 	   "CollegeDraftTeam":"DEN",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":343,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "DEN"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"SF",
-	   "Position":"OL",
+	   "FirstName":"Mike",
+	   "LastName":"McGlinchey",
 	   "PositionCategory":"OFF",
 	   "Name":"Mike McGlinchey",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19833.png",
 	   "CollegeDraftTeam":"SF",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":344,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "SF",
+		  "SF",
+		  "SF",
+		  "SF"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"TB",
-	   "Position":"DL",
+	   "FirstName":"Vita",
+	   "LastName":"Vea",
 	   "PositionCategory":"DEF",
 	   "Name":"Vita Vea",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19834.png",
 	   "CollegeDraftTeam":"TB",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":345,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "TB",
+		  "TB",
+		  "TB",
+		  "TB"
+	   ],
+	   "ProBowls":1,
+	   "Rings":1
 	},
 	{
 	   "Team":"NO",
-	   "Position":"DL",
+	   "FirstName":"Marcus",
+	   "LastName":"Davenport",
 	   "PositionCategory":"DEF",
 	   "Name":"Marcus Davenport",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19835.png",
 	   "CollegeDraftTeam":"NO",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":346,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "NO",
+		  "NO",
+		  "NO",
+		  "NO"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"LB",
+	   "FirstName":"Tremaine",
+	   "LastName":"Edmunds",
 	   "PositionCategory":"DEF",
 	   "Name":"Tremaine Edmunds",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19836.png",
 	   "CollegeDraftTeam":"BUF",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":347,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "BUF"
+	   ],
+	   "ProBowls":2,
+	   "Rings":0
 	},
 	{
 	   "Team":"LAC",
-	   "Position":"DB",
+	   "FirstName":"Derwin",
+	   "LastName":"James Jr.",
 	   "PositionCategory":"DEF",
 	   "Name":"Derwin James Jr.",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19837.png",
 	   "CollegeDraftTeam":"LAC",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":348,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "LAC"
+	   ],
+	   "ProBowls":2,
+	   "Rings":0
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"LB",
+	   "FirstName":"Leighton",
+	   "LastName":"Vander Esch",
 	   "PositionCategory":"DEF",
 	   "Name":"Leighton Vander Esch",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19838.png",
 	   "CollegeDraftTeam":"DAL",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":349,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "DAL"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"GB",
-	   "Position":"DB",
+	   "FirstName":"Jaire",
+	   "LastName":"Alexander",
 	   "PositionCategory":"DEF",
 	   "Name":"Jaire Alexander",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19839.png",
 	   "CollegeDraftTeam":"GB",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":350,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "GB",
+		  "GB",
+		  "GB",
+		  "GB"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"LV",
-	   "Position":"OL",
+	   "FirstName":"Kolton",
+	   "LastName":"Miller",
 	   "PositionCategory":"OFF",
 	   "Name":"Kolton Miller",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19840.png",
 	   "CollegeDraftTeam":"LV",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":351,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "OAK",
+		  "LV",
+		  "LV"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"DL",
+	   "FirstName":"Daron",
+	   "LastName":"Payne",
 	   "PositionCategory":"DEF",
 	   "Name":"Daron Payne",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19841.png",
 	   "CollegeDraftTeam":"WAS",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":352,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "WAS"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"TE",
+	   "FirstName":"Hayden",
+	   "LastName":"Hurst",
 	   "PositionCategory":"OFF",
 	   "Name":"Hayden Hurst",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19843.png",
 	   "CollegeDraftTeam":"BAL",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":353,
+	   "Position":"TE",
+	   "AllTeams":[
+		  "BAL",
+		  "ATL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"WR",
+	   "FirstName":"DJ",
+	   "LastName":"Moore",
 	   "PositionCategory":"OFF",
 	   "Name":"DJ Moore",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19844.png",
 	   "CollegeDraftTeam":"CAR",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":354,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "CAR"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"DET",
-	   "Position":"OL",
+	   "FirstName":"Frank",
+	   "LastName":"Ragnow",
 	   "PositionCategory":"OFF",
 	   "Name":"Frank Ragnow",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19845.png",
 	   "CollegeDraftTeam":"DET",
-	   "CollegeDraftYear":2018
-	},
-	{
-	   "Team":"DET",
-	   "Position":"DB",
-	   "PositionCategory":"DEF",
-	   "Name":"Mike Hughes",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19847.png",
-	   "CollegeDraftTeam":"MIN",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":355,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "DET"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"NE",
-	   "Position":"OL",
+	   "FirstName":"Isaiah",
+	   "LastName":"Wynn",
 	   "PositionCategory":"OFF",
 	   "Name":"Isaiah Wynn",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19848.png",
 	   "CollegeDraftTeam":"NE",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":356,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "NE",
+		  "NE",
+		  "NE"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"OL",
+	   "FirstName":"Austin",
+	   "LastName":"Corbett",
 	   "PositionCategory":"OFF",
 	   "Name":"Austin Corbett",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19851.png",
 	   "CollegeDraftTeam":"CLE",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":357,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "CLE",
+		  "LAR"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"IND",
-	   "Position":"LB",
+	   "FirstName":"Darius",
+	   "LastName":"Leonard",
 	   "PositionCategory":"DEF",
 	   "Name":"Darius Leonard",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19852.png",
 	   "CollegeDraftTeam":"IND",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":358,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "IND"
+	   ],
+	   "ProBowls":3,
+	   "Rings":0
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"TE",
+	   "FirstName":"Mike",
+	   "LastName":"Gesicki",
 	   "PositionCategory":"OFF",
 	   "Name":"Mike Gesicki",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19853.png",
 	   "CollegeDraftTeam":"MIA",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":359,
+	   "Position":"TE",
+	   "AllTeams":[
+		  "MIA"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"PIT",
-	   "Position":"OL",
+	   "FirstName":"James",
+	   "LastName":"Daniels",
 	   "PositionCategory":"OFF",
 	   "Name":"James Daniels",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19855.png",
 	   "CollegeDraftTeam":"CHI",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":360,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "CHI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"IND",
-	   "Position":"OL",
+	   "FirstName":"Braden",
+	   "LastName":"Smith",
 	   "PositionCategory":"OFF",
 	   "Name":"Braden Smith",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19857.png",
 	   "CollegeDraftTeam":"IND",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":361,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "IND"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"OL",
+	   "FirstName":"Will",
+	   "LastName":"Hernandez",
 	   "PositionCategory":"OFF",
 	   "Name":"Will Hernandez",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19860.png",
 	   "CollegeDraftTeam":"NYG",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":362,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "NYG"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"KC",
-	   "Position":"RB",
+	   "FirstName":"Ronald",
+	   "LastName":"Jones II",
 	   "PositionCategory":"OFF",
 	   "Name":"Ronald Jones II",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19861.png",
 	   "CollegeDraftTeam":"TB",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":363,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "TB",
+		  "TB",
+		  "TB",
+		  "TB"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"TE",
+	   "FirstName":"Dallas",
+	   "LastName":"Goedert",
 	   "PositionCategory":"OFF",
 	   "Name":"Dallas Goedert",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19863.png",
 	   "CollegeDraftTeam":"PHI",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":364,
+	   "Position":"TE",
+	   "AllTeams":[
+		  "PHI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"WR",
+	   "FirstName":"James",
+	   "LastName":"Washington",
 	   "PositionCategory":"OFF",
 	   "Name":"James Washington",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19865.png",
 	   "CollegeDraftTeam":"PIT",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":365,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "PIT"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"KC",
-	   "Position":"DB",
+	   "FirstName":"Justin",
+	   "LastName":"Reid",
 	   "PositionCategory":"DEF",
 	   "Name":"Justin Reid",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19866.png",
 	   "CollegeDraftTeam":"HOU",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":366,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "HOU"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"WR",
+	   "FirstName":"Michael",
+	   "LastName":"Gallup",
 	   "PositionCategory":"OFF",
 	   "Name":"Michael Gallup",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19867.png",
 	   "CollegeDraftTeam":"DAL",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":367,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "DAL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"ATL",
-	   "Position":"DB",
+	   "FirstName":"Isaiah",
+	   "LastName":"Oliver",
 	   "PositionCategory":"DEF",
 	   "Name":"Isaiah Oliver",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19868.png",
 	   "CollegeDraftTeam":"ATL",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":368,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "ATL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"DB",
+	   "FirstName":"Donte",
+	   "LastName":"Jackson",
 	   "PositionCategory":"DEF",
 	   "Name":"Donte Jackson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19870.png",
 	   "CollegeDraftTeam":"CAR",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":369,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "CAR"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"DL",
+	   "FirstName":"Sam",
+	   "LastName":"Hubbard",
 	   "PositionCategory":"DEF",
 	   "Name":"Sam Hubbard",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19871.png",
 	   "CollegeDraftTeam":"CIN",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":370,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "CIN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"DB",
+	   "FirstName":"Jessie",
+	   "LastName":"Bates III",
 	   "PositionCategory":"DEF",
 	   "Name":"Jessie Bates III",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19873.png",
 	   "CollegeDraftTeam":"CIN",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":371,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "CIN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"DET",
-	   "Position":"DB",
+	   "FirstName":"Tracy",
+	   "LastName":"Walker III",
 	   "PositionCategory":"DEF",
 	   "Name":"Tracy Walker III",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19876.png",
 	   "CollegeDraftTeam":"DET",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":372,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "DET"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"KC",
-	   "Position":"DL",
+	   "FirstName":"Derrick",
+	   "LastName":"Nnadi",
 	   "PositionCategory":"DEF",
 	   "Name":"Derrick Nnadi",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19880.png",
 	   "CollegeDraftTeam":"KC",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":373,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "KC",
+		  "KC",
+		  "KC",
+		  "KC"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"CHI",
-	   "Position":"DL",
+	   "FirstName":"Justin",
+	   "LastName":"Jones",
 	   "PositionCategory":"DEF",
 	   "Name":"Justin Jones",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19881.png",
 	   "CollegeDraftTeam":"LAC",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":374,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "LAC"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"LB",
+	   "FirstName":"Jerome",
+	   "LastName":"Baker",
 	   "PositionCategory":"DEF",
 	   "Name":"Jerome Baker",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19882.png",
 	   "CollegeDraftTeam":"MIA",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":375,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "MIA"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"MIN",
-	   "Position":"OL",
+	   "FirstName":"Brian",
+	   "LastName":"O'Neill",
 	   "PositionCategory":"OFF",
 	   "Name":"Brian O'Neill",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19883.png",
 	   "CollegeDraftTeam":"MIN",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":376,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "MIN"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
+	},
+	{
+	   "Team":"CIN",
+	   "FirstName":"B.J.",
+	   "LastName":"Hill",
+	   "PositionCategory":"DEF",
+	   "Name":"B.J. Hill",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19885.png",
+	   "CollegeDraftTeam":"NYG",
+	   "CollegeDraftYear":2018,
+	   "id":377,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "NYG",
+		  "CIN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"ATL",
-	   "Position":"LB",
+	   "FirstName":"Lorenzo",
+	   "LastName":"Carter",
 	   "PositionCategory":"DEF",
 	   "Name":"Lorenzo Carter",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19886.png",
 	   "CollegeDraftTeam":"NYG",
-	   "CollegeDraftYear":2018
-	},
-	{
-	   "Team":"LV",
-	   "Position":"OL",
-	   "PositionCategory":"OFF",
-	   "Name":"Brandon Parker",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19888.png",
-	   "CollegeDraftTeam":"LV",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":378,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "NYG"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"SF",
-	   "Position":"LB",
+	   "FirstName":"Fred",
+	   "LastName":"Warner",
 	   "PositionCategory":"DEF",
 	   "Name":"Fred Warner",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19891.png",
 	   "CollegeDraftTeam":"SF",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":379,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "SF",
+		  "SF",
+		  "SF",
+		  "SF"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"TB",
-	   "Position":"DB",
+	   "FirstName":"Carlton",
+	   "LastName":"Davis III",
 	   "PositionCategory":"DEF",
 	   "Name":"Carlton Davis III",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19892.png",
 	   "CollegeDraftTeam":"TB",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":380,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "TB",
+		  "TB",
+		  "TB",
+		  "TB"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"OL",
+	   "FirstName":"Joe",
+	   "LastName":"Noteboom",
 	   "PositionCategory":"OFF",
 	   "Name":"Joe Noteboom",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19895.png",
 	   "CollegeDraftTeam":"LAR",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":381,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "LAR"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"NO",
-	   "Position":"WR",
+	   "FirstName":"Tre'Quan",
+	   "LastName":"Smith",
 	   "PositionCategory":"OFF",
 	   "Name":"Tre'Quan Smith",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19897.png",
 	   "CollegeDraftTeam":"NO",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":382,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "NO",
+		  "NO",
+		  "NO",
+		  "NO"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"PIT",
-	   "Position":"OL",
+	   "FirstName":"Mason",
+	   "LastName":"Cole",
 	   "PositionCategory":"OFF",
 	   "Name":"Mason Cole",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19898.png",
 	   "CollegeDraftTeam":"ARI",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":383,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "ARI",
+		  "MIN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"MIN",
-	   "Position":"DL",
+	   "FirstName":"Harrison",
+	   "LastName":"Phillips",
 	   "PositionCategory":"DEF",
 	   "Name":"Harrison Phillips",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19900.png",
 	   "CollegeDraftTeam":"BUF",
-	   "CollegeDraftYear":2018
-	},
-	{
-	   "Team":"CLE",
-	   "Position":"DB",
-	   "PositionCategory":"DEF",
-	   "Name":"Ronnie Harrison Jr.",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19904.png",
-	   "CollegeDraftTeam":"JAX",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":384,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "BUF"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"PIT",
-	   "Position":"OL",
+	   "FirstName":"Chukwuma",
+	   "LastName":"Okorafor",
 	   "PositionCategory":"OFF",
 	   "Name":"Chukwuma Okorafor",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19906.png",
 	   "CollegeDraftTeam":"PIT",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":385,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "PIT"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"OL",
+	   "FirstName":"Alex",
+	   "LastName":"Cappa",
 	   "PositionCategory":"OFF",
 	   "Name":"Alex Cappa",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19908.png",
 	   "CollegeDraftTeam":"TB",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":386,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "TB",
+		  "TB",
+		  "TB",
+		  "TB"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"IND",
-	   "Position":"RB",
+	   "FirstName":"Nyheim",
+	   "LastName":"Hines",
 	   "PositionCategory":"OFF",
 	   "Name":"Nyheim Hines",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19912.png",
 	   "CollegeDraftTeam":"IND",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":387,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "IND"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"RB",
+	   "FirstName":"Chase",
+	   "LastName":"Edmonds",
 	   "PositionCategory":"OFF",
 	   "Name":"Chase Edmonds",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19919.png",
 	   "CollegeDraftTeam":"ARI",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":388,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "ARI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"TE",
+	   "FirstName":"Dalton",
+	   "LastName":"Schultz",
 	   "PositionCategory":"OFF",
 	   "Name":"Dalton Schultz",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19920.png",
 	   "CollegeDraftTeam":"DAL",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":389,
+	   "Position":"TE",
+	   "AllTeams":[
+		  "DAL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"DB",
+	   "FirstName":"Taron",
+	   "LastName":"Johnson",
 	   "PositionCategory":"DEF",
 	   "Name":"Taron Johnson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19928.png",
 	   "CollegeDraftTeam":"BUF",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":390,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "BUF"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"LV",
-	   "Position":"DL",
+	   "FirstName":"Bilal",
+	   "LastName":"Nichols",
 	   "PositionCategory":"DEF",
 	   "Name":"Bilal Nichols",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19930.png",
 	   "CollegeDraftTeam":"CHI",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":391,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "CHI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"LB",
+	   "FirstName":"Josey",
+	   "LastName":"Jewell",
 	   "PositionCategory":"DEF",
 	   "Name":"Josey Jewell",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19933.png",
 	   "CollegeDraftTeam":"DEN",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":392,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "DEN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"IND",
+	   "FirstName":"Keke",
+	   "LastName":"Coutee",
+	   "PositionCategory":"OFF",
+	   "Name":"Keke Coutee",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19937.png",
+	   "CollegeDraftTeam":"HOU",
+	   "CollegeDraftYear":2018,
+	   "id":393,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "HOU",
+		  "IND"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"LB",
+	   "FirstName":"Kyzir",
+	   "LastName":"White",
 	   "PositionCategory":"DEF",
 	   "Name":"Kyzir White",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19940.png",
 	   "CollegeDraftTeam":"LAC",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":394,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "LAC"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"OL",
+	   "FirstName":"Brian",
+	   "LastName":"Allen",
 	   "PositionCategory":"OFF",
 	   "Name":"Brian Allen",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19941.png",
 	   "CollegeDraftTeam":"LAR",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":395,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "LAR"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"DL",
+	   "FirstName":"John",
+	   "LastName":"Franklin-Myers",
 	   "PositionCategory":"DEF",
 	   "Name":"John Franklin-Myers",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19942.png",
 	   "CollegeDraftTeam":"LAR",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":396,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "LAR",
+		  "NYJ"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NE",
-	   "Position":"LB",
+	   "FirstName":"Ja'Whaun",
+	   "LastName":"Bentley",
 	   "PositionCategory":"DEF",
 	   "Name":"Ja'Whaun Bentley",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19944.png",
 	   "CollegeDraftTeam":"NE",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":397,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NE"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"DB",
+	   "FirstName":"Avonte",
+	   "LastName":"Maddox",
 	   "PositionCategory":"DEF",
 	   "Name":"Avonte Maddox",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19949.png",
 	   "CollegeDraftTeam":"PHI",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":398,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "PHI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"DB",
+	   "FirstName":"D.J.",
+	   "LastName":"Reed",
 	   "PositionCategory":"DEF",
 	   "Name":"D.J. Reed",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19953.png",
 	   "CollegeDraftTeam":"SF",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":399,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "SF",
+		  "SF",
+		  "SEA"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"DB",
+	   "FirstName":"Jordan",
+	   "LastName":"Whitehead",
 	   "PositionCategory":"DEF",
 	   "Name":"Jordan Whitehead",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19954.png",
 	   "CollegeDraftTeam":"TB",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":400,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "TB",
+		  "TB",
+		  "TB",
+		  "TB"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"CLE",
-	   "Position":"OL",
+	   "FirstName":"Wyatt",
+	   "LastName":"Teller",
 	   "PositionCategory":"OFF",
 	   "Name":"Wyatt Teller",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19962.png",
 	   "CollegeDraftTeam":"BUF",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":401,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "BUF",
+		  "CLE"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"KC",
-	   "Position":"WR",
+	   "FirstName":"Marquez",
+	   "LastName":"Valdes-Scantling",
 	   "PositionCategory":"OFF",
 	   "Name":"Marquez Valdes-Scantling",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19976.png",
 	   "CollegeDraftTeam":"GB",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":402,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "GB",
+		  "GB",
+		  "GB",
+		  "GB"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"TEN",
+	   "FirstName":"Jordan",
+	   "LastName":"Wilkins",
+	   "PositionCategory":"OFF",
+	   "Name":"Jordan Wilkins",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19979.png",
+	   "CollegeDraftTeam":"IND",
+	   "CollegeDraftYear":2018,
+	   "id":403,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "IND",
+		  "TEN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"LAC",
-	   "Position":"DL",
+	   "FirstName":"Sebastian",
+	   "LastName":"Joseph-Day",
 	   "PositionCategory":"DEF",
 	   "Name":"Sebastian Joseph-Day",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19985.png",
 	   "CollegeDraftTeam":"LAR",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":404,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "LAR"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"LB",
+	   "FirstName":"Ogbonnia",
+	   "LastName":"Okoronkwo",
 	   "PositionCategory":"DEF",
 	   "Name":"Ogbonnia Okoronkwo",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19987.png",
 	   "CollegeDraftTeam":"LAR",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":405,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "LAR"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
+	},
+	{
+	   "Team":"NYJ",
+	   "FirstName":"Tyler",
+	   "LastName":"Conklin",
+	   "PositionCategory":"OFF",
+	   "Name":"Tyler Conklin",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19988.png",
+	   "CollegeDraftTeam":"MIN",
+	   "CollegeDraftYear":2018,
+	   "id":406,
+	   "Position":"TE",
+	   "AllTeams":[
+		  "MIN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"DL",
+	   "FirstName":"Folorunso",
+	   "LastName":"Fatukasi",
 	   "PositionCategory":"DEF",
 	   "Name":"Folorunso Fatukasi",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19993.png",
 	   "CollegeDraftTeam":"NYJ",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":407,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "NYJ"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
-	   "Team":"BUF",
-	   "Position":"DL",
-	   "PositionCategory":"DEF",
-	   "Name":"Tim Settle",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20002.png",
-	   "CollegeDraftTeam":"WAS",
-	   "CollegeDraftYear":2018
+	   "Team":"ARI",
+	   "FirstName":"Jaylen",
+	   "LastName":"Samuels",
+	   "PositionCategory":"OFF",
+	   "Name":"Jaylen Samuels",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/19996.png",
+	   "CollegeDraftTeam":"PIT",
+	   "CollegeDraftYear":2018,
+	   "id":408,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "PIT",
+		  "HOU"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"TB",
-	   "Position":"WR",
+	   "FirstName":"Russell",
+	   "LastName":"Gage",
 	   "PositionCategory":"OFF",
 	   "Name":"Russell Gage",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20006.png",
 	   "CollegeDraftTeam":"ATL",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":409,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "ATL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"LB",
+	   "FirstName":"Foyesade",
+	   "LastName":"Oluokun",
 	   "PositionCategory":"DEF",
 	   "Name":"Foyesade Oluokun",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20007.png",
 	   "CollegeDraftTeam":"ATL",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":410,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "ATL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"OL",
+	   "FirstName":"Bradley",
+	   "LastName":"Bozeman",
 	   "PositionCategory":"OFF",
 	   "Name":"Bradley Bozeman",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20008.png",
 	   "CollegeDraftTeam":"BAL",
-	   "CollegeDraftYear":2018
-	},
-	{
-	   "Team":"MIA",
-	   "Position":"WR",
-	   "PositionCategory":"OFF",
-	   "Name":"Cedrick Wilson",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20013.png",
-	   "CollegeDraftTeam":"DAL",
-	   "CollegeDraftYear":2018
-	},
-	{
-	   "Team":"NYJ",
-	   "Position":"WR",
-	   "PositionCategory":"OFF",
-	   "Name":"Braxton Berrios",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20038.png",
-	   "CollegeDraftTeam":"NE",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":411,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "BAL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"RB",
+	   "FirstName":"Boston",
+	   "LastName":"Scott",
 	   "PositionCategory":"OFF",
 	   "Name":"Boston Scott",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20039.png",
 	   "CollegeDraftTeam":"NO",
-	   "CollegeDraftYear":2018
-	},
-	{
-	   "Team":"TEN",
+	   "CollegeDraftYear":2018,
+	   "id":412,
 	   "Position":"RB",
-	   "PositionCategory":"OFF",
-	   "Name":"Trenton Cannon",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20040.png",
-	   "CollegeDraftTeam":"NYJ",
-	   "CollegeDraftYear":2018
+	   "AllTeams":[
+		  "PHI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"OL",
+	   "FirstName":"Jordan",
+	   "LastName":"Mailata",
 	   "PositionCategory":"OFF",
 	   "Name":"Jordan Mailata",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20042.png",
 	   "CollegeDraftTeam":"PHI",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":413,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "PHI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"IND",
-	   "Position":"OL",
+	   "FirstName":"Matt",
+	   "LastName":"Pryor",
 	   "PositionCategory":"OFF",
 	   "Name":"Matt Pryor",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20043.png",
 	   "CollegeDraftTeam":"PHI",
-	   "CollegeDraftYear":2018
-	},
-	{
-	   "Team":"MIA",
-	   "Position":"DL",
-	   "PositionCategory":"DEF",
-	   "Name":"Zach Sieler",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20051.png",
-	   "CollegeDraftTeam":"BAL",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":414,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "PHI",
+		  "IND"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"ATL",
-	   "Position":"WR",
+	   "FirstName":"Auden",
+	   "LastName":"Tate",
 	   "PositionCategory":"OFF",
 	   "Name":"Auden Tate",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20057.png",
 	   "CollegeDraftTeam":"CIN",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":415,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "CIN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"PIT",
+	   "FirstName":"Levi",
+	   "LastName":"Wallace",
+	   "PositionCategory":"DEF",
+	   "Name":"Levi Wallace",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20102.png",
+	   "CollegeDraftTeam":"BUF",
+	   "CollegeDraftYear":2018,
+	   "id":416,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "BUF"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"GB",
-	   "Position":"WR",
+	   "FirstName":"Allen",
+	   "LastName":"Lazard",
 	   "PositionCategory":"OFF",
 	   "Name":"Allen Lazard",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20145.png",
 	   "CollegeDraftTeam":"JAX",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":417,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "GB",
+		  "GB",
+		  "GB",
+		  "GB"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CHI",
-	   "Position":"WR",
+	   "FirstName":"Byron",
+	   "LastName":"Pringle",
 	   "PositionCategory":"OFF",
 	   "Name":"Byron Pringle",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20150.png",
 	   "CollegeDraftTeam":"KC",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":418,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "KC",
+		  "KC",
+		  "KC"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"RB",
+	   "FirstName":"Mike",
+	   "LastName":"Boone",
 	   "PositionCategory":"OFF",
 	   "Name":"Mike Boone",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20159.png",
 	   "CollegeDraftTeam":"MIN",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":419,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "MIN",
+		  "DEN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"LAC",
-	   "Position":"DB",
+	   "FirstName":"J.C.",
+	   "LastName":"Jackson",
 	   "PositionCategory":"DEF",
 	   "Name":"J.C. Jackson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20167.png",
 	   "CollegeDraftTeam":"NE",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":420,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "NE",
+		  "NE",
+		  "NE",
+		  "NE"
+	   ],
+	   "ProBowls":1,
+	   "Rings":1
 	},
 	{
 	   "Team":"MIN",
-	   "Position":"DB",
+	   "FirstName":"Chandon",
+	   "LastName":"Sullivan",
 	   "PositionCategory":"DEF",
 	   "Name":"Chandon Sullivan",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20178.png",
 	   "CollegeDraftTeam":"PHI",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":421,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "PHI",
+		  "GB",
+		  "GB",
+		  "GB"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"DL",
+	   "FirstName":"Poona",
+	   "LastName":"Ford",
 	   "PositionCategory":"DEF",
 	   "Name":"Poona Ford",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20185.png",
 	   "CollegeDraftTeam":"SEA",
-	   "CollegeDraftYear":2018
-	},
-	{
-	   "Team":"ARI",
-	   "Position":"TE",
-	   "PositionCategory":"OFF",
-	   "Name":"David Wells",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20199.png",
-	   "CollegeDraftTeam":"DAL",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":422,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "SEA"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"SF",
-	   "Position":"DB",
+	   "FirstName":"Charvarius",
+	   "LastName":"Ward",
 	   "PositionCategory":"DEF",
 	   "Name":"Charvarius Ward",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20204.png",
 	   "CollegeDraftTeam":"DAL",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":423,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "KC",
+		  "KC",
+		  "KC",
+		  "KC"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"DB",
+	   "FirstName":"Tavierre",
+	   "LastName":"Thomas",
 	   "PositionCategory":"DEF",
 	   "Name":"Tavierre Thomas",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20217.png",
 	   "CollegeDraftTeam":"ARI",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":424,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "CLE",
+		  "HOU"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"BAL",
-	   "Position":"RB",
+	   "FirstName":"Gus",
+	   "LastName":"Edwards",
 	   "PositionCategory":"OFF",
 	   "Name":"Gus Edwards",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20239.png",
 	   "CollegeDraftTeam":"BAL",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":425,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "BAL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"OL",
+	   "FirstName":"Ike",
+	   "LastName":"Boettger",
 	   "PositionCategory":"OFF",
 	   "Name":"Ike Boettger",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20252.png",
 	   "CollegeDraftTeam":"BUF",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":426,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "BUF"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"SF",
-	   "Position":"RB",
+	   "FirstName":"Jeff",
+	   "LastName":"Wilson Jr.",
 	   "PositionCategory":"OFF",
 	   "Name":"Jeff Wilson Jr.",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20360.png",
 	   "CollegeDraftTeam":"SF",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":427,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "SF",
+		  "SF",
+		  "SF",
+		  "SF"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"SF",
-	   "Position":"DB",
+	   "FirstName":"Emmanuel",
+	   "LastName":"Moseley",
 	   "PositionCategory":"DEF",
 	   "Name":"Emmanuel Moseley",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20366.png",
 	   "CollegeDraftTeam":"SF",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":428,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "SF",
+		  "SF",
+		  "SF",
+		  "SF"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"TB",
-	   "Position":"OL",
+	   "FirstName":"Aaron",
+	   "LastName":"Stinnie",
 	   "PositionCategory":"OFF",
 	   "Name":"Aaron Stinnie",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20379.png",
 	   "CollegeDraftTeam":"TEN",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":429,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "TEN",
+		  "TB",
+		  "TB",
+		  "TB"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"DB",
+	   "FirstName":"Danny",
+	   "LastName":"Johnson",
 	   "PositionCategory":"DEF",
 	   "Name":"Danny Johnson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20395.png",
 	   "CollegeDraftTeam":"WAS",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":430,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "WAS"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"IND",
-	   "Position":"DB",
+	   "FirstName":"Brandon",
+	   "LastName":"Facyson",
 	   "PositionCategory":"DEF",
 	   "Name":"Brandon Facyson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20434.png",
 	   "CollegeDraftTeam":"LAC",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":431,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "LAC",
+		  "LV"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
-	   "Team":"WAS",
-	   "Position":"WR",
-	   "PositionCategory":"OFF",
-	   "Name":"Cam Sims",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20529.png",
-	   "CollegeDraftTeam":"WAS",
-	   "CollegeDraftYear":2018
-	},
-	{
-	   "Team":"TEN",
-	   "Position":"RB",
-	   "PositionCategory":"OFF",
-	   "Name":"Dontrell Hilliard",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20566.png",
-	   "CollegeDraftTeam":"CLE",
-	   "CollegeDraftYear":2018
+	   "Team":"SF",
+	   "FirstName":"George",
+	   "LastName":"Odum",
+	   "PositionCategory":"DEF",
+	   "Name":"George Odum",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20492.png",
+	   "CollegeDraftTeam":"IND",
+	   "CollegeDraftYear":2018,
+	   "id":432,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "IND"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"DB",
+	   "FirstName":"Darious",
+	   "LastName":"Williams",
 	   "PositionCategory":"DEF",
 	   "Name":"Darious Williams",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20570.png",
 	   "CollegeDraftTeam":"BAL",
-	   "CollegeDraftYear":2018
+	   "CollegeDraftYear":2018,
+	   "id":433,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "LAR",
+		  "BAL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"SF",
-	   "Position":"DL",
+	   "FirstName":"Nick",
+	   "LastName":"Bosa",
 	   "PositionCategory":"DEF",
 	   "Name":"Nick Bosa",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20713.png",
 	   "CollegeDraftTeam":"SF",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":434,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "SF",
+		  "SF",
+		  "SF"
+	   ],
+	   "ProBowls":2,
+	   "Rings":0
 	},
 	{
 	   "Team":"LV",
-	   "Position":"DB",
+	   "FirstName":"Johnathan",
+	   "LastName":"Abram",
 	   "PositionCategory":"DEF",
 	   "Name":"Johnathan Abram",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20731.png",
 	   "CollegeDraftTeam":"LV",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":435,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "OAK",
+		  "LV",
+		  "LV"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"LAC",
-	   "Position":"DB",
+	   "FirstName":"Nasir",
+	   "LastName":"Adderley",
 	   "PositionCategory":"DEF",
 	   "Name":"Nasir Adderley",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20733.png",
 	   "CollegeDraftTeam":"LAC",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":436,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "LAC"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"DL",
+	   "FirstName":"Josh",
+	   "LastName":"Allen",
 	   "PositionCategory":"DEF",
 	   "Name":"Josh Allen",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20737.png",
 	   "CollegeDraftTeam":"JAX",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":437,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "JAX"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"DL",
+	   "FirstName":"Zach",
+	   "LastName":"Allen",
 	   "PositionCategory":"DEF",
 	   "Name":"Zach Allen",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20738.png",
 	   "CollegeDraftTeam":"ARI",
-	   "CollegeDraftYear":2019
-	},
-	{
-	   "Team":"JAX",
-	   "Position":"RB",
-	   "PositionCategory":"OFF",
-	   "Name":"Ryquell Armstead",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20743.png",
-	   "CollegeDraftTeam":"JAX",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":438,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "ARI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"OL",
+	   "FirstName":"David",
+	   "LastName":"Edwards",
 	   "PositionCategory":"OFF",
 	   "Name":"David Edwards",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20747.png",
 	   "CollegeDraftTeam":"LAR",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":439,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "LAR"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"LB",
+	   "FirstName":"T.J.",
+	   "LastName":"Edwards",
 	   "PositionCategory":"DEF",
 	   "Name":"T.J. Edwards",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20749.png",
 	   "CollegeDraftTeam":"PHI",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":440,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "PHI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"OL",
+	   "FirstName":"Bobby",
+	   "LastName":"Evans",
 	   "PositionCategory":"OFF",
 	   "Name":"Bobby Evans",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20752.png",
 	   "CollegeDraftTeam":"LAR",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":441,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "LAR"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"TE",
+	   "FirstName":"Noah",
+	   "LastName":"Fant",
 	   "PositionCategory":"OFF",
 	   "Name":"Noah Fant",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20753.png",
 	   "CollegeDraftTeam":"DEN",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":442,
+	   "Position":"TE",
+	   "AllTeams":[
+		  "DEN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"KC",
-	   "Position":"DB",
+	   "FirstName":"Rashad",
+	   "LastName":"Fenton",
 	   "PositionCategory":"DEF",
 	   "Name":"Rashad Fenton",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20754.png",
 	   "CollegeDraftTeam":"KC",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":443,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "KC",
+		  "KC",
+		  "KC"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"DL",
+	   "FirstName":"Greg",
+	   "LastName":"Gaines",
 	   "PositionCategory":"DEF",
 	   "Name":"Greg Gaines",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20764.png",
 	   "CollegeDraftTeam":"LAR",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":444,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "LAR"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"NO",
-	   "Position":"DB",
+	   "FirstName":"C.J.",
+	   "LastName":"Gardner-Johnson",
 	   "PositionCategory":"DEF",
 	   "Name":"C.J. Gardner-Johnson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20766.png",
 	   "CollegeDraftTeam":"NO",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":445,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "NO",
+		  "NO",
+		  "NO"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"GB",
-	   "Position":"LB",
+	   "FirstName":"Rashan",
+	   "LastName":"Gary",
 	   "PositionCategory":"DEF",
 	   "Name":"Rashan Gary",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20767.png",
 	   "CollegeDraftTeam":"GB",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":446,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "GB",
+		  "GB",
+		  "GB"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"RB",
+	   "FirstName":"Myles",
+	   "LastName":"Gaskin",
 	   "PositionCategory":"OFF",
 	   "Name":"Myles Gaskin",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20768.png",
 	   "CollegeDraftTeam":"MIA",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":447,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "MIA"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"SF",
-	   "Position":"LB",
+	   "FirstName":"Dre",
+	   "LastName":"Greenlaw",
 	   "PositionCategory":"DEF",
 	   "Name":"Dre Greenlaw",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20778.png",
 	   "CollegeDraftTeam":"SF",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":448,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "SF",
+		  "SF",
+		  "SF"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"KC",
-	   "Position":"WR",
+	   "FirstName":"Mecole",
+	   "LastName":"Hardman",
 	   "PositionCategory":"OFF",
 	   "Name":"Mecole Hardman",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20788.png",
 	   "CollegeDraftTeam":"KC",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":449,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "KC",
+		  "KC",
+		  "KC"
+	   ],
+	   "ProBowls":1,
+	   "Rings":1
 	},
 	{
 	   "Team":"NE",
-	   "Position":"RB",
+	   "FirstName":"Damien",
+	   "LastName":"Harris",
 	   "PositionCategory":"OFF",
 	   "Name":"Damien Harris",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20790.png",
 	   "CollegeDraftTeam":"NE",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":450,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "NE",
+		  "NE",
+		  "NE"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"DET",
-	   "Position":"DB",
+	   "FirstName":"Will",
+	   "LastName":"Harris",
 	   "PositionCategory":"DEF",
 	   "Name":"Will Harris",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20791.png",
 	   "CollegeDraftTeam":"DET",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":451,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "DET"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"RB",
+	   "FirstName":"Darrell",
+	   "LastName":"Henderson Jr.",
 	   "PositionCategory":"OFF",
 	   "Name":"Darrell Henderson Jr.",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20798.png",
 	   "CollegeDraftTeam":"LAR",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":452,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "LAR"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"BAL",
-	   "Position":"RB",
+	   "FirstName":"Justice",
+	   "LastName":"Hill",
 	   "PositionCategory":"OFF",
 	   "Name":"Justice Hill",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20802.png",
 	   "CollegeDraftTeam":"BAL",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":453,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "BAL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"DL",
+	   "FirstName":"Trysten",
+	   "LastName":"Hill",
 	   "PositionCategory":"DEF",
 	   "Name":"Trysten Hill",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20803.png",
 	   "CollegeDraftTeam":"DAL",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":454,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "DAL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"DET",
-	   "Position":"TE",
+	   "FirstName":"T.J.",
+	   "LastName":"Hockenson",
 	   "PositionCategory":"OFF",
 	   "Name":"T.J. Hockenson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20805.png",
 	   "CollegeDraftTeam":"DET",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":455,
+	   "Position":"TE",
+	   "AllTeams":[
+		  "DET"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"DB",
+	   "FirstName":"Amani",
+	   "LastName":"Hooker",
 	   "PositionCategory":"DEF",
 	   "Name":"Amani Hooker",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20811.png",
 	   "CollegeDraftTeam":"TEN",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":456,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "TEN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"OL",
+	   "FirstName":"Tytus",
+	   "LastName":"Howard",
 	   "PositionCategory":"OFF",
 	   "Name":"Tytus Howard",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20813.png",
 	   "CollegeDraftTeam":"HOU",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":457,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "HOU"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"ARI",
+	   "FirstName":"Andy",
+	   "LastName":"Isabella",
+	   "PositionCategory":"OFF",
+	   "Name":"Andy Isabella",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20820.png",
+	   "CollegeDraftTeam":"ARI",
+	   "CollegeDraftYear":2019,
+	   "id":458,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "ARI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"LV",
-	   "Position":"RB",
+	   "FirstName":"Josh",
+	   "LastName":"Jacobs",
 	   "PositionCategory":"OFF",
 	   "Name":"Josh Jacobs",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20824.png",
 	   "CollegeDraftTeam":"LV",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":459,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "OAK",
+		  "LV",
+		  "LV"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"LV",
-	   "Position":"OL",
+	   "FirstName":"Andre",
+	   "LastName":"James",
 	   "PositionCategory":"OFF",
 	   "Name":"Andre James",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20825.png",
 	   "CollegeDraftTeam":"LV",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":460,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "OAK",
+		  "LV",
+		  "LV"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"GB",
-	   "Position":"OL",
+	   "FirstName":"Elgton",
+	   "LastName":"Jenkins",
 	   "PositionCategory":"OFF",
 	   "Name":"Elgton Jenkins",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20828.png",
 	   "CollegeDraftTeam":"GB",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":461,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "GB",
+		  "GB",
+		  "GB"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
+	},
+	{
+	   "Team":"SF",
+	   "FirstName":"KeeSean",
+	   "LastName":"Johnson",
+	   "PositionCategory":"OFF",
+	   "Name":"KeeSean Johnson",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20835.png",
+	   "CollegeDraftTeam":"ARI",
+	   "CollegeDraftYear":2019,
+	   "id":462,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "ARI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"RB",
+	   "FirstName":"Ty",
+	   "LastName":"Johnson",
 	   "PositionCategory":"OFF",
 	   "Name":"Ty Johnson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20837.png",
 	   "CollegeDraftTeam":"DET",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":463,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "DET",
+		  "NYJ"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"DB",
+	   "FirstName":"Lonnie",
+	   "LastName":"Johnson Jr.",
 	   "PositionCategory":"DEF",
 	   "Name":"Lonnie Johnson Jr.",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20840.png",
 	   "CollegeDraftTeam":"HOU",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":464,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "HOU"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"QB",
+	   "FirstName":"Daniel",
+	   "LastName":"Jones",
 	   "PositionCategory":"OFF",
 	   "Name":"Daniel Jones",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20841.png",
 	   "CollegeDraftTeam":"NYG",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":465,
+	   "Position":"QB",
+	   "AllTeams":[
+		  "NYG"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"DL",
+	   "FirstName":"Dre'Mont",
+	   "LastName":"Jones",
 	   "PositionCategory":"DEF",
 	   "Name":"Dre'Mont Jones",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20842.png",
 	   "CollegeDraftTeam":"DEN",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":466,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "DEN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"TE",
+	   "FirstName":"Dawson",
+	   "LastName":"Knox",
 	   "PositionCategory":"OFF",
 	   "Name":"Dawson Knox",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20850.png",
 	   "CollegeDraftTeam":"BUF",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":467,
+	   "Position":"TE",
+	   "AllTeams":[
+		  "BUF"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"DL",
+	   "FirstName":"Dexter",
+	   "LastName":"Lawrence",
 	   "PositionCategory":"DEF",
 	   "Name":"Dexter Lawrence",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20852.png",
 	   "CollegeDraftTeam":"NYG",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":468,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "NYG"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"ATL",
-	   "Position":"OL",
+	   "FirstName":"Chris",
+	   "LastName":"Lindstrom",
 	   "PositionCategory":"OFF",
 	   "Name":"Chris Lindstrom",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20857.png",
 	   "CollegeDraftTeam":"ATL",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":469,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "ATL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"QB",
+	   "FirstName":"Drew",
+	   "LastName":"Lock",
 	   "PositionCategory":"OFF",
 	   "Name":"Drew Lock",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20859.png",
 	   "CollegeDraftTeam":"DEN",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":470,
+	   "Position":"QB",
+	   "AllTeams":[
+		  "DEN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"DB",
+	   "FirstName":"David",
+	   "LastName":"Long Jr.",
 	   "PositionCategory":"DEF",
 	   "Name":"David Long Jr.",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20861.png",
 	   "CollegeDraftTeam":"LAR",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":471,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "TEN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"LB",
+	   "FirstName":"David",
+	   "LastName":"Long Jr.",
 	   "PositionCategory":"DEF",
 	   "Name":"David Long Jr.",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20862.png",
 	   "CollegeDraftTeam":"TEN",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":472,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "TEN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"DB",
+	   "FirstName":"Julian",
+	   "LastName":"Love",
 	   "PositionCategory":"DEF",
 	   "Name":"Julian Love",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20864.png",
 	   "CollegeDraftTeam":"NYG",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":473,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "NYG"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"MIN",
-	   "Position":"RB",
+	   "FirstName":"Alexander",
+	   "LastName":"Mattison",
 	   "PositionCategory":"OFF",
 	   "Name":"Alexander Mattison",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20868.png",
 	   "CollegeDraftTeam":"MIN",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":474,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "MIN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NO",
-	   "Position":"OL",
+	   "FirstName":"Erik",
+	   "LastName":"McCoy",
 	   "PositionCategory":"OFF",
 	   "Name":"Erik McCoy",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20869.png",
 	   "CollegeDraftTeam":"NO",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":475,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "NO",
+		  "NO",
+		  "NO"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"ATL",
-	   "Position":"OL",
+	   "FirstName":"Kaleb",
+	   "LastName":"McGary",
 	   "PositionCategory":"OFF",
 	   "Name":"Kaleb McGary",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20870.png",
 	   "CollegeDraftTeam":"ATL",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":476,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "ATL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"OL",
+	   "FirstName":"Connor",
+	   "LastName":"McGovern",
 	   "PositionCategory":"OFF",
 	   "Name":"Connor McGovern",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20871.png",
 	   "CollegeDraftTeam":"DAL",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":477,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "DAL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"WR",
+	   "FirstName":"Terry",
+	   "LastName":"McLaurin",
 	   "PositionCategory":"OFF",
 	   "Name":"Terry McLaurin",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20873.png",
 	   "CollegeDraftTeam":"WAS",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":478,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "WAS"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"WR",
+	   "FirstName":"DK",
+	   "LastName":"Metcalf",
 	   "PositionCategory":"OFF",
 	   "Name":"DK Metcalf",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20875.png",
 	   "CollegeDraftTeam":"SEA",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":479,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "SEA"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"NE",
-	   "Position":"WR",
+	   "FirstName":"Jakobi",
+	   "LastName":"Meyers",
 	   "PositionCategory":"OFF",
 	   "Name":"Jakobi Meyers",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20876.png",
 	   "CollegeDraftTeam":"NE",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":480,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "NE",
+		  "NE",
+		  "NE"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CHI",
-	   "Position":"RB",
+	   "FirstName":"David",
+	   "LastName":"Montgomery",
 	   "PositionCategory":"OFF",
 	   "Name":"David Montgomery",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20882.png",
 	   "CollegeDraftTeam":"CHI",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":481,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "CHI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"LV",
-	   "Position":"DB",
+	   "FirstName":"Trayvon",
+	   "LastName":"Mullen Jr.",
 	   "PositionCategory":"DEF",
 	   "Name":"Trayvon Mullen Jr.",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20887.png",
 	   "CollegeDraftTeam":"LV",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":482,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "OAK",
+		  "LV",
+		  "LV"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"DB",
+	   "FirstName":"Byron",
+	   "LastName":"Murphy Jr.",
 	   "PositionCategory":"DEF",
 	   "Name":"Byron Murphy Jr.",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20888.png",
 	   "CollegeDraftTeam":"ARI",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":483,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "ARI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"QB",
+	   "FirstName":"Kyler",
+	   "LastName":"Murray",
 	   "PositionCategory":"OFF",
 	   "Name":"Kyler Murray",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20889.png",
 	   "CollegeDraftTeam":"ARI",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":484,
+	   "Position":"QB",
+	   "AllTeams":[
+		  "ARI"
+	   ],
+	   "ProBowls":2,
+	   "Rings":0
 	},
 	{
 	   "Team":"IND",
-	   "Position":"LB",
+	   "FirstName":"Bobby",
+	   "LastName":"Okereke",
 	   "PositionCategory":"DEF",
 	   "Name":"Bobby Okereke",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20897.png",
 	   "CollegeDraftTeam":"IND",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":485,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "IND"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"DL",
+	   "FirstName":"Ed",
+	   "LastName":"Oliver",
 	   "PositionCategory":"DEF",
 	   "Name":"Ed Oliver",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20898.png",
 	   "CollegeDraftTeam":"BUF",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":486,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "BUF"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"DET",
-	   "Position":"DB",
+	   "FirstName":"Amani",
+	   "LastName":"Oruwariye",
 	   "PositionCategory":"DEF",
 	   "Name":"Amani Oruwariye",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20903.png",
 	   "CollegeDraftTeam":"DET",
-	   "CollegeDraftYear":2019
-	},
-	{
-	   "Team":"NE",
-	   "Position":"RB",
-	   "PositionCategory":"OFF",
-	   "Name":"Devine Ozigbo",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20904.png",
-	   "CollegeDraftTeam":"NO",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":487,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "DET"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"RB",
+	   "FirstName":"Tony",
+	   "LastName":"Pollard",
 	   "PositionCategory":"OFF",
 	   "Name":"Tony Pollard",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20912.png",
 	   "CollegeDraftTeam":"DAL",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":488,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "DAL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"LB",
+	   "FirstName":"Germaine",
+	   "LastName":"Pratt",
 	   "PositionCategory":"DEF",
 	   "Name":"Germaine Pratt",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20915.png",
 	   "CollegeDraftTeam":"CIN",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":489,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "CIN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"DB",
+	   "FirstName":"Taylor",
+	   "LastName":"Rapp",
 	   "PositionCategory":"DEF",
 	   "Name":"Taylor Rapp",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20919.png",
 	   "CollegeDraftTeam":"LAR",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":490,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "LAR"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"LV",
-	   "Position":"WR",
+	   "FirstName":"Hunter",
+	   "LastName":"Renfrow",
 	   "PositionCategory":"OFF",
 	   "Name":"Hunter Renfrow",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20924.png",
 	   "CollegeDraftTeam":"LV",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":491,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "OAK",
+		  "LV",
+		  "LV"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"OL",
+	   "FirstName":"Dalton",
+	   "LastName":"Risner",
 	   "PositionCategory":"OFF",
 	   "Name":"Dalton Risner",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20926.png",
 	   "CollegeDraftTeam":"DEN",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":492,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "DEN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"SF",
-	   "Position":"WR",
+	   "FirstName":"Deebo",
+	   "LastName":"Samuel",
 	   "PositionCategory":"OFF",
 	   "Name":"Deebo Samuel",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20932.png",
 	   "CollegeDraftTeam":"SF",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":493,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "SF",
+		  "SF",
+		  "SF"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"RB",
+	   "FirstName":"Miles",
+	   "LastName":"Sanders",
 	   "PositionCategory":"OFF",
 	   "Name":"Miles Sanders",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20933.png",
 	   "CollegeDraftTeam":"PHI",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":494,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "PHI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"DL",
+	   "FirstName":"Jeffery",
+	   "LastName":"Simmons",
 	   "PositionCategory":"DEF",
 	   "Name":"Jeffery Simmons",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20940.png",
 	   "CollegeDraftTeam":"TEN",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":495,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "TEN"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"RB",
+	   "FirstName":"Devin",
+	   "LastName":"Singletary",
 	   "PositionCategory":"OFF",
 	   "Name":"Devin Singletary",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20941.png",
 	   "CollegeDraftTeam":"BUF",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":496,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "BUF"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
-	   "Team":"MIN",
-	   "Position":"TE",
+	   "Team":"NYG",
+	   "FirstName":"Darius",
+	   "LastName":"Slayton",
 	   "PositionCategory":"OFF",
-	   "Name":"Irv Smith Jr.",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20949.png",
-	   "CollegeDraftTeam":"MIN",
-	   "CollegeDraftYear":2019
+	   "Name":"Darius Slayton",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20943.png",
+	   "CollegeDraftTeam":"NYG",
+	   "CollegeDraftYear":2019,
+	   "id":497,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "NYG"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"PIT",
-	   "Position":"RB",
+	   "FirstName":"Benny",
+	   "LastName":"Snell Jr.",
 	   "PositionCategory":"OFF",
 	   "Name":"Benny Snell Jr.",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20950.png",
 	   "CollegeDraftTeam":"PIT",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":498,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "PIT"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"DL",
+	   "FirstName":"Montez",
+	   "LastName":"Sweat",
 	   "PositionCategory":"DEF",
 	   "Name":"Montez Sweat",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20956.png",
 	   "CollegeDraftTeam":"WAS",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":499,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "WAS"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"OL",
+	   "FirstName":"Jawaan",
+	   "LastName":"Taylor",
 	   "PositionCategory":"OFF",
 	   "Name":"Jawaan Taylor",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20960.png",
 	   "CollegeDraftTeam":"JAX",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":500,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "JAX"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"KC",
-	   "Position":"DB",
+	   "FirstName":"Juan",
+	   "LastName":"Thornhill",
 	   "PositionCategory":"DEF",
 	   "Name":"Juan Thornhill",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20965.png",
 	   "CollegeDraftTeam":"KC",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":501,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "KC",
+		  "KC",
+		  "KC"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"LAC",
-	   "Position":"DL",
+	   "FirstName":"Jerry",
+	   "LastName":"Tillery",
 	   "PositionCategory":"DEF",
 	   "Name":"Jerry Tillery",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20967.png",
 	   "CollegeDraftTeam":"LAC",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":502,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "LAC"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"LAC",
-	   "Position":"LB",
+	   "FirstName":"Drue",
+	   "LastName":"Tranquill",
 	   "PositionCategory":"DEF",
 	   "Name":"Drue Tranquill",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20968.png",
 	   "CollegeDraftTeam":"LAC",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":503,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "LAC"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"LB",
+	   "FirstName":"Andrew",
+	   "LastName":"Van Ginkel",
 	   "PositionCategory":"DEF",
 	   "Name":"Andrew Van Ginkel",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20971.png",
 	   "CollegeDraftTeam":"MIA",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":504,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "MIA"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"MIN",
+	   "FirstName":"Armon",
+	   "LastName":"Watts",
+	   "PositionCategory":"DEF",
+	   "Name":"Armon Watts",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20975.png",
+	   "CollegeDraftTeam":"MIN",
+	   "CollegeDraftYear":2019,
+	   "id":505,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "MIN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"TB",
-	   "Position":"LB",
+	   "FirstName":"Devin",
+	   "LastName":"White",
 	   "PositionCategory":"DEF",
 	   "Name":"Devin White",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20981.png",
 	   "CollegeDraftTeam":"TB",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":506,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "TB",
+		  "TB",
+		  "TB"
+	   ],
+	   "ProBowls":1,
+	   "Rings":1
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"DL",
+	   "FirstName":"Christian",
+	   "LastName":"Wilkins",
 	   "PositionCategory":"DEF",
 	   "Name":"Christian Wilkins",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20983.png",
 	   "CollegeDraftTeam":"MIA",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":507,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "MIA"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"OL",
+	   "FirstName":"Jonah",
+	   "LastName":"Williams",
 	   "PositionCategory":"OFF",
 	   "Name":"Jonah Williams",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20987.png",
 	   "CollegeDraftTeam":"CIN",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":508,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "LAR"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
+	},
+	{
+	   "Team":"MIA",
+	   "FirstName":"Preston",
+	   "LastName":"Williams",
+	   "PositionCategory":"OFF",
+	   "Name":"Preston Williams",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20988.png",
+	   "CollegeDraftTeam":"MIA",
+	   "CollegeDraftYear":2019,
+	   "id":509,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "MIA"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"DL",
+	   "FirstName":"Quinnen",
+	   "LastName":"Williams",
 	   "PositionCategory":"DEF",
 	   "Name":"Quinnen Williams",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20989.png",
 	   "CollegeDraftTeam":"NYJ",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":510,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "NYJ"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"CIN",
+	   "FirstName":"Trayveon",
+	   "LastName":"Williams",
+	   "PositionCategory":"OFF",
+	   "Name":"Trayveon Williams",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20990.png",
+	   "CollegeDraftTeam":"CIN",
+	   "CollegeDraftYear":2019,
+	   "id":511,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "CIN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"IND",
-	   "Position":"DB",
+	   "FirstName":"Khari",
+	   "LastName":"Willis",
 	   "PositionCategory":"DEF",
 	   "Name":"Khari Willis",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20991.png",
 	   "CollegeDraftTeam":"IND",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":512,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "IND"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"NE",
+	   "FirstName":"Mack",
+	   "LastName":"Wilson",
+	   "PositionCategory":"DEF",
+	   "Name":"Mack Wilson",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20994.png",
+	   "CollegeDraftTeam":"CLE",
+	   "CollegeDraftYear":2019,
+	   "id":513,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "CLE"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"CLE",
+	   "FirstName":"Chase",
+	   "LastName":"Winovich",
+	   "PositionCategory":"DEF",
+	   "Name":"Chase Winovich",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/20995.png",
+	   "CollegeDraftTeam":"NE",
+	   "CollegeDraftYear":2019,
+	   "id":514,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "NE",
+		  "NE",
+		  "NE"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"LV",
-	   "Position":"DB",
+	   "FirstName":"Rock",
+	   "LastName":"Ya-Sin",
 	   "PositionCategory":"DEF",
 	   "Name":"Rock Ya-Sin",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21001.png",
 	   "CollegeDraftTeam":"IND",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":515,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "IND"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"LV",
-	   "Position":"DL",
+	   "FirstName":"Maxx",
+	   "LastName":"Crosby",
 	   "PositionCategory":"DEF",
 	   "Name":"Maxx Crosby",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21015.png",
 	   "CollegeDraftTeam":"LV",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":516,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "OAK",
+		  "LV",
+		  "LV"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"KC",
-	   "Position":"DB",
+	   "FirstName":"DeAndre",
+	   "LastName":"Baker",
 	   "PositionCategory":"DEF",
 	   "Name":"DeAndre Baker",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21020.png",
 	   "CollegeDraftTeam":"NYG",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":517,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "NYG",
+		  "KC",
+		  "KC"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"SEA",
+	   "FirstName":"Cody",
+	   "LastName":"Barton",
+	   "PositionCategory":"DEF",
+	   "Name":"Cody Barton",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21025.png",
+	   "CollegeDraftTeam":"SEA",
+	   "CollegeDraftYear":2019,
+	   "id":518,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "SEA"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"BAL",
+	   "FirstName":"Miles",
+	   "LastName":"Boykin",
+	   "PositionCategory":"OFF",
+	   "Name":"Miles Boykin",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21037.png",
+	   "CollegeDraftTeam":"BAL",
+	   "CollegeDraftYear":2019,
+	   "id":519,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "BAL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"MIN",
-	   "Position":"OL",
+	   "FirstName":"Garrett",
+	   "LastName":"Bradbury",
 	   "PositionCategory":"OFF",
 	   "Name":"Garrett Bradbury",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21038.png",
 	   "CollegeDraftTeam":"MIN",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":520,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "MIN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"WR",
+	   "FirstName":"A.J.",
+	   "LastName":"Brown",
 	   "PositionCategory":"OFF",
 	   "Name":"A.J. Brown",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21042.png",
 	   "CollegeDraftTeam":"TEN",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":521,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "TEN"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"BAL",
-	   "Position":"WR",
+	   "FirstName":"Marquise",
+	   "LastName":"Brown",
 	   "PositionCategory":"OFF",
 	   "Name":"Marquise Brown",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21045.png",
 	   "CollegeDraftTeam":"BAL",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":522,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "BAL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"TB",
-	   "Position":"DB",
+	   "FirstName":"Sean",
+	   "LastName":"Murphy-Bunting",
 	   "PositionCategory":"DEF",
 	   "Name":"Sean Murphy-Bunting",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21050.png",
 	   "CollegeDraftTeam":"TB",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":523,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "TB",
+		  "TB",
+		  "TB"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"DL",
+	   "FirstName":"Brian",
+	   "LastName":"Burns",
 	   "PositionCategory":"DEF",
 	   "Name":"Brian Burns",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21052.png",
 	   "CollegeDraftTeam":"CAR",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":524,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "CAR"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"PIT",
-	   "Position":"LB",
+	   "FirstName":"Devin",
+	   "LastName":"Bush",
 	   "PositionCategory":"DEF",
 	   "Name":"Devin Bush",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21054.png",
 	   "CollegeDraftTeam":"PIT",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":525,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "PIT"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"OL",
+	   "FirstName":"Nate",
+	   "LastName":"Davis",
 	   "PositionCategory":"OFF",
 	   "Name":"Nate Davis",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21060.png",
 	   "CollegeDraftTeam":"TEN",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":526,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "TEN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"TB",
-	   "Position":"DB",
+	   "FirstName":"Jamel",
+	   "LastName":"Dean",
 	   "PositionCategory":"DEF",
 	   "Name":"Jamel Dean",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21064.png",
 	   "CollegeDraftTeam":"TB",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":527,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "TB",
+		  "TB",
+		  "TB"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"OL",
+	   "FirstName":"Michael",
+	   "LastName":"Deiter",
 	   "PositionCategory":"OFF",
 	   "Name":"Michael Deiter",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21065.png",
 	   "CollegeDraftTeam":"MIA",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":528,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "MIA"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"PIT",
-	   "Position":"WR",
+	   "FirstName":"Diontae",
+	   "LastName":"Johnson",
 	   "PositionCategory":"OFF",
 	   "Name":"Diontae Johnson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21077.png",
 	   "CollegeDraftTeam":"PIT",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":529,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "PIT"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"GB",
-	   "Position":"DB",
+	   "FirstName":"Darnell",
+	   "LastName":"Savage",
 	   "PositionCategory":"DEF",
 	   "Name":"Darnell Savage",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21107.png",
 	   "CollegeDraftTeam":"GB",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":530,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "GB",
+		  "GB",
+		  "GB"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"LB",
+	   "FirstName":"Quincy",
+	   "LastName":"Williams",
 	   "PositionCategory":"DEF",
 	   "Name":"Quincy Williams",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21109.png",
 	   "CollegeDraftTeam":"JAX",
-	   "CollegeDraftYear":2019
-	},
-	{
-	   "Team":"GB",
-	   "Position":"WR",
-	   "PositionCategory":"OFF",
-	   "Name":"Juwann Winfree",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21115.png",
-	   "CollegeDraftTeam":"DEN",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":531,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "JAX",
+		  "NYJ"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"LB",
+	   "FirstName":"Cole",
+	   "LastName":"Holcomb",
 	   "PositionCategory":"DEF",
 	   "Name":"Cole Holcomb",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21120.png",
 	   "CollegeDraftTeam":"WAS",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":532,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "WAS"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"CHI",
+	   "FirstName":"Duke",
+	   "LastName":"Shelley",
+	   "PositionCategory":"DEF",
+	   "Name":"Duke Shelley",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21122.png",
+	   "CollegeDraftTeam":"CHI",
+	   "CollegeDraftYear":2019,
+	   "id":533,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "CHI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"DAL",
+	   "FirstName":"Donovan",
+	   "LastName":"Wilson",
+	   "PositionCategory":"DEF",
+	   "Name":"Donovan Wilson",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21123.png",
+	   "CollegeDraftTeam":"DAL",
+	   "CollegeDraftYear":2019,
+	   "id":534,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "DAL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"ATL",
-	   "Position":"WR",
+	   "FirstName":"Olamide",
+	   "LastName":"Zaccheaus",
 	   "PositionCategory":"OFF",
 	   "Name":"Olamide Zaccheaus",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21142.png",
 	   "CollegeDraftTeam":"ATL",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":535,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "ATL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"DB",
+	   "FirstName":"Nik",
+	   "LastName":"Needham",
 	   "PositionCategory":"DEF",
 	   "Name":"Nik Needham",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21192.png",
 	   "CollegeDraftTeam":"MIA",
-	   "CollegeDraftYear":2019
-	},
-	{
-	   "Team":"MIA",
-	   "Position":"RB",
-	   "PositionCategory":"OFF",
-	   "Name":"Patrick Laird",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21211.png",
-	   "CollegeDraftTeam":"MIA",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":536,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "MIA"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"TE",
+	   "FirstName":"Damarea",
+	   "LastName":"Crockett",
 	   "PositionCategory":"OFF",
-	   "Name":"Andrew Beck",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21227.png",
-	   "CollegeDraftTeam":"NE",
-	   "CollegeDraftYear":2019
+	   "Name":"Damarea Crockett",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21240.png",
+	   "CollegeDraftTeam":"HOU",
+	   "CollegeDraftYear":2019,
+	   "id":537,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "DEN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"DB",
+	   "FirstName":"Andrew",
+	   "LastName":"Wingard",
 	   "PositionCategory":"DEF",
 	   "Name":"Andrew Wingard",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21281.png",
 	   "CollegeDraftTeam":"JAX",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":538,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "JAX"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
-	   "Team":"CHI",
-	   "Position":"RB",
+	   "Team":"PIT",
+	   "FirstName":"Steven",
+	   "LastName":"Sims",
 	   "PositionCategory":"OFF",
-	   "Name":"Khari Blasingame",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21310.png",
-	   "CollegeDraftTeam":"MIN",
-	   "CollegeDraftYear":2019
-	},
-	{
-	   "Team":"LAR",
-	   "Position":"LB",
-	   "PositionCategory":"DEF",
-	   "Name":"Troy Reeder",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21332.png",
-	   "CollegeDraftTeam":"LAR",
-	   "CollegeDraftYear":2019
+	   "Name":"Steven Sims",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21400.png",
+	   "CollegeDraftTeam":"WAS",
+	   "CollegeDraftYear":2019,
+	   "id":539,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "WAS",
+		  "PIT"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NO",
-	   "Position":"DL",
+	   "FirstName":"Shy",
+	   "LastName":"Tuttle",
 	   "PositionCategory":"DEF",
 	   "Name":"Shy Tuttle",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21422.png",
 	   "CollegeDraftTeam":"NO",
-	   "CollegeDraftYear":2019
-	},
-	{
-	   "Team":"LAC",
-	   "Position":"WR",
-	   "PositionCategory":"OFF",
-	   "Name":"Jalen Guyton",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21448.png",
-	   "CollegeDraftTeam":"DAL",
-	   "CollegeDraftYear":2019
-	},
-	{
-	   "Team":"DET",
-	   "Position":"RB",
-	   "PositionCategory":"OFF",
-	   "Name":"Craig Reynolds",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21564.png",
-	   "CollegeDraftTeam":"WAS",
-	   "CollegeDraftYear":2019
-	},
-	{
-	   "Team":"CLE",
-	   "Position":"RB",
-	   "PositionCategory":"OFF",
-	   "Name":"D'Ernest Johnson",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21593.png",
-	   "CollegeDraftTeam":"CLE",
-	   "CollegeDraftYear":2019
+	   "CollegeDraftYear":2019,
+	   "id":540,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "NO",
+		  "NO",
+		  "NO"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"DB",
+	   "FirstName":"Jalen",
+	   "LastName":"Thompson",
 	   "PositionCategory":"DEF",
 	   "Name":"Jalen Thompson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21635.png",
 	   "CollegeDraftTeam":"ARI",
-	   "CollegeDraftYear":2019
-	},
-	{
-	   "Team":"BAL",
-	   "Position":"RB",
-	   "PositionCategory":"OFF",
-	   "Name":"J.K. Dobbins",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21674.png",
-	   "CollegeDraftTeam":"BAL",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2019,
+	   "id":541,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "ARI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"QB",
+	   "FirstName":"Tua",
+	   "LastName":"Tagovailoa",
 	   "PositionCategory":"OFF",
 	   "Name":"Tua Tagovailoa",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21677.png",
 	   "CollegeDraftTeam":"MIA",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":542,
+	   "Position":"QB",
+	   "AllTeams":[
+		  "MIA"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"WR",
+	   "FirstName":"CeeDee",
+	   "LastName":"Lamb",
 	   "PositionCategory":"OFF",
 	   "Name":"CeeDee Lamb",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21679.png",
 	   "CollegeDraftTeam":"DAL",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":543,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "DAL"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"LAC",
-	   "Position":"QB",
+	   "FirstName":"Justin",
+	   "LastName":"Herbert",
 	   "PositionCategory":"OFF",
 	   "Name":"Justin Herbert",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21681.png",
 	   "CollegeDraftTeam":"LAC",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":544,
+	   "Position":"QB",
+	   "AllTeams":[
+		  "LAC"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"IND",
-	   "Position":"RB",
+	   "FirstName":"Jonathan",
+	   "LastName":"Taylor",
 	   "PositionCategory":"OFF",
 	   "Name":"Jonathan Taylor",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21682.png",
 	   "CollegeDraftTeam":"IND",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":545,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "IND"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"DET",
-	   "Position":"RB",
+	   "FirstName":"D'Andre",
+	   "LastName":"Swift",
 	   "PositionCategory":"OFF",
 	   "Name":"D'Andre Swift",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21684.png",
 	   "CollegeDraftTeam":"DET",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":546,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "DET"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"MIN",
-	   "Position":"WR",
+	   "FirstName":"Justin",
+	   "LastName":"Jefferson",
 	   "PositionCategory":"OFF",
 	   "Name":"Justin Jefferson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21685.png",
 	   "CollegeDraftTeam":"MIN",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":547,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "MIN"
+	   ],
+	   "ProBowls":2,
+	   "Rings":0
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"WR",
+	   "FirstName":"Jalen",
+	   "LastName":"Reagor",
 	   "PositionCategory":"OFF",
 	   "Name":"Jalen Reagor",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21686.png",
 	   "CollegeDraftTeam":"PHI",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":548,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "PHI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"WR",
+	   "FirstName":"DeVonta",
+	   "LastName":"Smith",
 	   "PositionCategory":"OFF",
 	   "Name":"DeVonta Smith",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21687.png",
 	   "CollegeDraftTeam":"PHI",
-	   "CollegeDraftYear":2021
-	},
-	{
-	   "Team":"LAR",
-	   "Position":"RB",
-	   "PositionCategory":"OFF",
-	   "Name":"Cam Akers",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21688.png",
-	   "CollegeDraftTeam":"LAR",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2021,
+	   "id":549,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "PHI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"WR",
+	   "FirstName":"Tee",
+	   "LastName":"Higgins",
 	   "PositionCategory":"OFF",
 	   "Name":"Tee Higgins",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21690.png",
 	   "CollegeDraftTeam":"CIN",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":550,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "CIN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"RB",
+	   "FirstName":"Chuba",
+	   "LastName":"Hubbard",
 	   "PositionCategory":"OFF",
 	   "Name":"Chuba Hubbard",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21691.png",
 	   "CollegeDraftTeam":"CAR",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":551,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "CAR"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"WR",
+	   "FirstName":"Jerry",
+	   "LastName":"Jeudy",
 	   "PositionCategory":"OFF",
 	   "Name":"Jerry Jeudy",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21692.png",
 	   "CollegeDraftTeam":"DEN",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":552,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "DEN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"QB",
+	   "FirstName":"Joe",
+	   "LastName":"Burrow",
 	   "PositionCategory":"OFF",
 	   "Name":"Joe Burrow",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21693.png",
 	   "CollegeDraftTeam":"CIN",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":553,
+	   "Position":"QB",
+	   "AllTeams":[
+		  "CIN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"RB",
+	   "FirstName":"Laviska",
+	   "LastName":"Shenault Jr.",
 	   "PositionCategory":"OFF",
-	   "Name":"Travis Etienne Jr.",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21696.png",
+	   "Name":"Laviska Shenault Jr.",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21697.png",
 	   "CollegeDraftTeam":"JAX",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2020,
+	   "id":554,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "JAX"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"MIN",
-	   "Position":"WR",
+	   "FirstName":"K.J.",
+	   "LastName":"Osborn",
 	   "PositionCategory":"OFF",
 	   "Name":"K.J. Osborn",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21714.png",
 	   "CollegeDraftTeam":"MIN",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":555,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "MIN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
-	   "Team":"SF",
-	   "Position":"WR",
+	   "Team":"DET",
+	   "FirstName":"Quintez",
+	   "LastName":"Cephus",
 	   "PositionCategory":"OFF",
-	   "Name":"Jauan Jennings",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21717.png",
-	   "CollegeDraftTeam":"SF",
-	   "CollegeDraftYear":2020
-	},
-	{
-	   "Team":"BAL",
+	   "Name":"Quintez Cephus",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21729.png",
+	   "CollegeDraftTeam":"DET",
+	   "CollegeDraftYear":2020,
+	   "id":556,
 	   "Position":"WR",
-	   "PositionCategory":"OFF",
-	   "Name":"Devin Duvernay",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21721.png",
-	   "CollegeDraftTeam":"BAL",
-	   "CollegeDraftYear":2020
+	   "AllTeams":[
+		  "DET"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"WR",
+	   "FirstName":"Gabriel",
+	   "LastName":"Davis",
 	   "PositionCategory":"OFF",
 	   "Name":"Gabriel Davis",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21735.png",
 	   "CollegeDraftTeam":"BUF",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":557,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "BUF"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"LV",
-	   "Position":"WR",
+	   "FirstName":"Bryan",
+	   "LastName":"Edwards",
 	   "PositionCategory":"OFF",
 	   "Name":"Bryan Edwards",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21736.png",
 	   "CollegeDraftTeam":"LV",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":558,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "LV",
+		  "LV"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"LAR",
+	   "FirstName":"Van",
+	   "LastName":"Jefferson",
+	   "PositionCategory":"OFF",
+	   "Name":"Van Jefferson",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21739.png",
+	   "CollegeDraftTeam":"LAR",
+	   "CollegeDraftYear":2020,
+	   "id":559,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "LAR"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
+	},
+	{
+	   "Team":"NYJ",
+	   "FirstName":"Denzel",
+	   "LastName":"Mims",
+	   "PositionCategory":"OFF",
+	   "Name":"Denzel Mims",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21741.png",
+	   "CollegeDraftTeam":"NYJ",
+	   "CollegeDraftYear":2020,
+	   "id":560,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "NYJ"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"IND",
-	   "Position":"WR",
+	   "FirstName":"Michael",
+	   "LastName":"Pittman Jr.",
 	   "PositionCategory":"OFF",
 	   "Name":"Michael Pittman Jr.",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21744.png",
 	   "CollegeDraftTeam":"IND",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":561,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "IND"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"SF",
-	   "Position":"WR",
+	   "FirstName":"Brandon",
+	   "LastName":"Aiyuk",
 	   "PositionCategory":"OFF",
 	   "Name":"Brandon Aiyuk",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21747.png",
 	   "CollegeDraftTeam":"SF",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":562,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "SF",
+		  "SF"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NO",
-	   "Position":"WR",
+	   "FirstName":"Marquez",
+	   "LastName":"Callaway",
 	   "PositionCategory":"OFF",
 	   "Name":"Marquez Callaway",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21750.png",
 	   "CollegeDraftTeam":"NO",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":563,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "NO",
+		  "NO"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"PIT",
-	   "Position":"WR",
+	   "FirstName":"Chase",
+	   "LastName":"Claypool",
 	   "PositionCategory":"OFF",
 	   "Name":"Chase Claypool",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21752.png",
 	   "CollegeDraftTeam":"PIT",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":564,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "PIT"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CLE",
-	   "Position":"WR",
+	   "FirstName":"Donovan",
+	   "LastName":"Peoples-Jones",
 	   "PositionCategory":"OFF",
 	   "Name":"Donovan Peoples-Jones",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21754.png",
 	   "CollegeDraftTeam":"CLE",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":565,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "CLE"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"WR",
+	   "FirstName":"Nico",
+	   "LastName":"Collins",
 	   "PositionCategory":"OFF",
 	   "Name":"Nico Collins",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21756.png",
 	   "CollegeDraftTeam":"HOU",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":566,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "HOU"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
-	   "Team":"SF",
-	   "Position":"RB",
+	   "Team":"DEN",
+	   "FirstName":"KJ",
+	   "LastName":"Hamler",
 	   "PositionCategory":"OFF",
-	   "Name":"JaMycal Hasty",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21765.png",
-	   "CollegeDraftTeam":"SF",
-	   "CollegeDraftYear":2020
+	   "Name":"KJ Hamler",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21759.png",
+	   "CollegeDraftTeam":"DEN",
+	   "CollegeDraftYear":2020,
+	   "id":567,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "DEN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"PIT",
-	   "Position":"RB",
+	   "FirstName":"Najee",
+	   "LastName":"Harris",
 	   "PositionCategory":"OFF",
 	   "Name":"Najee Harris",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21768.png",
 	   "CollegeDraftTeam":"PIT",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":568,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "PIT"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"KC",
-	   "Position":"RB",
+	   "FirstName":"Clyde",
+	   "LastName":"Edwards-Helaire",
 	   "PositionCategory":"OFF",
 	   "Name":"Clyde Edwards-Helaire",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21769.png",
 	   "CollegeDraftTeam":"KC",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":569,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "KC",
+		  "KC"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CHI",
-	   "Position":"TE",
+	   "FirstName":"Cole",
+	   "LastName":"Kmet",
 	   "PositionCategory":"OFF",
 	   "Name":"Cole Kmet",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21772.png",
 	   "CollegeDraftTeam":"CHI",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":570,
+	   "Position":"TE",
+	   "AllTeams":[
+		  "CHI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"RB",
+	   "FirstName":"Eno",
+	   "LastName":"Benjamin",
 	   "PositionCategory":"OFF",
 	   "Name":"Eno Benjamin",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21773.png",
 	   "CollegeDraftTeam":"ARI",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":571,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "ARI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NO",
-	   "Position":"RB",
+	   "FirstName":"Tony",
+	   "LastName":"Jones Jr.",
 	   "PositionCategory":"OFF",
 	   "Name":"Tony Jones Jr.",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21774.png",
 	   "CollegeDraftTeam":"NO",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":572,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "NO",
+		  "NO"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"LAC",
-	   "Position":"RB",
+	   "FirstName":"Joshua",
+	   "LastName":"Kelley",
 	   "PositionCategory":"OFF",
 	   "Name":"Joshua Kelley",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21776.png",
 	   "CollegeDraftTeam":"LAC",
-	   "CollegeDraftYear":2020
-	},
-	{
-	   "Team":"ARI",
+	   "CollegeDraftYear":2020,
+	   "id":573,
 	   "Position":"RB",
-	   "PositionCategory":"OFF",
-	   "Name":"Jonathan Ward",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21782.png",
-	   "CollegeDraftTeam":"ARI",
-	   "CollegeDraftYear":2020
+	   "AllTeams":[
+		  "LAC"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
-	   "Team":"CLE",
-	   "Position":"TE",
+	   "Team":"LAC",
+	   "FirstName":"Larry",
+	   "LastName":"Rountree III",
 	   "PositionCategory":"OFF",
-	   "Name":"Harrison Bryant",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21783.png",
-	   "CollegeDraftTeam":"CLE",
-	   "CollegeDraftYear":2020
+	   "Name":"Larry Rountree III",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21777.png",
+	   "CollegeDraftTeam":"LAC",
+	   "CollegeDraftYear":2021,
+	   "id":574,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "LAC"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"RB",
+	   "FirstName":"Zack",
+	   "LastName":"Moss",
 	   "PositionCategory":"OFF",
 	   "Name":"Zack Moss",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21784.png",
 	   "CollegeDraftTeam":"BUF",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":575,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "BUF"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"NO",
+	   "FirstName":"Adam",
+	   "LastName":"Trautman",
+	   "PositionCategory":"OFF",
+	   "Name":"Adam Trautman",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21786.png",
+	   "CollegeDraftTeam":"NO",
+	   "CollegeDraftYear":2020,
+	   "id":576,
+	   "Position":"TE",
+	   "AllTeams":[
+		  "NO",
+		  "NO"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"TB",
-	   "Position":"RB",
+	   "FirstName":"Ke'Shawn",
+	   "LastName":"Vaughn",
 	   "PositionCategory":"OFF",
 	   "Name":"Ke'Shawn Vaughn",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21788.png",
 	   "CollegeDraftTeam":"TB",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":577,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "TB",
+		  "TB"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"TE",
+	   "FirstName":"Albert",
+	   "LastName":"Okwuegbunam",
 	   "PositionCategory":"OFF",
 	   "Name":"Albert Okwuegbunam",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21794.png",
 	   "CollegeDraftTeam":"DEN",
-	   "CollegeDraftYear":2020
-	},
-	{
-	   "Team":"GB",
+	   "CollegeDraftYear":2020,
+	   "id":578,
 	   "Position":"TE",
+	   "AllTeams":[
+		  "DEN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"SF",
+	   "FirstName":"Trey",
+	   "LastName":"Sermon",
 	   "PositionCategory":"OFF",
-	   "Name":"Josiah Deguara",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21798.png",
-	   "CollegeDraftTeam":"GB",
-	   "CollegeDraftYear":2020
+	   "Name":"Trey Sermon",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21801.png",
+	   "CollegeDraftTeam":"SF",
+	   "CollegeDraftYear":2021,
+	   "id":579,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "SF"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"GB",
-	   "Position":"RB",
+	   "FirstName":"AJ",
+	   "LastName":"Dillon",
 	   "PositionCategory":"OFF",
 	   "Name":"AJ Dillon",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21802.png",
 	   "CollegeDraftTeam":"GB",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":580,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "GB",
+		  "GB"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"SEA",
+	   "FirstName":"DeeJay",
+	   "LastName":"Dallas",
+	   "PositionCategory":"OFF",
+	   "Name":"DeeJay Dallas",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21804.png",
+	   "CollegeDraftTeam":"SEA",
+	   "CollegeDraftYear":2020,
+	   "id":581,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "SEA"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"QB",
+	   "FirstName":"Jalen",
+	   "LastName":"Hurts",
 	   "PositionCategory":"OFF",
 	   "Name":"Jalen Hurts",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21831.png",
 	   "CollegeDraftTeam":"PHI",
-	   "CollegeDraftYear":2020
-	},
-	{
-	   "Team":"NE",
-	   "Position":"RB",
-	   "PositionCategory":"OFF",
-	   "Name":"J.J. Taylor",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21837.png",
-	   "CollegeDraftTeam":"NE",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":582,
+	   "Position":"QB",
+	   "AllTeams":[
+		  "PHI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"GB",
-	   "Position":"RB",
+	   "FirstName":"Kylin",
+	   "LastName":"Hill",
 	   "PositionCategory":"OFF",
 	   "Name":"Kylin Hill",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21840.png",
 	   "CollegeDraftTeam":"GB",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":583,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "GB"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CHI",
-	   "Position":"RB",
+	   "FirstName":"Darrynton",
+	   "LastName":"Evans",
 	   "PositionCategory":"OFF",
 	   "Name":"Darrynton Evans",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21845.png",
 	   "CollegeDraftTeam":"TEN",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":584,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "TEN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"PIT",
+	   "FirstName":"Anthony",
+	   "LastName":"McFarland Jr.",
+	   "PositionCategory":"OFF",
+	   "Name":"Anthony McFarland Jr.",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21854.png",
+	   "CollegeDraftTeam":"PIT",
+	   "CollegeDraftYear":2020,
+	   "id":585,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "PIT"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"RB",
+	   "FirstName":"Antonio",
+	   "LastName":"Gibson",
 	   "PositionCategory":"OFF",
 	   "Name":"Antonio Gibson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21861.png",
 	   "CollegeDraftTeam":"WAS",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":586,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "WAS"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"SF",
-	   "Position":"DL",
+	   "FirstName":"Javon",
+	   "LastName":"Kinlaw",
 	   "PositionCategory":"DEF",
 	   "Name":"Javon Kinlaw",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21867.png",
 	   "CollegeDraftTeam":"SF",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":587,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "SF",
+		  "SF"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"DL",
+	   "FirstName":"Jonathan",
+	   "LastName":"Greenard",
 	   "PositionCategory":"DEF",
 	   "Name":"Jonathan Greenard",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21879.png",
 	   "CollegeDraftTeam":"HOU",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":588,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "HOU"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"SEA",
+	   "FirstName":"Darrell",
+	   "LastName":"Taylor",
+	   "PositionCategory":"DEF",
+	   "Name":"Darrell Taylor",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21882.png",
+	   "CollegeDraftTeam":"SEA",
+	   "CollegeDraftYear":2020,
+	   "id":589,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "SEA"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"ATL",
+	   "FirstName":"Marlon",
+	   "LastName":"Davidson",
+	   "PositionCategory":"DEF",
+	   "Name":"Marlon Davidson",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21884.png",
+	   "CollegeDraftTeam":"ATL",
+	   "CollegeDraftYear":2020,
+	   "id":590,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "ATL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"BAL",
+	   "FirstName":"Broderick",
+	   "LastName":"Washington",
+	   "PositionCategory":"DEF",
+	   "Name":"Broderick Washington",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21886.png",
+	   "CollegeDraftTeam":"BAL",
+	   "CollegeDraftYear":2020,
+	   "id":591,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "BAL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"LB",
+	   "FirstName":"K'Lavon",
+	   "LastName":"Chaisson",
 	   "PositionCategory":"DEF",
 	   "Name":"K'Lavon Chaisson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21888.png",
 	   "CollegeDraftTeam":"JAX",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":592,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "JAX"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"CHI",
+	   "FirstName":"Trevis",
+	   "LastName":"Gipson",
+	   "PositionCategory":"DEF",
+	   "Name":"Trevis Gipson",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21890.png",
+	   "CollegeDraftTeam":"CHI",
+	   "CollegeDraftYear":2020,
+	   "id":593,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "CHI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"DL",
+	   "FirstName":"Yetur",
+	   "LastName":"Gross-Matos",
 	   "PositionCategory":"DEF",
 	   "Name":"Yetur Gross-Matos",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21896.png",
 	   "CollegeDraftTeam":"CAR",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":594,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "CAR"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"PIT",
-	   "Position":"LB",
+	   "FirstName":"Alex",
+	   "LastName":"Highsmith",
 	   "PositionCategory":"DEF",
 	   "Name":"Alex Highsmith",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21897.png",
 	   "CollegeDraftTeam":"PIT",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":595,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "PIT"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"LB",
+	   "FirstName":"Terrell",
+	   "LastName":"Lewis",
 	   "PositionCategory":"DEF",
 	   "Name":"Terrell Lewis",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21903.png",
 	   "CollegeDraftTeam":"LAR",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":596,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "LAR"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
+	},
+	{
+	   "Team":"CLE",
+	   "FirstName":"Grant",
+	   "LastName":"Delpit",
+	   "PositionCategory":"DEF",
+	   "Name":"Grant Delpit",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21918.png",
+	   "CollegeDraftTeam":"CLE",
+	   "CollegeDraftYear":2020,
+	   "id":597,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "CLE"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"DB",
+	   "FirstName":"Jeremy",
+	   "LastName":"Chinn",
 	   "PositionCategory":"DEF",
 	   "Name":"Jeremy Chinn",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21921.png",
 	   "CollegeDraftTeam":"CAR",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":598,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "CAR"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"DB",
+	   "FirstName":"Kamren",
+	   "LastName":"Curl",
 	   "PositionCategory":"DEF",
 	   "Name":"Kamren Curl",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21923.png",
 	   "CollegeDraftTeam":"WAS",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":599,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "WAS"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"DB",
+	   "FirstName":"Ashtyn",
+	   "LastName":"Davis",
 	   "PositionCategory":"DEF",
 	   "Name":"Ashtyn Davis",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21925.png",
 	   "CollegeDraftTeam":"NYJ",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":600,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "NYJ"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"DB",
+	   "FirstName":"Brandon",
+	   "LastName":"Jones",
 	   "PositionCategory":"DEF",
 	   "Name":"Brandon Jones",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21927.png",
 	   "CollegeDraftTeam":"MIA",
-	   "CollegeDraftYear":2020
-	},
-	{
-	   "Team":"ATL",
+	   "CollegeDraftYear":2020,
+	   "id":601,
 	   "Position":"DB",
-	   "PositionCategory":"DEF",
-	   "Name":"Jaylinn Hawkins",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21933.png",
-	   "CollegeDraftTeam":"ATL",
-	   "CollegeDraftYear":2020
+	   "AllTeams":[
+		  "MIA"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"KC",
-	   "Position":"DB",
+	   "FirstName":"L'Jarius",
+	   "LastName":"Sneed",
 	   "PositionCategory":"DEF",
 	   "Name":"L'Jarius Sneed",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21934.png",
 	   "CollegeDraftTeam":"KC",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":602,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "KC",
+		  "KC"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"DB",
+	   "FirstName":"Xavier",
+	   "LastName":"McKinney",
 	   "PositionCategory":"DEF",
 	   "Name":"Xavier McKinney",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21936.png",
 	   "CollegeDraftTeam":"NYG",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":603,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "NYG"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"DB",
+	   "FirstName":"Jordan",
+	   "LastName":"Fuller",
 	   "PositionCategory":"DEF",
 	   "Name":"Jordan Fuller",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21937.png",
 	   "CollegeDraftTeam":"LAR",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":604,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "LAR"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
+	},
+	{
+	   "Team":"PHI",
+	   "FirstName":"K'Von",
+	   "LastName":"Wallace",
+	   "PositionCategory":"DEF",
+	   "Name":"K'Von Wallace",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21938.png",
+	   "CollegeDraftTeam":"PHI",
+	   "CollegeDraftYear":2020,
+	   "id":605,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "PHI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"TB",
-	   "Position":"DB",
+	   "FirstName":"Antoine",
+	   "LastName":"Winfield Jr.",
 	   "PositionCategory":"DEF",
 	   "Name":"Antoine Winfield Jr.",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21940.png",
 	   "CollegeDraftTeam":"TB",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":606,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "TB",
+		  "TB"
+	   ],
+	   "ProBowls":1,
+	   "Rings":1
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"OL",
+	   "FirstName":"Robert",
+	   "LastName":"Hunt",
 	   "PositionCategory":"OFF",
 	   "Name":"Robert Hunt",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21943.png",
 	   "CollegeDraftTeam":"MIA",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":607,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "MIA"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"DET",
-	   "Position":"OL",
+	   "FirstName":"Jonah",
+	   "LastName":"Jackson",
 	   "PositionCategory":"OFF",
 	   "Name":"Jonah Jackson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21944.png",
 	   "CollegeDraftTeam":"DET",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":608,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "DET"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"OL",
+	   "FirstName":"Charlie",
+	   "LastName":"Heck",
 	   "PositionCategory":"OFF",
 	   "Name":"Charlie Heck",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21947.png",
 	   "CollegeDraftTeam":"HOU",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":609,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "HOU"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CLE",
-	   "Position":"OL",
+	   "FirstName":"Nick",
+	   "LastName":"Harris",
 	   "PositionCategory":"OFF",
 	   "Name":"Nick Harris",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21948.png",
 	   "CollegeDraftTeam":"CLE",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":610,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "CLE"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"ATL",
-	   "Position":"OL",
+	   "FirstName":"Matt",
+	   "LastName":"Hennessy",
 	   "PositionCategory":"OFF",
 	   "Name":"Matt Hennessy",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21951.png",
 	   "CollegeDraftTeam":"ATL",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":611,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "ATL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
-	   "Team":"PHI",
-	   "Position":"WR",
+	   "Team":"DAL",
+	   "FirstName":"Rico",
+	   "LastName":"Dowdle",
 	   "PositionCategory":"OFF",
-	   "Name":"Quez Watkins",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21957.png",
-	   "CollegeDraftTeam":"PHI",
-	   "CollegeDraftYear":2020
-	},
-	{
-	   "Team":"SEA",
-	   "Position":"WR",
-	   "PositionCategory":"OFF",
-	   "Name":"Freddie Swain",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21960.png",
-	   "CollegeDraftTeam":"SEA",
-	   "CollegeDraftYear":2020
+	   "Name":"Rico Dowdle",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21952.png",
+	   "CollegeDraftTeam":"DAL",
+	   "CollegeDraftYear":2020,
+	   "id":612,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "DAL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CHI",
-	   "Position":"WR",
+	   "FirstName":"Darnell",
+	   "LastName":"Mooney",
 	   "PositionCategory":"OFF",
 	   "Name":"Darnell Mooney",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21961.png",
 	   "CollegeDraftTeam":"CHI",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":613,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "CHI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
-	   "Team":"NE",
-	   "Position":"RB",
+	   "Team":"CHI",
+	   "FirstName":"Isaiah",
+	   "LastName":"Coulter",
 	   "PositionCategory":"OFF",
-	   "Name":"Malcolm Perry",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21962.png",
-	   "CollegeDraftTeam":"MIA",
-	   "CollegeDraftYear":2020
+	   "Name":"Isaiah Coulter",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21967.png",
+	   "CollegeDraftTeam":"HOU",
+	   "CollegeDraftYear":2020,
+	   "id":614,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "HOU",
+		  "CHI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"RB",
+	   "FirstName":"James",
+	   "LastName":"Robinson",
 	   "PositionCategory":"OFF",
 	   "Name":"James Robinson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21970.png",
 	   "CollegeDraftTeam":"JAX",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":615,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "JAX"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"LB",
+	   "FirstName":"Shaquille",
+	   "LastName":"Quarterman",
 	   "PositionCategory":"DEF",
 	   "Name":"Shaquille Quarterman",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21974.png",
 	   "CollegeDraftTeam":"JAX",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":616,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "JAX"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"BAL",
-	   "Position":"LB",
+	   "FirstName":"Patrick",
+	   "LastName":"Queen",
 	   "PositionCategory":"DEF",
 	   "Name":"Patrick Queen",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21982.png",
 	   "CollegeDraftTeam":"BAL",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":617,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "BAL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"KC",
-	   "Position":"LB",
+	   "FirstName":"Willie",
+	   "LastName":"Gay",
 	   "PositionCategory":"DEF",
 	   "Name":"Willie Gay",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21984.png",
 	   "CollegeDraftTeam":"KC",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":618,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "KC",
+		  "KC"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"LAC",
-	   "Position":"LB",
+	   "FirstName":"Kenneth",
+	   "LastName":"Murray Jr.",
 	   "PositionCategory":"DEF",
 	   "Name":"Kenneth Murray Jr.",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21985.png",
 	   "CollegeDraftTeam":"LAC",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":619,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "LAC"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"ATL",
-	   "Position":"LB",
+	   "FirstName":"Mykal",
+	   "LastName":"Walker",
 	   "PositionCategory":"DEF",
 	   "Name":"Mykal Walker",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21989.png",
 	   "CollegeDraftTeam":"ATL",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":620,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "ATL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"MIN",
-	   "Position":"OL",
+	   "FirstName":"Ezra",
+	   "LastName":"Cleveland",
 	   "PositionCategory":"OFF",
 	   "Name":"Ezra Cleveland",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21993.png",
 	   "CollegeDraftTeam":"MIN",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":621,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "MIN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"OL",
+	   "FirstName":"Tyler",
+	   "LastName":"Biadasz",
 	   "PositionCategory":"OFF",
 	   "Name":"Tyler Biadasz",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21995.png",
 	   "CollegeDraftTeam":"DAL",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":622,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "DAL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"BAL",
+	   "FirstName":"Malik",
+	   "LastName":"Harrison",
+	   "PositionCategory":"DEF",
+	   "Name":"Malik Harrison",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21996.png",
+	   "CollegeDraftTeam":"BAL",
+	   "CollegeDraftYear":2020,
+	   "id":623,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "BAL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"OL",
+	   "FirstName":"Lloyd",
+	   "LastName":"Cushenberry III",
 	   "PositionCategory":"OFF",
 	   "Name":"Lloyd Cushenberry III",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/21997.png",
 	   "CollegeDraftTeam":"DEN",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":624,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "DEN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"LB",
+	   "FirstName":"Logan",
+	   "LastName":"Wilson",
 	   "PositionCategory":"DEF",
 	   "Name":"Logan Wilson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22003.png",
 	   "CollegeDraftTeam":"CIN",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":625,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "CIN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"LB",
+	   "FirstName":"Isaiah",
+	   "LastName":"Simmons",
 	   "PositionCategory":"DEF",
 	   "Name":"Isaiah Simmons",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22004.png",
 	   "CollegeDraftTeam":"ARI",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":626,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "ARI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"LB",
+	   "FirstName":"Jordyn",
+	   "LastName":"Brooks",
 	   "PositionCategory":"DEF",
 	   "Name":"Jordyn Brooks",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22005.png",
 	   "CollegeDraftTeam":"SEA",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":627,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "SEA"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"OL",
+	   "FirstName":"Mekhi",
+	   "LastName":"Becton",
 	   "PositionCategory":"OFF",
 	   "Name":"Mekhi Becton",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22009.png",
 	   "CollegeDraftTeam":"NYJ",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":628,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "NYJ"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"BAL",
-	   "Position":"OL",
+	   "FirstName":"Trystan",
+	   "LastName":"Colon",
 	   "PositionCategory":"OFF",
 	   "Name":"Trystan Colon",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22010.png",
 	   "CollegeDraftTeam":"BAL",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":629,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "BAL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"OL",
+	   "FirstName":"Ben",
+	   "LastName":"Bartch",
 	   "PositionCategory":"OFF",
 	   "Name":"Ben Bartch",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22012.png",
 	   "CollegeDraftTeam":"JAX",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":630,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "JAX"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"KC",
-	   "Position":"OL",
+	   "FirstName":"Lucas",
+	   "LastName":"Niang",
 	   "PositionCategory":"OFF",
 	   "Name":"Lucas Niang",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22018.png",
 	   "CollegeDraftTeam":"KC",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":631,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "KC"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"SF",
-	   "Position":"OL",
+	   "FirstName":"Colton",
+	   "LastName":"McKivitz",
 	   "PositionCategory":"OFF",
 	   "Name":"Colton McKivitz",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22023.png",
 	   "CollegeDraftTeam":"SF",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":632,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "SF",
+		  "SF"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CLE",
-	   "Position":"OL",
+	   "FirstName":"Jedrick",
+	   "LastName":"Wills Jr.",
 	   "PositionCategory":"OFF",
 	   "Name":"Jedrick Wills Jr.",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22024.png",
 	   "CollegeDraftTeam":"CLE",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":633,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "CLE"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"OL",
+	   "FirstName":"Andrew",
+	   "LastName":"Thomas",
 	   "PositionCategory":"OFF",
 	   "Name":"Andrew Thomas",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22025.png",
 	   "CollegeDraftTeam":"NYG",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":634,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "NYG"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"BAL",
-	   "Position":"OL",
+	   "FirstName":"Tyre",
+	   "LastName":"Phillips",
 	   "PositionCategory":"OFF",
 	   "Name":"Tyre Phillips",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22027.png",
 	   "CollegeDraftTeam":"BAL",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":635,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "BAL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"OL",
+	   "FirstName":"Damien",
+	   "LastName":"Lewis",
 	   "PositionCategory":"OFF",
 	   "Name":"Damien Lewis",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22028.png",
 	   "CollegeDraftTeam":"SEA",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":636,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "SEA"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"TB",
-	   "Position":"OL",
+	   "FirstName":"Tristan",
+	   "LastName":"Wirfs",
 	   "PositionCategory":"OFF",
 	   "Name":"Tristan Wirfs",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22033.png",
 	   "CollegeDraftTeam":"TB",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":637,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "TB",
+		  "TB"
+	   ],
+	   "ProBowls":1,
+	   "Rings":1
+	},
+	{
+	   "Team":"NYG",
+	   "FirstName":"Matt",
+	   "LastName":"Peart",
+	   "PositionCategory":"OFF",
+	   "Name":"Matt Peart",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22035.png",
+	   "CollegeDraftTeam":"NYG",
+	   "CollegeDraftYear":2020,
+	   "id":638,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "NYG"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NO",
-	   "Position":"OL",
+	   "FirstName":"Cesar",
+	   "LastName":"Ruiz",
 	   "PositionCategory":"OFF",
 	   "Name":"Cesar Ruiz",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22036.png",
 	   "CollegeDraftTeam":"NO",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":639,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "NO",
+		  "NO"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
-	   "Team":"NYG",
-	   "Position":"OL",
+	   "Team":"GB",
+	   "FirstName":"Jon",
+	   "LastName":"Runyan",
 	   "PositionCategory":"OFF",
-	   "Name":"Shane Lemieux",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22039.png",
-	   "CollegeDraftTeam":"NYG",
-	   "CollegeDraftYear":2020
+	   "Name":"Jon Runyan",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22040.png",
+	   "CollegeDraftTeam":"GB",
+	   "CollegeDraftYear":2020,
+	   "id":640,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "GB",
+		  "GB"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"OL",
+	   "FirstName":"Terence",
+	   "LastName":"Steele",
 	   "PositionCategory":"OFF",
 	   "Name":"Terence Steele",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22041.png",
 	   "CollegeDraftTeam":"DAL",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":641,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "DAL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"DET",
-	   "Position":"DB",
+	   "FirstName":"Jeff",
+	   "LastName":"Okudah",
 	   "PositionCategory":"DEF",
 	   "Name":"Jeff Okudah",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22044.png",
 	   "CollegeDraftTeam":"DET",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":642,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "DET"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"MIN",
-	   "Position":"DB",
+	   "FirstName":"Cameron",
+	   "LastName":"Dantzler",
 	   "PositionCategory":"DEF",
 	   "Name":"Cameron Dantzler",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22048.png",
 	   "CollegeDraftTeam":"MIN",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":643,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "MIN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"DB",
+	   "FirstName":"Darnay",
+	   "LastName":"Holmes",
 	   "PositionCategory":"DEF",
 	   "Name":"Darnay Holmes",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22050.png",
 	   "CollegeDraftTeam":"NYG",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":644,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "NYG"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"DB",
+	   "FirstName":"Trevon",
+	   "LastName":"Diggs",
 	   "PositionCategory":"DEF",
 	   "Name":"Trevon Diggs",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22051.png",
 	   "CollegeDraftTeam":"DAL",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":645,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "DAL"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"DB",
+	   "FirstName":"CJ",
+	   "LastName":"Henderson",
 	   "PositionCategory":"DEF",
 	   "Name":"CJ Henderson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22052.png",
 	   "CollegeDraftTeam":"JAX",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":646,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "JAX",
+		  "CAR"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CHI",
-	   "Position":"DB",
+	   "FirstName":"Jaylon",
+	   "LastName":"Johnson",
 	   "PositionCategory":"DEF",
 	   "Name":"Jaylon Johnson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22056.png",
 	   "CollegeDraftTeam":"CHI",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":647,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "CHI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"DB",
+	   "FirstName":"Jeff",
+	   "LastName":"Gladney",
 	   "PositionCategory":"DEF",
 	   "Name":"Jeff Gladney",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22058.png",
 	   "CollegeDraftTeam":"MIN",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":648,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "MIN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"CLE",
+	   "FirstName":"Jordan",
+	   "LastName":"Elliott",
+	   "PositionCategory":"DEF",
+	   "Name":"Jordan Elliott",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22059.png",
+	   "CollegeDraftTeam":"CLE",
+	   "CollegeDraftYear":2020,
+	   "id":649,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "CLE"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"DB",
+	   "FirstName":"Dane",
+	   "LastName":"Jackson",
 	   "PositionCategory":"DEF",
 	   "Name":"Dane Jackson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22060.png",
 	   "CollegeDraftTeam":"BUF",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":650,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "BUF"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"DL",
+	   "FirstName":"Raekwon",
+	   "LastName":"Davis",
 	   "PositionCategory":"DEF",
 	   "Name":"Raekwon Davis",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22062.png",
 	   "CollegeDraftTeam":"MIA",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":651,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "MIA"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"ATL",
-	   "Position":"DB",
+	   "FirstName":"A.J.",
+	   "LastName":"Terrell",
 	   "PositionCategory":"DEF",
 	   "Name":"A.J. Terrell",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22075.png",
 	   "CollegeDraftTeam":"ATL",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":652,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "ATL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"DB",
+	   "FirstName":"Bryce",
+	   "LastName":"Hall",
 	   "PositionCategory":"DEF",
 	   "Name":"Bryce Hall",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22076.png",
 	   "CollegeDraftTeam":"NYJ",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":653,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "NYJ"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"DL",
+	   "FirstName":"Neville",
+	   "LastName":"Gallimore",
 	   "PositionCategory":"DEF",
 	   "Name":"Neville Gallimore",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22078.png",
 	   "CollegeDraftTeam":"DAL",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":654,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "DAL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CHI",
-	   "Position":"DB",
+	   "FirstName":"Kindle",
+	   "LastName":"Vildor",
 	   "PositionCategory":"DEF",
 	   "Name":"Kindle Vildor",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22079.png",
 	   "CollegeDraftTeam":"CHI",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":655,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "CHI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"ARI",
+	   "FirstName":"Leki",
+	   "LastName":"Fotu",
+	   "PositionCategory":"DEF",
+	   "Name":"Leki Fotu",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22083.png",
+	   "CollegeDraftTeam":"ARI",
+	   "CollegeDraftYear":2020,
+	   "id":656,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "ARI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"DB",
+	   "FirstName":"Kristian",
+	   "LastName":"Fulton",
 	   "PositionCategory":"DEF",
 	   "Name":"Kristian Fulton",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22084.png",
 	   "CollegeDraftTeam":"TEN",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":657,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "TEN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"DL",
+	   "FirstName":"Derrick",
+	   "LastName":"Brown",
 	   "PositionCategory":"DEF",
 	   "Name":"Derrick Brown",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22085.png",
 	   "CollegeDraftTeam":"CAR",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":658,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "CAR"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"DL",
+	   "FirstName":"Chase",
+	   "LastName":"Young",
 	   "PositionCategory":"DEF",
 	   "Name":"Chase Young",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22092.png",
 	   "CollegeDraftTeam":"WAS",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":659,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "WAS"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
+	},
+	{
+	   "Team":"KC",
+	   "FirstName":"Mike",
+	   "LastName":"Danna",
+	   "PositionCategory":"DEF",
+	   "Name":"Mike Danna",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22095.png",
+	   "CollegeDraftTeam":"KC",
+	   "CollegeDraftYear":2020,
+	   "id":660,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "KC"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"IND",
-	   "Position":"DB",
+	   "FirstName":"Julian",
+	   "LastName":"Blackmon",
 	   "PositionCategory":"DEF",
 	   "Name":"Julian Blackmon",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22109.png",
 	   "CollegeDraftTeam":"IND",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":661,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "IND"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"BAL",
+	   "FirstName":"Ty'Son",
+	   "LastName":"Williams",
+	   "PositionCategory":"OFF",
+	   "Name":"Ty'Son Williams",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22126.png",
+	   "CollegeDraftTeam":"BAL",
+	   "CollegeDraftYear":2020,
+	   "id":662,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "BAL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"PIT",
-	   "Position":"OL",
+	   "FirstName":"Kevin",
+	   "LastName":"Dotson",
 	   "PositionCategory":"OFF",
 	   "Name":"Kevin Dotson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22132.png",
 	   "CollegeDraftTeam":"PIT",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":663,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "PIT"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"IND",
+	   "FirstName":"Isaiah",
+	   "LastName":"Rodgers",
+	   "PositionCategory":"DEF",
+	   "Name":"Isaiah Rodgers",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22139.png",
+	   "CollegeDraftTeam":"IND",
+	   "CollegeDraftYear":2020,
+	   "id":664,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "IND"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"LB",
+	   "FirstName":"Tae",
+	   "LastName":"Crowder",
 	   "PositionCategory":"DEF",
 	   "Name":"Tae Crowder",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22156.png",
 	   "CollegeDraftTeam":"NYG",
-	   "CollegeDraftYear":2020
-	},
-	{
-	   "Team":"CHI",
+	   "CollegeDraftYear":2020,
+	   "id":665,
 	   "Position":"LB",
-	   "PositionCategory":"DEF",
-	   "Name":"Ledarius Mack",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22161.png",
-	   "CollegeDraftTeam":"CHI",
-	   "CollegeDraftYear":2020
+	   "AllTeams":[
+		  "NYG"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"GB",
-	   "Position":"LB",
+	   "FirstName":"Krys",
+	   "LastName":"Barnes",
 	   "PositionCategory":"DEF",
 	   "Name":"Krys Barnes",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22266.png",
 	   "CollegeDraftTeam":"GB",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":666,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "GB",
+		  "GB"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"OL",
+	   "FirstName":"Aaron",
+	   "LastName":"Brewer",
 	   "PositionCategory":"OFF",
 	   "Name":"Aaron Brewer",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22419.png",
 	   "CollegeDraftTeam":"TEN",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":667,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "TEN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"DL",
+	   "FirstName":"Teair",
+	   "LastName":"Tart",
 	   "PositionCategory":"DEF",
 	   "Name":"Teair Tart",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22422.png",
 	   "CollegeDraftTeam":"TEN",
-	   "CollegeDraftYear":2020
+	   "CollegeDraftYear":2020,
+	   "id":668,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "TEN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"QB",
+	   "FirstName":"Nathan",
+	   "LastName":"Cottrell",
+	   "PositionCategory":"OFF",
+	   "Name":"Nathan Cottrell",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22441.png",
+	   "CollegeDraftTeam":"JAX",
+	   "CollegeDraftYear":2020,
+	   "id":669,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "JAX"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"JAX",
+	   "FirstName":"Trevor",
+	   "LastName":"Lawrence",
 	   "PositionCategory":"OFF",
 	   "Name":"Trevor Lawrence",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22490.png",
 	   "CollegeDraftTeam":"JAX",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":670,
+	   "Position":"QB",
+	   "AllTeams":[
+		  "JAX"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CHI",
-	   "Position":"QB",
+	   "FirstName":"Justin",
+	   "LastName":"Fields",
 	   "PositionCategory":"OFF",
 	   "Name":"Justin Fields",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22492.png",
 	   "CollegeDraftTeam":"CHI",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":671,
+	   "Position":"QB",
+	   "AllTeams":[
+		  "CHI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"SF",
+	   "FirstName":"Trey",
+	   "LastName":"Lance",
+	   "PositionCategory":"OFF",
+	   "Name":"Trey Lance",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22493.png",
+	   "CollegeDraftTeam":"SF",
+	   "CollegeDraftYear":2021,
+	   "id":672,
+	   "Position":"QB",
+	   "AllTeams":[
+		  "SF"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"QB",
+	   "FirstName":"Zach",
+	   "LastName":"Wilson",
 	   "PositionCategory":"OFF",
 	   "Name":"Zach Wilson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22495.png",
 	   "CollegeDraftTeam":"NYJ",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":673,
+	   "Position":"QB",
+	   "AllTeams":[
+		  "NYJ"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NE",
-	   "Position":"QB",
+	   "FirstName":"Mac",
+	   "LastName":"Jones",
 	   "PositionCategory":"OFF",
 	   "Name":"Mac Jones",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22496.png",
 	   "CollegeDraftTeam":"NE",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":674,
+	   "Position":"QB",
+	   "AllTeams":[
+		  "NE"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"QB",
+	   "FirstName":"Davis",
+	   "LastName":"Mills",
 	   "PositionCategory":"OFF",
 	   "Name":"Davis Mills",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22505.png",
 	   "CollegeDraftTeam":"HOU",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":675,
+	   "Position":"QB",
+	   "AllTeams":[
+		  "HOU"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"HOU",
+	   "FirstName":"Brevin",
+	   "LastName":"Jordan",
+	   "PositionCategory":"OFF",
+	   "Name":"Brevin Jordan",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22506.png",
+	   "CollegeDraftTeam":"HOU",
+	   "CollegeDraftYear":2021,
+	   "id":676,
+	   "Position":"TE",
+	   "AllTeams":[
+		  "HOU"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"PIT",
-	   "Position":"TE",
+	   "FirstName":"Pat",
+	   "LastName":"Freiermuth",
 	   "PositionCategory":"OFF",
 	   "Name":"Pat Freiermuth",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22507.png",
 	   "CollegeDraftTeam":"PIT",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":677,
+	   "Position":"TE",
+	   "AllTeams":[
+		  "PIT"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"ATL",
-	   "Position":"TE",
+	   "FirstName":"Kyle",
+	   "LastName":"Pitts",
 	   "PositionCategory":"OFF",
 	   "Name":"Kyle Pitts",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22508.png",
 	   "CollegeDraftTeam":"ATL",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":678,
+	   "Position":"TE",
+	   "AllTeams":[
+		  "ATL"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
-	   "Team":"SF",
-	   "Position":"RB",
+	   "Team":"CLE",
+	   "FirstName":"Demetric",
+	   "LastName":"Felton",
 	   "PositionCategory":"OFF",
-	   "Name":"Elijah Mitchell",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22535.png",
-	   "CollegeDraftTeam":"SF",
-	   "CollegeDraftYear":2021
+	   "Name":"Demetric Felton",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22533.png",
+	   "CollegeDraftTeam":"CLE",
+	   "CollegeDraftYear":2021,
+	   "id":679,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "CLE"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NE",
-	   "Position":"RB",
+	   "FirstName":"Rhamondre",
+	   "LastName":"Stevenson",
 	   "PositionCategory":"OFF",
 	   "Name":"Rhamondre Stevenson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22546.png",
 	   "CollegeDraftTeam":"NE",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":680,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "NE"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"RB",
+	   "FirstName":"Michael",
+	   "LastName":"Carter",
 	   "PositionCategory":"OFF",
 	   "Name":"Michael Carter",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22553.png",
 	   "CollegeDraftTeam":"NYJ",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":681,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "NYJ"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"DET",
+	   "FirstName":"Jermar",
+	   "LastName":"Jefferson",
+	   "PositionCategory":"OFF",
+	   "Name":"Jermar Jefferson",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22555.png",
+	   "CollegeDraftTeam":"DET",
+	   "CollegeDraftYear":2021,
+	   "id":682,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "DET"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"RB",
+	   "FirstName":"Jaret",
+	   "LastName":"Patterson",
 	   "PositionCategory":"OFF",
 	   "Name":"Jaret Patterson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22556.png",
 	   "CollegeDraftTeam":"WAS",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":683,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "WAS"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"RB",
+	   "FirstName":"Javian",
+	   "LastName":"Hawkins",
 	   "PositionCategory":"OFF",
 	   "Name":"Javian Hawkins",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22557.png",
 	   "CollegeDraftTeam":"ATL",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":684,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "LAR"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"RB",
+	   "FirstName":"Javonte",
+	   "LastName":"Williams",
 	   "PositionCategory":"OFF",
 	   "Name":"Javonte Williams",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22558.png",
 	   "CollegeDraftTeam":"DEN",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":685,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "DEN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"PHI",
+	   "FirstName":"Kenneth",
+	   "LastName":"Gainwell",
+	   "PositionCategory":"OFF",
+	   "Name":"Kenneth Gainwell",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22562.png",
+	   "CollegeDraftTeam":"PHI",
+	   "CollegeDraftYear":2021,
+	   "id":686,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "PHI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CHI",
-	   "Position":"RB",
+	   "FirstName":"Khalil",
+	   "LastName":"Herbert",
 	   "PositionCategory":"OFF",
 	   "Name":"Khalil Herbert",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22563.png",
 	   "CollegeDraftTeam":"CHI",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":687,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "CHI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"WR",
+	   "FirstName":"Ja'Marr",
+	   "LastName":"Chase",
 	   "PositionCategory":"OFF",
 	   "Name":"Ja'Marr Chase",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22564.png",
 	   "CollegeDraftTeam":"CIN",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":688,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "CIN"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
+	},
+	{
+	   "Team":"SEA",
+	   "FirstName":"Dee",
+	   "LastName":"Eskridge",
+	   "PositionCategory":"OFF",
+	   "Name":"Dee Eskridge",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22569.png",
+	   "CollegeDraftTeam":"SEA",
+	   "CollegeDraftYear":2021,
+	   "id":689,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "SEA"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"GB",
+	   "FirstName":"Amari",
+	   "LastName":"Rodgers",
+	   "PositionCategory":"OFF",
+	   "Name":"Amari Rodgers",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22575.png",
+	   "CollegeDraftTeam":"GB",
+	   "CollegeDraftYear":2021,
+	   "id":690,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "GB"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"DET",
-	   "Position":"WR",
+	   "FirstName":"Amon-Ra",
+	   "LastName":"St. Brown",
 	   "PositionCategory":"OFF",
 	   "Name":"Amon-Ra St. Brown",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/0.png",
 	   "CollegeDraftTeam":"DET",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":691,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "DET"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"CLE",
+	   "FirstName":"Anthony",
+	   "LastName":"Schwartz",
+	   "PositionCategory":"OFF",
+	   "Name":"Anthony Schwartz",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22588.png",
+	   "CollegeDraftTeam":"CLE",
+	   "CollegeDraftYear":2021,
+	   "id":692,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "CLE"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"TEN",
+	   "FirstName":"Dez",
+	   "LastName":"Fitzpatrick",
+	   "PositionCategory":"OFF",
+	   "Name":"Dez Fitzpatrick",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22591.png",
+	   "CollegeDraftTeam":"TEN",
+	   "CollegeDraftYear":2021,
+	   "id":693,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "TEN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"WR",
+	   "FirstName":"Elijah",
+	   "LastName":"Moore",
 	   "PositionCategory":"OFF",
 	   "Name":"Elijah Moore",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22592.png",
 	   "CollegeDraftTeam":"NYJ",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":694,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "NYJ"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"WR",
+	   "FirstName":"Jaylen",
+	   "LastName":"Waddle",
 	   "PositionCategory":"OFF",
 	   "Name":"Jaylen Waddle",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22598.png",
 	   "CollegeDraftTeam":"MIA",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":695,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "MIA"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
-	   "Team":"NYG",
-	   "Position":"WR",
+	   "Team":"LAC",
+	   "FirstName":"Joshua",
+	   "LastName":"Palmer",
 	   "PositionCategory":"OFF",
-	   "Name":"Kadarius Toney",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22614.png",
-	   "CollegeDraftTeam":"NYG",
-	   "CollegeDraftYear":2021
+	   "Name":"Joshua Palmer",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22613.png",
+	   "CollegeDraftTeam":"LAC",
+	   "CollegeDraftYear":2021,
+	   "id":696,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "LAC"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"IND",
+	   "FirstName":"Mike",
+	   "LastName":"Strachan",
+	   "PositionCategory":"OFF",
+	   "Name":"Mike Strachan",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22620.png",
+	   "CollegeDraftTeam":"IND",
+	   "CollegeDraftYear":2021,
+	   "id":697,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "IND"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"BAL",
-	   "Position":"WR",
+	   "FirstName":"Rashod",
+	   "LastName":"Bateman",
 	   "PositionCategory":"OFF",
 	   "Name":"Rashod Bateman",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22623.png",
 	   "CollegeDraftTeam":"BAL",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":698,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "BAL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"WR",
+	   "FirstName":"Rondale",
+	   "LastName":"Moore",
 	   "PositionCategory":"OFF",
 	   "Name":"Rondale Moore",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22626.png",
 	   "CollegeDraftTeam":"ARI",
-	   "CollegeDraftYear":2021
-	},
-	{
-	   "Team":"CIN",
-	   "Position":"RB",
-	   "PositionCategory":"OFF",
-	   "Name":"Chris Evans",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22647.png",
-	   "CollegeDraftTeam":"CIN",
-	   "CollegeDraftYear":2021
-	},
-	{
-	   "Team":"TEN",
-	   "Position":"TE",
-	   "PositionCategory":"OFF",
-	   "Name":"Briley Moore",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22660.png",
-	   "CollegeDraftTeam":"TEN",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":699,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "ARI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"TE",
+	   "FirstName":"Tommy",
+	   "LastName":"Tremble",
 	   "PositionCategory":"OFF",
 	   "Name":"Tommy Tremble",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22662.png",
 	   "CollegeDraftTeam":"CAR",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":700,
+	   "Position":"TE",
+	   "AllTeams":[
+		  "CAR"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"RB",
+	   "FirstName":"Gary",
+	   "LastName":"Brightwell",
 	   "PositionCategory":"OFF",
 	   "Name":"Gary Brightwell",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22672.png",
 	   "CollegeDraftTeam":"NYG",
-	   "CollegeDraftYear":2021
-	},
-	{
-	   "Team":"IND",
+	   "CollegeDraftYear":2021,
+	   "id":701,
 	   "Position":"RB",
-	   "PositionCategory":"OFF",
-	   "Name":"Deon Jackson",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22674.png",
-	   "CollegeDraftTeam":"IND",
-	   "CollegeDraftYear":2021
+	   "AllTeams":[
+		  "NYG"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"MIN",
-	   "Position":"RB",
+	   "FirstName":"Kene",
+	   "LastName":"Nwangwu",
 	   "PositionCategory":"OFF",
 	   "Name":"Kene Nwangwu",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22676.png",
 	   "CollegeDraftTeam":"MIN",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":702,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "MIN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"JAX",
+	   "FirstName":"Mekhi",
+	   "LastName":"Sargent",
+	   "PositionCategory":"OFF",
+	   "Name":"Mekhi Sargent",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22677.png",
+	   "CollegeDraftTeam":"TEN",
+	   "CollegeDraftYear":2021,
+	   "id":703,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "JAX",
+		  "TEN",
+		  "LAR"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
+	},
+	{
+	   "Team":"LAR",
+	   "FirstName":"Jake",
+	   "LastName":"Funk",
+	   "PositionCategory":"OFF",
+	   "Name":"Jake Funk",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22678.png",
+	   "CollegeDraftTeam":"LAR",
+	   "CollegeDraftYear":2021,
+	   "id":704,
+	   "Position":"RB",
+	   "AllTeams":[
+		  "LAR"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"WR",
+	   "FirstName":"Terrace",
+	   "LastName":"Marshall Jr.",
 	   "PositionCategory":"OFF",
 	   "Name":"Terrace Marshall Jr.",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22685.png",
 	   "CollegeDraftTeam":"CAR",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":705,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "CAR"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"WAS",
+	   "FirstName":"Dyami",
+	   "LastName":"Brown",
+	   "PositionCategory":"OFF",
+	   "Name":"Dyami Brown",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22686.png",
+	   "CollegeDraftTeam":"WAS",
+	   "CollegeDraftYear":2021,
+	   "id":706,
+	   "Position":"WR",
+	   "AllTeams":[
+		  "WAS"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"LV",
-	   "Position":"DB",
+	   "FirstName":"Tre'Von",
+	   "LastName":"Moehrig",
 	   "PositionCategory":"DEF",
 	   "Name":"Tre'Von Moehrig",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22688.png",
 	   "CollegeDraftTeam":"LV",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":707,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "LV"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"IND",
-	   "Position":"DL",
+	   "FirstName":"Kwity",
+	   "LastName":"Paye",
 	   "PositionCategory":"DEF",
 	   "Name":"Kwity Paye",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22689.png",
 	   "CollegeDraftTeam":"IND",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":708,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "IND"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"LAC",
-	   "Position":"OL",
+	   "FirstName":"Rashawn",
+	   "LastName":"Slater",
 	   "PositionCategory":"OFF",
 	   "Name":"Rashawn Slater",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22690.png",
 	   "CollegeDraftTeam":"LAC",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":709,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "LAC"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"DET",
-	   "Position":"OL",
+	   "FirstName":"Penei",
+	   "LastName":"Sewell",
 	   "PositionCategory":"OFF",
 	   "Name":"Penei Sewell",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22691.png",
 	   "CollegeDraftTeam":"DET",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":710,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "DET"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"DEN",
-	   "Position":"DB",
+	   "FirstName":"Pat",
+	   "LastName":"Surtain II",
 	   "PositionCategory":"DEF",
 	   "Name":"Pat Surtain II",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22692.png",
 	   "CollegeDraftTeam":"DEN",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":711,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "DEN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"DB",
+	   "FirstName":"Caleb",
+	   "LastName":"Farley",
 	   "PositionCategory":"DEF",
 	   "Name":"Caleb Farley",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22693.png",
 	   "CollegeDraftTeam":"TEN",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":712,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "TEN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CAR",
-	   "Position":"DB",
+	   "FirstName":"Jaycee",
+	   "LastName":"Horn",
 	   "PositionCategory":"DEF",
 	   "Name":"Jaycee Horn",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22694.png",
 	   "CollegeDraftTeam":"CAR",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":713,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "CAR"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"DAL",
-	   "Position":"LB",
+	   "FirstName":"Micah",
+	   "LastName":"Parsons",
 	   "PositionCategory":"DEF",
 	   "Name":"Micah Parsons",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22695.png",
 	   "CollegeDraftTeam":"DAL",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":714,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "DAL"
+	   ],
+	   "ProBowls":1,
+	   "Rings":0
 	},
 	{
 	   "Team":"CLE",
-	   "Position":"LB",
+	   "FirstName":"Jeremiah",
+	   "LastName":"Owusu-Koramoah",
 	   "PositionCategory":"DEF",
 	   "Name":"Jeremiah Owusu-Koramoah",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22696.png",
 	   "CollegeDraftTeam":"CLE",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":715,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "CLE"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"LB",
+	   "FirstName":"Zaven",
+	   "LastName":"Collins",
 	   "PositionCategory":"DEF",
 	   "Name":"Zaven Collins",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22697.png",
 	   "CollegeDraftTeam":"ARI",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":716,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "ARI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"DL",
+	   "FirstName":"Greg",
+	   "LastName":"Rousseau",
 	   "PositionCategory":"DEF",
 	   "Name":"Greg Rousseau",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22698.png",
 	   "CollegeDraftTeam":"BUF",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":717,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "BUF"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"MIA",
+	   "FirstName":"Jaelan",
+	   "LastName":"Phillips",
+	   "PositionCategory":"DEF",
+	   "Name":"Jaelan Phillips",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22699.png",
+	   "CollegeDraftTeam":"MIA",
+	   "CollegeDraftYear":2021,
+	   "id":718,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "MIA"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NO",
-	   "Position":"DB",
+	   "FirstName":"Paulson",
+	   "LastName":"Adebo",
 	   "PositionCategory":"DEF",
 	   "Name":"Paulson Adebo",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22704.png",
 	   "CollegeDraftTeam":"NO",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":719,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "NO"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
-	   "Team":"NE",
-	   "Position":"DL",
+	   "Team":"DET",
+	   "FirstName":"Derrick",
+	   "LastName":"Barnes",
 	   "PositionCategory":"DEF",
-	   "Name":"Christian Barmore",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22709.png",
-	   "CollegeDraftTeam":"NE",
-	   "CollegeDraftYear":2021
+	   "Name":"Derrick Barnes",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/0.png",
+	   "CollegeDraftTeam":"DET",
+	   "CollegeDraftYear":2021,
+	   "id":720,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "DET"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"KC",
-	   "Position":"LB",
+	   "FirstName":"Nick",
+	   "LastName":"Bolton",
 	   "PositionCategory":"DEF",
 	   "Name":"Nick Bolton",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22714.png",
 	   "CollegeDraftTeam":"KC",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":721,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "KC"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CHI",
-	   "Position":"OL",
+	   "FirstName":"Larry",
+	   "LastName":"Borom",
 	   "PositionCategory":"OFF",
 	   "Name":"Larry Borom",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22716.png",
 	   "CollegeDraftTeam":"CHI",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":722,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "CHI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"BUF",
-	   "Position":"OL",
+	   "FirstName":"Spencer",
+	   "LastName":"Brown",
 	   "PositionCategory":"OFF",
 	   "Name":"Spencer Brown",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22725.png",
 	   "CollegeDraftTeam":"BUF",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":723,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "CAR"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"SEA",
-	   "Position":"DB",
+	   "FirstName":"Tre",
+	   "LastName":"Brown",
 	   "PositionCategory":"DEF",
 	   "Name":"Tre Brown",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22726.png",
 	   "CollegeDraftTeam":"SEA",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":724,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "SEA"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"MIN",
-	   "Position":"DB",
+	   "FirstName":"Camryn",
+	   "LastName":"Bynum",
 	   "PositionCategory":"DEF",
 	   "Name":"Camryn Bynum",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22729.png",
 	   "CollegeDraftTeam":"MIN",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":725,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "MIN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"JAX",
-	   "Position":"DB",
+	   "FirstName":"Tyson",
+	   "LastName":"Campbell",
 	   "PositionCategory":"DEF",
 	   "Name":"Tyson Campbell",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22731.png",
 	   "CollegeDraftTeam":"JAX",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":726,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "JAX"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CIN",
-	   "Position":"OL",
+	   "FirstName":"Jackson",
+	   "LastName":"Carman",
 	   "PositionCategory":"OFF",
 	   "Name":"Jackson Carman",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22732.png",
 	   "CollegeDraftTeam":"CIN",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":727,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "CIN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"DB",
+	   "FirstName":"Michael",
+	   "LastName":"Carter II",
 	   "PositionCategory":"DEF",
 	   "Name":"Michael Carter II",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22735.png",
 	   "CollegeDraftTeam":"NYJ",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":728,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "NYJ"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"ARI",
-	   "Position":"DB",
+	   "FirstName":"Marco",
+	   "LastName":"Wilson",
 	   "PositionCategory":"DEF",
 	   "Name":"Marco Wilson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22739.png",
 	   "CollegeDraftTeam":"ARI",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":729,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "ARI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"OL",
+	   "FirstName":"Sam",
+	   "LastName":"Cosmi",
 	   "PositionCategory":"OFF",
 	   "Name":"Sam Cosmi",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22747.png",
 	   "CollegeDraftTeam":"WAS",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":730,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "WAS"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"SEA",
+	   "FirstName":"Jake",
+	   "LastName":"Curhan",
+	   "PositionCategory":"OFF",
+	   "Name":"Jake Curhan",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22752.png",
+	   "CollegeDraftTeam":"SEA",
+	   "CollegeDraftYear":2021,
+	   "id":731,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "SEA"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"NO",
+	   "FirstName":"Pete",
+	   "LastName":"Werner",
+	   "PositionCategory":"DEF",
+	   "Name":"Pete Werner",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22753.png",
+	   "CollegeDraftTeam":"NO",
+	   "CollegeDraftYear":2021,
+	   "id":732,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "NO"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"MIN",
-	   "Position":"OL",
+	   "FirstName":"Christian",
+	   "LastName":"Darrisaw",
 	   "PositionCategory":"OFF",
 	   "Name":"Christian Darrisaw",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22757.png",
 	   "CollegeDraftTeam":"MIN",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":733,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "MIN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"WAS",
-	   "Position":"LB",
+	   "FirstName":"Jamin",
+	   "LastName":"Davis",
 	   "PositionCategory":"DEF",
 	   "Name":"Jamin Davis",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22759.png",
 	   "CollegeDraftTeam":"WAS",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":734,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "WAS"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NYJ",
-	   "Position":"OL",
+	   "FirstName":"Alijah",
+	   "LastName":"Vera-Tucker",
 	   "PositionCategory":"OFF",
 	   "Name":"Alijah Vera-Tucker",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22766.png",
 	   "CollegeDraftTeam":"NYJ",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":735,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "NYJ"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"LV",
-	   "Position":"LB",
+	   "FirstName":"Divine",
+	   "LastName":"Deablo",
 	   "PositionCategory":"DEF",
 	   "Name":"Divine Deablo",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22767.png",
 	   "CollegeDraftTeam":"LV",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":736,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "LV"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"PHI",
-	   "Position":"OL",
+	   "FirstName":"Landon",
+	   "LastName":"Dickerson",
 	   "PositionCategory":"OFF",
 	   "Name":"Landon Dickerson",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22769.png",
 	   "CollegeDraftTeam":"PHI",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":737,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "PHI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"TB",
+	   "FirstName":"Joe",
+	   "LastName":"Tryon-Shoyinka",
+	   "PositionCategory":"DEF",
+	   "Name":"Joe Tryon-Shoyinka",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22775.png",
+	   "CollegeDraftTeam":"TB",
+	   "CollegeDraftYear":2021,
+	   "id":738,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "TB"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CHI",
-	   "Position":"DL",
+	   "FirstName":"Khyiris",
+	   "LastName":"Tonga",
 	   "PositionCategory":"DEF",
 	   "Name":"Khyiris Tonga",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22778.png",
 	   "CollegeDraftTeam":"CHI",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":739,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "CHI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"CLE",
+	   "FirstName":"Tommy",
+	   "LastName":"Togiai",
+	   "PositionCategory":"DEF",
+	   "Name":"Tommy Togiai",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22780.png",
+	   "CollegeDraftTeam":"CLE",
+	   "CollegeDraftYear":2021,
+	   "id":740,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "CLE"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"SF",
-	   "Position":"DB",
+	   "FirstName":"Ambry",
+	   "LastName":"Thomas",
 	   "PositionCategory":"DEF",
 	   "Name":"Ambry Thomas",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22782.png",
 	   "CollegeDraftTeam":"SF",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":741,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "SF"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"GB",
-	   "Position":"DB",
+	   "FirstName":"Eric",
+	   "LastName":"Stokes",
 	   "PositionCategory":"DEF",
 	   "Name":"Eric Stokes",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22786.png",
 	   "CollegeDraftTeam":"GB",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":742,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "GB"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"DEN",
+	   "FirstName":"Caden",
+	   "LastName":"Sterns",
+	   "PositionCategory":"DEF",
+	   "Name":"Caden Sterns",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22793.png",
+	   "CollegeDraftTeam":"DEN",
+	   "CollegeDraftYear":2021,
+	   "id":743,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "DEN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"KC",
-	   "Position":"OL",
+	   "FirstName":"Trey",
+	   "LastName":"Smith",
 	   "PositionCategory":"OFF",
 	   "Name":"Trey Smith",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22797.png",
 	   "CollegeDraftTeam":"KC",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":744,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "KC"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"LAC",
-	   "Position":"DB",
+	   "FirstName":"Asante",
+	   "LastName":"Samuel Jr.",
 	   "PositionCategory":"DEF",
 	   "Name":"Asante Samuel Jr.",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22807.png",
 	   "CollegeDraftTeam":"LAC",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":745,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "LAC"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"OL",
+	   "FirstName":"Liam",
+	   "LastName":"Eichenberg",
 	   "PositionCategory":"OFF",
 	   "Name":"Liam Eichenberg",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22809.png",
 	   "CollegeDraftTeam":"MIA",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":746,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "MIA"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"SEA",
+	   "FirstName":"Stone",
+	   "LastName":"Forsythe",
+	   "PositionCategory":"OFF",
+	   "Name":"Stone Forsythe",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22816.png",
+	   "CollegeDraftTeam":"SEA",
+	   "CollegeDraftYear":2021,
+	   "id":747,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "SEA"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"IND",
+	   "FirstName":"Will",
+	   "LastName":"Fries",
+	   "PositionCategory":"OFF",
+	   "Name":"Will Fries",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22817.png",
+	   "CollegeDraftTeam":"IND",
+	   "CollegeDraftYear":2021,
+	   "id":748,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "IND"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"ATL",
-	   "Position":"DL",
+	   "FirstName":"Ta'Quon",
+	   "LastName":"Graham",
 	   "PositionCategory":"DEF",
 	   "Name":"Ta'Quon Graham",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22822.png",
 	   "CollegeDraftTeam":"ATL",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":749,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "ATL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"MIA",
-	   "Position":"DB",
+	   "FirstName":"Jevon",
+	   "LastName":"Holland",
 	   "PositionCategory":"DEF",
 	   "Name":"Jevon Holland",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22841.png",
 	   "CollegeDraftTeam":"MIA",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":750,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "MIA"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"KC",
-	   "Position":"OL",
+	   "FirstName":"Creed",
+	   "LastName":"Humphrey",
 	   "PositionCategory":"OFF",
 	   "Name":"Creed Humphrey",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22845.png",
 	   "CollegeDraftTeam":"KC",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":751,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "KC"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"DB",
+	   "FirstName":"Robert",
+	   "LastName":"Rochell",
 	   "PositionCategory":"DEF",
 	   "Name":"Robert Rochell",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22848.png",
 	   "CollegeDraftTeam":"LAR",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":752,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "LAR"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"LB",
+	   "FirstName":"Quincy",
+	   "LastName":"Roche",
 	   "PositionCategory":"DEF",
 	   "Name":"Quincy Roche",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22850.png",
 	   "CollegeDraftTeam":"PIT",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":753,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "NYG"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"LAC",
+	   "FirstName":"Brenden",
+	   "LastName":"Jaimes",
+	   "PositionCategory":"OFF",
+	   "Name":"Brenden Jaimes",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22853.png",
+	   "CollegeDraftTeam":"LAC",
+	   "CollegeDraftYear":2021,
+	   "id":754,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "LAC"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"TEN",
+	   "FirstName":"Dillon",
+	   "LastName":"Radunz",
+	   "PositionCategory":"OFF",
+	   "Name":"Dillon Radunz",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22857.png",
+	   "CollegeDraftTeam":"TEN",
+	   "CollegeDraftYear":2021,
+	   "id":755,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "TEN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"CHI",
+	   "FirstName":"Teven",
+	   "LastName":"Jenkins",
+	   "PositionCategory":"OFF",
+	   "Name":"Teven Jenkins",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22860.png",
+	   "CollegeDraftTeam":"CHI",
+	   "CollegeDraftYear":2021,
+	   "id":756,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "CHI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"LAR",
-	   "Position":"LB",
+	   "FirstName":"Ernest",
+	   "LastName":"Jones",
 	   "PositionCategory":"DEF",
 	   "Name":"Ernest Jones",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22865.png",
 	   "CollegeDraftTeam":"LAR",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":757,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "LAR"
+	   ],
+	   "ProBowls":0,
+	   "Rings":1
+	},
+	{
+	   "Team":"BAL",
+	   "FirstName":"Odafe",
+	   "LastName":"Oweh",
+	   "PositionCategory":"DEF",
+	   "Name":"Odafe Oweh",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22867.png",
+	   "CollegeDraftTeam":"BAL",
+	   "CollegeDraftYear":2021,
+	   "id":758,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "BAL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"DET",
+	   "FirstName":"Levi",
+	   "LastName":"Onwuzurike",
+	   "PositionCategory":"DEF",
+	   "Name":"Levi Onwuzurike",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22869.png",
+	   "CollegeDraftTeam":"DET",
+	   "CollegeDraftYear":2021,
+	   "id":759,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "DET"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"NYG",
-	   "Position":"LB",
+	   "FirstName":"Azeez",
+	   "LastName":"Ojulari",
 	   "PositionCategory":"DEF",
 	   "Name":"Azeez Ojulari",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22870.png",
 	   "CollegeDraftTeam":"NYG",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":760,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "NYG"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"CLE",
-	   "Position":"DB",
+	   "FirstName":"Greg",
+	   "LastName":"Newsome II",
 	   "PositionCategory":"DEF",
 	   "Name":"Greg Newsome II",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22877.png",
 	   "CollegeDraftTeam":"CLE",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":761,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "CLE"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"GB",
-	   "Position":"OL",
+	   "FirstName":"Royce",
+	   "LastName":"Newman",
 	   "PositionCategory":"OFF",
 	   "Name":"Royce Newman",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22878.png",
 	   "CollegeDraftTeam":"GB",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":762,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "GB"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"GB",
-	   "Position":"OL",
+	   "FirstName":"Josh",
+	   "LastName":"Myers",
 	   "PositionCategory":"OFF",
 	   "Name":"Josh Myers",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22880.png",
 	   "CollegeDraftTeam":"GB",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":763,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "GB"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"PIT",
-	   "Position":"OL",
+	   "FirstName":"Dan",
+	   "LastName":"Moore Jr.",
 	   "PositionCategory":"OFF",
 	   "Name":"Dan Moore Jr.",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22886.png",
 	   "CollegeDraftTeam":"PIT",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":764,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "PIT"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"TEN",
-	   "Position":"DB",
+	   "FirstName":"Elijah",
+	   "LastName":"Molden",
 	   "PositionCategory":"DEF",
 	   "Name":"Elijah Molden",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22887.png",
 	   "CollegeDraftTeam":"TEN",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":765,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "TEN"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"LV",
+	   "FirstName":"Alex",
+	   "LastName":"Leatherwood",
+	   "PositionCategory":"OFF",
+	   "Name":"Alex Leatherwood",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22897.png",
+	   "CollegeDraftTeam":"LV",
+	   "CollegeDraftYear":2021,
+	   "id":766,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "LV"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"ATL",
-	   "Position":"OL",
+	   "FirstName":"Jalen",
+	   "LastName":"Mayfield",
 	   "PositionCategory":"OFF",
 	   "Name":"Jalen Mayfield",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22903.png",
 	   "CollegeDraftTeam":"ATL",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":767,
+	   "Position":"OL",
+	   "AllTeams":[
+		  "ATL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"DET",
-	   "Position":"DL",
+	   "FirstName":"Alim",
+	   "LastName":"McNeill",
 	   "PositionCategory":"DEF",
 	   "Name":"Alim McNeill",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22906.png",
 	   "CollegeDraftTeam":"DET",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":768,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "DET"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"PHI",
+	   "FirstName":"Zech",
+	   "LastName":"McPhearson",
+	   "PositionCategory":"DEF",
+	   "Name":"Zech McPhearson",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22907.png",
+	   "CollegeDraftTeam":"PHI",
+	   "CollegeDraftYear":2021,
+	   "id":769,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "PHI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"LV",
-	   "Position":"DB",
+	   "FirstName":"Nate",
+	   "LastName":"Hobbs",
 	   "PositionCategory":"DEF",
 	   "Name":"Nate Hobbs",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22921.png",
 	   "CollegeDraftTeam":"LV",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":770,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "LV"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"ATL",
-	   "Position":"LB",
+	   "FirstName":"Adetokunbo",
+	   "LastName":"Ogundeji",
 	   "PositionCategory":"DEF",
 	   "Name":"Adetokunbo Ogundeji",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22924.png",
 	   "CollegeDraftTeam":"ATL",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":771,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "ATL"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
 	   "Team":"HOU",
-	   "Position":"DL",
+	   "FirstName":"Roy",
+	   "LastName":"Lopez",
 	   "PositionCategory":"DEF",
 	   "Name":"Roy Lopez",
 	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22928.png",
 	   "CollegeDraftTeam":"HOU",
-	   "CollegeDraftYear":2021
+	   "CollegeDraftYear":2021,
+	   "id":772,
+	   "Position":"DL",
+	   "AllTeams":[
+		  "HOU"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	},
 	{
-	   "Team":"SEA",
-	   "Position":"LB",
+	   "Team":"CHI",
+	   "FirstName":"Caleb",
+	   "LastName":"Johnson",
 	   "PositionCategory":"DEF",
-	   "Name":"Jon Rhattigan",
-	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22956.png",
-	   "CollegeDraftTeam":"SEA",
-	   "CollegeDraftYear":2021
+	   "Name":"Caleb Johnson",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/22942.png",
+	   "CollegeDraftTeam":"CHI",
+	   "CollegeDraftYear":2021,
+	   "id":773,
+	   "Position":"LB",
+	   "AllTeams":[
+		  "CHI"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
+	},
+	{
+	   "Team":"DET",
+	   "FirstName":"Jerry",
+	   "LastName":"Jacobs",
+	   "PositionCategory":"DEF",
+	   "Name":"Jerry Jacobs",
+	   "PhotoUrl":"https://s3-us-west-2.amazonaws.com/static.fantasydata.com/headshots/nfl/low-res/23011.png",
+	   "CollegeDraftTeam":"DET",
+	   "CollegeDraftYear":2021,
+	   "id":774,
+	   "Position":"DB",
+	   "AllTeams":[
+		  "DET"
+	   ],
+	   "ProBowls":0,
+	   "Rings":0
 	}
 ]
 
