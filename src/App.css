@@ -147,3 +147,7 @@ td {
 .shareBtn:hover {
 	box-shadow: 2px 2px 2px grey ;
 }
+
+.searchRadio {
+	margin-left: 15px;
+}
