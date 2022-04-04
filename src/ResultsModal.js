@@ -1,5 +1,5 @@
 import { Modal, Stack, Row, Col } from 'react-bootstrap';
-import ShareIcon from '@material-ui/icons/Share';
+import Share from './Share'
 import Countdown from 'react-countdown';
 import BarGraph from './BarGraph';
 
@@ -72,7 +72,7 @@ function ResultsModal(props) {
 				date={Date.now() + (new Date().setHours(24,0,0,0) - Date.now())}
 				daysInHours={true}
 			/>
-			<button className="shareBtn">Share<ShareIcon/></button>
+			<Share totalGuesses={props.totalGuesses}/>
 		</Modal.Footer>
 	  </Modal>
 	);
