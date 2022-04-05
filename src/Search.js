@@ -69,14 +69,14 @@ class Search extends Component {
 								items={players}
 								fuseOptions={{ keys: [this.state.searchParam] }}
 								inputDebounce={500}
-								maxResults={5}
+								maxResults={50}
 								onSelect={this.handleOnSelect}
 								showIcon={false}
 								placeholder={this.props.disabled ? "Game Over" : "Guess " + this.state.totalGuesses + " of 6"}
 								formatResult={this.formatResult}
 								styling={this.props.disabled
 									? {backgroundColor: "#F0F2EF", border: "1px solid #999", boxShadow: "none", fontFamily:"Amiko"} 
-									: {fontFamily:"Amiko"}
+									: {fontFamily: "Amiko"}
 								}
 							/>
 						</div>

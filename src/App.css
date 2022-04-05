@@ -34,6 +34,11 @@ p {
 	display: inline;
 }
 
+ul {
+	max-height: 40vh;
+	overflow-y: scroll;
+}
+
 .headerBtn { 
 	background-color: #013369;
 	border: none; 
@@ -88,6 +93,9 @@ p {
 .logo {
 	max-width:100%;
 	max-height:100%;
+}
+
+.result-wrapper {
 }
 
 .results-image {
