@@ -87,15 +87,10 @@ class App extends Component {
 	chooseAnswer() {
 		fetch(`${process.env.REACT_APP_ANSWER_MS_URL}/dailyAnswer`, {method: 'GET'})
 		.then(response => response.json())
-		.then(data => this.setState({ answer: data.answer }))
-		.catch(error => {
-				console.error(error);
-			}
-		);
-
-		fetch(`${process.env.REACT_APP_ANSWER_MS_URL}/dailyPuzzleId`, {method: 'GET'})
-		.then(response => response.json())
-		.then(data => this.setState({ activePuzzle: data.puzzleId }, this.populateState))
+		.then(data => this.setState({
+			answer: data.answer,
+			activePuzzle: data.puzzleId
+		}, this.populateState))
 		.catch(error => {
 				console.error(error);
 			}
