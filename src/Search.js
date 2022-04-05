@@ -58,10 +58,10 @@ class Search extends Component {
     render() {
         return (
             <Container fluid>
-				<Row>
+				<Row style={{marginBottom: "15px"}}>
 					<h2>NFL Player Guessing Game</h2>
 				</Row>
-				<Row>
+				<Row style={{marginBottom: "15px"}}>
 					<Col sm={{span: 6, offset: 3}}>
 						<div style={this.props.disabled ? {pointerEvents: "none"} : {pointerEvents: "auto"}}>
 							<ReactSearchAutocomplete

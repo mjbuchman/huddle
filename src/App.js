@@ -66,7 +66,7 @@ class App extends Component {
 	}
 	
 	componentDidMount() {
-		// this.chooseAnswer(); // sets off chain to retrieve daily answer and update state and local storage
+		//this.chooseAnswer(); // sets off chain to retrieve daily answer and update state and local storage
 		
 		eventBus.on("playerSelected", (data) => {
 			this.setState(prevState => ({
@@ -207,10 +207,10 @@ class App extends Component {
 
 	render() {
 		return (
-			<Stack className="app" gap={5}>
+			<Stack className="app" gap={4}>
 				<Stack className="header" direction="horizontal">
 					<span className="img-small"><img className="logo" src="/logo192.png" alt="huddle-logo"></img></span>
-					<h1 style={{margin: "auto 10px", padding: "0px",}}>HUDDLE</h1>
+					<h1>HUDDLE</h1>
 					<button className="headerBtn ms-auto" onClick={this.setStatsModalShow}><AssessmentIcon/></button>
 					<button className="headerBtn" onClick={this.setInfoModalShow}><InfoIcon/></button>
 				</Stack>
