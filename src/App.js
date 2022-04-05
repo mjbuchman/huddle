@@ -8,6 +8,7 @@ import ResultsModal from "./ResultsModal";
 import { Stack } from 'react-bootstrap';
 import InfoIcon from '@material-ui/icons/InfoOutlined';
 import AssessmentIcon from '@material-ui/icons/AssessmentOutlined';
+import TwitterIcon from '@material-ui/icons/Twitter';
 import eventBus from "./EventBus";
 
 class App extends Component {
@@ -60,6 +61,8 @@ class App extends Component {
 		this.setInfoModalShow = this.setInfoModalShow.bind(this);
 		this.setResultsModalShow = this.setResultsModalShow.bind(this);
 		this.hideResultsModal = this.hideResultsModal.bind(this);
+		this.donateLink = this.donateLink.bind(this);
+		this.twitterLink = this.twitterLink.bind(this);
 	}
 	
 	componentDidMount() {
@@ -88,8 +91,8 @@ class App extends Component {
 		fetch(`${process.env.REACT_APP_ANSWER_MS_URL}/dailyAnswer`, {method: 'GET'})
 		.then(response => response.json())
 		.then(data => this.setState({
-			answer: data.answer,
-			activePuzzle: data.puzzleId
+			answer: data.answer.answer,
+			activePuzzle: data.answer.ComponentpuzzleId
 		}, this.populateState))
 		.catch(error => {
 				console.error(error);
@@ -194,6 +197,14 @@ class App extends Component {
 		this.setState({showResults: false});
 	}
 
+	donateLink() {
+		window.open("https://ko-fi.com/huddle")
+	}
+
+	twitterLink() {
+		window.open("https://twitter.com/HuddleGame")
+	}
+
 	render() {
 		return (
 			<Stack className="app" gap={0}>
@@ -223,8 +234,10 @@ class App extends Component {
 					show={this.state.showResults}
 					onHide={this.hideResultsModal}
 				/>
-				<Stack className="footer" direction="horizontal">
-					<button className="headerBtn" onClick={this.resetCache}>Reset Cache</button>
+				<Stack className="footer" direction="horizontal" gap={2}>
+					<button className="donationBtn" onClick={this.donateLink}>Donate</button>
+					<p>Help keep our servers running</p>
+					<button className="headerBtn ms-auto" onClick={this.twitterLink}><TwitterIcon/></button>
 				</Stack>
 			</Stack>  
 		);
