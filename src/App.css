@@ -36,6 +36,7 @@ p {
 	font-size: 16px;
 	cursor: pointer;
 	outline: none;
+	margin: 5px;
 }
   
 .headerBtn:hover {
@@ -110,11 +111,28 @@ td {
 	width: 100%;
 	background-color:#013369;
 	color: white;
+	padding: 5px;
 }
 
 .footer p {
-	font-size: 20px;
-	margin: 10px auto;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.donationBtn {
+	background-color: #489FB5;
+	border: none;
+	border-radius: 5px; 
+	color: white; 
+	padding: 5px 10px; 
+	font-size: 16px;
+	cursor: pointer;
+	outline: none;
+}
+
+.donationBtn:hover {
+	background-color: #f0f2ef;
+	color: #013369;
 }
 
 .stats-box {
