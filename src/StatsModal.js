@@ -26,7 +26,7 @@ function StatsModal(props) {
 					</Col>
 					<Col sm={3}>
 						<div className="stats-box">
-							<p style={{fontSize: "28px", fontWeight: "bold"}}>{props.stats.wins/props.stats.played*100}</p><br/>
+							<p style={{fontSize: "28px", fontWeight: "bold"}}>{props.stats.played > 0 ? props.stats.wins/props.stats.played*100 : 0}</p><br/>
 							<p style={{fontSize: "12px"}}>WIN %</p><br/>
 						</div>
 					</Col>
