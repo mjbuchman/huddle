@@ -8,7 +8,6 @@ import ResultsModal from "./ResultsModal";
 import { Stack } from 'react-bootstrap';
 import InfoIcon from '@material-ui/icons/InfoOutlined';
 import AssessmentIcon from '@material-ui/icons/AssessmentOutlined';
-import players from './Players';
 import eventBus from "./EventBus";
 
 class App extends Component {
@@ -23,6 +22,7 @@ class App extends Component {
 			gameOver: false,
 			didWin: false,
 			answer: "",
+			activePuzzle: 0,
 			stats: {
 				played: 0,
 				wins: 0,
@@ -38,7 +38,8 @@ class App extends Component {
 				wins: 0,
 				currStreak: 0,
 				maxStreak: 0,
-				guessDist: [0,0,0,0,0,0]
+				guessDist: [0,0,0,0,0,0],
+				activePuzzle: 0
 			}));
 		}
 
@@ -59,13 +60,10 @@ class App extends Component {
 		this.setInfoModalShow = this.setInfoModalShow.bind(this);
 		this.setResultsModalShow = this.setResultsModalShow.bind(this);
 		this.hideResultsModal = this.hideResultsModal.bind(this);
-		this.resetCache = this.resetCache.bind(this);
-		this.advanceDay = this.advanceDay.bind(this);
 	}
 	
 	componentDidMount() {
 		this.chooseAnswer();
-		this.populateState();
 		
 		eventBus.on("playerSelected", (data) => {
 			this.setState(prevState => ({
@@ -87,15 +85,33 @@ class App extends Component {
 	}
 
 	chooseAnswer() {
-		let seed = new Date().toDateString() + process.env.REACT_APP_SECRET_SEED; // generate date-based seed with hidden value
-		const generator = require('random-seed').create(seed);
-		const result = generator(players.length) // randomly select player using our seeded random generator
-		this.setState({answer: players[result]});
+		fetch(`${process.env.REACT_APP_ANSWER_MS_URL}/dailyAnswer`, {method: 'GET'})
+		.then(response => response.json())
+		.then(data => this.setState({
+			answer: data.answer,
+			activePuzzle: data.puzzleId
+		}, this.populateState))
+		.catch(error => {
+				console.error(error);
+			}
+		);
 	}
 
 	populateState() {
-		let savedDaily = JSON.parse(localStorage.getItem("daily"));
 		let savedStats = JSON.parse(localStorage.getItem("stats"));
+		if(this.state.activePuzzle !== savedStats.activePuzzle) {
+			localStorage.setItem('daily', JSON.stringify({ // reset daily if the player's last active puzzle is not the current puzzle
+				totalGuesses: 0,
+				guesses: [],
+				gameOver: false,
+				didWin: false
+			}));
+			savedStats.activePuzzle = this.state.activePuzzle;  // update active puzzle to todays
+			localStorage.setItem("stats", JSON.stringify(savedStats));
+			window.location.reload();  // needed to reset table and search bar
+		}
+		
+		let savedDaily = JSON.parse(localStorage.getItem("daily"));
 		this.setState({
 			totalGuesses: savedDaily.totalGuesses,
 			didWin: savedDaily.didWin,
@@ -106,7 +122,8 @@ class App extends Component {
 				wins: savedStats.wins,
 				currStreak: savedStats.currStreak,
 				maxStreak: savedStats.maxStreak,
-				guessDist: savedStats.guessDist
+				guessDist: savedStats.guessDist,
+				activePuzzle: savedStats.activePuzzle
 			}
 		}, () => {
 			// handle new state data
@@ -177,16 +194,6 @@ class App extends Component {
 		this.setState({showResults: false});
 	}
 
-	resetCache() {
-		localStorage.clear();
-		window.location.reload(false);
-	}
-	
-	advanceDay() {
-		localStorage.removeItem('daily');
-		window.location.reload(false);
-	}
-
 	render() {
 		return (
 			<Stack className="app" gap={0}>
@@ -198,7 +205,7 @@ class App extends Component {
 				</Stack>
 				<p>Answer: {this.state.answer.Name}</p>
 				<Search disabled={this.state.gameOver}></Search>
-				<ResultsTable></ResultsTable>
+				<ResultsTable key={this.state.gameOver}></ResultsTable>
 				<StatsModal
 					show={this.state.showStats}
 					stats={this.state.stats}
@@ -218,7 +225,6 @@ class App extends Component {
 				/>
 				<Stack className="footer" direction="horizontal">
 					<button className="headerBtn" onClick={this.resetCache}>Reset Cache</button>
-					<button className="headerBtn" onClick={this.advanceDay}>Advance Day</button>
 				</Stack>
 			</Stack>  
 		);
