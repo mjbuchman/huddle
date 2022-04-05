@@ -2,6 +2,7 @@
 	background-color: #f0f2ef;
 	height: 100vh;
 	text-align: center;
+	font-family: "Amiko";
 }
 
 .header {
@@ -16,15 +17,18 @@
 }
 
 h1 {
+	font-family: 'Fugaz One';
 	font-size: 24px;
 	color: white;
 }
 
 h2, h3, h4, h5 {
+	font-family: 'Cairo';
 	color: #013369;
 }
 
 p {
+	font-family: 'Amiko';
 	display: inline;
 }
 
@@ -79,6 +83,10 @@ p {
 	max-height:100%;
 }
 
+.result-wrapper {
+	transform: translate3d(0,0,1px);
+}
+
 .results-image {
 	width: 100%
 }
@@ -102,6 +110,10 @@ p {
 
 td {
 	vertical-align: middle;
+}
+
+Modal {
+	
 }
 
 .footer {
@@ -167,5 +179,10 @@ td {
 }
 
 .searchRadio {
-	margin-left: 15px;
+	margin-left: 5px;
+}
+
+.help-icon {
+	color: #777;
+	margin-left: 5px;
 }

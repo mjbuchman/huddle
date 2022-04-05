@@ -11,7 +11,7 @@ function StatsModal(props) {
 	  >
 		<Modal.Header closeButton>
 		  <Modal.Title id="contained-modal-title-vcenter">
-			Stats
+			<h4>Stats</h4>
 		  </Modal.Title>
 		</Modal.Header>
 		<Modal.Body>
@@ -26,7 +26,7 @@ function StatsModal(props) {
 					</Col>
 					<Col sm={3}>
 						<div className="stats-box">
-							<p style={{fontSize: "28px", fontWeight: "bold"}}>{props.stats.played > 0 ? props.stats.wins/props.stats.played*100 : 0}</p><br/>
+							<p style={{fontSize: "28px", fontWeight: "bold"}}>{props.stats.played > 0 ? Math.round(props.stats.wins/props.stats.played*100) : 0}</p><br/>
 							<p style={{fontSize: "12px"}}>WIN %</p><br/>
 						</div>
 					</Col>

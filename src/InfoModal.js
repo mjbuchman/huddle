@@ -10,7 +10,7 @@ function InfoModal(props) {
 	  >
 		<Modal.Header closeButton>
 			<Modal.Title id="contained-modal-title-vcenter">
-				Guess The Player
+				<h4>Guess The Player</h4>
 			</Modal.Title>
 		</Modal.Header>
 		<Modal.Body>

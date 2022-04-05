@@ -75,8 +75,8 @@ class Search extends Component {
 								placeholder={this.props.disabled ? "Game Over" : "Guess " + this.state.totalGuesses + " of 6"}
 								formatResult={this.formatResult}
 								styling={this.props.disabled
-									? {backgroundColor: "#F0F2EF", border: "1px solid #999", boxShadow: "none"} 
-									: {}
+									? {backgroundColor: "#F0F2EF", border: "1px solid #999", boxShadow: "none", fontFamily:"Amiko"} 
+									: {fontFamily:"Amiko"}
 								}
 							/>
 						</div>
@@ -85,11 +85,14 @@ class Search extends Component {
 				<Row>
 					<Col className="center" sm={12}>
 						<p>Search by: </p>
-						<input className="searchRadio" type="radio" value="Name" name="searchParam" onChange={this.handleOnChange} checked={this.state.searchParam === "Name"}/> Name
-						<input className="searchRadio" type="radio" value="Team" name="searchParam" onChange={this.handleOnChange} checked={this.state.searchParam === "Team"}/> Team
-						<input className="searchRadio" type="radio" value="Position" name="searchParam" onChange={this.handleOnChange} checked={this.state.searchParam === "Position"}/> Position
+						<input className="searchRadio" type="radio" value="Name" name="searchParam" onChange={this.handleOnChange} checked={this.state.searchParam === "Name"}/>
+						<p> Name </p>
+						<input className="searchRadio" type="radio" value="Team" name="searchParam" onChange={this.handleOnChange} checked={this.state.searchParam === "Team"}/>
+						<p> Team </p>
+						<input className="searchRadio" type="radio" value="Position" name="searchParam" onChange={this.handleOnChange} checked={this.state.searchParam === "Position"}/>
+						<p> Position </p>
 						<ReactTooltip id="help-tooltip">Team uses 2 or 3 letter abbreviation (e.g. "LAC", "GB")<br></br>Position uses 2 letter abbreviation (e.g. "QB", "DB")</ReactTooltip>
-						<HelpIcon data-tip="help" data-for="help-tooltip" data-place="bottom" data-effect="solid"/>				
+						<HelpIcon fontSize="inherit" className="help-icon" data-tip="help" data-for="help-tooltip" data-place="bottom" data-effect="solid"/>				
 					</Col>
 				</Row>
             </Container>
