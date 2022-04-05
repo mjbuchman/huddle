@@ -92,7 +92,7 @@ class App extends Component {
 		.then(response => response.json())
 		.then(data => this.setState({
 			answer: data.answer.answer,
-			activePuzzle: data.answer.ComponentpuzzleId
+			activePuzzle: data.answer.puzzleId
 		}, this.populateState))
 		.catch(error => {
 				console.error(error);
