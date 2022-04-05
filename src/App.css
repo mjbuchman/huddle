@@ -149,15 +149,16 @@ td {
 }
 
 .correctField {
-	color: green;
-	/* border: 10px solid green; */
-	background-color: green;
-	font-weight: 800;
+	color: white;
+	background-color: rgba(0, 128, 0, 0.85) !important;
+	font-weight: 700;
 }
 
 .closeField {
-	color: orange;
-	/* border: 10px solid green; */
-	background-color: orange;
-	font-weight: 800;
+	background-color: rgba(255, 255, 0, 1) !important;
+	font-weight: 700;
+}
+
+td {
+	border-left: 1px solid rgb(232, 232, 232) !important;
 }

@@ -92,8 +92,6 @@ class App extends Component {
 		const result = generator(players.length) // randomly select player using our seeded random generator
 		this.setState({answer: players[result]});
 	}
-
-<<<<<<< Updated upstream
 	populateState() {
 		let savedDaily = JSON.parse(localStorage.getItem("daily"));
 		let savedStats = JSON.parse(localStorage.getItem("stats"));
@@ -149,9 +147,6 @@ class App extends Component {
 
 		this.setResultsModalShow(didWin);
 	}
-=======
-
->>>>>>> Stashed changes
 
 	setStatsModalShow() {
 		if(this.state.gameOver) {
@@ -200,17 +195,11 @@ class App extends Component {
 					<button className="headerBtn ms-auto" onClick={this.setStatsModalShow}><AssessmentIcon/></button>
 					<button className="headerBtn" onClick={this.setInfoModalShow}><InfoIcon/></button>
 				</Stack>
-<<<<<<< Updated upstream
 				<p>Answer: {this.state.answer.Name}</p>
 				<Search disabled={this.state.gameOver}></Search>
-				<ResultsTable></ResultsTable>
-=======
-				<p>{this.state.answer}</p>
-				<Search></Search>
 				<ResultsTable 
 					answer={this.state.answer}
 				></ResultsTable>
->>>>>>> Stashed changes
 				<StatsModal
 					show={this.state.showStats}
 					stats={this.state.stats}
