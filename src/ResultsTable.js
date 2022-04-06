@@ -30,7 +30,7 @@ class ResultsTable extends Component {
 		return this.state.guesses ? true : false;
 	}
 
-	classMaker(guess){
+	classMaker(guess) {
 		let guessClasses = {};
 		let team = guess.Team
 		let correctPlayer = this.props.answer
@@ -87,7 +87,7 @@ class ResultsTable extends Component {
 	return guessClasses
 	}
 
-	upOrDownArrow(guess, field){
+	upOrDownArrow(guess, field) {
 		let correctPlayer = this.props.answer
 		if(guess[field] === correctPlayer[field]){
 			return ""
@@ -98,20 +98,39 @@ class ResultsTable extends Component {
 		}
 	}
 
-	makeTableViews(guess,i){
+	makeTableViews(guess,i) {
 		let classes = this.classMaker(guess)
-		return (
-			<tr key={i}>
-				<td className={classes.Name}>{guess.Name}</td>
-				<td className={classes.Conf}>{Teams[guess.Team].Conf} {Teams[guess.Team].Div}</td>
-				<td className={classes.Team}><span className="img-small-logo"><img className="logo" src={Teams[guess.Team].Logo} alt={guess.Name}></img></span></td>
-				<td className={classes.Position}>{guess.Position}</td>
-				<td className={classes.CollegeDraftTeam}><span className="img-small-logo"><img className="logo" src={Teams[guess.CollegeDraftTeam].Logo} alt={guess.CollegeDraftTeam}></img></span></td>
-				<td className={classes.CollegeDraftYear}>{guess.CollegeDraftYear} {this.upOrDownArrow(guess, 'CollegeDraftYear')}</td>
-				<td className={classes.ProBowls}>{guess.ProBowls} {this.upOrDownArrow(guess, 'ProBowls')}</td>
-				<td className={classes.Rings}>{guess.Rings} {this.upOrDownArrow(guess, 'Rings')}</td>
-			</tr>
-		)
+		if (window.innerWidth < 578) {
+			return (
+				<React.Fragment>
+					<tr key={i + "name"}>
+						<td className={classes.Name + " table-name"} colSpan={7}>{guess.Name}</td>
+					</tr>
+					<tr key={i} style={{borderBottom: "1px black solid"}}>
+						<td className={classes.Conf}>{Teams[guess.Team].Conf}<br></br>{Teams[guess.Team].Div}</td>
+						<td className={classes.Team}><span className="img-small-logo"><img className="logo" src={Teams[guess.Team].Logo} alt={guess.Name}></img></span></td>
+						<td className={classes.Position}>{guess.Position}</td>
+						<td className={classes.CollegeDraftTeam}><span className="img-small-logo"><img className="logo" src={Teams[guess.CollegeDraftTeam].Logo} alt={guess.CollegeDraftTeam}></img></span></td>
+						<td className={classes.CollegeDraftYear}>{guess.CollegeDraftYear} {this.upOrDownArrow(guess, 'CollegeDraftYear')}</td>
+						<td className={classes.ProBowls}>{guess.ProBowls} {this.upOrDownArrow(guess, 'ProBowls')}</td>
+						<td className={classes.Rings}>{guess.Rings} {this.upOrDownArrow(guess, 'Rings')}</td>
+					</tr>
+				</React.Fragment>
+			)
+		} else {
+			return (
+				<tr key={i}>
+					<td className={classes.Name}>{guess.Name}</td>
+					<td className={classes.Conf}>{Teams[guess.Team].Conf}<br></br>{Teams[guess.Team].Div}</td>
+					<td className={classes.Team}><span className="img-small-logo"><img className="logo" src={Teams[guess.Team].Logo} alt={guess.Name}></img></span></td>
+					<td className={classes.Position}>{guess.Position}</td>
+					<td className={classes.CollegeDraftTeam}><span className="img-small-logo"><img className="logo" src={Teams[guess.CollegeDraftTeam].Logo} alt={guess.CollegeDraftTeam}></img></span></td>
+					<td className={classes.CollegeDraftYear}>{guess.CollegeDraftYear} {this.upOrDownArrow(guess, 'CollegeDraftYear')}</td>
+					<td className={classes.ProBowls}>{guess.ProBowls} {this.upOrDownArrow(guess, 'ProBowls')}</td>
+					<td className={classes.Rings}>{guess.Rings} {this.upOrDownArrow(guess, 'Rings')}</td>
+				</tr>
+			)
+		}
 	}
 
     render() {
@@ -119,15 +138,15 @@ class ResultsTable extends Component {
             <Container fluid>
 				<Row>
 					<Col sm={{span: 10, offset: 1}}>
-						<Table responsive>
+						<Table style={{tableLayout: window.innerWidth < 578 ? "fixed" : "responsive"}}>
 							<thead>
 								<tr>
-									<th>Player</th>
-									<th>Conf/Div</th>
+									{window.innerWidth < 578 ? "" : <th>Name</th>}
+									<th>Div</th>
 									<th>Team</th>
-									<th>Position</th>
-									<th>Drafted by</th>
-									<th>Draft year</th>
+									<th>Pos</th>
+									<th>Draft Team</th>
+									<th>Draft Year</th>
 									<th>Pro Bowls</th>
 									<th>Rings</th>
 								</tr>

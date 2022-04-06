@@ -208,7 +208,7 @@ class App extends Component {
 		return (
 			<Stack className="app" gap={4}>
 				<Stack className="header" direction="horizontal">
-					<img className="logo" src="/banner.png" alt="huddle-logo"></img>
+					<img className="banner" src="/banner.png" alt="huddle-logo"></img>
 					<button className="headerBtn ms-auto" onClick={this.setStatsModalShow}><AssessmentIcon/></button>
 					<button className="headerBtn" onClick={this.setInfoModalShow}><InfoIcon/></button>
 				</Stack>
