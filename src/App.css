@@ -16,14 +16,6 @@
 	vertical-align: middle;
 }
 
-h1 {
-	font-family: 'Cairo';
-	font-size: 24px;
-	color: white;
-	margin: auto 10px !important;
-	line-height: 20px !important;
-}
-
 h2, h3, h4, h5 {
 	font-family: 'Cairo';
 	color: #013369;
@@ -91,8 +83,8 @@ ul {
 }
 
 .logo {
-	max-width:100%;
-	max-height:100%;
+	margin-left: 5px;
+	width: 200px;
 }
 
 .results-image {
@@ -196,25 +188,13 @@ td {
 
 .correctField {
 	color: white;
-	background-color: rgba(0, 128, 0, 0.85) !important;
+	background-color: #4CB963 !important;
 	font-weight: 700;
 }
 
 .closeField {
-	background-color: rgb(255, 220, 0, 0.9) !important;
+	background-color: #F4D06F !important;
 	font-weight: 600;
-}
-
-.green {
-	color: white;
-	background-color: rgba(0, 128, 0, 0.70);
-	padding: 2px;
-}
-
-.yellow {
-	background-color: rgb(255, 220, 0, 0.9);
-	padding: 2px;
-
 }
 
 .padded {
