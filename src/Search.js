@@ -76,7 +76,7 @@ class Search extends Component {
 								formatResult={this.formatResult}
 								styling={this.props.disabled
 									? {backgroundColor: "#F0F2EF", border: "1px solid #999", boxShadow: "none", fontFamily:"Amiko"} 
-									: {fontFamily: "Amiko"}
+									: {fontFamily: "Amiko", zIndex:"99"}
 								}
 							/>
 						</div>
