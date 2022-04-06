@@ -99,7 +99,6 @@ class ResultsTable extends Component {
 	}
 
 	makeTableViews(guess,i){
-		console.log(this.upOrDownArrow(guess, 'ProBowls'))
 		let classes = this.classMaker(guess)
 		return (
 			<tr key={i}>

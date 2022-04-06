@@ -22,7 +22,7 @@ class App extends Component {
 			guesses: [],
 			gameOver: false,
 			didWin: false,
-			answer: "",
+			answer: {Team:"None",FirstName:"",LastName:"",PositionCategory:"",Name:"",PhotoUrl:"",CollegeDraftTeam:"",CollegeDraftYear: 0,id: -1,Position:"",AllTeams:[],ProBowls:0,Rings:0},
 			activePuzzle: 0,
 			stats: {
 				played: 0,
@@ -66,7 +66,7 @@ class App extends Component {
 	}
 	
 	componentDidMount() {
-		//this.chooseAnswer(); // sets off chain to retrieve daily answer and update state and local storage
+		this.chooseAnswer(); // sets off chain to retrieve daily answer and update state and local storage
 		
 		eventBus.on("playerSelected", (data) => {
 			this.setState(prevState => ({
