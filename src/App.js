@@ -99,7 +99,6 @@ class App extends Component {
 			}
 		);
 	}
-
 	populateState() {
 		let savedStats = JSON.parse(localStorage.getItem("stats"));
 		if(this.state.activePuzzle !== savedStats.activePuzzle) {
@@ -215,7 +214,9 @@ class App extends Component {
 					<button className="headerBtn" onClick={this.setInfoModalShow}><InfoIcon/></button>
 				</Stack>
 				<Search disabled={this.state.gameOver}></Search>
-				<ResultsTable key={this.state.gameOver}></ResultsTable>
+				<ResultsTable 
+					answer={this.state.answer}
+				></ResultsTable>
 				<StatsModal
 					show={this.state.showStats}
 					stats={this.state.stats}
