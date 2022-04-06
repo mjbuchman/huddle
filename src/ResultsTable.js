@@ -138,25 +138,27 @@ class ResultsTable extends Component {
             <Container fluid>
 				<Row>
 					<Col sm={{span: 10, offset: 1}}>
-						<Table style={{tableLayout: window.innerWidth < 578 ? "fixed" : "responsive"}}>
-							<thead>
-								<tr>
-									{window.innerWidth < 578 ? "" : <th>Name</th>}
-									<th>Div</th>
-									<th>Team</th>
-									<th>Pos</th>
-									<th>Draft Team</th>
-									<th>Draft Year</th>
-									<th>Pro Bowls</th>
-									<th>Rings</th>
-								</tr>
-							</thead>
-							<tbody>
-								{this.state.guesses.map((guess,i)=>{
-									return (this.makeTableViews(guess,i))
-								})}
-							</tbody>
-						</Table>
+						<div className="table-container">
+							<Table style={{tableLayout: window.innerWidth < 578 ? "fixed" : "responsive"}}>
+								<thead>
+									<tr>
+										{window.innerWidth < 578 ? "" : <th>Name</th>}
+										<th>Div</th>
+										<th>Team</th>
+										<th>Pos</th>
+										<th>Draft Team</th>
+										<th>Draft Year</th>
+										<th>Pro Bowls</th>
+										<th>Rings</th>
+									</tr>
+								</thead>
+								<tbody>
+									{this.state.guesses.map((guess,i)=>{
+										return (this.makeTableViews(guess,i))
+									})}
+								</tbody>
+							</Table>
+						</div>
 					</Col>
 				</Row>
             </Container>
