@@ -106,7 +106,7 @@ class ResultsTable extends Component {
 				<td className={classes.Conf}>{Teams[guess.Team].Conf} {Teams[guess.Team].Div}</td>
 				<td className={classes.Team}><span className="img-small-logo"><img className="logo" src={Teams[guess.Team].Logo} alt={guess.Name}></img></span></td>
 				<td className={classes.Position}>{guess.Position}</td>
-				<td className={classes.CollegeDraftTeam}>{guess.CollegeDraftTeam}</td>
+				<td className={classes.CollegeDraftTeam}><span className="img-small-logo"><img className="logo" src={Teams[guess.CollegeDraftTeam].Logo} alt={guess.CollegeDraftTeam}></img></span></td>
 				<td className={classes.CollegeDraftYear}>{guess.CollegeDraftYear} {this.upOrDownArrow(guess, 'CollegeDraftYear')}</td>
 				<td className={classes.ProBowls}>{guess.ProBowls} {this.upOrDownArrow(guess, 'ProBowls')}</td>
 				<td className={classes.Rings}>{guess.Rings} {this.upOrDownArrow(guess, 'Rings')}</td>
