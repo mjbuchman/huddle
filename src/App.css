@@ -2,11 +2,12 @@
 	background-color: #f0f2ef;
 	height: 100vh;
 	text-align: center;
+	font-family: "Amiko";
 }
 
 .header {
 	background-color: #013369;
-	vertical-align: middle;
+	align-items: center;
 	border-bottom: 5px #D50A0A solid;
 }
 
@@ -16,16 +17,26 @@
 }
 
 h1 {
+	font-family: 'Cairo';
 	font-size: 24px;
 	color: white;
+	margin: auto 10px !important;
+	line-height: 20px !important;
 }
 
 h2, h3, h4, h5 {
+	font-family: 'Cairo';
 	color: #013369;
 }
 
 p {
+	font-family: 'Amiko';
 	display: inline;
+}
+
+ul {
+	max-height: 40vh;
+	overflow-y: scroll;
 }
 
 .headerBtn { 
@@ -36,6 +47,7 @@ p {
 	font-size: 16px;
 	cursor: pointer;
 	outline: none;
+	margin: 5px;
 }
 
 .headerBtn:hover {
@@ -62,11 +74,16 @@ p {
 }
 
 .img-large {
-	width: 100%;
+	width: 30vh;
 	border: 5px #013369 solid;
 	border-bottom: 5px #D50A0A solid;
 	border-radius: 5px;
 	box-shadow: 5px 5px 5px grey ;
+	margin: 0 auto;
+}
+
+.modal-size {
+	min-width: 30%;
 }
 
 .player {
@@ -79,7 +96,8 @@ p {
 }
 
 .results-image {
-	width: 100%
+    width: 100%;
+    height: 100%
 }
 
 .result-name {
@@ -111,11 +129,28 @@ td {
 	width: 100%;
 	background-color:#013369;
 	color: white;
+	padding: 5px;
 }
 
 .footer p {
-	font-size: 20px;
-	margin: 10px auto;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.donationBtn {
+	background-color: #489FB5;
+	border: none;
+	border-radius: 5px; 
+	color: white; 
+	padding: 5px 10px; 
+	font-size: 16px;
+	cursor: pointer;
+	outline: none;
+}
+
+.donationBtn:hover {
+	background-color: #f0f2ef;
+	color: #013369;
 }
 
 .stats-box {
@@ -125,11 +160,21 @@ td {
 	vertical-align: middle;
 	color: white;
 	border-radius: 5px;
-	box-shadow: 2px 2px 2px grey ;
+	box-shadow: 2px 2px 2px grey;
+	margin-bottom: 10px;
+	line-height: 1;
+	padding: 5px;
+	font-size: 16px;
 }
 
-.guess-dist {
-	height: 100%;
+@media screen and (max-width: 578px) {
+	.stats-box {
+	   font-size: 12px !important;
+	}
+
+	.footer p {
+		font-size: 12px;
+	}
 }
 
 .shareBtn {
@@ -174,4 +219,13 @@ td {
 
 .padded {
 	padding: 1%;
+}
+
+.searchRadio {
+	margin-left: 5px;
+}
+
+.help-icon {
+	color: #777;
+	margin-left: 5px;
 }
