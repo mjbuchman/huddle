@@ -235,10 +235,6 @@ td {
 
 	td {
 		font-size: 13px;
-	}
-
-	.logo {
-		max-height: 5vw;
-		max-width: 5vw;
+		padding: 10px 0px !important;
 	}
 }
