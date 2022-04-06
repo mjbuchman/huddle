@@ -101,6 +101,7 @@ p {
 
 td {
 	vertical-align: middle;
+	border-left: 1px solid rgb(232, 232, 232) !important;
 }
 
 .footer {
@@ -155,10 +156,22 @@ td {
 }
 
 .closeField {
-	background-color: rgba(255, 255, 0, 1) !important;
-	font-weight: 700;
+	background-color: rgb(255, 220, 0, 0.9) !important;
+	font-weight: 600;
 }
 
-td {
-	border-left: 1px solid rgb(232, 232, 232) !important;
+.green {
+	color: white;
+	background-color: rgba(0, 128, 0, 0.70);
+	padding: 2px;
+}
+
+.yellow {
+	background-color: rgb(255, 220, 0, 0.9);
+	padding: 2px;
+
+}
+
+.padded {
+	padding: 1%;
 }

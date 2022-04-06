@@ -1,4 +1,5 @@
 import { Modal, Button } from 'react-bootstrap';
+import Rules from './GameRules';
 
 function InfoModal(props) {
 	return (
@@ -10,13 +11,11 @@ function InfoModal(props) {
 	  >
 		<Modal.Header closeButton>
 			<Modal.Title id="contained-modal-title-vcenter">
-				Guess The Player
+				Guess The NFL Player
 			</Modal.Title>
 		</Modal.Header>
 		<Modal.Body>
-		  <p>
-			Put rules here
-		  </p>
+			<Rules></Rules>
 		</Modal.Body>
 		<Modal.Footer>
 		  <Button onClick={props.onHide}>Close</Button>
