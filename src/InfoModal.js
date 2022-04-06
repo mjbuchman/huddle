@@ -5,6 +5,7 @@ function InfoModal(props) {
 	return (
 	  <Modal
 		{...props}
+		dialogClassName="modal-size-info"
 	  >
 		<Modal.Header closeButton>
 			<Modal.Title id="contained-modal-title-vcenter">

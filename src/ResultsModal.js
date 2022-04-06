@@ -7,7 +7,7 @@ function ResultsModal(props) {
 	return (
 	  <Modal
 		{...props}
-		dialogClassName="modal-size"
+		dialogClassName="modal-size-results"
 	  >
 		<Modal.Header closeButton>
 			<Modal.Title id="contained-modal-title-vcenter">
