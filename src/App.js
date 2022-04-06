@@ -22,7 +22,7 @@ class App extends Component {
 			guesses: [],
 			gameOver: false,
 			didWin: false,
-			answer: "",
+			answer: {Team:"None",FirstName:"",LastName:"",PositionCategory:"",Name:"",PhotoUrl:"",CollegeDraftTeam:"",CollegeDraftYear: 0,id: -1,Position:"",AllTeams:[],ProBowls:-10,Rings:-10},
 			activePuzzle: 0,
 			stats: {
 				played: 0,
@@ -99,7 +99,6 @@ class App extends Component {
 			}
 		);
 	}
-
 	populateState() {
 		let savedStats = JSON.parse(localStorage.getItem("stats"));
 		if(this.state.activePuzzle !== savedStats.activePuzzle) {
@@ -209,13 +208,14 @@ class App extends Component {
 		return (
 			<Stack className="app" gap={4}>
 				<Stack className="header" direction="horizontal">
-					<span className="img-small"><img className="logo" src="/logo192.png" alt="huddle-logo"></img></span>
-					<h1>HUDDLE</h1>
+					<img className="banner" src="/banner.png" alt="huddle-logo"></img>
 					<button className="headerBtn ms-auto" onClick={this.setStatsModalShow}><AssessmentIcon/></button>
 					<button className="headerBtn" onClick={this.setInfoModalShow}><InfoIcon/></button>
 				</Stack>
 				<Search disabled={this.state.gameOver}></Search>
-				<ResultsTable key={this.state.gameOver}></ResultsTable>
+				<ResultsTable 
+					answer={this.state.answer}
+				></ResultsTable>
 				<StatsModal
 					show={this.state.showStats}
 					stats={this.state.stats}

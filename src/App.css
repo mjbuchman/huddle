@@ -16,14 +16,6 @@
 	vertical-align: middle;
 }
 
-h1 {
-	font-family: 'Cairo';
-	font-size: 24px;
-	color: white;
-	margin: auto 10px !important;
-	line-height: 20px !important;
-}
-
 h2, h3, h4, h5 {
 	font-family: 'Cairo';
 	color: #013369;
@@ -49,7 +41,7 @@ ul {
 	outline: none;
 	margin: 5px;
 }
-  
+
 .headerBtn:hover {
 	color: #D50A0A;
 }
@@ -90,6 +82,11 @@ ul {
 	max-height: 100%;
 }
 
+.banner {
+	margin-left: 5px;
+	width: 200px;
+}
+
 .logo {
 	max-width:100%;
 	max-height:100%;
@@ -119,6 +116,21 @@ ul {
 
 td {
 	vertical-align: middle;
+	align-items: center;
+	border-left: 1px solid rgb(232, 232, 232) !important;
+	border-right: 1px solid rgb(232, 232, 232) !important;
+}
+
+.table-name {
+	font-size: 16px;
+	font-weight: bold;
+	text-align: left;
+}
+
+.table-container {
+	height: 50vh;
+	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
 .footer {
@@ -166,16 +178,6 @@ td {
 	font-size: 16px;
 }
 
-@media screen and (max-width: 578px) {
-	.stats-box {
-	   font-size: 12px !important;
-	}
-
-	.footer p {
-		font-size: 12px;
-	}
-}
-
 .shareBtn {
 	background-color: #013369;
 	border: none;
@@ -193,6 +195,21 @@ td {
 	box-shadow: 2px 2px 2px grey ;
 }
 
+.correctField {
+	color: white;
+	background-color: #4CB963 !important;
+	font-weight: 700;
+}
+
+.closeField {
+	background-color: #F4D06F !important;
+	font-weight: 600;
+}
+
+.padded {
+	padding: 1%;
+}
+
 .searchRadio {
 	margin-left: 5px;
 }
@@ -200,4 +217,28 @@ td {
 .help-icon {
 	color: #777;
 	margin-left: 5px;
+}
+
+/* logic for smaller screens */
+@media screen and (max-width: 578px) {
+	.stats-box {
+	   font-size: 12px !important;
+	}
+
+	.footer p {
+		font-size: 12px;
+	}
+
+	th {
+		font-size: 12px;
+	}
+
+	td {
+		font-size: 13px;
+	}
+
+	.logo {
+		max-height: 5vw;
+		max-width: 5vw;
+	}
 }

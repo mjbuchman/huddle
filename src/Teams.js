@@ -190,6 +190,12 @@ const Teams = {
 		Logo: "https://i.logocdn.com/nfl/2015/cleveland-browns.svg",
 		Conf: "AFC",
 		Div: "North"
+	},
+	None: {
+		Name: "",
+		Logo: "",
+		Conf: "",
+		Div: ""
 	}
 }
 
