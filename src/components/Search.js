@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Container, Row, Col, Stack } from 'react-bootstrap';
 import { ReactSearchAutocomplete } from 'react-search-autocomplete';
+import { useScrollToBottom } from 'react-scroll-to-bottom';
 import players from './Players';
 import eventBus from "./EventBus";
 import HelpIcon from '@material-ui/icons/HelpOutline';
@@ -29,6 +30,7 @@ class Search extends Component {
 			resetSearch: !prevState.resetSearch 	// changing this variable triggers the ReactSearchAutocomplete to reset itself
 		 }));
 		eventBus.dispatch("playerSelected", { guess: player });
+		useScrollToBottom();
 	};
 
 	handleOnChange = (param) => {
@@ -41,7 +43,14 @@ class Search extends Component {
 	formatResult = (item) => {
 		return (
 			<Stack className="result-wrapper" direction="horizontal">
-				<span className="img-small"><img className="player" src={item.PhotoUrl} alt={item.Name}></img></span>
+				<span className="img-small">
+					<img className="player" src={item.PhotoUrl} alt={item.Name}
+						onError={({ currentTarget }) => {
+						currentTarget.onerror = null; // prevents looping
+						currentTarget.src="/player_placeholder.png";
+						}}>
+					</img>
+				</span>
 				<span>
 					<Row>
 						<span className="result-name">{item.Name}</span>
@@ -58,10 +67,10 @@ class Search extends Component {
     render() {
         return (
             <Container fluid>
-				<Row>
+				<Row style={{marginBottom: "15px"}}>
 					<h2>NFL Player Guessing Game</h2>
 				</Row>
-				<Row>
+				<Row style={{marginBottom: "15px"}}>
 					<Col sm={{span: 6, offset: 3}}>
 						<div style={this.props.disabled ? {pointerEvents: "none"} : {pointerEvents: "auto"}}>
 							<ReactSearchAutocomplete
@@ -69,14 +78,14 @@ class Search extends Component {
 								items={players}
 								fuseOptions={{ keys: [this.state.searchParam] }}
 								inputDebounce={500}
-								maxResults={5}
+								maxResults={50}
 								onSelect={this.handleOnSelect}
 								showIcon={false}
-								placeholder={this.props.disabled ? "Game Over" : "Guess " + this.state.totalGuesses + " of 6"}
+								placeholder={this.props.disabled ? "Game Over" : "Guess " + this.state.totalGuesses + " of 8"}
 								formatResult={this.formatResult}
 								styling={this.props.disabled
-									? {backgroundColor: "#F0F2EF", border: "1px solid #999", boxShadow: "none"} 
-									: {}
+									? {backgroundColor: "#F0F2EF", border: "1px solid #999", boxShadow: "none", fontFamily:"Amiko"} 
+									: {fontFamily: "Amiko", zIndex:"99"}
 								}
 							/>
 						</div>
@@ -85,16 +94,19 @@ class Search extends Component {
 				<Row>
 					<Col className="center" sm={12}>
 						<p>Search by: </p>
-						<input className="searchRadio" type="radio" value="Name" name="searchParam" onChange={this.handleOnChange} checked={this.state.searchParam === "Name"}/> Name
-						<input className="searchRadio" type="radio" value="Team" name="searchParam" onChange={this.handleOnChange} checked={this.state.searchParam === "Team"}/> Team
-						<input className="searchRadio" type="radio" value="Position" name="searchParam" onChange={this.handleOnChange} checked={this.state.searchParam === "Position"}/> Position
+						<input className="searchRadio" type="radio" value="Name" name="searchParam" onChange={this.handleOnChange} checked={this.state.searchParam === "Name"}/>
+						<p> Name </p>
+						<input className="searchRadio" type="radio" value="Team" name="searchParam" onChange={this.handleOnChange} checked={this.state.searchParam === "Team"}/>
+						<p> Team </p>
+						<input className="searchRadio" type="radio" value="Position" name="searchParam" onChange={this.handleOnChange} checked={this.state.searchParam === "Position"}/>
+						<p> Position </p>
 						<ReactTooltip id="help-tooltip">Team uses 2 or 3 letter abbreviation (e.g. "LAC", "GB")<br></br>Position uses 2 letter abbreviation (e.g. "QB", "DB")</ReactTooltip>
-						<HelpIcon data-tip="help" data-for="help-tooltip" data-place="bottom" data-effect="solid"/>				
+						<HelpIcon fontSize="inherit" className="help-icon" data-tip="help" data-for="help-tooltip" data-place="bottom" data-effect="solid"/>				
 					</Col>
 				</Row>
             </Container>
         );
     }
 }
- 
+
 export default Search;

@@ -1,15 +1,15 @@
 import { Component } from 'react';
-import './App.css';
-import Search from "./Search";
-import ResultsTable from "./ResultsTable";
-import InfoModal from "./InfoModal";
-import StatsModal from "./StatsModal";
-import ResultsModal from "./ResultsModal";
+import './css/App.css';
+import Search from "./components/Search";
+import ResultsTable from "./components/ResultsTable";
+import InfoModal from "./components/modals/InfoModal";
+import StatsModal from "./components/modals/StatsModal";
+import ResultsModal from "./components/modals/ResultsModal";
 import { Stack } from 'react-bootstrap';
 import InfoIcon from '@material-ui/icons/InfoOutlined';
 import AssessmentIcon from '@material-ui/icons/AssessmentOutlined';
 import TwitterIcon from '@material-ui/icons/Twitter';
-import eventBus from "./EventBus";
+import eventBus from "./components/EventBus";
 
 class App extends Component {
 	constructor(props) {
@@ -22,14 +22,15 @@ class App extends Component {
 			guesses: [],
 			gameOver: false,
 			didWin: false,
-			answer: "",
-			activePuzzle: 0,
+			answer: {Team:"None",FirstName:"",LastName:"",PositionCategory:"",Name:"",PhotoUrl:"",CollegeDraftTeam:"",CollegeDraftYear: 0,id: -1,Position:"",AllTeams:[],ProBowls:-10,Rings:-10},
+			activePuzzle: -1,
+			activeDate: "",
 			stats: {
 				played: 0,
 				wins: 0,
 				currStreak: 0,
 				maxStreak: 0,
-				guessDist: [0,0,0,0,0,0]
+				guessDist: [0,0,0,0,0,0,0,0]
 			}
 		};
 
@@ -39,8 +40,7 @@ class App extends Component {
 				wins: 0,
 				currStreak: 0,
 				maxStreak: 0,
-				guessDist: [0,0,0,0,0,0],
-				activePuzzle: 0
+				guessDist: [0,0,0,0,0,0,0,0]
 			}));
 		}
 
@@ -49,11 +49,16 @@ class App extends Component {
 				totalGuesses: 0, 
 				guesses: [],
 				gameOver: false,
-				didWin: false
+				didWin: false,
+				activeDate: "",
+				activePuzzle: -1,
+				answer: {Team:"None",FirstName:"",LastName:"",PositionCategory:"",Name:"",PhotoUrl:"",CollegeDraftTeam:"",CollegeDraftYear: 0,id: -1,Position:"",AllTeams:[],ProBowls:-10,Rings:-10},
 			}));
 		}
 
+		this.resetDailyIfNecessary = this.resetDailyIfNecessary.bind(this);
 		this.chooseAnswer = this.chooseAnswer.bind(this);
+		this.savePuzzleInfo = this.savePuzzleInfo.bind(this);
 		this.populateState = this.populateState.bind(this);
 		this.addGuessToStorage = this.addGuessToStorage.bind(this);
 		this.handleGameOver = this.handleGameOver.bind(this);
@@ -66,7 +71,7 @@ class App extends Component {
 	}
 	
 	componentDidMount() {
-		this.chooseAnswer();
+		this.resetDailyIfNecessary();
 		
 		eventBus.on("playerSelected", (data) => {
 			this.setState(prevState => ({
@@ -76,7 +81,7 @@ class App extends Component {
 				this.addGuessToStorage();
 				if (this.state.answer.Name === data.guess.Name) {
 					this.handleGameOver(true);
-				} else if (this.state.totalGuesses >= 6) {
+				} else if (this.state.totalGuesses >= 8) {
 					this.handleGameOver(false);
 				}
 			}); 
@@ -87,51 +92,64 @@ class App extends Component {
 		eventBus.remove("playerSelected");
 	}
 
+	resetDailyIfNecessary() {
+		let savedDaily = JSON.parse(localStorage.getItem("daily"));
+		if(savedDaily.activeDate !== new Date().toDateString()) {
+			localStorage.setItem('daily', JSON.stringify({ // reset daily if the player's last active puzzle is not the current puzzle
+				totalGuesses: 0,
+				guesses: [],
+				gameOver: false,
+				didWin: false,
+				activeDate: new Date().toDateString()
+			}));
+			this.chooseAnswer();
+		} else {
+			this.populateState();
+		}
+	}
+
 	chooseAnswer() {
 		fetch(`${process.env.REACT_APP_ANSWER_MS_URL}/dailyAnswer`, {method: 'GET'})
 		.then(response => response.json())
 		.then(data => this.setState({
 			answer: data.answer.answer,
 			activePuzzle: data.answer.puzzleId
-		}, this.populateState))
+		}, this.savePuzzleInfo, this.populateState))
 		.catch(error => {
 				console.error(error);
 			}
 		);
 	}
+	
+	savePuzzleInfo() {
+		let savedDaily = JSON.parse(localStorage.getItem("daily"));
+		savedDaily.activePuzzle = this.state.activePuzzle;
+		savedDaily.answer = this.state.answer;
+		localStorage.setItem("daily", JSON.stringify(savedDaily));		
+	}
 
 	populateState() {
 		let savedStats = JSON.parse(localStorage.getItem("stats"));
-		if(this.state.activePuzzle !== savedStats.activePuzzle) {
-			localStorage.setItem('daily', JSON.stringify({ // reset daily if the player's last active puzzle is not the current puzzle
-				totalGuesses: 0,
-				guesses: [],
-				gameOver: false,
-				didWin: false
-			}));
-			savedStats.activePuzzle = this.state.activePuzzle;  // update active puzzle to todays
-			localStorage.setItem("stats", JSON.stringify(savedStats));
-			window.location.reload();  // needed to reset table and search bar
-		}
-		
 		let savedDaily = JSON.parse(localStorage.getItem("daily"));
 		this.setState({
 			totalGuesses: savedDaily.totalGuesses,
 			didWin: savedDaily.didWin,
 			gameOver: savedDaily.gameOver,
 			guesses: savedDaily.guesses,
+			activeDate: savedDaily.activeDate,
+			activePuzzle: savedDaily.activePuzzle,
+			answer: savedDaily.answer,
 			stats: {
 				played: savedStats.played,
 				wins: savedStats.wins,
 				currStreak: savedStats.currStreak,
 				maxStreak: savedStats.maxStreak,
 				guessDist: savedStats.guessDist,
-				activePuzzle: savedStats.activePuzzle
 			}
 		}, () => {
 			// handle new state data
 			if(this.state.gameOver) {
-				this.setResultsModalShow(this.state.didWin);
+				this.setResultsModalShow(this.state.didWin, 2500);
 			} else if (this.state.stats.played === 0) {
 				this.setInfoModalShow();
 			}
@@ -166,12 +184,12 @@ class App extends Component {
 		localStorage.setItem("stats", JSON.stringify(savedStats));	
 		this.setState({stats: savedStats});
 
-		this.setResultsModalShow(didWin);
+		this.setResultsModalShow(didWin, 2500);
 	}
 
 	setStatsModalShow() {
 		if(this.state.gameOver) {
-			this.setResultsModalShow(this.state.didWin)  // if game is complete show results modal instead of stats
+			this.setResultsModalShow(this.state.didWin, 0)  // if game is complete show results modal instead of stats
 		} else {
 			this.setState(prevState => ({
 				showStats: !prevState.showStats
@@ -185,12 +203,15 @@ class App extends Component {
 		  }));
 	}
 
-	setResultsModalShow(didWin) {
+	setResultsModalShow(didWin, delay) {
+		// Wait until table animation completes to show results
 		this.setState({
-			showResults: true,
 			gameOver: true,
 			didWin: didWin
-		  });
+		});
+		setTimeout(() => {
+			this.setState({showResults: true});
+        }, delay);
 	}
 
 	hideResultsModal() {
@@ -207,16 +228,16 @@ class App extends Component {
 
 	render() {
 		return (
-			<Stack className="app" gap={0}>
+			<Stack className="app" gap={4}>
 				<Stack className="header" direction="horizontal">
-					<span className="img-small"><img className="logo" src="/logo192.png" alt="huddle-logo"></img></span>
-					<h1 style={{marginLeft: "10px", padding: "0px"}}>Huddle</h1>
+					<img className="banner" src="/banner.png" alt="huddle-logo"></img>
 					<button className="headerBtn ms-auto" onClick={this.setStatsModalShow}><AssessmentIcon/></button>
 					<button className="headerBtn" onClick={this.setInfoModalShow}><InfoIcon/></button>
 				</Stack>
-				<p>Answer: {this.state.answer.Name}</p>
 				<Search disabled={this.state.gameOver}></Search>
-				<ResultsTable key={this.state.gameOver}></ResultsTable>
+				<ResultsTable 
+					answer={this.state.answer}
+				></ResultsTable>
 				<StatsModal
 					show={this.state.showStats}
 					stats={this.state.stats}
