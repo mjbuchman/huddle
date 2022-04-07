@@ -18,7 +18,14 @@ function ResultsModal(props) {
 			<Stack className="center">
 				<Row>
 					<Col>
-						<div className="img-large"><img className="results-image" src={props.answer.PhotoUrl} alt={props.answer.Name}></img></div>
+						<div className="img-large">
+							<img className="results-image" src={props.answer.PhotoUrl} alt={props.answer.Name}  
+									onError={({ currentTarget }) => {
+									currentTarget.onerror = null; // prevents looping
+									currentTarget.src="/player_placeholder.png";
+								}}>
+							</img>
+						</div>
 					</Col>
 				</Row>
 				<Row>

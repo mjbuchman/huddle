@@ -24,6 +24,7 @@ class App extends Component {
 			didWin: false,
 			answer: {Team:"None",FirstName:"",LastName:"",PositionCategory:"",Name:"",PhotoUrl:"",CollegeDraftTeam:"",CollegeDraftYear: 0,id: -1,Position:"",AllTeams:[],ProBowls:0,Rings:0},
 			activePuzzle: 0,
+			activeDate: "",
 			stats: {
 				played: 0,
 				wins: 0,
@@ -40,7 +41,6 @@ class App extends Component {
 				currStreak: 0,
 				maxStreak: 0,
 				guessDist: [0,0,0,0,0,0],
-				activePuzzle: 0
 			}));
 		}
 
@@ -49,11 +49,16 @@ class App extends Component {
 				totalGuesses: 0, 
 				guesses: [],
 				gameOver: false,
-				didWin: false
+				didWin: false,
+				activeDate: "",
+				activePuzzle: 0,
+				answer: {Team:"None",FirstName:"",LastName:"",PositionCategory:"",Name:"",PhotoUrl:"",CollegeDraftTeam:"",CollegeDraftYear: 0,id: -1,Position:"",AllTeams:[],ProBowls:0,Rings:0},
 			}));
 		}
 
+		this.resetDailyIfNecessary = this.resetDailyIfNecessary.bind(this);
 		this.chooseAnswer = this.chooseAnswer.bind(this);
+		this.savePuzzleInfo = this.savePuzzleInfo.bind(this);
 		this.populateState = this.populateState.bind(this);
 		this.addGuessToStorage = this.addGuessToStorage.bind(this);
 		this.handleGameOver = this.handleGameOver.bind(this);
@@ -66,7 +71,7 @@ class App extends Component {
 	}
 	
 	componentDidMount() {
-		//this.chooseAnswer(); // sets off chain to retrieve daily answer and update state and local storage
+		this.resetDailyIfNecessary();
 		
 		eventBus.on("playerSelected", (data) => {
 			this.setState(prevState => ({
@@ -87,45 +92,59 @@ class App extends Component {
 		eventBus.remove("playerSelected");
 	}
 
+	resetDailyIfNecessary() {
+		let savedDaily = JSON.parse(localStorage.getItem("daily"));
+		if(savedDaily.activeDate !== new Date().toDateString()) {
+			localStorage.setItem('daily', JSON.stringify({ // reset daily if the player's last active puzzle is not the current puzzle
+				totalGuesses: 0,
+				guesses: [],
+				gameOver: false,
+				didWin: false,
+				activeDate: new Date().toDateString()
+			}));
+			this.chooseAnswer();
+		} else {
+			this.populateState();
+		}
+	}
+
 	chooseAnswer() {
 		fetch(`${process.env.REACT_APP_ANSWER_MS_URL}/dailyAnswer`, {method: 'GET'})
 		.then(response => response.json())
 		.then(data => this.setState({
 			answer: data.answer.answer,
-			activePuzzle: data.answer.ComponentpuzzleId
-		}, this.populateState))
+			activePuzzle: data.answer.puzzleId
+		}, this.savePuzzleInfo, this.populateState))
 		.catch(error => {
 				console.error(error);
 			}
 		);
 	}
+	
+	savePuzzleInfo() {
+		let savedDaily = JSON.parse(localStorage.getItem("daily"));
+		savedDaily.activePuzzle = this.state.activePuzzle;
+		savedDaily.answer = this.state.answer;
+		localStorage.setItem("daily", JSON.stringify(savedDaily));		
+	}
+
 	populateState() {
 		let savedStats = JSON.parse(localStorage.getItem("stats"));
-		if(this.state.activePuzzle !== savedStats.activePuzzle) {
-			localStorage.setItem('daily', JSON.stringify({ // reset daily if the player's last active puzzle is not the current puzzle
-				totalGuesses: 0,
-				guesses: [],
-				gameOver: false,
-				didWin: false
-			}));
-			savedStats.activePuzzle = this.state.activePuzzle;  // update active puzzle to todays
-			localStorage.setItem("stats", JSON.stringify(savedStats));
-			window.location.reload();  // needed to reset table and search bar
-		}
-		
 		let savedDaily = JSON.parse(localStorage.getItem("daily"));
 		this.setState({
 			totalGuesses: savedDaily.totalGuesses,
 			didWin: savedDaily.didWin,
 			gameOver: savedDaily.gameOver,
 			guesses: savedDaily.guesses,
+			activeDate: savedDaily.activeDate,
+			activePuzzle: savedDaily.activePuzzle,
+			answer: savedDaily.answer,
 			stats: {
 				played: savedStats.played,
 				wins: savedStats.wins,
 				currStreak: savedStats.currStreak,
 				maxStreak: savedStats.maxStreak,
 				guessDist: savedStats.guessDist,
-				activePuzzle: savedStats.activePuzzle
 			}
 		}, () => {
 			// handle new state data
@@ -185,11 +204,14 @@ class App extends Component {
 	}
 
 	setResultsModalShow(didWin) {
-		this.setState({
-			showResults: true,
-			gameOver: true,
-			didWin: didWin
-		  });
+		// Wait until table animation completes to show results
+		setTimeout(() => {
+			this.setState({
+				showResults: true,
+				gameOver: true,
+				didWin: didWin
+			});
+        }, 2500);
 	}
 
 	hideResultsModal() {

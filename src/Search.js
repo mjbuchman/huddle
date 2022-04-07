@@ -41,7 +41,14 @@ class Search extends Component {
 	formatResult = (item) => {
 		return (
 			<Stack className="result-wrapper" direction="horizontal">
-				<span className="img-small"><img className="player" src={item.PhotoUrl} alt={item.Name}></img></span>
+				<span className="img-small">
+					<img className="player" src={item.PhotoUrl} alt={item.Name}
+						onError={({ currentTarget }) => {
+						currentTarget.onerror = null; // prevents looping
+						currentTarget.src="/player_placeholder.png";
+						}}>
+					</img>
+				</span>
 				<span>
 					<Row>
 						<span className="result-name">{item.Name}</span>
