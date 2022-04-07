@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import {Container, Row, Col, Table} from 'react-bootstrap';
+import ScrollToBottom from 'react-scroll-to-bottom';
 import eventBus from "./EventBus";
 import Teams from "./Teams";
 import "../css/animation.css";
@@ -139,8 +140,8 @@ class ResultsTable extends Component {
             <Container fluid>
 				<Row>
 					<Col sm={{span: 10, offset: 1}}>
-						<div className="table-container">
-							<Table style={{tableLayout: window.innerWidth < 578 ? "fixed" : "responsive"}}>
+						<ScrollToBottom className="table-container">
+							<Table style={{tableLayout: window.innerWidth < 578 ? "fixed" : "responsive", overflow:"hidden"}}>
 								<thead>
 									<tr>
 										{window.innerWidth < 578 ? "" : <th>Name</th>}
@@ -159,7 +160,7 @@ class ResultsTable extends Component {
 									})}
 								</tbody>
 							</Table>
-						</div>
+						</ScrollToBottom>
 					</Col>
 				</Row>
             </Container>
