@@ -27,6 +27,15 @@ function BarGraph(props) {
 					}
 				}
 			},
+			title: {
+				text: "Guess Distribution",
+				align: 'center',
+				style: {
+				  fontSize:  '14px',
+				  fontFamily:  "Cairo",
+				  color:  '#013369'
+				},
+			},
 			colors: ['#013369'],
 			plotOptions: {
 				bar: {
@@ -38,7 +47,7 @@ function BarGraph(props) {
 				show: false
 			},
 			dataLabels: {
-				enabled: true
+				enabled: true,
 			},
 			xaxis: {
 				categories: ['1', '2', '3', '4', '5', '6'],
