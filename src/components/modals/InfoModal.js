@@ -1,5 +1,5 @@
 import { Modal, Button } from 'react-bootstrap';
-import Rules from './GameRules';
+import Rules from '../GameRules';
 
 function InfoModal(props) {
 	return (

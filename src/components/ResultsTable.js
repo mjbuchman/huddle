@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import {Container, Row, Col, Table} from 'react-bootstrap';
 import eventBus from "./EventBus";
 import Teams from "./Teams";
-import "./animation.css";
+import "../css/animation.css";
 
 class ResultsTable extends Component {
     constructor(props) {

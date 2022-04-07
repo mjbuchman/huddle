@@ -1,15 +1,15 @@
 import { Component } from 'react';
-import './App.css';
-import Search from "./Search";
-import ResultsTable from "./ResultsTable";
-import InfoModal from "./InfoModal";
-import StatsModal from "./StatsModal";
-import ResultsModal from "./ResultsModal";
+import './css/App.css';
+import Search from "./components/Search";
+import ResultsTable from "./components/ResultsTable";
+import InfoModal from "./components/modals/InfoModal";
+import StatsModal from "./components/modals/StatsModal";
+import ResultsModal from "./components/modals/ResultsModal";
 import { Stack } from 'react-bootstrap';
 import InfoIcon from '@material-ui/icons/InfoOutlined';
 import AssessmentIcon from '@material-ui/icons/AssessmentOutlined';
 import TwitterIcon from '@material-ui/icons/Twitter';
-import eventBus from "./EventBus";
+import eventBus from "./components/EventBus";
 
 class App extends Component {
 	constructor(props) {

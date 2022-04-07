@@ -1,7 +1,7 @@
 import { Modal, Stack, Row, Col } from 'react-bootstrap';
-import Share from './Share'
+import Share from '../Share'
 import Countdown from 'react-countdown';
-import BarGraph from './BarGraph';
+import BarGraph from '../BarGraph';
 
 function ResultsModal(props) {
 	return (

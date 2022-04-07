@@ -1,5 +1,5 @@
 import { Modal, Button, Stack, Row, Col } from 'react-bootstrap';
-import BarGraph from './BarGraph';
+import BarGraph from '../BarGraph';
 
 function StatsModal(props) {
 	return (
