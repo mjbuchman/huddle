@@ -30,7 +30,7 @@ class App extends Component {
 				wins: 0,
 				currStreak: 0,
 				maxStreak: 0,
-				guessDist: [0,0,0,0,0,0]
+				guessDist: [0,0,0,0,0,0,0,0]
 			}
 		};
 
@@ -40,7 +40,7 @@ class App extends Component {
 				wins: 0,
 				currStreak: 0,
 				maxStreak: 0,
-				guessDist: [0,0,0,0,0,0],
+				guessDist: [0,0,0,0,0,0,0,0]
 			}));
 		}
 
@@ -81,7 +81,7 @@ class App extends Component {
 				this.addGuessToStorage();
 				if (this.state.answer.Name === data.guess.Name) {
 					this.handleGameOver(true);
-				} else if (this.state.totalGuesses >= 9) {
+				} else if (this.state.totalGuesses >= 8) {
 					this.handleGameOver(false);
 				}
 			}); 
@@ -205,12 +205,12 @@ class App extends Component {
 
 	setResultsModalShow(didWin, delay) {
 		// Wait until table animation completes to show results
+		this.setState({
+			gameOver: true,
+			didWin: didWin
+		});
 		setTimeout(() => {
-			this.setState({
-				showResults: true,
-				gameOver: true,
-				didWin: didWin
-			});
+			this.setState({showResults: true});
         }, delay);
 	}
 

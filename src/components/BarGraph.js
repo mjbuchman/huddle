@@ -7,6 +7,7 @@ function BarGraph(props) {
 		}],
 		options: {
 			chart: {
+				background: '#013369',
 				toolbar: {
 					show: false
 				},
@@ -33,10 +34,10 @@ function BarGraph(props) {
 				style: {
 				  fontSize:  '14px',
 				  fontFamily:  "Cairo",
-				  color:  '#013369'
+				  color:  '#FFF'
 				},
 			},
-			colors: ['#013369'],
+			colors: ['#FF0000'],
 			plotOptions: {
 				bar: {
 				borderRadius: 4,
@@ -48,11 +49,29 @@ function BarGraph(props) {
 			},
 			dataLabels: {
 				enabled: true,
+				style: {
+					colors: ["#FFF"]
+				}
 			},
 			xaxis: {
-				categories: ['1', '2', '3', '4', '5', '6'],
+				categories: ['1', '2', '3', '4', '5', '6', '7', '8'],
+				tickAmount: 'dataPoints',
 				labels: {
+					show: false,
+					style: {
+						colors: ["#FFF"]
+					}
+				},
+				axisTicks: {
 					show: false
+				}
+			},
+			yaxis: {
+				labels: {
+					show: true,
+					style: {
+						colors: ["#FFF"]
+					}
 				},
 				axisTicks: {
 					show: false

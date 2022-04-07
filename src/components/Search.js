@@ -81,7 +81,7 @@ class Search extends Component {
 								maxResults={50}
 								onSelect={this.handleOnSelect}
 								showIcon={false}
-								placeholder={this.props.disabled ? "Game Over" : "Guess " + this.state.totalGuesses + " of 6"}
+								placeholder={this.props.disabled ? "Game Over" : "Guess " + this.state.totalGuesses + " of 8"}
 								formatResult={this.formatResult}
 								styling={this.props.disabled
 									? {backgroundColor: "#F0F2EF", border: "1px solid #999", boxShadow: "none", fontFamily:"Amiko"} 

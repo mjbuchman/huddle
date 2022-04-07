@@ -203,6 +203,11 @@ td {
 	font-size: 16px;
 }
 
+.guess-dist {
+	border-radius: 5px;
+	box-shadow: 2px 2px 2px grey;
+}
+
 .shareBtn {
 	background-color: #013369;
 	border: none;
