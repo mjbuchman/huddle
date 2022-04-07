@@ -81,7 +81,7 @@ class App extends Component {
 				this.addGuessToStorage();
 				if (this.state.answer.Name === data.guess.Name) {
 					this.handleGameOver(true);
-				} else if (this.state.totalGuesses >= 6) {
+				} else if (this.state.totalGuesses >= 9) {
 					this.handleGameOver(false);
 				}
 			}); 
