@@ -1,0 +1,24 @@
+.one {
+	animation-delay: .25s;
+}
+.two {
+	animation-delay: .5s;
+}
+.three {
+	animation-delay: .75s;
+}
+.four {
+	animation-delay: 1s;
+}
+.five {
+	animation-delay: 1.25s;
+}
+.six {
+	animation-delay: 1.5s;
+}
+.seven {
+	animation-delay: 1.75s;
+}
+.eight {
+	animation-delay: 2s;
+}

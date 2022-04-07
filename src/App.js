@@ -22,7 +22,7 @@ class App extends Component {
 			guesses: [],
 			gameOver: false,
 			didWin: false,
-			answer: {Team:"None",FirstName:"",LastName:"",PositionCategory:"",Name:"",PhotoUrl:"",CollegeDraftTeam:"",CollegeDraftYear: 0,id: -1,Position:"",AllTeams:[],ProBowls:-10,Rings:-10},
+			answer: {Team:"None",FirstName:"",LastName:"",PositionCategory:"",Name:"",PhotoUrl:"",CollegeDraftTeam:"",CollegeDraftYear: 0,id: -1,Position:"",AllTeams:[],ProBowls:0,Rings:0},
 			activePuzzle: 0,
 			stats: {
 				played: 0,
