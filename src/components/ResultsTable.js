@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import {Container, Row, Col, Table} from 'react-bootstrap';
 import eventBus from "./EventBus";
-import Teams from "./Teams"
+import Teams from "./Teams";
+import "../css/animation.css";
 
 class ResultsTable extends Component {
     constructor(props) {
@@ -104,30 +105,30 @@ class ResultsTable extends Component {
 			return (
 				<React.Fragment>
 					<tr key={i + "name"}>
-						<td className={classes.Name + " table-name"} colSpan={7}>{guess.Name}</td>
+						<td className={classes.Name + " table-name one"} colSpan={7}>{guess.Name}</td>
 					</tr>
 					<tr key={i} style={{borderBottom: "1px black solid"}}>
-						<td className={classes.Conf}>{Teams[guess.Team].Conf}<br></br>{Teams[guess.Team].Div}</td>
-						<td className={classes.Team}><span className="img-small-logo"><img className="logo" src={Teams[guess.Team].Logo} alt={guess.Name}></img></span></td>
-						<td className={classes.Position}>{guess.Position}</td>
-						<td className={classes.CollegeDraftTeam}><span className="img-small-logo"><img className="logo" src={Teams[guess.CollegeDraftTeam].Logo} alt={guess.CollegeDraftTeam}></img></span></td>
-						<td className={classes.CollegeDraftYear}>{guess.CollegeDraftYear} {this.upOrDownArrow(guess, 'CollegeDraftYear')}</td>
-						<td className={classes.ProBowls}>{guess.ProBowls} {this.upOrDownArrow(guess, 'ProBowls')}</td>
-						<td className={classes.Rings}>{guess.Rings} {this.upOrDownArrow(guess, 'Rings')}</td>
+						<td className={classes.Conf + " two"}><div className="tile">{Teams[guess.Team].Conf}<br></br>{Teams[guess.Team].Div}</div></td>
+						<td className={classes.Team + " three"}><span className="img-small-logo"><img className="logo" src={Teams[guess.Team].Logo} alt={guess.Name}></img></span></td>
+						<td className={classes.Position + " four"}>{guess.Position}</td>
+						<td className={classes.CollegeDraftTeam + " five"}><span className="img-small-logo"><img className="logo" src={Teams[guess.CollegeDraftTeam].Logo} alt={guess.CollegeDraftTeam}></img></span></td>
+						<td className={classes.CollegeDraftYear + " six"}>{guess.CollegeDraftYear} {this.upOrDownArrow(guess, 'CollegeDraftYear')}</td>
+						<td className={classes.ProBowls + " seven"}>{guess.ProBowls} {this.upOrDownArrow(guess, 'ProBowls')}</td>
+						<td className={classes.Rings + " eight"}>{guess.Rings} {this.upOrDownArrow(guess, 'Rings')}</td>
 					</tr>
 				</React.Fragment>
 			)
 		} else {
 			return (
 				<tr key={i}>
-					<td className={classes.Name}>{guess.Name}</td>
-					<td className={classes.Conf}>{Teams[guess.Team].Conf}<br></br>{Teams[guess.Team].Div}</td>
-					<td className={classes.Team}><span className="img-small-logo"><img className="logo" src={Teams[guess.Team].Logo} alt={guess.Name}></img></span></td>
-					<td className={classes.Position}>{guess.Position}</td>
-					<td className={classes.CollegeDraftTeam}><span className="img-small-logo"><img className="logo" src={Teams[guess.CollegeDraftTeam].Logo} alt={guess.CollegeDraftTeam}></img></span></td>
-					<td className={classes.CollegeDraftYear}>{guess.CollegeDraftYear} {this.upOrDownArrow(guess, 'CollegeDraftYear')}</td>
-					<td className={classes.ProBowls}>{guess.ProBowls} {this.upOrDownArrow(guess, 'ProBowls')}</td>
-					<td className={classes.Rings}>{guess.Rings} {this.upOrDownArrow(guess, 'Rings')}</td>
+					<td className={classes.Name + " one"}>{guess.Name}</td>
+					<td className={classes.Conf + " two"}>{Teams[guess.Team].Conf}<br></br>{Teams[guess.Team].Div}</td>
+					<td className={classes.Team + " three"}><span className="img-small-logo"><img className="logo" src={Teams[guess.Team].Logo} alt={guess.Name}></img></span></td>
+					<td className={classes.Position + " four"}>{guess.Position}</td>
+					<td className={classes.CollegeDraftTeam + " five"}><span className="img-small-logo"><img className="logo" src={Teams[guess.CollegeDraftTeam].Logo} alt={guess.CollegeDraftTeam}></img></span></td>
+					<td className={classes.CollegeDraftYear + " six"}>{guess.CollegeDraftYear} {this.upOrDownArrow(guess, 'CollegeDraftYear')}</td>
+					<td className={classes.ProBowls + " seven"}>{guess.ProBowls} {this.upOrDownArrow(guess, 'ProBowls')}</td>
+					<td className={classes.Rings + " eight"}>{guess.Rings} {this.upOrDownArrow(guess, 'Rings')}</td>
 				</tr>
 			)
 		}

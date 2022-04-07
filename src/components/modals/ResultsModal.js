@@ -1,13 +1,13 @@
 import { Modal, Stack, Row, Col } from 'react-bootstrap';
-import Share from './Share'
+import Share from '../Share'
 import Countdown from 'react-countdown';
-import BarGraph from './BarGraph';
+import BarGraph from '../BarGraph';
 
 function ResultsModal(props) {
 	return (
 	  <Modal
 		{...props}
-		dialogClassName="modal-size"
+		dialogClassName="modal-size-results"
 	  >
 		<Modal.Header closeButton>
 			<Modal.Title id="contained-modal-title-vcenter">
@@ -18,7 +18,14 @@ function ResultsModal(props) {
 			<Stack className="center">
 				<Row>
 					<Col>
-						<div className="img-large"><img className="results-image" src={props.answer.PhotoUrl} alt={props.answer.Name}></img></div>
+						<div className="img-large">
+							<img className="results-image" src={props.answer.PhotoUrl} alt={props.answer.Name}  
+									onError={({ currentTarget }) => {
+									currentTarget.onerror = null; // prevents looping
+									currentTarget.src="/player_placeholder.png";
+								}}>
+							</img>
+						</div>
 					</Col>
 				</Row>
 				<Row>

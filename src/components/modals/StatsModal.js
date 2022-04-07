@@ -1,5 +1,5 @@
 import { Modal, Button, Stack, Row, Col } from 'react-bootstrap';
-import BarGraph from './BarGraph';
+import BarGraph from '../BarGraph';
 
 function StatsModal(props) {
 	return (
@@ -7,9 +7,9 @@ function StatsModal(props) {
 		{...props}
 	  >
 		<Modal.Header closeButton>
-		  <Modal.Title id="contained-modal-title-vcenter">
-			<h4>Stats</h4>
-		  </Modal.Title>
+			<Modal.Title id="contained-modal-title-vcenter">
+				<h4>Stats</h4>
+			</Modal.Title>
 		</Modal.Header>
 		<Modal.Body>
 			<Stack gap={2}>

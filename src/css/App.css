@@ -74,8 +74,17 @@ ul {
 	margin: 0 auto;
 }
 
-.modal-size {
+.modal-size-results {
 	min-width: 30%;
+}
+
+.modal-size-info {
+	min-width: 60%;
+}
+
+.rules {
+	max-height: 100% !important;
+	overflow: unset !important;	
 }
 
 .player {
@@ -119,12 +128,30 @@ td {
 	align-items: center;
 	border-left: 1px solid rgb(232, 232, 232) !important;
 	border-right: 1px solid rgb(232, 232, 232) !important;
+	overflow: hidden;
+	padding: 0 !important;
+	transform: scale(0,1);
+	-webkit-transform: scale(0,1);
+	animation: flip 1s forwards;
+	-webkit-animation: flip 1s forwards;
+}
+
+@keyframes flip {
+    100% { transform: scale(1,1);}
+}
+
+@-webkit-keyframes flip {
+    100% {  -webkit-transform: scale(1,1);}
 }
 
 .table-name {
 	font-size: 16px;
 	font-weight: bold;
 	text-align: left;
+	transform: scale(1,0);
+	-webkit-transform: scale(1,0);
+	animation: flip 1s forwards;
+	-webkit-animation: flip 1s forwards;
 }
 
 .table-container {
@@ -237,8 +264,7 @@ td {
 		font-size: 13px;
 	}
 
-	.logo {
-		max-height: 5vw;
-		max-width: 5vw;
+	.tile {
+		padding: 10px 0;
 	}
 }
