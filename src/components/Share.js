@@ -1,13 +1,24 @@
 import ShareIcon from '@material-ui/icons/Share';
 import { isMobile } from "react-device-detect";
 import { useAlert } from 'react-alert'
+import { useState, useEffect } from 'react'
+import eventBus from './EventBus';
 
 function Share(props) {
 	const alert = useAlert()
+	const [guessData, setGuessData] = useState([]);
+
+	useEffect(() => {
+		eventBus.on("guessSelected", (classes) => {
+			setGuessData(classes)
+		})
+	}, [])
 
 	const generateResultsString = () => {
-		return "\u2B1B\u{1F7E9}\u{1F7E8}"
+		return guessData
+		// return "\u2B1B\u{1F7E9}\u{1F7E8}"
 	}
+	console.log(generateResultsString())
 	
 	const handleOnClick = () => {
 		let start = new Date(2022,2,30); // CHANGE THIS LATER

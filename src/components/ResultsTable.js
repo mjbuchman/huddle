@@ -9,8 +9,8 @@ class ResultsTable extends Component {
         super(props);
         this.state = {
 			guesses: []
-        };
-    }
+		};
+	}
 
     componentDidMount() {
 		var savedData = JSON.parse(localStorage.getItem("daily"));
@@ -87,7 +87,7 @@ class ResultsTable extends Component {
 		}
 	return guessClasses
 	}
-
+	
 	upOrDownArrow(guess, field) {
 		let correctPlayer = this.props.answer
 		if(guess[field] === correctPlayer[field]){
@@ -101,6 +101,9 @@ class ResultsTable extends Component {
 
 	makeTableViews(guess,i) {
 		let classes = this.classMaker(guess)
+		//send via eventBus.dispatch to share
+		eventBus.dispatch("guessSelected", classes);
+		
 		if (window.innerWidth < 578) {
 			return (
 				<React.Fragment>
@@ -168,7 +171,3 @@ class ResultsTable extends Component {
 }
 
 export default ResultsTable;
-
-
-
-// Fields within guess => Team, Position, PositionCategory, Name, {Age}, PhotoURL, CollegeDraftTeam, CollegeDraftYear, ProBowls, Rings
