@@ -32,10 +32,19 @@ class ResultsTable extends Component {
 	}
 
 	classMaker(guess) {
-		let guessClasses = {};
-		let team = guess.Team
-		let correctPlayer = this.props.answer
-		let correctTeam = correctPlayer.Team
+		let guessClasses = {
+			Name: "incorrectField",
+			Conf: "incorrectField",
+			Team: "incorrectField",
+			Position: "incorrectField",
+			CollegeDraftTeam: "incorrectField",
+			CollegeDraftYear: "incorrectField",
+			ProBowls: "incorrectField",
+			Rings: "incorrectField"
+		};
+		let team = guess.Team;
+		let correctPlayer = this.props.answer;
+		let correctTeam = correctPlayer.Team;
 
 		//CORRECT GUESS
 		if(correctPlayer.Name === guess.Name){
@@ -103,7 +112,7 @@ class ResultsTable extends Component {
 		let classes = this.classMaker(guess)
 		//send via eventBus.dispatch to share
 		eventBus.dispatch("guessSelected", classes);
-		
+
 		if (window.innerWidth < 578) {
 			return (
 				<React.Fragment>
