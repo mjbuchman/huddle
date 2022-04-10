@@ -25,6 +25,7 @@ class App extends Component {
 			answer: {Team:"None",FirstName:"",LastName:"",PositionCategory:"",Name:"",PhotoUrl:"",CollegeDraftTeam:"",CollegeDraftYear: 0,id: -1,Position:"",AllTeams:[],ProBowls:-10,Rings:-10},
 			activePuzzle: -1,
 			activeDate: "",
+			finalGuessData: [],
 			stats: {
 				played: 0,
 				wins: 0,
@@ -52,6 +53,7 @@ class App extends Component {
 				didWin: false,
 				activeDate: "",
 				activePuzzle: -1,
+				finalGuessData: [],
 				answer: {Team:"None",FirstName:"",LastName:"",PositionCategory:"",Name:"",PhotoUrl:"",CollegeDraftTeam:"",CollegeDraftYear: 0,id: -1,Position:"",AllTeams:[],ProBowls:-10,Rings:-10},
 			}));
 		}
@@ -68,11 +70,18 @@ class App extends Component {
 		this.hideResultsModal = this.hideResultsModal.bind(this);
 		this.donateLink = this.donateLink.bind(this);
 		this.twitterLink = this.twitterLink.bind(this);
+
+		this.resetDailyIfNecessary(); // kicks off data population
 	}
-	
+
 	componentDidMount() {
-		this.resetDailyIfNecessary();
-		
+		let savedDaily = JSON.parse(localStorage.getItem("daily"));
+		if(savedDaily.activeDate !== new Date().toDateString()) {
+			this.chooseAnswer();
+		} else {
+			this.populateState();
+		}
+
 		eventBus.on("playerSelected", (data) => {
 			this.setState(prevState => ({
 				totalGuesses: prevState.totalGuesses + 1,
@@ -86,6 +95,13 @@ class App extends Component {
 				}
 			}); 
 		});
+
+		eventBus.on("finalGuessData", (data) => {
+			this.setState({finalGuessData: data.finalGuessData});
+			let savedDaily = JSON.parse(localStorage.getItem("daily"));
+			savedDaily.finalGuessData = data.finalGuessData;
+			localStorage.setItem("daily", JSON.stringify(savedDaily));	
+		})
 	}
 	
 	componentWillUnmount() {
@@ -96,15 +112,15 @@ class App extends Component {
 		let savedDaily = JSON.parse(localStorage.getItem("daily"));
 		if(savedDaily.activeDate !== new Date().toDateString()) {
 			localStorage.setItem('daily', JSON.stringify({ // reset daily if the player's last active puzzle is not the current puzzle
-				totalGuesses: 0,
+				totalGuesses: 0, 
 				guesses: [],
 				gameOver: false,
 				didWin: false,
-				activeDate: new Date().toDateString()
+				activeDate: "",
+				activePuzzle: -1,
+				finalGuessData: [],
+				answer: {Team:"None",FirstName:"",LastName:"",PositionCategory:"",Name:"",PhotoUrl:"",CollegeDraftTeam:"",CollegeDraftYear: 0,id: -1,Position:"",AllTeams:[],ProBowls:-10,Rings:-10},
 			}));
-			this.chooseAnswer();
-		} else {
-			this.populateState();
 		}
 	}
 
@@ -113,7 +129,8 @@ class App extends Component {
 		.then(response => response.json())
 		.then(data => this.setState({
 			answer: data.answer.answer,
-			activePuzzle: data.answer.puzzleId
+			activePuzzle: data.answer.puzzleId,
+			activeDate: new Date().toDateString()
 		}, this.savePuzzleInfo, this.populateState))
 		.catch(error => {
 				console.error(error);
@@ -125,9 +142,10 @@ class App extends Component {
 		let savedDaily = JSON.parse(localStorage.getItem("daily"));
 		savedDaily.activePuzzle = this.state.activePuzzle;
 		savedDaily.answer = this.state.answer;
-		localStorage.setItem("daily", JSON.stringify(savedDaily));		
+		savedDaily.activeDate = this.state.activeDate
+		localStorage.setItem("daily", JSON.stringify(savedDaily));	
 	}
-
+	
 	populateState() {
 		let savedStats = JSON.parse(localStorage.getItem("stats"));
 		let savedDaily = JSON.parse(localStorage.getItem("daily"));
@@ -139,6 +157,7 @@ class App extends Component {
 			activeDate: savedDaily.activeDate,
 			activePuzzle: savedDaily.activePuzzle,
 			answer: savedDaily.answer,
+			finalGuessData: savedDaily.finalGuessData,
 			stats: {
 				played: savedStats.played,
 				wins: savedStats.wins,
@@ -237,6 +256,7 @@ class App extends Component {
 				<Search disabled={this.state.gameOver}></Search>
 				<ResultsTable 
 					answer={this.state.answer}
+					gameOver={this.state.gameOver}
 				></ResultsTable>
 				<StatsModal
 					show={this.state.showStats}
@@ -251,7 +271,9 @@ class App extends Component {
 					didwin={this.state.didWin}
 					answer={this.state.answer}
 					stats={this.state.stats}
-					totalGuesses={this.state.totalGuesses}
+					activepuzzle={this.state.activePuzzle}
+					totalguesses={this.state.totalGuesses}
+					finalguessdata={this.state.finalGuessData}
 					show={this.state.showResults}
 					onHide={this.hideResultsModal}
 				/>
