@@ -1,8 +1,6 @@
 import ShareIcon from '@material-ui/icons/Share';
 import { ConsoleView, isMobile } from "react-device-detect";
 import { useAlert } from 'react-alert'
-import { useState, useEffect } from 'react'
-import eventBus from './EventBus';
 
 function Share(props) {
 	let [finalGuessTableString, setFinalGuessTableString] = useState("")
@@ -36,9 +34,8 @@ function Share(props) {
 	}
 
 	const handleOnClick = () => {
-		let start = new Date(2022,2,30); // CHANGE THIS LATER
-		let id = Math.round((new Date()-start)/(1000*60*60*24));
-		let huddleUrl = 'https://www.google.com' // CHANGE THIS LATER
+		let id = props.activePuzzle
+		let huddleUrl = 'https://www.huddlegame.com'
 		if (navigator.share && isMobile) {
 			navigator
 				.share({
