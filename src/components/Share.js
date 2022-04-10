@@ -10,9 +10,8 @@ function Share(props) {
 	}
 	
 	const handleOnClick = () => {
-		let start = new Date(2022,2,30); // CHANGE THIS LATER
-		let id = Math.round((new Date()-start)/(1000*60*60*24));
-		let huddleUrl = 'https://www.google.com' // CHANGE THIS LATER
+		let id = props.activePuzzle
+		let huddleUrl = 'www.huddlegame.com'
 		if (navigator.share && isMobile) {
 			navigator
 				.share({

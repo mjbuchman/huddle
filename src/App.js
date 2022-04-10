@@ -251,6 +251,7 @@ class App extends Component {
 					didwin={this.state.didWin}
 					answer={this.state.answer}
 					stats={this.state.stats}
+					activePuzzle={this.state.activePuzzle}
 					totalGuesses={this.state.totalGuesses}
 					show={this.state.showResults}
 					onHide={this.hideResultsModal}
