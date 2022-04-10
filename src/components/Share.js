@@ -6,19 +6,10 @@ import eventBus from './EventBus';
 
 function Share(props) {
 	const alert = useAlert()
-	const [guessData, setGuessData] = useState([]);
-
-	useEffect(() => {
-		eventBus.on("guessSelected", (data) => {
-			console.log(data.finalGuessData)
-		})
-	}, [])
 
 	const generateResultsString = () => {
-		return guessData
-		// return "\u2B1B\u{1F7E9}\u{1F7E8}"
+		 return "\u2B1B\u{1F7E9}\u{1F7E8}"
 	}
-	// console.log(generateResultsString())
 
 	const handleOnClick = () => {
 		let start = new Date(2022,2,30); // CHANGE THIS LATER

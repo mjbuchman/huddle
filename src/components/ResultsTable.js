@@ -26,8 +26,8 @@ class ResultsTable extends Component {
     }
 
 	componentDidUpdate(prevProps) {
-		if(prevProps.gameOver !==this.props.gameOver) {
-			eventBus.dispatch("guessSelected", {finalGuessData: this.state.guessData})
+		if(prevProps.gameOver !== this.props.gameOver) {
+			eventBus.dispatch("finalGuessData", {finalGuessData: this.state.guessData})
 		}
 	}
 

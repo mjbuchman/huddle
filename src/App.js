@@ -86,6 +86,10 @@ class App extends Component {
 				}
 			}); 
 		});
+
+		eventBus.on("finalGuessData", (data) => {
+			this.setState({finalGuessData: data.finalGuessData});
+		})
 	}
 	
 	componentWillUnmount() {
@@ -253,6 +257,7 @@ class App extends Component {
 					answer={this.state.answer}
 					stats={this.state.stats}
 					totalGuesses={this.state.totalGuesses}
+					finalGuessData={this.state.finalGuessData}
 					show={this.state.showResults}
 					onHide={this.hideResultsModal}
 				/>

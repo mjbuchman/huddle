@@ -79,7 +79,7 @@ function ResultsModal(props) {
 					daysInHours={true}
 				/>
 			</Stack>
-			<Share totalGuesses={props.totalGuesses}/>
+			<Share totalGuesses={props.totalGuesses} finalGuessData={props.finalGuessData}/>
 		</Modal.Footer>
 	  </Modal>
 	);
