@@ -9,18 +9,17 @@ function Share(props) {
 	const [guessData, setGuessData] = useState([]);
 
 	useEffect(() => {
-		eventBus.on("guessSelected", (classes) => {
-			setGuessData(guessData => ([...guessData, classes]))
+		eventBus.on("guessSelected", (data) => {
+			console.log(data.finalGuessData)
 		})
-	}, [guessData])
+	}, [])
 
 	const generateResultsString = () => {
 		return guessData
 		// return "\u2B1B\u{1F7E9}\u{1F7E8}"
 	}
-	console.log(guessData)
+	// console.log(generateResultsString())
 
-	
 	const handleOnClick = () => {
 		let start = new Date(2022,2,30); // CHANGE THIS LATER
 		let id = Math.round((new Date()-start)/(1000*60*60*24));

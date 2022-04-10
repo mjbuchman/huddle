@@ -237,6 +237,7 @@ class App extends Component {
 				<Search disabled={this.state.gameOver}></Search>
 				<ResultsTable 
 					answer={this.state.answer}
+					gameOver={this.state.gameOver}
 				></ResultsTable>
 				<StatsModal
 					show={this.state.showStats}

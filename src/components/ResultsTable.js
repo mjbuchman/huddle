@@ -8,7 +8,8 @@ class ResultsTable extends Component {
     constructor(props) {
         super(props);
         this.state = {
-			guesses: []
+			guesses: [],
+			guessData: []
 		};
 	}
 
@@ -17,11 +18,18 @@ class ResultsTable extends Component {
 		this.setState({
 			guesses: savedData.guesses
 		});
-
+		
 		eventBus.on("playerSelected", (data) =>
-			this.setState({ guesses: [...this.state.guesses, data.guess] }) //append new guess to guesses
+			{let classes = this.classMaker(data.guess)
+			this.setState({ guesses: [...this.state.guesses, data.guess], guessData: [...this.state.guessData, classes] })} //append new guess to guesses
 		);
     }
+
+	componentDidUpdate(prevProps) {
+		if(prevProps.gameOver !==this.props.gameOver) {
+			eventBus.dispatch("guessSelected", {finalGuessData: this.state.guessData})
+		}
+	}
 
 	componentWillUnmount() {
 		eventBus.remove("playerSelected");
@@ -111,8 +119,6 @@ class ResultsTable extends Component {
 	makeTableViews(guess,i) {
 		let classes = this.classMaker(guess)
 		//send via eventBus.dispatch to share
-		eventBus.dispatch("guessSelected", classes);
-
 		if (window.innerWidth < 578) {
 			return (
 				<React.Fragment>
