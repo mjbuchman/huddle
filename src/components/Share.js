@@ -11,7 +11,7 @@ function Share(props) {
 
 	const handleOnClick = () => {
 		let id = props.activePuzzle
-		let huddleUrl = 'www.huddlegame.com'
+		let huddleUrl = 'https://www.huddlegame.com'
 		if (navigator.share && isMobile) {
 			navigator
 				.share({
