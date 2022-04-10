@@ -11,7 +11,6 @@ function Rules(){
                 <li className="padded"><span className="padded closeField">Yellow in <b>Team</b></span> means the player played for that team previously, but not currently</li>
                 <li className="padded"><span className="padded closeField">Yellow in <b>Position</b></span> means the correct position is on the same side of the ball</li>
                 <li className="padded"><span className="padded closeField">Yellow in <b>Draft Team</b>, <b>Draft Year</b>, <b>Pro Bowls</b>, and <b>Rings</b></span> indicates that the guess is only off by one</li>
-                {/* <li>↑ means the correct number is higher, while ↓ means that it is lower </li> */}
                 <li className="padded">A new player to guess every day!</li>
             </ul>
         </div>

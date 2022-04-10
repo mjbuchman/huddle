@@ -4,20 +4,42 @@ import { useAlert } from 'react-alert'
 
 function Share(props) {
 	const alert = useAlert()
-
-	const generateResultsString = () => {
-		return "\u2B1B\u{1F7E9}\u{1F7E8}"
-	}
 	
+	const generateResultsString = () => {
+		let black = "\u2B1B"
+		let green = "\u{1F7E9}"
+		let yellow = "\u{1F7E8}"
+
+		let guessData = props.finalGuessData
+		let finalString = ""
+		let guessFields = ["Name", "Conf", "Team", "Position", "CollegeDraftTeam", "CollegeDraftYear", "ProBowls", "Rings"]
+
+		for(let i = 0; i < guessData.length; i++) {
+			for(let j = 0; j < guessFields.length; j ++) {
+				if(guessData[i][guessFields[j]] === "correctField"){
+					finalString += green
+				} else if(guessData[i][guessFields[j]] === "closeField"){
+					finalString += yellow
+				} else {
+					finalString += black
+				}
+			}
+			if(i < guessData.length - 1) {
+				finalString += "\n"
+			}
+		}
+	
+		return finalString
+	}
+
 	const handleOnClick = () => {
-		let start = new Date(2022,2,30); // CHANGE THIS LATER
-		let id = Math.round((new Date()-start)/(1000*60*60*24));
-		let huddleUrl = 'https://www.google.com' // CHANGE THIS LATER
+		let id = props.activePuzzle
+		let huddleUrl = 'https://www.huddlegame.com'
 		if (navigator.share && isMobile) {
 			navigator
 				.share({
 					title: `Huddle ${id} ${props.totalGuesses}/6`,
-					text: `${generateResultsString()}\nTry it yourself:`,
+					text: `${generateResultsString()}Try it yourself:`,
 					url: huddleUrl,
 				})
 			.catch(error => {
