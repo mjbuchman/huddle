@@ -20,14 +20,14 @@ class ResultsTable extends Component {
 			guesses: savedData.guesses
 		});
 		
-		eventBus.on("playerSelected", (data) =>
-			{let classes = this.classMaker(data.guess)
-			this.setState({ guesses: [...this.state.guesses, data.guess], guessData: [...this.state.guessData, classes] })} //append new guess to guesses
-		);
+		eventBus.on("playerSelected", (data) => {
+			let classes = this.classMaker(data.guess)
+			this.setState({ guesses: [...this.state.guesses, data.guess], guessData: [...this.state.guessData, classes] })
+		});
     }
 
 	componentDidUpdate(prevProps) {
-		if(prevProps.gameOver !== this.props.gameOver) {
+		if(prevProps.gameOver !== this.props.gameOver && this.state.guessData.length > 0) {
 			eventBus.dispatch("finalGuessData", {finalGuessData: this.state.guessData})
 		}
 	}

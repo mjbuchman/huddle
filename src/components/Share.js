@@ -1,11 +1,10 @@
 import ShareIcon from '@material-ui/icons/Share';
-import { ConsoleView, isMobile } from "react-device-detect";
+import { isMobile } from "react-device-detect";
 import { useAlert } from 'react-alert'
 
 function Share(props) {
-	let [finalGuessTableString, setFinalGuessTableString] = useState("")
-
 	const alert = useAlert()
+	
 	const generateResultsString = () => {
 		let black = "\u2B1B"
 		let green = "\u{1F7E9}"
@@ -29,7 +28,7 @@ function Share(props) {
 				finalString += "\n"
 			}
 		}
-		setFinalGuessTableString(...finalGuessTableString, finalString)
+	
 		return finalString
 	}
 

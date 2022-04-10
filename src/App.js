@@ -25,6 +25,7 @@ class App extends Component {
 			answer: {Team:"None",FirstName:"",LastName:"",PositionCategory:"",Name:"",PhotoUrl:"",CollegeDraftTeam:"",CollegeDraftYear: 0,id: -1,Position:"",AllTeams:[],ProBowls:-10,Rings:-10},
 			activePuzzle: -1,
 			activeDate: "",
+			finalGuessData: [],
 			stats: {
 				played: 0,
 				wins: 0,
@@ -52,6 +53,7 @@ class App extends Component {
 				didWin: false,
 				activeDate: "",
 				activePuzzle: -1,
+				finalGuessData: [],
 				answer: {Team:"None",FirstName:"",LastName:"",PositionCategory:"",Name:"",PhotoUrl:"",CollegeDraftTeam:"",CollegeDraftYear: 0,id: -1,Position:"",AllTeams:[],ProBowls:-10,Rings:-10},
 			}));
 		}
@@ -96,6 +98,9 @@ class App extends Component {
 
 		eventBus.on("finalGuessData", (data) => {
 			this.setState({finalGuessData: data.finalGuessData});
+			let savedDaily = JSON.parse(localStorage.getItem("daily"));
+			savedDaily.finalGuessData = data.finalGuessData;
+			localStorage.setItem("daily", JSON.stringify(savedDaily));	
 		})
 	}
 	
@@ -113,6 +118,7 @@ class App extends Component {
 				didWin: false,
 				activeDate: "",
 				activePuzzle: -1,
+				finalGuessData: [],
 				answer: {Team:"None",FirstName:"",LastName:"",PositionCategory:"",Name:"",PhotoUrl:"",CollegeDraftTeam:"",CollegeDraftYear: 0,id: -1,Position:"",AllTeams:[],ProBowls:-10,Rings:-10},
 			}));
 		}
@@ -151,6 +157,7 @@ class App extends Component {
 			activeDate: savedDaily.activeDate,
 			activePuzzle: savedDaily.activePuzzle,
 			answer: savedDaily.answer,
+			finalGuessData: savedDaily.finalGuessData,
 			stats: {
 				played: savedStats.played,
 				wins: savedStats.wins,
