@@ -6,9 +6,9 @@ function Share(props) {
 	const alert = useAlert()
 
 	const generateResultsString = () => {
-		return "\u2B1B\u{1F7E9}\u{1F7E8}"
+		 return "\u2B1B\u{1F7E9}\u{1F7E8}"
 	}
-	
+
 	const handleOnClick = () => {
 		let id = props.activePuzzle
 		let huddleUrl = 'www.huddlegame.com'

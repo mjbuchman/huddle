@@ -9,20 +9,28 @@ class ResultsTable extends Component {
     constructor(props) {
         super(props);
         this.state = {
-			guesses: []
-        };
-    }
+			guesses: [],
+			guessData: []
+		};
+	}
 
     componentDidMount() {
 		var savedData = JSON.parse(localStorage.getItem("daily"));
 		this.setState({
 			guesses: savedData.guesses
 		});
-
+		
 		eventBus.on("playerSelected", (data) =>
-			this.setState({ guesses: [...this.state.guesses, data.guess] }) //append new guess to guesses
+			{let classes = this.classMaker(data.guess)
+			this.setState({ guesses: [...this.state.guesses, data.guess], guessData: [...this.state.guessData, classes] })} //append new guess to guesses
 		);
     }
+
+	componentDidUpdate(prevProps) {
+		if(prevProps.gameOver !== this.props.gameOver) {
+			eventBus.dispatch("finalGuessData", {finalGuessData: this.state.guessData})
+		}
+	}
 
 	componentWillUnmount() {
 		eventBus.remove("playerSelected");
@@ -33,10 +41,19 @@ class ResultsTable extends Component {
 	}
 
 	classMaker(guess) {
-		let guessClasses = {};
-		let team = guess.Team
-		let correctPlayer = this.props.answer
-		let correctTeam = correctPlayer.Team
+		let guessClasses = {
+			Name: "incorrectField",
+			Conf: "incorrectField",
+			Team: "incorrectField",
+			Position: "incorrectField",
+			CollegeDraftTeam: "incorrectField",
+			CollegeDraftYear: "incorrectField",
+			ProBowls: "incorrectField",
+			Rings: "incorrectField"
+		};
+		let team = guess.Team;
+		let correctPlayer = this.props.answer;
+		let correctTeam = correctPlayer.Team;
 
 		//CORRECT GUESS
 		if(correctPlayer.Name === guess.Name){
@@ -88,7 +105,7 @@ class ResultsTable extends Component {
 		}
 	return guessClasses
 	}
-
+	
 	upOrDownArrow(guess, field) {
 		let correctPlayer = this.props.answer
 		if(guess[field] === correctPlayer[field]){
@@ -102,6 +119,7 @@ class ResultsTable extends Component {
 
 	makeTableViews(guess,i) {
 		let classes = this.classMaker(guess)
+		//send via eventBus.dispatch to share
 		if (window.innerWidth < 578) {
 			return (
 				<React.Fragment>
@@ -169,7 +187,3 @@ class ResultsTable extends Component {
 }
 
 export default ResultsTable;
-
-
-
-// Fields within guess => Team, Position, PositionCategory, Name, {Age}, PhotoURL, CollegeDraftTeam, CollegeDraftYear, ProBowls, Rings
