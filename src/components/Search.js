@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Container, Row, Col, Stack } from 'react-bootstrap';
 import { ReactSearchAutocomplete } from 'react-search-autocomplete';
+import { useScrollToBottom } from 'react-scroll-to-bottom';
 import players from './Players';
 import eventBus from "./EventBus";
 import HelpIcon from '@material-ui/icons/HelpOutline';
@@ -29,6 +30,7 @@ class Search extends Component {
 			resetSearch: !prevState.resetSearch 	// changing this variable triggers the ReactSearchAutocomplete to reset itself
 		 }));
 		eventBus.dispatch("playerSelected", { guess: player });
+		useScrollToBottom();
 	};
 
 	handleOnChange = (param) => {
@@ -79,7 +81,7 @@ class Search extends Component {
 								maxResults={50}
 								onSelect={this.handleOnSelect}
 								showIcon={false}
-								placeholder={this.props.disabled ? "Game Over" : "Guess " + this.state.totalGuesses + " of 6"}
+								placeholder={this.props.disabled ? "Game Over" : "Guess " + this.state.totalGuesses + " of 8"}
 								formatResult={this.formatResult}
 								styling={this.props.disabled
 									? {backgroundColor: "#F0F2EF", border: "1px solid #999", boxShadow: "none", fontFamily:"Amiko"} 

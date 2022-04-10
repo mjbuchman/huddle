@@ -22,15 +22,15 @@ class App extends Component {
 			guesses: [],
 			gameOver: false,
 			didWin: false,
-			answer: {Team:"None",FirstName:"",LastName:"",PositionCategory:"",Name:"",PhotoUrl:"",CollegeDraftTeam:"",CollegeDraftYear: 0,id: -1,Position:"",AllTeams:[],ProBowls:0,Rings:0},
-			activePuzzle: 0,
+			answer: {Team:"None",FirstName:"",LastName:"",PositionCategory:"",Name:"",PhotoUrl:"",CollegeDraftTeam:"",CollegeDraftYear: 0,id: -1,Position:"",AllTeams:[],ProBowls:-10,Rings:-10},
+			activePuzzle: -1,
 			activeDate: "",
 			stats: {
 				played: 0,
 				wins: 0,
 				currStreak: 0,
 				maxStreak: 0,
-				guessDist: [0,0,0,0,0,0]
+				guessDist: [0,0,0,0,0,0,0,0]
 			}
 		};
 
@@ -40,7 +40,7 @@ class App extends Component {
 				wins: 0,
 				currStreak: 0,
 				maxStreak: 0,
-				guessDist: [0,0,0,0,0,0],
+				guessDist: [0,0,0,0,0,0,0,0]
 			}));
 		}
 
@@ -51,8 +51,8 @@ class App extends Component {
 				gameOver: false,
 				didWin: false,
 				activeDate: "",
-				activePuzzle: 0,
-				answer: {Team:"None",FirstName:"",LastName:"",PositionCategory:"",Name:"",PhotoUrl:"",CollegeDraftTeam:"",CollegeDraftYear: 0,id: -1,Position:"",AllTeams:[],ProBowls:0,Rings:0},
+				activePuzzle: -1,
+				answer: {Team:"None",FirstName:"",LastName:"",PositionCategory:"",Name:"",PhotoUrl:"",CollegeDraftTeam:"",CollegeDraftYear: 0,id: -1,Position:"",AllTeams:[],ProBowls:-10,Rings:-10},
 			}));
 		}
 
@@ -81,7 +81,7 @@ class App extends Component {
 				this.addGuessToStorage();
 				if (this.state.answer.Name === data.guess.Name) {
 					this.handleGameOver(true);
-				} else if (this.state.totalGuesses >= 6) {
+				} else if (this.state.totalGuesses >= 8) {
 					this.handleGameOver(false);
 				}
 			}); 
@@ -149,7 +149,7 @@ class App extends Component {
 		}, () => {
 			// handle new state data
 			if(this.state.gameOver) {
-				this.setResultsModalShow(this.state.didWin);
+				this.setResultsModalShow(this.state.didWin, 2500);
 			} else if (this.state.stats.played === 0) {
 				this.setInfoModalShow();
 			}
@@ -184,12 +184,12 @@ class App extends Component {
 		localStorage.setItem("stats", JSON.stringify(savedStats));	
 		this.setState({stats: savedStats});
 
-		this.setResultsModalShow(didWin);
+		this.setResultsModalShow(didWin, 2500);
 	}
 
 	setStatsModalShow() {
 		if(this.state.gameOver) {
-			this.setResultsModalShow(this.state.didWin)  // if game is complete show results modal instead of stats
+			this.setResultsModalShow(this.state.didWin, 0)  // if game is complete show results modal instead of stats
 		} else {
 			this.setState(prevState => ({
 				showStats: !prevState.showStats
@@ -203,15 +203,15 @@ class App extends Component {
 		  }));
 	}
 
-	setResultsModalShow(didWin) {
+	setResultsModalShow(didWin, delay) {
 		// Wait until table animation completes to show results
+		this.setState({
+			gameOver: true,
+			didWin: didWin
+		});
 		setTimeout(() => {
-			this.setState({
-				showResults: true,
-				gameOver: true,
-				didWin: didWin
-			});
-        }, 2500);
+			this.setState({showResults: true});
+        }, delay);
 	}
 
 	hideResultsModal() {
