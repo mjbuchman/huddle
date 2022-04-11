@@ -39,14 +39,14 @@ function Share(props) {
 			navigator
 				.share({
 					title: `Huddle ${id} ${props.totalGuesses}/8`,
-					text: `${generateResultsString()}\nTry it yourself:`,
+					text: `Huddle ${id} ${props.totalGuesses}/8\n${generateResultsString()}\nTry it yourself:`,
 					url: huddleUrl,
 				})
 			.catch(error => {
 				alert('Something went wrong with sharing', error);
 			});
 		} else {
-			let results = `Huddle #${id} ${props.totalGuesses}/8\n${generateResultsString()}\nTry it yourself:\n${huddleUrl}`
+			let results = `Huddle #${id} ${props.totalGuesses}/8\n${generateResultsString()}Try it yourself:\n${huddleUrl}`
 			navigator.clipboard.writeText(results)
 			alert.show('Text Copied')
 		}
