@@ -38,15 +38,15 @@ function Share(props) {
 		if (navigator.share && isMobile) {
 			navigator
 				.share({
-					title: `Huddle ${id} ${props.totalGuesses}/6`,
-					text: `${generateResultsString()}Try it yourself:`,
+					title: `Huddle ${id} ${props.totalGuesses}/8`,
+					text: `${generateResultsString()}\nTry it yourself:`,
 					url: huddleUrl,
 				})
 			.catch(error => {
 				alert('Something went wrong with sharing', error);
 			});
 		} else {
-			let results = `Huddle #${id} ${props.totalGuesses}/6\n${generateResultsString()}\nTry it yourself:\n${huddleUrl}`
+			let results = `Huddle #${id} ${props.totalGuesses}/8\n${generateResultsString()}\nTry it yourself:\n${huddleUrl}`
 			navigator.clipboard.writeText(results)
 			alert.show('Text Copied')
 		}
