@@ -9,6 +9,10 @@ import 'font-awesome/css/font-awesome.min.css';
 import { Provider as AlertProvider } from 'react-alert';
 import AlertTemplate from 'react-alert-template-basic';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ReactGA from 'react-ga'
+
+ReactGA.initialize('G-78144KGHV0');
+ReactGA.pageview(window.location.pathname);
 
 const alertOptions = {
   position: "top center",
