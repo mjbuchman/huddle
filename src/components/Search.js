@@ -39,7 +39,6 @@ class Search extends Component {
 	};
 
 	setPlayerModalShow = () => {
-		console.log(this.state)
 		this.setState(prevState => ({
 			showPlayerModal: !prevState.showPlayerModal
 		  }));
@@ -85,7 +84,7 @@ class Search extends Component {
 					<h2>NFL Player Guessing Game</h2>
 				</Row>
 				<p style={{fontSize:"12px", color:"#555"}}>Search by Name, Team, or Position — For Player Pool Info
-					<a onClick={this.setPlayerModalShow} style={{ cursor:"pointer", color:"#013369", marginLeft:"2px"}} href={null}><u>Click Here</u></a>
+					<a onClick={this.setPlayerModalShow} style={{ cursor:"pointer", color:"#013369", marginLeft:"2px"}}><u>Click Here</u></a>
 				</p>				
 				<Row style={{marginBottom: "5px"}}>
 					<Col sm={{span: 6, offset: 3}}>

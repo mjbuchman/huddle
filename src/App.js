@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import './css/App.css';
 import Search from "./components/Search";
+import Players from "./components/Players"
 import ResultsTable from "./components/ResultsTable";
 import InfoModal from "./components/modals/InfoModal";
 import StatsModal from "./components/modals/StatsModal";
@@ -22,9 +23,8 @@ class App extends Component {
 			guesses: [],
 			gameOver: false,
 			didWin: false,
+			answerIndex: 0,
 			answer: {Team:"None",FirstName:"",LastName:"",PositionCategory:"",Name:"",PhotoUrl:"",CollegeDraftTeam:"",CollegeDraftYear: 0,id: -1,Position:"",AllTeams:[],ProBowls:-10,Rings:-10},
-			activePuzzle: -1,
-			activeDate: "",
 			finalGuessData: [],
 			stats: {
 				played: 0,
@@ -51,16 +51,13 @@ class App extends Component {
 				guesses: [],
 				gameOver: false,
 				didWin: false,
-				activeDate: "",
-				activePuzzle: -1,
+				answerIndex: 0,
 				finalGuessData: [],
-				answer: {Team:"None",FirstName:"",LastName:"",PositionCategory:"",Name:"",PhotoUrl:"",CollegeDraftTeam:"",CollegeDraftYear: 0,id: -1,Position:"",AllTeams:[],ProBowls:-10,Rings:-10},
 			}));
 		}
 
-		this.resetDailyIfNecessary = this.resetDailyIfNecessary.bind(this);
-		this.chooseAnswer = this.chooseAnswer.bind(this);
-		this.savePuzzleInfo = this.savePuzzleInfo.bind(this);
+		this.checkDaily = this.checkDaily.bind(this);
+		this.resetDaily = this.resetDaily.bind(this);
 		this.populateState = this.populateState.bind(this);
 		this.addGuessToStorage = this.addGuessToStorage.bind(this);
 		this.handleGameOver = this.handleGameOver.bind(this);
@@ -71,17 +68,12 @@ class App extends Component {
 		this.donateLink = this.donateLink.bind(this);
 		this.twitterLink = this.twitterLink.bind(this);
 
-		this.resetDailyIfNecessary(); // kicks off data population
+		this.checkDaily();
 	}
 
 	componentDidMount() {
-		let savedDaily = JSON.parse(localStorage.getItem("daily"));
-		if(savedDaily.activeDate !== new Date().toDateString()) {
-			this.chooseAnswer();
-		} else {
-			this.populateState();
-		}
-
+		this.populateState();
+		
 		eventBus.on("playerSelected", (data) => {
 			this.setState(prevState => ({
 				totalGuesses: prevState.totalGuesses + 1,
@@ -108,42 +100,25 @@ class App extends Component {
 		eventBus.remove("playerSelected");
 	}
 
-	resetDailyIfNecessary() {
+	checkDaily() {
+		let start = new Date('4/11/2022');
+		let currIndex = Math.round((new Date() - start)/(1000*60*60*24)) - 1;
 		let savedDaily = JSON.parse(localStorage.getItem("daily"));
-		if(savedDaily.activeDate !== new Date().toDateString()) {
-			localStorage.setItem('daily', JSON.stringify({ // reset daily if the player's last active puzzle is not the current puzzle
-				totalGuesses: 0, 
-				guesses: [],
-				gameOver: false,
-				didWin: false,
-				activeDate: "",
-				activePuzzle: -1,
-				finalGuessData: [],
-				answer: {Team:"None",FirstName:"",LastName:"",PositionCategory:"",Name:"",PhotoUrl:"",CollegeDraftTeam:"",CollegeDraftYear: 0,id: -1,Position:"",AllTeams:[],ProBowls:-10,Rings:-10},
-			}));
+		if(savedDaily.answerIndex !== currIndex) {
+			this.resetDaily(currIndex);
 		}
 	}
 
-	chooseAnswer() {
-		fetch(`${process.env.REACT_APP_ANSWER_MS_URL}/dailyAnswer`, {method: 'GET'})
-		.then(response => response.json())
-		.then(data => this.setState({
-			answer: data.answer.answer,
-			activePuzzle: data.answer.puzzleId,
-			activeDate: new Date().toDateString()
-		}, this.savePuzzleInfo, this.populateState))
-		.catch(error => {
-				console.error(error);
-			}
-		);
-	}
-	
-	savePuzzleInfo() {
-		let savedDaily = JSON.parse(localStorage.getItem("daily"));
-		savedDaily.activePuzzle = this.state.activePuzzle;
-		savedDaily.answer = this.state.answer;
-		savedDaily.activeDate = this.state.activeDate
-		localStorage.setItem("daily", JSON.stringify(savedDaily));	
+	resetDaily(currIndex) {
+		localStorage.removeItem('daily');
+		localStorage.setItem('daily', JSON.stringify({
+			totalGuesses: 0, 
+			guesses: [],
+			gameOver: false,
+			didWin: false,
+			answerIndex: currIndex,
+			finalGuessData: []
+		}));
 	}
 	
 	populateState() {
@@ -154,9 +129,7 @@ class App extends Component {
 			didWin: savedDaily.didWin,
 			gameOver: savedDaily.gameOver,
 			guesses: savedDaily.guesses,
-			activeDate: savedDaily.activeDate,
-			activePuzzle: savedDaily.activePuzzle,
-			answer: savedDaily.answer,
+			answer: Players[savedDaily.answerIndex],
 			finalGuessData: savedDaily.finalGuessData,
 			stats: {
 				played: savedStats.played,
@@ -169,7 +142,7 @@ class App extends Component {
 			let savedStats = JSON.parse(localStorage.getItem("stats"));
 			// handle new state data
 			if(this.state.gameOver) {
-				this.setResultsModalShow(this.state.didWin, 2500);
+				this.setResultsModalShow(this.state.didWin, 1600);
 			} else if (savedStats.played === 0) {
 				this.setInfoModalShow();
 			}
