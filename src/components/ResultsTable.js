@@ -65,6 +65,11 @@ class ResultsTable extends Component {
 			//TEAM-CONF-DIV
 			if(correctPlayer.AllTeams.includes(team) && (Teams[team] !== Teams[correctTeam])){
 				guessClasses.Team = "closeField"
+				if(!(Teams[team].Div === Teams[correctTeam].Div) && (Teams[team].Conf === Teams[correctTeam].Conf)){
+					guessClasses.Conf = "closeField"
+				} else if((Teams[team].Div === Teams[correctTeam].Div) && (Teams[team].Conf === Teams[correctTeam].Conf)){
+					guessClasses.Conf = "correctField"
+				}
 			} else if(Teams[team] === Teams[correctTeam]){
 				guessClasses.Team = "correctField"
 				guessClasses.Conf = "correctField"

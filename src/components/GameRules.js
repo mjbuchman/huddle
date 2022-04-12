@@ -4,7 +4,7 @@ function Rules(){
     return(
         <div>
             <ul className="rules">
-                <li className="padded">You have six guesses to guess the correct player</li>
+                <li className="padded">You have eight guesses to guess the correct player</li>
                 <li className="padded">Offensive positions include QB, RB, OL, TE, and WR. Defensive positions include DB, LB, and DL. </li>
                 <li className="padded"><span className="padded correctField">Green categories</span> are correct</li>
                 <li className="padded"><span className="padded closeField">Yellow in <b>Division</b></span> means the player is in that conference, but in a different division</li>

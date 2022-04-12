@@ -54,7 +54,7 @@ class Search extends Component {
 		return (
 			<Stack className="result-wrapper" direction="horizontal">
 				<span className="img-small">
-					<img className="player" src={item.PhotoUrl} alt={item.Name}
+					<img className="player" src={item.PhotoUrl} alt={item.Name} loading="lazy"
 						onError={({ currentTarget }) => {
 							currentTarget.onerror = null; // prevents looping
 							currentTarget.src="/player_placeholder.png";
