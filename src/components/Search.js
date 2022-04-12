@@ -3,9 +3,8 @@ import { Container, Row, Col, Stack } from 'react-bootstrap';
 import { ReactSearchAutocomplete } from 'react-search-autocomplete';
 import { useScrollToBottom } from 'react-scroll-to-bottom';
 import players from './Players';
+import PlayerModal from './modals/PlayerModal'
 import eventBus from "./EventBus";
-import HelpIcon from '@material-ui/icons/HelpOutline';
-import ReactTooltip from 'react-tooltip';
 
 class Search extends Component {
     constructor(props) {
@@ -13,7 +12,7 @@ class Search extends Component {
         this.state = {
 			resetSearch: false,
 			totalGuesses: 1,
-			searchParam: "Name"
+			showPlayerModal: false
 		}
     }
 
@@ -33,21 +32,32 @@ class Search extends Component {
 		useScrollToBottom();
 	};
 
-	handleOnChange = (param) => {
+	handleOnChange = () => {
 		this.setState(prevState => ({
-			searchParam: param.target.value,
 			resetSearch: !prevState.resetSearch
 		 }));
 	};
 
+	setPlayerModalShow = () => {
+		console.log(this.state)
+		this.setState(prevState => ({
+			showPlayerModal: !prevState.showPlayerModal
+		  }));
+	}
+
 	formatResult = (item) => {
+		let isLast = ++this.resultsCount === 50;
+		if (isLast) {
+			this.resultsCount = 0;
+		}
+
 		return (
 			<Stack className="result-wrapper" direction="horizontal">
 				<span className="img-small">
 					<img className="player" src={item.PhotoUrl} alt={item.Name}
 						onError={({ currentTarget }) => {
-						currentTarget.onerror = null; // prevents looping
-						currentTarget.src="/player_placeholder.png";
+							currentTarget.onerror = null; // prevents looping
+							currentTarget.src="/player_placeholder.png";
 						}}>
 					</img>
 				</span>
@@ -67,16 +77,23 @@ class Search extends Component {
     render() {
         return (
             <Container fluid>
+				<PlayerModal
+					show={this.state.showPlayerModal}
+					onHide={this.setPlayerModalShow}
+				/>
 				<Row style={{marginBottom: "15px"}}>
 					<h2>NFL Player Guessing Game</h2>
 				</Row>
-				<Row style={{marginBottom: "15px"}}>
+				<p style={{fontSize:"12px", color:"#555"}}>Search by Name, Team, or Position — For Player Pool Info
+					<a onClick={this.setPlayerModalShow} style={{ cursor:"pointer", color:"#013369", marginLeft:"2px"}} href={null}><u>Click Here</u></a>
+				</p>				
+				<Row style={{marginBottom: "5px"}}>
 					<Col sm={{span: 6, offset: 3}}>
 						<div style={this.props.disabled ? {pointerEvents: "none"} : {pointerEvents: "auto"}}>
 							<ReactSearchAutocomplete
 								key={this.state.resetSearch}
 								items={players}
-								fuseOptions={{ keys: [this.state.searchParam] }}
+								fuseOptions={{ keys: ["Name", "Team", "FullTeam", "Position", "FullPosition"] }}
 								inputDebounce={500}
 								maxResults={50}
 								onSelect={this.handleOnSelect}
@@ -89,19 +106,6 @@ class Search extends Component {
 								}
 							/>
 						</div>
-					</Col>
-				</Row>
-				<Row>
-					<Col className="center" sm={12}>
-						<p>Search by: </p>
-						<input className="searchRadio" type="radio" value="Name" name="searchParam" onChange={this.handleOnChange} checked={this.state.searchParam === "Name"}/>
-						<p> Name </p>
-						<input className="searchRadio" type="radio" value="Team" name="searchParam" onChange={this.handleOnChange} checked={this.state.searchParam === "Team"}/>
-						<p> Team </p>
-						<input className="searchRadio" type="radio" value="Position" name="searchParam" onChange={this.handleOnChange} checked={this.state.searchParam === "Position"}/>
-						<p> Position </p>
-						<ReactTooltip id="help-tooltip">Team uses 2 or 3 letter abbreviation (e.g. "LAC", "GB")<br></br>Position uses 2 letter abbreviation (e.g. "QB", "DB")</ReactTooltip>
-						<HelpIcon fontSize="inherit" className="help-icon" data-tip="help" data-for="help-tooltip" data-place="bottom" data-effect="solid"/>				
 					</Col>
 				</Row>
             </Container>

@@ -132,8 +132,8 @@ td {
 	padding: 0 !important;
 	transform: scale(0,1);
 	-webkit-transform: scale(0,1);
-	animation: flip 1s forwards;
-	-webkit-animation: flip 1s forwards;
+	animation: flip .75s forwards;
+	-webkit-animation: flip .75s forwards;
 }
 
 @keyframes flip {
@@ -238,15 +238,6 @@ td {
 
 .padded {
 	padding: 1%;
-}
-
-.searchRadio {
-	margin-left: 5px;
-}
-
-.help-icon {
-	color: #777;
-	margin-left: 5px;
 }
 
 /* logic for smaller screens */

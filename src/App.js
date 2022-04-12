@@ -166,10 +166,11 @@ class App extends Component {
 				guessDist: savedStats.guessDist,
 			}
 		}, () => {
+			let savedStats = JSON.parse(localStorage.getItem("stats"));
 			// handle new state data
 			if(this.state.gameOver) {
 				this.setResultsModalShow(this.state.didWin, 2500);
-			} else if (this.state.stats.played === 0) {
+			} else if (savedStats.played === 0) {
 				this.setInfoModalShow();
 			}
 		});
@@ -203,7 +204,7 @@ class App extends Component {
 		localStorage.setItem("stats", JSON.stringify(savedStats));	
 		this.setState({stats: savedStats});
 
-		this.setResultsModalShow(didWin, 2500);
+		this.setResultsModalShow(didWin, 1600);
 	}
 
 	setStatsModalShow() {
