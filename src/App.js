@@ -102,7 +102,7 @@ class App extends Component {
 
 	checkDaily() {
 		let start = new Date('4/11/2022');
-		let currIndex = Math.round((new Date() - start)/(1000*60*60*24)) - 1;
+		let currIndex = Math.round((new Date().setHours(0,0,0,0) - start)/(1000*60*60*24));
 		let savedDaily = JSON.parse(localStorage.getItem("daily"));
 		if(savedDaily.answerIndex !== currIndex) {
 			this.resetDaily(currIndex);
