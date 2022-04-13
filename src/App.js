@@ -245,7 +245,6 @@ class App extends Component {
 					didwin={this.state.didWin}
 					answer={this.state.answer}
 					stats={this.state.stats}
-					activePuzzle={this.state.activePuzzle}
 					totalGuesses={this.state.totalGuesses}
 					finalGuessData={this.state.finalGuessData}
 					show={this.state.showResults}
