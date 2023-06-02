@@ -8,7 +8,7 @@ You will need api key information to run this locally, please contact the owners
 
 ## Deployments
 
-This game is currently deployed on Heroku at this link: [Huddle Game](https://huddle-game.herokuapp.com)
+This game is currently deployed at this link: [Huddle Game](https://huddlegame.com)
 
 ## To Run Locally
 
