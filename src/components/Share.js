@@ -33,13 +33,14 @@ function Share(props) {
 	}
 
 	const handleOnClick = () => {
-		let id = props.activePuzzle
+		let daily = JSON.parse(localStorage.getItem("daily"));
+		let id = daily.answerIndex;
 		let huddleUrl = 'https://www.huddlegame.com'
 		if (navigator.share && isMobile) {
 			navigator
 				.share({
-					title: `Huddle ${id} ${props.totalGuesses}/8`,
-					text: `Huddle ${id} ${props.totalGuesses}/8\n${generateResultsString()}\nTry it yourself:`,
+					title: `Huddle #${id} ${props.totalGuesses}/8`,
+					text: `Huddle #${id} ${props.totalGuesses}/8\n${generateResultsString()}\nTry it yourself:`,
 					url: huddleUrl,
 				})
 			.catch(error => {
