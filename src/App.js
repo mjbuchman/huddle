@@ -4,20 +4,25 @@ import Search from "./components/Search";
 import Players from "./components/Players"
 import ResultsTable from "./components/ResultsTable";
 import InfoModal from "./components/modals/InfoModal";
+import NewsModal from "./components/modals/NewsModal";
 import StatsModal from "./components/modals/StatsModal";
 import ResultsModal from "./components/modals/ResultsModal";
 import { Stack } from 'react-bootstrap';
 import InfoIcon from '@material-ui/icons/InfoOutlined';
+import NewsIcon from '@material-ui/icons/NotificationImportantOutlined';
 import AssessmentIcon from '@material-ui/icons/AssessmentOutlined';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import eventBus from "./components/EventBus";
 
+const rosterStartDate = '6/1/2023';  // UPDATE WHEN NEW ROSTER DROPS
+const currNewsIndex = 1;  // INCREMENT WHEN NEWS UPDATE CHANGES
 class App extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			showStats: false,
 			showInfo: false,
+			showNews: false,
 			showResults: false,
 			totalGuesses: 0,
 			guesses: [],
@@ -35,6 +40,10 @@ class App extends Component {
 			}
 		};
 
+		if (localStorage.getItem("news") === null) {
+			localStorage.setItem('news', 0);
+		}
+		
 		if (JSON.parse(localStorage.getItem("stats") === null)) {
 			localStorage.setItem('stats', JSON.stringify({
 				played: 0,
@@ -63,9 +72,9 @@ class App extends Component {
 		this.handleGameOver = this.handleGameOver.bind(this);
 		this.setStatsModalShow = this.setStatsModalShow.bind(this);
 		this.setInfoModalShow = this.setInfoModalShow.bind(this);
+		this.setNewsModalShow = this.setNewsModalShow.bind(this);
 		this.setResultsModalShow = this.setResultsModalShow.bind(this);
 		this.hideResultsModal = this.hideResultsModal.bind(this);
-		this.donateLink = this.donateLink.bind(this);
 		this.twitterLink = this.twitterLink.bind(this);
 
 		this.checkDaily();
@@ -101,7 +110,7 @@ class App extends Component {
 	}
 
 	checkDaily() {
-		let start = new Date('4/11/2022');
+		let start = new Date(rosterStartDate);
 		let currIndex = Math.round((new Date() - start)/(1000*60*60*24)) - 1;
 		let savedDaily = JSON.parse(localStorage.getItem("daily"));
 		if(savedDaily.answerIndex !== currIndex) {
@@ -140,11 +149,15 @@ class App extends Component {
 			}
 		}, () => {
 			let savedStats = JSON.parse(localStorage.getItem("stats"));
+			let lastNewsUpdate = JSON.parse(localStorage.getItem("news"));
 			// handle new state data
 			if(this.state.gameOver) {
 				this.setResultsModalShow(this.state.didWin, 1600);
 			} else if (savedStats.played === 0) {
 				this.setInfoModalShow();
+			} else if (lastNewsUpdate < currNewsIndex) {
+				this.setNewsModalShow();
+				localStorage.setItem("news", currNewsIndex);	
 			}
 		});
 	}
@@ -196,6 +209,12 @@ class App extends Component {
 		  }));
 	}
 
+	setNewsModalShow() {
+		this.setState(prevState => ({
+			showNews: !prevState.showNews
+		  }));
+	}
+
 	setResultsModalShow(didWin, delay) {
 		// Wait until table animation completes to show results
 		this.setState({
@@ -211,10 +230,6 @@ class App extends Component {
 		this.setState({showResults: false});
 	}
 
-	donateLink() {
-		window.open("https://ko-fi.com/huddle")
-	}
-
 	twitterLink() {
 		window.open("https://twitter.com/HuddleGame")
 	}
@@ -225,6 +240,7 @@ class App extends Component {
 				<Stack className="header" direction="horizontal">
 					<img className="banner" src="/banner.png" alt="huddle-logo"></img>
 					<button className="headerBtn ms-auto" onClick={this.setStatsModalShow}><AssessmentIcon/></button>
+					<button className="headerBtn" onClick={this.setNewsModalShow}><NewsIcon/></button>
 					<button className="headerBtn" onClick={this.setInfoModalShow}><InfoIcon/></button>
 				</Stack>
 				<Search disabled={this.state.gameOver}></Search>
@@ -241,6 +257,10 @@ class App extends Component {
 					show={this.state.showInfo}
 					onHide={this.setInfoModalShow}
 				/>
+				<NewsModal
+					show={this.state.showNews}
+					onHide={this.setNewsModalShow}
+				/>
 				<ResultsModal
 					didwin={this.state.didWin}
 					answer={this.state.answer}
@@ -252,8 +272,6 @@ class App extends Component {
 					onHide={this.hideResultsModal}
 				/>
 				<Stack className="footer" direction="horizontal" gap={2}>
-					<button className="donationBtn" onClick={this.donateLink}>Donate</button>
-					<p>Help keep our servers running</p>
 					<button className="headerBtn ms-auto" onClick={this.twitterLink}><TwitterIcon/></button>
 				</Stack>
 			</Stack>  
