@@ -14,7 +14,7 @@ import AssessmentIcon from '@material-ui/icons/AssessmentOutlined';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import eventBus from "./components/EventBus";
 
-const rosterStartDate = '6/1/2023';  // UPDATE WHEN NEW ROSTER DROPS
+const rosterStartDate = '6/2/2023';  // UPDATE WHEN NEW ROSTER DROPS
 const currNewsIndex = 1;  // INCREMENT WHEN NEWS UPDATE CHANGES
 class App extends Component {
 	constructor(props) {
