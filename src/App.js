@@ -76,6 +76,7 @@ class App extends Component {
 		this.setResultsModalShow = this.setResultsModalShow.bind(this);
 		this.hideResultsModal = this.hideResultsModal.bind(this);
 		this.twitterLink = this.twitterLink.bind(this);
+		this.issueLink = this.issueLink.bind(this);
 
 		this.checkDaily();
 	}
@@ -234,6 +235,10 @@ class App extends Component {
 		window.open("https://twitter.com/HuddleGame")
 	}
 
+	issueLink() {
+		window.open("https://github.com/huddlegame/huddle-issues")
+	}
+
 	render() {
 		return (
 			<Stack className="app" gap={4}>
@@ -272,7 +277,8 @@ class App extends Component {
 					onHide={this.hideResultsModal}
 				/>
 				<Stack className="footer" direction="horizontal" gap={2}>
-					<button className="headerBtn ms-auto" onClick={this.twitterLink}><TwitterIcon/></button>
+					<button className="headerBtn ms-auto" onClick={this.issueLink}>Report Issue</button>
+					<button className="headerBtn " onClick={this.twitterLink}><TwitterIcon/></button>
 				</Stack>
 			</Stack>  
 		);
