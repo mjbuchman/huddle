@@ -18,7 +18,7 @@ function NewsModal(props) {
 			is reset, so players that were used as answers under the previous roster may now show up again.
 			<br></br>
 			<br></br>
-			Lastly, you may notice we've added some (hopefully unobtrusive) banner ads to the site. Huddle is meant to be a fun hobby project
+			Lastly, in the coming days you may notice some new (hopefully unobtrusive) banner ads on the site. Huddle is meant to be a fun hobby project
 			for anyone to enjoy, but unfortunately it costs a few bucks a month for us to run. We kindly ask that you disable any ad blockers you may have while
 			playing the game to help us cover the cost of our servers. It's important to us to say that we do not and will never track or sell any of your
 			personal data. We hope you can help us keep the game up and running for all to enjoy.
