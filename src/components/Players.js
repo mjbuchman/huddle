@@ -1136,12 +1136,10 @@ const players = [
       "id": 284,
       "Position": "DB",
       "AllTeams": [
-        "NO",
-        "NO",
-        "NO",
-        "NO",
-        "NO",
-        "NO"
+        "MIA",
+        "NYG",
+        "HOU",
+        "CIN"
       ],
       "ProBowls": 3,
       "Rings": 0,
@@ -1464,11 +1462,13 @@ const players = [
       "id": 371,
       "Position": "WR",
       "AllTeams": [
-        "BAL"
+        "BAL",
+        "LAR",
+        "NYG"
       ],
-      "ProBowls": 0,
-      "Rings": 0,
-      "Starts": 0,
+      "ProBowls": 3,
+      "Rings": 1,
+      "Starts": 126,
       "FullTeam": "Baltimore Ravens",
       "FullPosition": "Wide Reciever"
     },
