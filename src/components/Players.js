@@ -1141,7 +1141,7 @@ const players = [
         "HOU",
         "CIN"
       ],
-      "ProBowls": 3,
+      "ProBowls": 1,
       "Rings": 0,
       "Starts": 65,
       "FullTeam": "Cincinnati Bengals",
