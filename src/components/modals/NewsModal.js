@@ -8,12 +8,12 @@ function NewsModal(props) {
 	  >
 		<Modal.Header closeButton>
 			<Modal.Title id="contained-modal-title-vcenter">
-				June 2023 Update
+				June 2024 Roster Update
 			</Modal.Title>
 		</Modal.Header>
 		<Modal.Body>
-			Thank you for your support! We've been blown away by how many people have played our game over the past year. 
-			We wanted to acknowledge a few changes to the Huddle, first of which is a fresh roster update for the 2023-2024 season!
+			Thank you for your support! We've been blown away by how many people have played our game over the past 2 years. 
+			We wanted to acknowledge a few changes to the Huddle, first of which is a fresh roster update for the 2024-2025 season!
 			That means new rookies in the pool and familiar faces on their new teams. We hope this keeps things exciting as it also means the answer pool
 			is reset, so players that were used as answers under the previous roster may now show up again.
 			<br></br>
