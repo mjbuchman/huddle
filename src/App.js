@@ -112,7 +112,7 @@ class App extends Component {
 
 	checkDaily() {
 		let start = new Date(rosterStartDate);
-		let currIndex = Math.round((new Date() - start)/(1000*60*60*24)) - 1;
+		let currIndex = Math.round((new Date().setHours(0,0,0,0) - start)/(1000*60*60*24));
 		let savedDaily = JSON.parse(localStorage.getItem("daily"));
 		if(savedDaily.answerIndex !== currIndex) {
 			this.resetDaily(currIndex);
@@ -270,7 +270,6 @@ class App extends Component {
 					didwin={this.state.didWin}
 					answer={this.state.answer}
 					stats={this.state.stats}
-					activePuzzle={this.state.activePuzzle}
 					totalGuesses={this.state.totalGuesses}
 					finalGuessData={this.state.finalGuessData}
 					show={this.state.showResults}
